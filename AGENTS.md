@@ -172,6 +172,8 @@ Erros que circulam no grupo do WhatsApp. **Nenhum agente deve propagá-los.**
 
 **Proibido:** código do produto, arquitetura fechada, stack decidida, protótipo funcional. Motivo: §7.3 — o detalhamento do desafio **só é apresentado na abertura, às equipes**. Construir antes não bate com o tema real e quebra o nívelamento entre as 12 equipes.
 
+**⚠️ E a consequência disso:** o que se leva ao dia 14 **não é uma solução pronta — é capacidade de absorver o desafio em 90 minutos.** Chegar com uma tese travada (O1+O3, por exemplo) incumpre exatamente o nivelamento que o §7.3 impõe, e as nossas 5 oportunidades podem não ser o desafio real. O ativo que construímos é o **kit de mapeamento**: grade das 4 dimensões do Anexo I · 33 indicadores com prevalência e CI · instrumento validado do VigIndústria · 9 datasets públicos · escudo regulatório (CFM 2.454/2026 Anexo II, I) · 5 armadilhas com evidência · mapa competitivo de 5 camadas. Ver `docs/02-cruzamento-whatsapp.md` §1.
+
 **Métrica de sucesso em 12/11:** 1 problema definido com evidência, 3 hipóteses ranqueadas, 1 roteiro de 3 min ensaiado em voz alta, 8 perguntas para os mentores, stack decidida no dia seguinte com o desafio real à vista.
 
 ---
@@ -262,6 +264,7 @@ WhatsApp Image 2026-10-07 at 16.05.05.jpeg             Programa Aluno Empreended
 WhatsApp Image 2026-10-13 at 11.27.18.jpeg             INTEGRA SENAI Regional 2026
 docs/00-portfolio-oportunidades.md                     PORTFÓLIO DE OPORTUNIDADES (comece aqui)
 docs/01-produtos-brainstorm.md                        10 conceitos de produto + shortlist de 3
+docs/02-cruzamento-whatsapp.md                       pesquisa × histórico do grupo (kit de mapeamento)
 docs/pesquisa/01-mapa-competitivo.md                  mapa competitivo (11 players, 5 camadas)
 docs/pesquisa/01-mapa-competitivo-fontes.md            bibliografia anotada do mapa
 docs/pesquisa/02-dimensionamento-mercado.md            dimensionamento e funil de custo
