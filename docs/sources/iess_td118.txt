@@ -1,0 +1,574 @@
+Texto para Discussão n° 118 – 2026
+EVOLUÇÃO DOS CONTRATANTES E
+BENEFICIÁRIOS DE PLANOS COLETIVOS
+EMPRESARIAIS DE ASSISTÊNCIA MÉDICO-
+HOSPITALAR NO BRASIL (2020–2024)
+Autor: Bruno Minami
+Revisão: Felipe Delpino, José Cechin e Natalia Lara
+Superintendente Executivo: Denizar Vianna
+                           TD nº 118 - 2026 - Evolução dos Contratantes e Beneficiários de Planos Coletivos Empresariais
+
+
+
+SUMÁRIO EXECUTIVO
+
+
+  Os planos coletivos empresariais constituem o principal tipo de contratação da
+  saúde suplementar no Brasil, concentrando cerca de 71% dos vínculos e
+  aproximadamente 37 milhões de beneficiários com assistência médico hospitalar
+  em 2024.
+
+  Entre 2020 e 2024, o número de empresas contratantes cresceu 48%, enquanto
+  o número de beneficiários aumentou 17%. Como resultado, a razão média de
+  beneficiários por contratante reduziu-se de 20 para 16 no período,
+  evidenciando a redução da escala média dos contratos e o desacoplamento entre
+  a expansão contratual e a expansão da cobertura assistencial.
+
+  A ampliação da base contratual concentrou se em empresas de pequeno porte,
+  especialmente aquelas com até quatro titulares, ao passo que a maior parte dos
+  beneficiários permaneceu vinculada a grandes contratantes, responsáveis por
+  cerca de 40% das vidas cobertas.
+
+  Nos recortes setorial e de abrangência geográfica, observou se crescimento mais
+  intenso do número de contratantes em segmentos mais pulverizados e em
+  contratos de cobertura territorial mais restrita, sem alterações relevantes na
+  distribuição dos beneficiários, que permaneceu concentrada em contratos de
+  maior escala.
+
+  Houve recomposição do perfil dos contratos, com maior difusão de mecanismos
+  de compartilhamento de custos, especialmente a coparticipação, movimento
+  mais pronunciado na base de contratantes do que na cobertura assistencial.
+
+  Em conjunto, os resultados indicam que o período foi marcado por ampliação da
+  capilaridade contratual, com continuidade estrutural na organização da
+  cobertura dos planos coletivos empresariais no Brasil.
+
+
+
+
+                                                                                                                           2
+                                            TD nº 118 - 2026 - Evolução dos Contratantes e Beneficiários de Planos Coletivos Empresariais
+
+
+
+INTRODUÇÃO
+
+
+  Os planos coletivos empresariais constituem o principal eixo da saúde suplementar
+no Brasil, tanto em número de beneficiários quanto em capilaridade contratual. Essa
+modalidade, vinculada à relação formal de trabalho, conecta diretamente a dinâmica
+do mercado de trabalho ao acesso à assistência médico hospitalar privada, tornando
+se sensível a ciclos econômicos, transformações produtivas e mudanças no perfil das
+empresas.
+
+   Ao longo das últimas décadas, essa centralidade não apenas se manteve, como se
+consolidou. Em 2024, os planos coletivos empresariais respondiam por
+aproximadamente 71% dos vínculos em planos médico hospitalares, abrangendo
+cerca de 37 milhões de beneficiários, o que evidencia o peso estrutural deste tipo de
+contratação empresarial na organização do sistema de saúde suplementar brasileiro.
+
+   Em julho de 2025, a Agência Nacional de Saúde Suplementar (ANS) publicou o
+“Painel de Contratantes de Planos de Saúde Coletivos” [1]. A disponibilização dessa
+ferramenta possibilitou análises mais detalhadas da base contratual e da distribuição
+da cobertura assistencial, fortalecendo o acompanhamento da saúde suplementar
+empresarial.
+
+  O Texto para Discussão (TD) 111 do IESS [2] utilizou esse avanço informacional para
+caracterizar a estrutura dos contratantes de planos coletivos empresariais,
+evidenciando a coexistência entre elevada pulverização da base contratual e forte
+concentração da cobertura assistencial. Os resultados indicaram que em 2024,
+embora a maioria dos contratos esteja associada a empresas de pequeno porte, a
+maior parte dos beneficiários permanece vinculada a grandes contratantes,
+configurando um padrão estrutural relevante do segmento.
+
+    Com base nesse conjunto de informações, este TD dará continuidade à agenda
+analítica iniciada no TD 111, examinando a evolução do número de contratantes e do
+número de beneficiários de planos coletivos empresariais de assistência médico
+hospitalar entre 2020 e 2024. O período analisado foi marcado pela pandemia de
+Covid 19, pela retração e posterior recuperação do emprego formal e por ajustes
+relevantes no ambiente econômico.
+
+
+
+
+[1] Disponível em: https://www.gov.br/ans/pt-br/assuntos/contratante/painel-dos-contratantes
+[2] Disponívem em: https://iess.org.br/biblioteca/tds-e-estudos/textos-para-discussao/td-111-estrutura-e-dinamica-dos-
+contratantes-de
+
+
+
+                                                                                                                                            3
+                                           TD nº 118 - 2026 - Evolução dos Contratantes e Beneficiários de Planos Coletivos Empresariais
+
+
+
+     Ao examinar separadamente a trajetória dos contratantes e dos beneficiários
+segundo porte da empresa, setor econômico, abrangência geográfica e presença de
+fatores moderadores, o estudo busca identificar se os movimentos observados
+refletem transformações estruturais na organização da saúde suplementar
+empresarial ou se indicam, predominantemente, processos de recomposição e
+continuidade do padrão identificado anteriormente. O foco da análise está na relação
+entre capilaridade contratual e concentração assistencial, elemento central para o
+acompanhamento da evolução da saúde suplementar no Brasil.
+
+
+METODOLOGIA
+
+
+   Este estudo utiliza dados públicos extraídos em fevereiro de 2026 do “Painel de
+Contratantes de Planos de Saúde Coletivos”, disponibilizado pela ANS. A base
+contempla vínculos ativos de beneficiários de planos médico hospitalares do tipo
+coletivo empresarial, contratados diretamente por empresas com Cadastro Nacional
+da Pessoa Jurídica ativo junto à Receita Federal do Brasil.
+
+  As informações são originadas do Sistema de Informações de Beneficiários (SIB) da
+ANS, alimentado mensalmente pelas operadoras de planos de saúde. Foram
+considerados apenas registros associados a CNPJ válidos e identificáveis, com
+correspondência nas bases da Receita Federal. Vínculos com identificação inválida ou
+não identificável foram desconsiderados [3].
+
+
+
+
+[3] Contratantes registrados em outros cadastros administrativos, como Cadastro Específico do INSS ou Cadastro de Atividade
+Econômica da Pessoa Física, não foram incluídos na análise, uma vez que representam parcela residual da base de
+beneficiários, inferior a 0,3%, conforme documentação metodológica da ANS.
+
+
+
+                                                                                                                                           4
+                                 TD nº 118 - 2026 - Evolução dos Contratantes e Beneficiários de Planos Coletivos Empresariais
+
+
+
+RESULTADOS
+
+
+EVOLUÇÃO DO NÚMERO DE CONTRATANTES DE PLANOS COLETIVOS
+EMPRESARIAIS
+
+   A análise da evolução dos planos coletivos empresariais requer a observação
+conjunta de dois movimentos distintos e complementares: a trajetória do número de
+empresas contratantes e a evolução do número de beneficiários vinculados a esses
+contratos. Enquanto o primeiro reflete a dinâmica da base empresarial e a difusão da
+contratação, o segundo expressa a escala da cobertura assistencial e o peso relativo
+dos diferentes perfis de contratantes.
+
+    Entre 2020 e 2024, o número de empresas contratantes de planos coletivos
+empresariais cresceu 48,1%, passando de 1,6 milhão para 2,3 milhões (Gráfico 1). No
+mesmo período, o número de beneficiários cresceu 17,1%, de 32,0 milhões para 37,4
+milhões (Gráfico 2), em ritmo inferior ao observado para os contratantes. Como
+resultado, a razão média de beneficiários por contratante reduziu-se de
+aproximadamente 20 em 2020 para 16 em 2024. Esse comportamento indica um
+desacoplamento entre a expansão contratual e a expansão da cobertura assistencial,
+aspectos que serão analisados a seguir.
+
+
+  Gráficos 1 e 2. Evolução do número de contratantes e de beneficiários de
+  planos coletivos empresariais de assistência médico hospitalar, em milhões,
+  e variação percentual entre 2020 e 2024. Brasil, 2020 a 2024.
+
+
+
+
+                Fonte: ANS. Painel de Contratantes de Planos de Saúde Coletivos.
+                           Elaborado pelo IESS em fevereiro de 2026.
+
+
+
+
+                                                                                                                                 5
+                             TD nº 118 - 2026 - Evolução dos Contratantes e Beneficiários de Planos Coletivos Empresariais
+
+
+
+   ANÁLISE DA EVOLUÇÃO POR PORTE DA EMPRESA
+
+
+  Entre 2020 e 2024, a expansão do número de empresas contratantes de planos
+coletivos empresariais ocorreu de forma desigual entre os diferentes portes, com
+predominância das empresas de menor escala. As empresas com até 4 titulares
+concentraram a maior parte do crescimento da base contratual, passando de cerca de
+1,3 milhão de contratantes em 2020 para pouco mais de 2,0 milhões em 2024
+(crescimento de 55,1%). Esse movimento resultou no aumento de sua participação no
+total de contratantes de 83,7% para 87,6% no período (Gráfico 3).
+
+  Em contraste, os portes intermediários perderam participação relativa. As empresas
+com 5 a 9 titulares mantiveram número de contratos relativamente estável, em torno
+de 110 mil, enquanto aquelas com 10 a 19 titulares passaram de aproximadamente 60
+mil para 66 mil contratantes entre 2020 e 2024. Apesar do crescimento absoluto,
+esses grupos reduziram sua participação na base contratual, indicando que a
+expansão não se distribuiu de forma homogênea entre os portes empresariais.
+
+   Nos portes mais elevados, o número de contratantes cresceu a taxas superiores a
+20,0%, mas permaneceu limitado em termos absolutos. Em 2024, as empresas com
+250 ou mais titulares somavam cerca de 11,6 mil contratantes, mantendo participação
+residual no total de contratos.
+
+   A evolução do número de beneficiários apresentou dinâmica distinta. Entre 2020 e
+2024, o total de beneficiários cresceu de aproximadamente 32,0 milhões para 37,4
+milhões, com concentração persistente nos grandes contratos. As empresas com
+1.000 ou mais titulares reuniam cerca de 13,1 milhões de beneficiários em 2020,
+número que chegou a 15,3 milhões em 2024 (crescimento de 16,6%), mantendo
+participação próxima de 40,0% ao longo de todo o período (Gráfico 4).
+
+   Entre as empresas com até 4 titulares, o número de beneficiários aumentou de
+cerca de 4,6 milhões para 6,5 milhões (crescimento de 41,8%), elevando sua
+participação relativa na cobertura assistencial de 14,2% para 17,2% no período
+(Gráfico 4). Apesar desse avanço, esse grupo permaneceu responsável por parcela
+limitada do total de vidas, refletindo a baixa densidade média de beneficiários por
+contrato.
+
+
+
+
+                                                                                                                             6
+                                       TD nº 118 - 2026 - Evolução dos Contratantes e Beneficiários de Planos Coletivos Empresariais
+
+
+
+  Em síntese, a análise por porte da empresa indica que a expansão dos planos
+coletivos empresariais ocorreu predominantemente por meio da ampliação do
+número de contratos de pequeno porte. Apesar do crescimento relativo da
+participação dos beneficiários vinculados a empresas menores, a cobertura
+assistencial permaneceu fortemente concentrada nas grandes empresas, preservando
+a hierarquia existente na distribuição das vidas cobertas.
+
+
+Gráficos 3 e 4. Distribuição proporcional dos contratantes e dos beneficiários de
+planos coletivos empresariais de assistência médico hospitalar, segundo porte da
+empresa. Brasil, 2020 a 2024.
+
+
+
+
+Fonte: ANS. Painel de Contratantes de Planos de Saúde Coletivos. Elaborado pelo IESS em fevereiro de 2026.
+
+
+
+
+                                                                                                                                       7
+                             TD nº 118 - 2026 - Evolução dos Contratantes e Beneficiários de Planos Coletivos Empresariais
+
+
+
+   ANÁLISE DA EVOLUÇÃO POR SETOR ECONÔMICO
+
+
+  A análise setorial da evolução dos planos coletivos empresariais entre 2020 e 2024
+indica que o crescimento foi mais intenso em setores caracterizados por elevada
+pulverização empresarial. Em “Educação, saúde e serviços sociais”, o número de
+contratantes passou de aproximadamente 137 mil para 237 mil (+72,4%), enquanto
+em “Atividades administrativas” o contingente cresceu de cerca de 145 mil para 237
+mil (+63,6%). O setor de “Outras atividades” também apresentou expansão relevante,
+passando de aproximadamente 452 mil contratantes em 2020 para 716 mil em 2024
+(+58,2%). Esses setores ampliaram sua participação relativa na base contratual ao
+longo do período.
+
+  Em contraste, setores de maior escala produtiva apresentaram perda relativa de
+participação, apesar do crescimento absoluto. O setor de “Comércio e reparação”
+aumentou o número de contratantes de cerca de 502 mil para 661 mil (+31,7%), mas
+reduziu sua participação na base total de 32,1% para 28,6% (Gráfico 5).
+Comportamento semelhante foi observado na “Indústria”, cujo número de
+contratantes passou de aproximadamente 214 mil para 301 mil (+41,1%), com leve
+recuo de participação relativa. Esses movimentos indicam redistribuição marginal da
+base contratual em favor de setores mais pulverizados.
+
+  A evolução do número de beneficiários apresentou dinâmica distinta. Entre 2020 e
+2024, o total de beneficiários cresceu de cerca de 32,0 milhões para 37,4 milhões
+(+17,1%), com variações limitadas na composição setorial. A “Indústria” manteve-se
+como principal concentradora da cobertura assistencial, passando de
+aproximadamente 9,6 milhões de beneficiários em 2020 para 10,9 milhões em 2024
+(+13,4%), preservando participação próxima de 29,0% ao final do período (Gráfico 6).
+
+  O setor de “Outras atividades” ampliou o número de beneficiários de cerca de 5,1
+milhões para 6,4 milhões (25,3%), com ganho moderado de participação relativa,
+enquanto “Comércio e reparação” passou de aproximadamente 5,1 milhões para 5,7
+milhões (+11,7%), com leve redução proporcional. A Administração pública apresentou
+crescimento expressivo do número de beneficiários, de cerca de 1,9 milhão para 2,6
+milhões (+38,4%), elevando sua participação na cobertura, embora permaneça com
+peso limitado na base contratual.
+
+
+
+
+                                                                                                                             8
+                                       TD nº 118 - 2026 - Evolução dos Contratantes e Beneficiários de Planos Coletivos Empresariais
+
+
+
+   Em síntese, a análise setorial sugere que a expansão dos planos coletivos
+empresariais entre 2020 e 2024 foi impulsionada principalmente pela entrada de
+novos contratantes em setores caracterizados por maior pulverização empresarial.
+Embora tenham ocorrido deslocamentos marginais na participação relativa dos
+setores, a distribuição dos beneficiários manteve-se concentrada nos segmentos de
+maior escala produtiva, sem reconfiguração relevante do padrão setorial da cobertura
+assistencial.
+
+Gráficos 5 e 6. Distribuição proporcional dos contratantes e dos beneficiários de
+planos coletivos empresariais de assistência médico hospitalar, segundo setor
+econômico da empresa. Brasil, 2020 a 2024.
+
+
+
+
+Fonte: ANS. Painel de Contratantes de Planos de Saúde Coletivos. Elaborado pelo IESS em fevereiro de 2026.
+
+
+
+
+                                                                                                                                       9
+                              TD nº 118 - 2026 - Evolução dos Contratantes e Beneficiários de Planos Coletivos Empresariais
+
+
+
+   ANÁLISE DA EVOLUÇÃO POR ABRANGÊNCIA GEOGRÁFICA
+
+
+  A análise da abrangência geográfica dos planos coletivos empresariais entre 2020 e
+2024 evidencia que houve crescimento principalmente em contratos com abrangência
+territorial mais restrita. Os contratos de “grupo de municípios” passaram de
+aproximadamente 757 mil contratantes em 2020 para 1,2 milhão em 2024
+(crescimento de 58,9%), elevando sua participação de 45,2% para 49,1% do total de
+contratantes (Gráfico 7) e consolidando se como a principal forma de contratação em
+termos numéricos. Os contratos municipais também apresentaram expansão
+relevante, passando de cerca de 90 mil para 147 mil contratantes (+63,0%), com
+aumento de participação de 5,4% para 6,0% (Gráfico 7).
+
+  Os contratos de abrangência “estadual” cresceram de aproximadamente 92 mil para
+157 mil contratantes (+71,5%), ampliando sua participação relativa na base contratual.
+Em contraste, os contratos de “grupo de estados” apresentaram redução do número
+de contratantes, passando de cerca de 68 mil para 67 mil (-1,4%), com perda de
+participação relativa de 4,0% para 2,7% (Gráfico 7). Já os contratos de abrangência
+“nacional” cresceram em termos absolutos, de aproximadamente 667 mil para 878 mil
+contratantes (31,6%), mas perderam participação na base total.
+
+    A evolução do número de beneficiários apresentou comportamento mais estável.
+Entre 2020 e 2024, os contratos de abrangência “nacional” mantiveram a maior
+parcela da cobertura assistencial, reunindo aproximadamente 16,9 milhões de
+beneficiários em 2024, o que corresponde a 45,2% do total (Gráfico 8), proporção
+ligeiramente inferior à observada em 2020 (46,1%).
+
+   Os contratos de “grupo de municípios” ampliaram o número de beneficiários de
+aproximadamente 12,3 milhões para 14,2 milhões (+15,5%), mantendo participação
+próxima de 38,0% ao longo do período (Gráfico 8). Os contratos “estaduais” cresceram
+de cerca de 1,9 milhão para 2,5 milhões (31,5%), elevando sua participação de 6,0%
+para 6,8%, enquanto os contratos “municipais” passaram de aproximadamente 1,2
+milhão para 1,5 milhão (26,5%), com aumento de participação de 3,7% para 4,0%
+(Gráfico 8).
+
+
+
+
+                                                                                                                              10
+                                       TD nº 118 - 2026 - Evolução dos Contratantes e Beneficiários de Planos Coletivos Empresariais
+
+
+
+  Em síntese, os resultados por abrangência geográfica indicam que o crescimento da
+base contratual ocorreu sobretudo por meio de contratos com cobertura territorial
+mais restrita. Ainda assim, a maior parte da cobertura assistencial continuou
+associada a contratos de maior escala geográfica, especialmente os de abrangência
+nacional, mantendo-se inalterada a ordenação relativa entre as diferentes
+modalidades de cobertura territorial.
+
+
+Gráficos 7 e 8. Distribuição proporcional dos contratantes e dos beneficiários de
+planos coletivos empresariais de assistência médico hospitalar, segundo
+abrangência geográfica. Brasil, 2020 a 2024.
+
+
+
+
+Fonte: ANS. Painel de Contratantes de Planos de Saúde Coletivos. Elaborado pelo IESS em fevereiro de 2026.
+
+
+
+
+                                                                                                                                       11
+                              TD nº 118 - 2026 - Evolução dos Contratantes e Beneficiários de Planos Coletivos Empresariais
+
+
+
+   ANÁLISE DA EVOLUÇÃO POR FATOR MODERADOR
+
+
+  A análise da evolução dos planos coletivos empresariais por fator moderador entre
+2020 e 2024 evidencia que o crescimento foi fortemente impulsionado pelos contratos
+com “coparticipação”, que passaram de cerca de 551 mil contratantes em 2020 para
+1,1 milhão em 2024 (crescimento de 100,7%). Como resultado, sua participação na
+base contratual ampliou de 33,8% para 46,0% (Gráfico 9), tornando se praticamente
+equivalente à dos contratos sem fator moderador.
+
+  Em contraste, os contratos “sem fator moderador” (ou “ausente”) cresceram de
+forma mais limitada, passando de aproximadamente 1,0 milhão para 1,2 milhão de
+contratantes no período (+15,8%). Essa dinâmica resultou em perda expressiva de
+participação relativa, de 61,9% em 2020 para 48,5% em 2024 (Gráfico 9). Os contratos
+que combinam “franquia e coparticipação” também apresentaram expansão
+relevante, dobrando em número de contratantes (+100,5%) e ampliando sua
+participação de 3,5% para 4,7% (Gráfico 9), embora permaneçam minoritários. Já os
+contratos com “franquia” isolada mantiveram participação residual, próxima de 0,8%
+ao longo de todo o período.
+
+   A evolução do número de beneficiários seguiu padrão semelhante, porém com
+menor intensidade. Entre 2020 e 2024, os beneficiários vinculados a planos com
+“coparticipação” aumentaram de aproximadamente 18,0 milhões para 23,1 milhões
+(+27,9%), elevando sua participação relativa de 56,5% para 61,7% do total (Gráfico 10).
+
+   Por outro lado, os beneficiários de planos “sem fator moderador” permaneceram
+praticamente estáveis em termos absolutos, em torno de 11,7 milhões, com
+crescimento de apenas 0,2% no período. Como consequência, sua participação na
+cobertura total recuou de 36,5% para 31,2% (Gráfico 10). Os beneficiários vinculados a
+planos com “franquia” isolada mantiveram participação residual, próxima de 0,5%,
+enquanto aqueles em planos com “franquia e coparticipação” cresceram de cerca de
+2,1 milhões para 2,5 milhões (+19,5%), com leve aumento de participação para 6,7%
+em 2024 (Gráfico 10).
+
+
+
+
+                                                                                                                              12
+                                       TD nº 118 - 2026 - Evolução dos Contratantes e Beneficiários de Planos Coletivos Empresariais
+
+
+
+  Em síntese, a análise por fator moderador aponta para uma recomposição do perfil
+dos planos coletivos empresariais, marcada pela maior difusão de mecanismos de
+compartilhamento de custos, em especial a coparticipação. Esse movimento mostrou-
+se mais intenso na base de contratantes do que na distribuição dos beneficiários,
+indicando ajustes no desenho contratual sem mudanças estruturais na configuração
+geral da cobertura assistencial.
+
+
+Gráficos 9 e 10. Distribuição proporcional dos contratantes e dos beneficiários de
+planos coletivos empresariais de assistência médico hospitalar, segundo fator
+moderador. Brasil, 2020 a 2024.
+
+
+
+
+Fonte: ANS. Painel de Contratantes de Planos de Saúde Coletivos. Elaborado pelo IESS em fevereiro de 2026.
+
+
+
+
+                                                                                                                                       13
+                               TD nº 118 - 2026 - Evolução dos Contratantes e Beneficiários de Planos Coletivos Empresariais
+
+
+
+DISCUSSÃO
+
+
+  Os resultados indicam que a expansão dos planos coletivos empresariais entre 2020
+e 2024 ocorreu de forma assimétrica, com crescimento mais intenso do número de
+empresas contratantes do que do número de beneficiários. Esse padrão sugere
+ampliação da capilaridade contratual sem expansão proporcional da cobertura
+assistencial, característica que se manifesta de forma consistente nos diferentes
+recortes analisados. Esse movimento é consistente com a redução da densidade
+média contratual observada no período.
+
+   A predominância do crescimento entre empresas de pequeno porte, combinada à
+manutenção da maior parte dos beneficiários vinculada a grandes contratantes, indica
+que a incorporação de novos contratos ocorreu majoritariamente em bases de baixa
+escala média. Esse movimento não alterou o núcleo da cobertura assistencial, que
+permaneceu concentrado em empresas de maior porte, setores de maior escala
+produtiva e contratos de abrangência geográfica mais ampla.
+
+   Nos recortes setorial e territorial, observa se que a expansão da base contratual foi
+mais intensa em segmentos mais pulverizados e em contratos com cobertura
+geográfica mais restrita. Ainda assim, a distribuição dos beneficiários apresentou
+elevada estabilidade, reforçando a coexistência entre uma base contratual
+fragmentada e uma cobertura assistencial concentrada.
+
+   A maior difusão de contratos com mecanismos de compartilhamento de custos,
+especialmente a coparticipação, sugere ajustes no desenho dos produtos ofertados,
+mais evidentes na base de contratantes do que na distribuição dos beneficiários.
+Esses ajustes são compatíveis com estratégias de adaptação das empresas e das
+operadoras a contextos de maior restrição orçamentária, conforme o arcabouço
+regulatório vigente (ANS, 2018).
+
+     A interpretação dos resultados deve considerar que os dados do Sistema de
+Informações de Beneficiários registram vínculos contratuais, e não pessoas únicas,
+além de abrangerem um período marcado pelos efeitos da pandemia de Covid 19 e
+pela posterior recuperação do mercado de trabalho formal (ANS, 2025; IBGE, 2024).
+Ainda assim, os achados indicam que o período analisado foi marcado mais por
+processos de recomposição e difusão contratual do que por transformações
+estruturais na organização da saúde suplementar empresarial.
+
+
+
+
+                                                                                                                               14
+                              TD nº 118 - 2026 - Evolução dos Contratantes e Beneficiários de Planos Coletivos Empresariais
+
+
+
+CONCLUSÃO
+
+
+  Este Texto para Discussão analisou a evolução dos contratantes e dos beneficiários
+de planos coletivos empresariais de assistência médico hospitalar entre 2020 e 2024,
+a partir dos dados consolidados no Painel de Contratantes de Planos de Saúde
+Coletivos.
+
+  Os resultados mostram que a expansão observada no período ocorreu
+principalmente por meio do aumento do número de empresas contratantes,
+especialmente de pequeno porte, sem crescimento proporcional da cobertura
+assistencial. A estrutura geral da saúde suplementar empresarial manteve se
+relativamente estável, com concentração persistente dos beneficiários em grandes
+contratantes, setores de maior escala produtiva e contratos de abrangência geográfica
+mais ampla.
+
+  Ao evidenciar a coexistência entre pulverização de contratos e concentração de
+beneficiários, o estudo contribui para o acompanhamento da dinâmica recente dos
+planos coletivos empresariais no Brasil. O “Painel de Contratantes de Planos de Saúde
+Coletivos” constitui ferramenta relevante para o monitoramento contínuo dessas
+relações e para o aprofundamento de análises futuras sobre a estrutura da
+contratação empresarial na saúde suplementar.
+
+
+
+
+                                                                                                                              15
+                                                                                                                              2
+                              TD nº 118 - 2026 - Evolução dos Contratantes e Beneficiários de Planos Coletivos Empresariais
+
+
+
+REFERÊNCIAS
+
+
+Agência Nacional de Saúde Suplementar (ANS). Sistema de Informações de
+Beneficiários – Tabnet (SIB/ANS/MS - 12/2025). Dados extraídos em fevereiro de 2026.
+Disponível em: https://www.ans.gov.br/anstabnet/ .
+
+Agência Nacional de Saúde Suplementar (ANS). ANS divulga a 9ª edição do
+Panorama – Saúde Suplementar. Publicado em 16 de julho de 2025. Disponível em:
+https://www.gov.br/ans/pt-br/assuntos/noticias/numeros-do-setor/ans-divulga-a-9a-
+edicao-do-panorama-2013-saude-suplementar .
+
+Agência Nacional de Saúde Suplementar (ANS). Painel de Contratantes de Planos
+de Saúde Coletivos. Plataforma interativa em Power BI. Dados extraídos em fevereiro
+de          2026.        Disponível        em:        https://app.powerbi.com/view?
+r=eyJrIjoiYTljYjFjMTMtMzlhNi00MWY2LWFmZGMtODI4OTMzNzhlOTVkIiwidCI6IjlkYmE0
+ODBjLTRmYTctNDJmNC1iYmEzLTBmYjEzNzVmYmU1ZiJ9
+
+Instituto Brasileiro de Geografia e Estatística (IBGE). Taxa de desocupação cai a
+7,8% em 2023, menor patamar desde 2014. Rio de Janeiro: IBGE; 2024. Disponível em:
+https://agenciadenoticias.ibge.gov.br/agencia-noticias/2012-agencia-de-
+noticias/noticias/39022-taxa-de-desocupacao-cai-a-7-8-em-2023-menor-patamar-
+desde-2014
+
+Instituto de Estudos de Saúde Suplementar (IESS). Texto para Discussão nº 111 –
+Estrutura e dinâmica dos contratantes de planos coletivos empresariais de assistência
+médico-hospitalar      no    Brasil.  São    Paulo:   IESS;   2025.   Disponível   em:
+https://iess.org.br/biblioteca/tds-e-estudos/textos-para-discussao/td-111-estrutura-e-
+dinamica-dos-contratantes-de
+
+
+
+
+                                                                                                                              16
+contato@iess.org.br
+

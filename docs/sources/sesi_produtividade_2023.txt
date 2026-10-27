@@ -1,0 +1,1358 @@
+              RELATÓRIO
+ESTILO DE VIDA, SAÚDE E PRODUTIVIDADE
+DE TRABALHADORES DA INDÚSTRIA PRÉ E DURANTE PANDEMIA
+                    (2018 A 2021)
+
+
+
+
+                       Brasília
+                        2023
+              RELATÓRIO
+ESTILO DE VIDA, SAÚDE E PRODUTIVIDADE
+DE TRABALHADORES DA INDÚSTRIA PRÉ E DURANTE PANDEMIA
+                    (2018 A 2021)
+CONFEDERAÇÃO NACIONAL DA INDÚSTRIA – CNI
+Robson Braga de Andrade
+Presidente
+
+Gabinete da Presidência
+Teodomiro Braga da Silva
+Chefe do Gabinete - Diretor
+
+Diretoria de Educação e Tecnologia - DIRET
+Rafael Esmeraldo Lucchesi Ramacciotti
+Diretor de Educação e Tecnologia
+
+Serviço Social da Indústria - SESI
+Eduardo Eugenio Gouvêa Vieira
+Presidente do Conselho Nacional
+
+SESI – Departamento Nacional
+Robson Braga de Andrade
+Diretor
+
+Rafael Esmeraldo Lucchesi Ramacciotti
+Diretor-Superintendente
+
+Paulo Mól Júnior
+Diretor de Operações
+
+Serviço Nacional de Aprendizagem Industrial - SENAI
+Robson Braga de Andrade
+Presidente do Conselho Nacional
+
+SENAI – Departamento Nacional
+Rafael Esmeraldo Lucchesi Ramacciotti
+Diretor-Geral
+
+Julio Sergio de Maya Pedrosa Moreira
+Diretor-Adjunto
+
+Gustavo Leal Sales Filho
+Diretor de Operações
+
+Instituto Euvaldo Lodi – IEL
+Robson Braga de Andrade
+Presidente do Conselho Superior
+
+IEL – Núcleo Central
+Paulo Afonso Ferreira
+Diretor-Geral
+
+Eduardo Vaz da Costa Junior
+Superintendente
+              RELATÓRIO
+ESTILO DE VIDA, SAÚDE E PRODUTIVIDADE
+DE TRABALHADORES DA INDÚSTRIA PRÉ E DURANTE PANDEMIA
+                    (2018 A 2021)
+
+
+
+
+                       Brasília
+                        2023
+© 2023. SESI – Departamento Nacional
+Qualquer parte desta obra poderá ser reproduzida, desde que citada a fonte.
+
+
+SESI/DN
+Gerência Executiva de Saúde e Segurança na Indústria
+
+
+
+
+                                            FICHA CATALOGRÁFICA
+
+
+  S491r
+
+      Serviço Social da Indústria. Departamento Nacional.
+          Relatório estilo de vida, saúde e produtividade de trabalhadores da in-
+      dústria pré e durante pandemia (2018 a 2021) / Serviço Social da Indús-
+      tria. – Brasília : SESI/DN, 2023.
+          50 p. : il.
+
+         1.Saúde e Segurança no Trabalho. 2. Estilo de Vida. 3. Produtividade.
+      4. Fatores Psicossociais. I. Título
+
+
+                                                                                    CDU: 614.8
+
+
+
+
+SESI
+Serviço Social da Indústria
+Departamento Nacional
+Sede                                      Serviço de Atendimento ao Cliente - SAC
+Setor Bancário Norte                      Tels.: (61) 3317-9989 / 3317-9992
+Quadra 1 – Bloco C                        sac@cni.com.br
+Edifício Roberto Simonsen
+70040-903 – Brasília – DF
+http://www.portaldaindustria.com.br/sesi/
+                                                          LISTA DE FIGURAS
+Figura 1 – Modelo de análise hierarquizada empregado para identificação de fatores associados e
+determinação das medidas de OR via regressão logística. .................................................................. 15
+Figura 2 - Proporção de trabalhadores(as) por número de condições/enfermidades. .......................... 22
+Figura 3 - Prevalência de condições/enfermidades em trabalhadores(as) da indústria. ...................... 23
+Figura 4 - Odds Ratio (intervalo de confiança 95%) de fatores associados a maior prevalência de
+duas ou mais condições/enfermidades em homens trabalhadores do setor industrial. ........................ 24
+Figura 5 - Odds Ratio (intervalo de confiança 95%) de fatores associados a maior prevalência de
+duas ou mais condições/enfermidades em mulheres trabalhadoras do setor industrial. ...................... 25
+Figura 6 - Prevalência de faltas ao trabalho por motivo de saúde em trabalhadores (as) do setor
+industrial. ............................................................................................................................................. 26
+Figura 7 - Odds Ratio (intervalo de confiança 95%) de fatores associados a 3+ dias de faltas ao
+trabalho por motivo de saúde em homens industriários....................................................................... 27
+Figura 8 - Odds Ratio (intervalo de confiança 95%) de fatores associados a 3+ dias de faltas ao
+trabalho por motivo de saúde em mulheres industriárias..................................................................... 28
+Figura 9 - Prevalência de dias que referiu falta de vontade de ir ao trabalho em trabalhadores (as) do
+setor industrial. ..................................................................................................................................... 29
+Figura 10 - Odds Ratio (intervalo de confiança 95%) de fatores associados a 3+ dias de faltas de
+vontade de ir ao trabalho em homens industriários. ............................................................................ 30
+Figura 11 - Odds Ratio (intervalo de confiança 95%) de fatores associados a 3+ dias de falta de
+vontade de ir ao trabalho em mulheres industriárias. .......................................................................... 31
+Figura 12 - Prevalência de dias que referiu falta de disposição (ânimo ou energia) em
+trabalhadores(as) do setor industrial. ................................................................................................... 32
+Figura 13 - Odds Ratio (intervalo de confiança 95%) de fatores associados a 3+ dias de falta de
+disposição em homens industriários. ................................................................................................... 33
+Figura 14 - Odds Ratio (intervalo de confiança 95%) de fatores associados a 3+ dias de falta de
+disposição em mulheres industriárias. ................................................................................................. 34
+Figura 15 - Prevalência de dias que referiu dificuldade para se concentrar no trabalho em
+trabalhadores (as) do setor industrial. .................................................................................................. 35
+Figura 16 - Odds Ratio (intervalo de confiança 95%) de fatores associados a 3+ dias de falta de
+concentração em homens industriários. ............................................................................................... 36
+Figura 17 - Odds Ratio (intervalo de confiança 95%) de fatores associados a 3+ dias de falta de
+concentração em mulheres industriárias. ............................................................................................. 37
+Figura 18 - Prevalência de dias que referiu dores/desconforto na realização de tarefas laborais em
+trabalhadores (as) do setor industrial. .................................................................................................. 38
+Figura 19 - Odds Ratio (intervalo de confiança 95%) de fatores associados a 3+ dias de
+dores/desconforto na realização de tarefas laborais em homens industriários. ................................... 39
+Figura 20 - Odds Ratio (intervalo de confiança 95%) de fatores associados a 3+ dias de
+dores/desconforto na realização de tarefas laborais em mulheres industriárias. ................................. 40
+Figura 21 - Redes multivariadas de variáveis demográficas, psicossociais e morbidades sobre a
+variável IGEV. ..................................................................................................................................... 44
+Figura 22 - Redes multivariadas das variáveis demográficas, psicossociais, comorbidades e estilo de
+vida sobre a variável IPRO. ................................................................................................................. 46
+Figura 23 - Redes multivariadas das variáveis demográficas, psicossociais, comorbidades, estilo de
+vida e produtividade sobre a variável IPST. ........................................................................................ 48
+                                                LISTA DE QUADROS
+Quadro 1 - Mapa de calor de fatores associados a indicadores de redução da produtividade (3+
+dias/últimos 30 dias) em homens industriários. ................................................................................... 41
+Quadro 2 - Mapa de calor de fatores associados a indicadores de redução da produtividade (3+
+dias/últimos 30 dias) em mulheres industriárias. ................................................................................. 41
+                                                        LISTA DE TABELAS
+
+Tabela 1 - Características demográficas dos trabalhadores avaliados no período pré-pandemia (2018-
+2019) e no período da pandemia (2020-2022). .................................................................................... 17
+Tabela 2 - Características do estilo de vida e fatores psicossociais em trabalhadores avaliados no
+período pré-pandemia (2018-2019) e no período da pandemia (2020-2022). ..................................... 18
+Tabela 3 - Características do estilo de vida e fatores psicossociais em homens trabalhadores
+avaliados no período pré-pandemia (2018-2019) e no período da pandemia (2020-2022). ................ 19
+Tabela 4 - Características do estilo de vida e fatores psicossociais em mulheres trabalhadoras
+avaliadas no período pré-pandemia (2018-2019) e no período da pandemia (2020-2022). ................ 19
+Tabela 5 - Fatores de redução da produtividade em trabalhadores avaliados no período pré-pandemia
+(2018-2019) e no período da pandemia (2020-2022). ......................................................................... 21
+Tabela 6 - Fatores de redução da produtividade em homens trabalhadores avaliados no período pré-
+pandemia (2018-2019) e no período da pandemia (2020-2022). ......................................................... 21
+Tabela 7 - Fatores de redução da produtividade em mulheres trabalhadoras avaliadas no período pré-
+pandemia (2018-2019) e no período da pandemia (2020-2022). ......................................................... 21
+Tabela 8 - Índice de centralidade das variáveis sociodemográficas, estresse e enfermidades sobre a
+variável IGEV. ..................................................................................................................................... 43
+Tabela 9 - Índice de centralidade das variáveis demográficas, psicossociais, comorbidades e estilo de
+vida sobre a variável IPRO. ................................................................................................................. 45
+Tabela 10 - Índice de centralidade de variáveis demográficas, psicossociais, comorbidades e estilo de
+vida sobre a variável IPST. .................................................................................................................. 47
+                                                               SUMÁRIO
+1 APRESENTAÇÃO ........................................................................................................................... 12
+2 PROCEDIMENTOS METODOLÓGICOS...................................................................................... 13
+3 RESULTADOS................................................................................................................................. 17
+   3.1 Estilo de Vida e Fatores Psicossociais ....................................................................................... 18
+   3.2 Fatores de Redução da Produtividade ........................................................................................ 19
+   3.3. Fatores Associados à Morbidade em Industriários ................................................................... 22
+   3.4 Fatores Associados a Indicadores de Produtividade .................................................................. 25
+   3.5 Análise de Redes ........................................................................................................................ 42
+4 CONSIDERAÇÕES FINAIS............................................................................................................ 49
+REFERÊNCIAS ................................................................................................................................... 50
+                                                                                                   12
+
+
+
+
+1 APRESENTAÇÃO
+A “avaliação e monitoramento” é a denominação para um importante macroprocesso na gestão da
+saúde e segurança no trabalho e o Serviço Social da Indústria vem realizando um esforço pioneiro
+em relação a isso. Desde 2010, vem implementando inovações incrementais em relação a este
+macroprocesso, apresentando novas metodologias avaliativas e propondo indicadores úteis ao
+monitoramento da saúde e segurança em trabalhadores do setor industrial. Este processo começou
+em 2010 com a utilização do SAEVP (Sistema de Avaliação em Estilo de Vida e Produtividade) em
+diversos Departamentos Regionais do SESI e teve continuidade, em 2018, com o desenvolvimento da
+Metodologia ASSTI (Avaliação de Saúde e Segurança em Trabalhadores da Indústria).
+A ideia em relação à utilização dessas metodologias é obter dados que permitam uma avaliação da
+força de trabalho de empresas do setor industrial, tornando possível um planejamento mais
+assertivo do atendimento em serviços e soluções em saúde e segurança. A integração de dados de
+empresas atendidas em diferentes estados brasileiros permite então que se possa monitorar ao
+longo do tempo a variação em indicadores de saúde e segurança no setor industrial. Isto é
+importante para que se possa estimar tendências temporais em relação a esses indicadores,
+propondo soluções estratégicas de enfrentamento para os principais problemas identificados.
+A nova metodologia avaliativa, denominada ASSTI, permite gerar inúmeros indicadores de saúde e
+segurança, além de três índices, o IGEV (Índice Geral de Estilo de Vida), o IPRO (Índice de
+Produtividade) e o IPST (Índice de Percepção de Segurança no Trabalho). Estes indicadores e índices
+são explorados nas análises de modo a gerar conhecimentos que possam apoiar a tomada de
+decisão e gerar novas ideias para análises secundárias e estudos setoriais de interesse do SESI e do
+setor industrial.
+Neste relatório, recorre-se à análise dos dados acumulados de 2018 a 2022 para cumprir três
+objetivos: (1) analisar a tendência temporal em indicadores de estilo de vida, fatores psicossociais e
+indicadores de produtividade; (2) identificar fatores associados à morbidade e a indicadores de
+produtividade; e, (3) analisar mediante estratégia de redes a relação entre variáveis e identificar
+quais delas deveriam ser foco de intervenções e desenvolvimento de soluções e produtos.
+                                      Serviço Social da Indústria
+                                       Departamento Nacional
+                              Gerência de Saúde e Segurança na Indústria
+                                                                                             13
+
+
+
+
+2 PROCEDIMENTOS METODOLÓGICOS
+
+Os dados para realização deste estudo foram obtidos pelas equipes técnicas de diferentes
+Departamentos Regionais, mediante utilização da Metodologia ASSTI. Os dados coletados
+foram utilizados para planejamento do atendimento às empresas industriais e reunidos em
+uma base de dados de modo a permitir a realização das análises propostas neste relatório.
+Importante destacar que os dados não foram coletados com o fim específico de realizar as
+análises aqui propostas, de modo que não se pode assegurar que as amostras obtidas sejam
+representativas da população de trabalhadores do setor industrial brasileiro. Além disso,
+somente dados de empresas atendidas pelo SESI (clientes) foram incluídos. Assim, sugere-se
+cautela na interpretação dos resultados, em especial, no sentido da extrapolação dos mesmos
+para toda a população de industriários.
+
+
+
+                        “Importante destacar que os dados não foram coletados com o fim
+                    específico de realizar as análises aqui propostas, de modo que não se pode
+                    assegurar que as amostras obtidas em cada ano sejam representativas da
+                            população de trabalhadores do setor industrial brasileiro”.
+
+
+
+
+Ressalvadas as questões relativas à representatividade dos dados, é importante destacar
+também que as amostras são suficientemente grandes para garantir precisão às estimativas
+apresentadas, sendo que a base reúne dados de mais de 120 mil trabalhadores. Tais dados
+foram coletados nos seguintes Departamentos Regionais: BA, CE, DF, ES, GO, MT, PA, PB, PE, PR,
+RS e SC.
+
+
+Do ponto de vista demográfico as características dos trabalhadores avaliados foram analisadas
+segundo gênero, faixa etária, escolaridade e situação conjugal. No tocante à descrição do estilo
+de vida foi possível efetuar comparações em relação aos seguintes indicadores: tabagismo
+[trabalhadores que referiram ser fumantes, independentemente da frequência e intensidade da
+exposição]; abuso de bebidas alcoólicas [relato de consumo de cinco ou mais doses numa
+mesma ocasião, nos últimos 30 dias]; baixa frequência de consumo de frutas ou hortaliças [não
+                                                                                              14
+
+
+
+
+referir consumo diário de frutas e de hortaliças]; consumo excessivo de refrigerantes ou sucos
+artificiais [referir consumo em quatro ou mais dias por semana]; inatividade física no lazer
+[referir que no tempo de lazer não participa de atividades físicas de intensidade moderada a
+vigorosa em nenhum dia da semana].
+
+Além disso, foi possível analisar também quatro fatores psicossociais: percepção de exposição a
+elevado nível de estresse [trabalhadores que referiram se sentirem “quase sempre estressado,
+enfrentando problemas com frequência” ou “sempre estressado, com dificuldade para enfrentar a
+vida diária”]; percepção negativa da qualidade do sono [respondentes que referiram que
+nunca/raramente dormem bem]; percepção negativa de saúde [respondentes que classificaram a
+saúde atual como regular, ruim ou muito ruim]; percepção negativa quanto aos relacionamentos
+interpessoais [avaliados que referiram como regular ou ruim a qualidade dos relacionamentos que
+mantém com outras pessoas].
+
+
+O relatório traz ainda o monitoramento de indicadores de produtividade, os quais são
+empregados para geração de um índice, denominado IPRO (índice de produtividade), a saber:
+faltas por motivos de saúde; falta de vontade de vir ao trabalho; falta de disposição (ânimo ou
+energia); dificuldade para se concentrar; e, dores/desconforto na realização de tarefas laborais.
+Estes indicadores foram construídos a partir de sugestões apresentadas na literatura
+especializada e da necessidade de utilização de medidas simples que permitam obtenção de
+informações concretas da realidade observada nas empresas. Similarmente, recorre-se a
+outros indicadores para geração de um índice de percepção de segurança no trabalho (o IPST)
+e de um índice geral de estilo de vida (o IGEV).
+
+
+Para realizar as análises de fatores associados à morbidade e indicadores de produtividade
+foram utilizados somente os dados coletados no período de 2018 a 2022, uma base construída
+a partir do uso da Metodologia ASSTI e que reúne dados de 123.355 trabalhadores. Essa
+mesma base foi empregada também para as análises de redes. Os índices supramencionados
+(IPRO, IPST e IGEV) são explorados somente nas análises de fatores associados e de redes.
+
+
+Na análise de fatores associados, recorreu-se à estratégia de regressão logística binária com
+controle para potenciais variáveis de confusão. Esta opção metodológica foi efetuada em face
+                                                                                                      15
+
+
+
+
+da maior facilidade de interpretação e comunicação dos achados e porque o tamanho amostral
+permitiria a realização das análises com suficiente poder estatístico. Na apresentação dos
+resultados são apresentados valores de Odds Ratio (OR), uma medida estimada de risco. Um
+valor de OR inferior a 1 indica que há menor chance de um determinado desfecho
+considerando uma dada exposição (ou condição); por sua vez, valores de OR superiores a 1
+indicam maior chance do desfecho sob análise. As análises foram orientadas e organizadas a
+partir de um modelo de análise hierarquizada contendo correlatos distais, intermediários e
+proximais dos desfechos sob análise (Figura 1).
+
+
+    Figura 1 – Modelo de análise hierarquizada empregado para identificação de fatores associados e
+                        determinação das medidas de OR via regressão logística.
+
+
+
+
+Fonte: Elaboração própria
+
+
+
+Para avaliar a relação entre as variáveis e evidenciar quais delas necessitam maior atenção em
+intervenções a serem realizadas (influência esperada) foi aplicada a estratégia de análise de
+redes. Este método de análise permite compreender um padrão emergente, observado em um
+sistema complexo com variáveis de diferentes naturezas que interagem de forma não linear,
+por meio de relações parciais. A sua aplicação no âmbito da saúde permite melhorar a
+qualidade da intervenção, a partir da definição das variáveis mais influentes na “rede”. Nessas
+análises foi empregado o algoritmo Fruchterman-Reingold a fim de que os resultados fossem
+                                                                                               16
+
+
+
+
+apresentados graficamente em um espaço relativo, no qual as variáveis que evidenciam
+associações mais fortes estão mais próximas e, as mais fracas, mais distantes ou se repelem
+(Fruchterman & Reingold, 1991; Jalelet al., 2021).
+
+
+O Critério de Informação Bayesiana Estendido (EBIC) foi utilizado para selecionar o Lambda do
+parâmetro de regularização. O EBIC usa um hiperparâmetro (y) que determina a esparsidade
+dos modelos (Foygel & Drton, 2010; Golino & Epskamp, 2017). A análise de rede usa
+algoritmos padronizados de redução absoluta e operador de seleção (LASSO) para obter a
+matriz de precisão (matriz de peso). Quando padronizada, essa matriz representa as
+correlações entre as variáveis da rede. A rede é apresentada em um gráfico que inclui as
+variáveis (nós) e as relações (linhas). A espessura e a intensidade das linhas representam a
+magnitude das associações. Os pequenos efeitos (sensibilidade às condições iniciais) em
+sistemas complexos são considerados fundamentais para este tipo de análise, portanto a
+decisão sobre a magnitude de associação entre as variáveis presentes no modelo parte de uma
+escolha teórica (Caldarelli, 2020). Por fim, de modo a verificar o nível de estabilidade da rede e
+indicadores de centralidade foi utilizada a técnica de bootstrap com 1000 interações,
+considerando ótimos valores iguais ou maiores que 0,5 (Epskamp et al., 2018).
+
+
+As análises de tendência e de fatores associados à morbidade e indicadores de produtividade
+foram realizadas mediante utilização do programa SPSS para Windows. As análises de redes
+foram realizadas mediante uso do programa JASP para IOs (versão 0.16) e os pacotes ggplot2,
+qgraph e bootnet do programa R Studio.
+                                                                                                   17
+
+
+
+
+3 RESULTADOS
+Neste relatório os resultados estão organizados em cinco seções distintas, iniciando com as
+análises descritivas de indicadores de estilo de vida, psicossociais e de produtividade. Segue-se
+a análise de fatores associados à morbidade e indicadores de produtividade, com estimação de
+medidas de razão de chances para as variáveis de maior importância. Por fim, apresentam-se
+as análises de redes, com simulação de alguns cenários que podem ser explorados a partir de
+indicadores e índices mais recentes obtidos a partir da utilização da Metodologia ASSTI.
+
+
+Nessas análises foram considerados dados de 123.355 trabalhadores, avaliados entre 2018 e
+2022. Para fins de comparação, os indicadores foram aferidos no período imediatamente
+anterior (2018 e 2019) e após início da pandemia (2020-2022) de Covid-19. As estimativas de
+prevalência são apresentadas para os dois períodos, com estratificação por sexo. A proporção
+de homens na amostra foi discretamente mais elevada entre os trabalhadores avaliados no
+período da pandemia (65%) em comparação àqueles avaliados no período pré-pandemia
+(63%). Ademais, observou-se que os trabalhadores avaliados na pandemia eram pouco mais
+velhos, mas com maior nível de escolaridade. Destaca-se que as diferenças observadas eram de
+pequena magnitude (Tabela 1).
+
+  Tabela 1 - Características demográficas dos trabalhadores avaliados no período pré-pandemia (2018-
+                              2019) e no período da pandemia (2020-2022).
+                                                                     Pré-pandemia Pandemia
+  Grupo       Variável
+                                                                      (2018-2019) (2020-2022)
+           Idade [40+ anos]                                              29,8%           31,5%
+           Estado civil [casado(a)/vivendo com parceiro(a)]              62,2%           61,8%
+  Todos
+           Escolaridade [ensino fundamental incompleto]                  11,0%           10,8%
+           Escolaridade [ensino superior completo]                       30,4%           32,1%
+           Idade [40+ anos]                                              30,7%           32,6%
+           Estado civil [casado(a)/vivendo com parceiro(a)]              63,0%           66,1%
+  Homens
+           Escolaridade [ensino fundamental incompleto]                  11,9%           12,9%
+           Escolaridade [ensino superior completo]                       24,7%           26,9%
+           Idade [40+ anos]                                              28,1%           29,4%
+           Estado civil [casado(a)/vivendo com parceiro(a)]              60,8%           54,0%
+  Mulheres
+           Escolaridade [ensino fundamental incompleto]                   9,5%            7,0%
+           Escolaridade [ensino superior completo]                       40,0%           41,4%
+Fonte: Elaboração Própria
+                                                                                                        18
+
+
+
+
+3.1 Estilo de Vida e Fatores Psicossociais
+
+
+Em relação ao estilo de vida e fatores psicossociais, a magnitude das diferenças foi pequena
+(<1,5 ponto percentual), sendo que em alguns indicadores as oscilações foram positivas (i.e.,
+tabagismo) e noutros foram negativas (i.e., percepção negativa quanto aos relacionamentos
+interpessoais). Sem dúvida, a variação mais importante foi o aumento na prevalência de
+trabalhadores expostos a abuso de bebidas alcoólicas, uma variação que foi demonstrada em
+muitos estudos realizados no período da pandemia. Na amostra como um todo a elevação na
+prevalência desta conduta de risco à saúde foi de aproximadamente seis pontos percentuais
+(Tabela 2) e foi ainda mais acentuada ao observar a variação somente entre as mulheres
+(Tabela 4).
+
+
+De modo consistente, verificou-se nos dois períodos que mulheres apresentaram maior
+prevalência de inatividade física no lazer, percepção negativa de saúde e percepção de
+exposição a elevado nível de estresse. Por outro lado, homens apresentaram maior prevalência
+de tabagismo, de abuso de bebidas alcoólicas e de baixa frequência de consumo de frutas e
+hortaliças.
+
+
+Tabela 2 - Características do estilo de vida e fatores psicossociais em trabalhadores avaliados no período
+                  pré-pandemia (2018-2019) e no período da pandemia (2020-2022).
+                                                                         Pré-
+  Variável                                                                                  Pandemia
+                                                                       pandemia
+  Tabagismo [fumantes]                                                   8,0%                 8,7%
+  Tabagismo [ex-fumantes]                                                9,3%                 8,8%
+  Abuso de bebidas alcoólicas [5+ doses/ocasião]                        35,4%                41,6%
+  Percepção de exposição a elevado nível de estresse                    15,6%                16,8%
+  Percepção negativa da qualidade do sono [nunca/raramente/às vezes]    35,1%                33,8%
+  Percepção negativa da qualidade do sono [nunca/raramente]              7,9%                 7,7%
+  Percepção negativa de saúde                                           21,0%                22,2%
+  Percepção negativa quanto aos relacionamentos interpessoais            8,7%                 7,2%
+  Baixa frequência de consumo de frutas ou hortaliças                   79,9%                81,1%
+  Consumo excessivo de refrigerantes ou sucos artificiais [diário+]     13,5%                12,7%
+  Consumo excessivo de refrigerantes ou sucos artificiais [4-6 v/sem+]  22,8%                23,0%
+  Inatividade física no lazer                                           43,3%                44,0%
+Fonte: Elaboração Própria
+                                                                                                        19
+
+
+
+
+Tabela 3 - Características do estilo de vida e fatores psicossociais em homens trabalhadores avaliados no
+              período pré-pandemia (2018-2019) e no período da pandemia (2020-2022).
+                                                                         Pré-
+  Variável                                                                                  Pandemia
+                                                                       pandemia
+  Tabagismo [fumantes]                                                   9,9%                 10,4%
+  Tabagismo [ex-fumantes]                                               11,0%                 10,6%
+  Abuso de bebidas alcoólicas [5+ doses/ocasião]                        40,0%                 44,4%
+  Percepção de exposição a elevado nível de estresse                    12,3%                 14,6%
+  Percepção negativa da qualidade do sono [nunca/raramente/às vezes]    35,1%                 32,1%
+  Percepção negativa da qualidade do sono [nunca/raramente]              7,3%                  7,1%
+  Percepção negativa de saúde                                           19,2%                 20,6%
+  Percepção negativa quanto aos relacionamentos interpessoais            8,5%                  7,2%
+  Baixa frequência de consumo de frutas ou hortaliças                   84,1%                 85,1%
+  Consumo excessivo de refrigerantes ou sucos artificiais [diário+]     14,8%                 12,7%
+  Consumo excessivo de refrigerantes ou sucos artificiais [4-6 v/sem+]  25,8%                 25,4%
+  Inatividade física no lazer                                           37,8%                 39,2%
+Fonte: Elaboração Própria
+
+
+Tabela 4 - Características do estilo de vida e fatores psicossociais em mulheres trabalhadoras avaliadas no
+               período pré-pandemia (2018-2019) e no período da pandemia (2020-2022).
+                                                                         Pré-
+  Variável                                                                                  Pandemia
+                                                                       pandemia
+  Tabagismo [fumantes]                                                   4,8%                  5,5%
+  Tabagismo [ex-fumantes]                                                6,4%                  5,4%
+  Abuso de bebidas alcoólicas [5+ doses/ocasião]                        27,4%                 36,6%
+  Percepção de exposição a elevado nível de estresse                    21,3%                 20,8%
+  Percepção negativa da qualidade do sono [nunca/raramente/às vezes]    35,1%                 36,9%
+  Percepção negativa da qualidade do sono [nunca/raramente]              8,9%                  8,7%
+  Percepção negativa de saúde                                           24,7%                 25,2%
+  Percepção negativa quanto aos relacionamentos interpessoais            8,9%                  7,2%
+  Baixa frequência de consumo de frutas ou hortaliças                   71,0%                 73,6%
+  Consumo excessivo de refrigerantes ou sucos artificiais [diário+]     11,2%                 12,6%
+  Consumo excessivo de refrigerantes ou sucos artificiais [4-6 v/sem+]  17,8%                 18,8%
+  Inatividade física no lazer                                           52,8%                 53,0%
+Fonte: Elaboração Própria
+
+
+
+
+3.2 Fatores de Redução da Produtividade
+
+
+Foram analisados cinco indicadores, um de faltas ao trabalho por motivo de saúde e outros
+quatro fatores associados à redução da produtividade: falta de vontade de vir ao trabalho; falta
+de disposição (ânimo ou energia); dificuldade para se concentrar; e, dores/desconforto na
+realização de tarefas laborais. As prevalências expressam o número de trabalhadores que
+                                                                                             20
+
+
+
+
+referiram estas faltas ou condições em um único dia ou em três ou mais dias, dos últimos 30
+dias.
+
+
+Após início da pandemia, a prevalência de “3+ dias de faltas por motivo de saúde nos últimos
+30 dias” apresentou discreto aumento, tanto em homens quanto em mulheres, o que era de se
+esperar. Todavia, é importante destacar que a magnitude do aumento foi de somente dois
+pontos percentuais, um pouco maior entre as mulheres (2,5 p.p.) em comparação ao observado
+entre os homens (1,7 p.p.). Em relação ao indicador “1+ dias de falta nos últimos 30 dias”, este
+permaneceu praticamente inalterado, com pequena oscilação.
+
+
+Em relação ao indicador “falta de vontade de trabalhar”, as prevalências sofreram discreta
+redução após a pandemia, o que pode parecer paradoxal. Uma das explicações para esse
+achado pode residir no fato de que as limitações impostas para controle da pandemia, como o
+distanciamento físico, podem ter contribuído para que os trabalhadores expressassem maior
+vontade de ir ao trabalho.
+
+
+Quanto ao indicador “falta de disposição (ânimo ou energia)” e “dificuldade para se concentrar”,
+as prevalências oscilaram discretamente no período, com variações inferiores a 1,5 ponto
+percentual, exceto entre as mulheres. Neste subgrupo, houve aumento na prevalência de
+trabalhadoras que referiram falta de disposição em 1+ dia dos últimos 30 dias, enquanto se
+observou declínio na prevalência daqueles que referiram falta de disposição em 3+ dias dos
+últimos 30 dias. Similarmente, notou-se aumento na prevalência de dificuldade de
+concentração em 1+ dia, ao mesmo tempo em que se registrou redução na prevalência
+daqueles que referiam essa condição em 3+ dias dos últimos 30 dias.
+
+
+Por fim, destaca-se o observado em relação à prevalência de dores/desconforto na realização
+de tarefas laborais, a qual se manteve praticamente inalterada, com pequena oscilação negativa.
+Os resultados estão sintetizados nas Tabelas 5, 6 e 7.
+                                                                                                      21
+
+
+
+
+  Tabela 5 - Fatores de redução da produtividade em trabalhadores avaliados no período pré-pandemia
+                           (2018-2019) e no período da pandemia (2020-2022).
+                                                                            Pré-
+  Variável                                                                          Pandemia
+                                                                          pandemia
+  Faltas por motivos de saúde [1+ d/sem]                                      19,6%     20,0%
+  Faltas por motivos de saúde [3+ d/sem]                                       4,5%      6,5%
+  Falta de vontade de vir ao trabalho [1+ d/sem]                              39,2%     37,7%
+  Falta de vontade de vir ao trabalho [3+ d/sem]                              12,4%     10,8%
+  Falta de disposição (ânimo ou energia) [1+ d/sem]                           49,2%     50,1%
+  Falta de disposição (ânimo ou energia) [3+ d/sem]                           13,4%     12,6%
+  Dificuldade para se concentrar [1+ d/sem]                                   43,7%     44,4%
+  Dificuldade para se concentrar [3+ d/sem]                                   12,3%     12,2%
+  Dores/desconforto na realização de tarefas [1+ d/sem]                       48,9%     47,4%
+  Dores/desconforto na realização de tarefas [3+ d/sem]                       16,8%     16,4%
+Fonte: Elaboração Própria
+
+
+   Tabela 6 - Fatores de redução da produtividade em homens trabalhadores avaliados no período pré-
+                      pandemia (2018-2019) e no período da pandemia (2020-2022).
+                                                                            Pré-
+  Variável                                                                          Pandemia
+                                                                          pandemia
+  Faltas por motivos de saúde [1+ d/sem]                                      17,2%     17,3%
+  Faltas por motivos de saúde [3+ d/sem]                                       4,1%      5,8%
+  Falta de vontade de vir ao trabalho [1+ d/sem]                              36,1%     33,2%
+  Falta de vontade de vir ao trabalho [3+ d/sem]                              10,9%      9,9%
+  Falta de disposição (ânimo ou energia) [1+ d/sem]                           42,8%     43,5%
+  Falta de disposição (ânimo ou energia) [3+ d/sem]                           10,9%     11,2%
+  Dificuldade para se concentrar [1+ d/sem]                                   38,7%     38,1%
+  Dificuldade para se concentrar [3+ d/sem]                                   10,6%     11,0%
+  Dores/desconforto na realização de tarefas [1+ d/sem]                       46,5%     45,2%
+  Dores/desconforto na realização de tarefas [3+ d/sem]                       15,2%     15,5%
+Fonte: Elaboração Própria
+
+
+  Tabela 7 - Fatores de redução da produtividade em mulheres trabalhadoras avaliadas no período pré-
+                      pandemia (2018-2019) e no período da pandemia (2020-2022).
+                                                                            Pré-
+  Variável                                                                              Pandemia
+                                                                          pandemia
+  Faltas por motivos de saúde [1+ d/sem]                                    23,9%        22,5%
+  Faltas por motivos de saúde [3+ d/sem]                                     5,2%         7,7%
+  Falta de vontade de vir ao trabalho [1+ d/sem]                            47,1%        45,9%
+  Falta de vontade de vir ao trabalho [3+ d/sem]                            15,0%        12,5%
+  Falta de disposição (ânimo ou energia) [1+ d/sem]                         59,4%        62,2%
+  Falta de disposição (ânimo ou energia) [3+ d/sem]                         17,3%        15,3%
+  Dificuldade para se concentrar [1+ d/sem]                                 52,3%        56,0%
+  Dificuldade para se concentrar [3+ d/sem]                                 15,4%        14,6%
+  Dores/desconforto na realização de tarefas [1+ d/sem]                     53,0%        51,5%
+  Dores/desconforto na realização de tarefas [3+ d/sem]                     19,5%        18,1%
+Fonte: Elaboração Própria
+                                                                                                 22
+
+
+
+
+3.3. Fatores Associados à Morbidade em Industriários
+
+Empregando o modelo de análise hierarquizada proposto nos procedimentos metodológicos
+(Figura 1), efetuou-se análise a fim de identificar fatores comportamentais (estilo de vida) e
+psicossociais associados a grau de morbidade em trabalhadores do setor industrial. Os
+trabalhadores foram classificados quanto ao Índice de Massa Corporal a fim de identificar
+aqueles com obesidade (IMC≥ 30 kg/m2) e outras setes condições foram referidas pelo próprio
+trabalhador (morbidade referida), com medidas similares às que são usadas em inquéritos
+epidemiológicos       (Pesquisa   Nacional     de    Saúde,    VIGITEL,     dentre    outras).   As
+condições/enfermidades foram: hipertensão, diabetes, hipercolesterolemia, AVC ou derrame,
+artrite ou reumatismo, asma ou bronquite asmática e depressão.
+
+
+O número de trabalhadores que não referiram condições/enfermidades foi maior entre os
+homens em comparação à mulheres (49% versus 38%). Verificou-se também que a proporção
+de trabalhadores com três ou mais condições/enfermidades foi de 12% entre mulheres e de
+somente 9% entre os homens, conforme ilustrado na Figura 2. Entre os homens, a
+condição/enfermidade com maior prevalência foi a hipertensão (19,4%), seguida pela
+obesidade com 19,2%, enquanto entre as mulheres a depressão foi mais prevalente, seguida
+por obesidade e hipercolesterolemia (Figura 3).
+
+
+           Figura 2 - Proporção de trabalhadores(as) por número de condições/enfermidades.
+
+
+
+
+Fonte: SESI, ASSTI (2018-2022).
+                                                                                                23
+
+
+
+
+          Figura 3 - Prevalência de condições/enfermidades em trabalhadores(as) da indústria.
+
+
+
+
+Fonte: SESI, ASSTI (2018-2022).
+
+
+
+Tanto entre os homens quanto entre as mulheres foram identificados oito fatores associados a
+maior morbidade, conforme ilustrado nas Figuras 4 e 5. Os fatores com maior com maior
+influência no aumento da probabilidade de o(a) trabalhador(a) apresentar duas ou mais
+condições/enfermidades foram a percepção de exposição a elevado nível de estresse e a
+percepção negativa de saúde. Insatisfação com as condições de trabalho e excessivo tempo de
+TV foram fatores associados à morbidade em homens, mas não entre as mulheres. Por outro
+lado, tabagismo, abuso de bebidas alcoólicas e pensamentos negativos e pessimistas foram
+fatores que discriminaram o risco de morbidade em mulheres, mas não entre os homens.
+                                                                                                      24
+
+
+
+
+ Figura 4 - Odds Ratio (intervalo de confiança 95%) de fatores associados a maior prevalência de duas ou
+               mais condições/enfermidades em homens trabalhadores do setor industrial.
+
+
+
+
+Fonte: SESI, ASSTI (2018-2022).
+                                                                                                      25
+
+
+
+
+ Figura 5 - Odds Ratio (intervalo de confiança 95%) de fatores associados a maior prevalência de duas ou
+              mais condições/enfermidades em mulheres trabalhadoras do setor industrial.
+
+
+
+
+Fonte: SESI, ASSTI (2018-2022).
+
+
+
+3.4 Fatores Associados a Indicadores de Produtividade
+
+
+Procurou-se também identificar fatores associados a redução da produtividade, a qual foi
+expressa nesse estudo por indicadores de faltas por motivos de saúde e presenteísmo (falta de
+vontade de ir ao trabalho, falta de disposição [ânimo ou energia], dificuldade para se
+concentrar e dores/desconforto na realização de tarefas laborais). Por isso, recorreu-se
+inicialmente a análise descritiva dos referidos indicadores, os quais foram gerados a partir de
+avaliações de industriários realizadas no período de 2018 a 2022, sendo estes os dados mais
+recentes disponíveis para desenvolvimento do presente estudo.
+
+
+Faltas por motivos de saúde
+                                                                                                        26
+
+
+
+
+Aproximadamente um em cada cinco homens e uma em cada quatro mulheres referiu que
+precisou faltar ao trabalho por motivo de saúde em, pelo menos, um dia ao longo dos últimos
+30 dias (Figura 6). A proporção de trabalhadores(as) que referiu ter faltado mais de três dias
+nos últimos 30 dias foi de 5,2% entre os homens e 6,5% entre as mulheres.
+
+Figura 6 - Prevalência de faltas ao trabalho por motivo de saúde em trabalhadores (as) do setor industrial.
+
+
+
+
+Fonte: SESI, ASSTI (2018-2022).
+
+
+
+Tanto entre os homens quanto entre as mulheres foram identificados como fatores associados
+a três ou mais dias de falta ao trabalho a percepção negativa de saúde, a insatisfação com as
+condições de trabalho, a dificuldade de relaxar e usufruir do tempo de lazer, os
+                                                                                                        27
+
+
+
+
+relacionamentos interpessoais de baixa qualidade e o excessivo tempo de TV (comportamento
+sedentário. Todavia, é importante ressaltar que, entre as mulheres, os fatores com maior
+influência no aumento da probabilidade de o(a) trabalhador(a) apresentar três ou mais faltas
+foram os relacionamentos interpessoais de baixa qualidade e o excessivo tempo de TV (Figura
+8). Entre os homens, a insatisfação com as condições de trabalho e os relacionamentos
+interpessoais de baixa qualidade foram fatores que discriminaram o risco de faltas ao trabalho.
+
+
+ Figura 7 - Odds Ratio (intervalo de confiança 95%) de fatores associados a 3+ dias de faltas ao trabalho
+                              por motivo de saúde em homens industriários.
+
+
+
+
+Fonte: SESI, ASSTI (2018-2022).
+                                                                                                        28
+
+
+
+
+ Figura 8 - Odds Ratio (intervalo de confiança 95%) de fatores associados a 3+ dias de faltas ao trabalho
+                             por motivo de saúde em mulheres industriárias.
+
+
+
+
+Fonte: SESI, ASSTI (2018-2022).
+
+
+
+Falta de vontade de ir ao trabalho
+Aproximadamente um em cada três homens e uma em cada duas mulheres referiu que não
+sentiu vontade de ir ao trabalho em, pelo menos, um dia ao longo dos últimos 30 dias (Figura
+9). A proporção de trabalhadores(as) que referiu falta de vontade de ir ao trabalho em mais de
+três dias nos últimos 30 dias foi de 10,9% entre os homens e 14,4% entre as mulheres.
+                                                                                                           29
+
+
+
+
+  Figura 9 - Prevalência de dias que referiu falta de vontade de ir ao trabalho em trabalhadores (as) do
+                                              setor industrial.
+
+
+
+
+Fonte: SESI, ASSTI (2018-2022).
+
+
+
+Tanto em homens quanto em mulheres, sete variáveis foram identificadas como fatores
+associados à falta de vontade de ir ao trabalho em três ou mais dias, nos últimos 30 dias, a
+saber: (1) insatisfação com as condições de trabalho; (2) relacionamentos interpessoais de
+baixa qualidade; (3) percepção de exposição a elevado nível de estresse; (4) percepção
+negativa da qualidade do sono; (5) excessivo tempo de TV; (6) elevado consumo de sal; e, (7)
+abuso de bebidas alcoólicas. Entre os homens, outros fatores identificados foram a dificuldade
+de relaxar e usufruir do tempo de lazer, o consumo excessivo de refrigerantes ou sucos
+                                                                                                       30
+
+
+
+
+artificiais e o tabagismo (Figura 10). Entre as mulheres, observou-se ainda que baixa
+frequência de consumo de frutas ou hortaliças, pensamentos negativos e pessimistas,
+inatividade física no lazer e percepção negativa de saúde discriminaram o risco de a
+trabalhadora referir falta de vontade de ir ao trabalho (Figura 11). De modo geral, os fatores
+com maior influência no aumento da probabilidade de o(a) trabalhador(a) referir que em três
+ou mais dias não sentiu vontade de ir ao trabalho foram a insatisfação com as condições de
+trabalho, os relacionamentos interpessoais de baixa qualidade e a percepção de exposição a
+elevado nível de estresse.
+
+
+ Figura 10 - Odds Ratio (intervalo de confiança 95%) de fatores associados a 3+ dias de faltas de vontade
+                                de ir ao trabalho em homens industriários.
+
+
+
+
+Fonte: SESI, ASSTI (2018-2022).
+                                                                                                       31
+
+
+
+
+Figura 11 - Odds Ratio (intervalo de confiança 95%) de fatores associados a 3+ dias de falta de vontade de
+                                ir ao trabalho em mulheres industriárias.
+
+
+
+
+Fonte: SESI, ASSTI (2018-2022).
+
+
+
+Falta de disposição (ânimo ou energia)
+A prevalência de falta de disposição para o trabalho em, pelo menos, um dia, dos últimos 30
+dias, foi de 44,4% entre os homens e de 61,5% em mulheres trabalhadoras (Figura 12). A
+proporção de trabalhadores(as) que referiu falta de disposição para o trabalho em três ou mais
+dias, dos últimos 30 dias, foi de 11,6% entre os homens e 17,3% entre as mulheres, uma
+diferença de aproximadamente seis pontos percentuais.
+                                                                                                      32
+
+
+
+
+ Figura 12 - Prevalência de dias que referiu falta de disposição (ânimo ou energia) em trabalhadores(as)
+                                            do setor industrial.
+
+
+
+
+Fonte: SESI, ASSTI (2018-2022).
+
+
+
+Considerando o conjunto dos trabalhadores do setor industrial, nove variáveis foram
+identificadas como fatores associados a três ou mais dias de falta de disposição, a saber: (1)
+insatisfação com as condições de trabalho; (2) percepção de exposição a elevado nível de
+estresse; (3) percepção negativa da qualidade do sono; (4) relacionamentos interpessoais de
+baixa qualidade; (5) dificuldade de relaxar e usufruir do tempo de lazer; (6) elevado consumo
+de sal; (7) pensamentos negativos e pessimistas; (8) excessivo tempo de TV; e, (9) abuso de
+bebidas alcoólicas.
+                                                                                                        33
+
+
+
+
+Em homens, a falta de disposição também foi discriminada por outros três fatores: consumo
+excessivo de refrigerantes ou sucos artificiais, baixa frequência de consumo de frutas ou
+hortaliças e tabagismo (Figura 13). Entre as mulheres, a inatividade física no lazer foi um fator
+associado, embora de baixa influência no aumento da probabilidade de o(a) trabalhador(a)
+referir falta de disposição em três ou mais dias, dos últimos 30 dias (Figura 14).
+
+
+Figura 13 - Odds Ratio (intervalo de confiança 95%) de fatores associados a 3+ dias de falta de disposição
+                                        em homens industriários.
+
+
+
+
+Fonte: SESI, ASSTI (2018-2022).
+                                                                                                        34
+
+
+
+
+Figura 14 - Odds Ratio (intervalo de confiança 95%) de fatores associados a 3+ dias de falta de disposição
+                                       em mulheres industriárias.
+
+
+
+
+Fonte: SESI, ASSTI (2018-2022).
+
+
+
+Importante destacar que, independentemente do sexo, os fatores com maior influência no
+aumento da probabilidade de o(a) trabalhador(a) referir falta de disposição em três ou mais
+dias foram a insatisfação com as condições de trabalho, a percepção de exposição a elevado
+nível de estresse e os relacionamentos interpessoais de baixa qualidade.
+
+
+
+
+Dificuldade para se concentrar
+                                                                                                      35
+
+
+
+
+A prevalência de dificuldade para se concentrar no trabalho em pelo menos um dia, dos
+últimos 30 dias, foi de 54,6% entre os homens e de 39,4% em mulheres trabalhadoras (Figura
+15). A proporção de homens que referiu dificuldade de concentração em três ou mais dias foi
+de 11,3%, aproximadamente quatro pontos percentuais inferior à prevalência observada entre
+as mulheres (15,7%).
+
+
+ Figura 15 - Prevalência de dias que referiu dificuldade para se concentrar no trabalho em trabalhadores
+                                          (as) do setor industrial.
+
+
+
+
+Fonte: SESI, ASSTI (2018-2022).
+                                                                                                        36
+
+
+
+
+Tabagismo, inatividade física no lazer e excessivo tempo de TV foram fatores associados a
+dificuldade de concentração no trabalho, mas somente entre as mulheres (Figura 17). Nos
+homens, o consumo excessivo de refrigerantes ou sucos artificiais e a dificuldade de relaxar e
+usufruir do tempo de lazer foram fatores discriminantes deste indicador de presenteísmo
+(dificuldade de concentração), conforme ilustrado na Figura 16.
+
+
+      Figura 16 - Odds Ratio (intervalo de confiança 95%) de fatores associados a 3+ dias de falta de
+                                  concentração em homens industriários.
+
+
+
+
+Fonte: SESI, ASSTI (2018-2022).
+
+
+
+De modo geral, independentemente do sexo, as variáveis insatisfação com as condições de
+trabalho e percepção de exposição a elevado nível de estresse foram aquelas com maior
+                                                                                                        37
+
+
+
+
+influência no aumento da probabilidade de o(a) trabalhador(a) referir dificuldade de
+concentração em três ou mais dias, dos últimos 30 dias. A chance de referir dificuldade de
+concentração foi aproximadamente 200% superior entre trabalhadores(as) insatisfeitos com
+as condições de trabalho e que percebem elevada exposição a estresse.
+
+
+      Figura 17 - Odds Ratio (intervalo de confiança 95%) de fatores associados a 3+ dias de falta de
+                                 concentração em mulheres industriárias.
+
+
+
+
+Fonte: SESI, ASSTI (2018-2022).
+
+
+Dores/desconforto na realização de tarefas
+Em linha com o observado em relação aos demais indicadores de absenteísmo e presenteísmo,
+a proporção de mulheres que referiram dores/desconforto na realização de tarefas laborais foi
+                                                                                                         38
+
+
+
+
+superior entre as mulheres (52,8%) em comparação ao observado entre os homens, uma
+diferença de aproximadamente 6,5 pontos percentuais. A prevalência de dores/desconforto em
+três ou mais dias, dos últimos 30 dias, que foi de 15,7% entre os homens e 19,3% entre as
+mulheres (Figura 18).
+
+
+    Figura 18 - Prevalência de dias que referiu dores/desconforto na realização de tarefas laborais em
+                                  trabalhadores (as) do setor industrial.
+
+
+
+
+Fonte: SESI, ASSTI (2018-2022).
+
+
+
+O tabagismo e os pensamentos negativos e pessimistas foram fatores associados a
+dores/desconforto somente entre os homens, embora a magnitude da influência do primeiro
+                                                                                                      39
+
+
+
+
+possa ser considerada baixa (OR= 1,09). Por outro lado, a prevalência de dores/desconforto em
+três ou mais dias foi discriminada pela baixa frequência de consumo de frutas ou hortaliças e
+pela percepção negativa de saúde, mas somente entre as mulheres.
+
+
+Figura 19 - Odds Ratio (intervalo de confiança 95%) de fatores associados a 3+ dias de dores/desconforto
+                        na realização de tarefas laborais em homens industriários.
+
+
+
+
+Fonte: SESI, ASSTI (2018-2022).
+                                                                                                      40
+
+
+
+
+Figura 20 - Odds Ratio (intervalo de confiança 95%) de fatores associados a 3+ dias de dores/desconforto
+                       na realização de tarefas laborais em mulheres industriárias.
+
+
+
+
+Fonte: SESI, ASSTI (2018-2022).
+
+
+
+De modo similar ao que foi verificado em relação a outros indicadores de produtividade, os
+fatores com maior magnitude associação com dores/desconforto na realização de tarefas
+laborais foram a insatisfação com as condições de trabalho e a percepção de exposição a
+elevado nível de estresse, independentemente do sexo.
+                                                                                                     41
+
+
+
+
+Nos Quadros 1 e 2, apresentam-se dois “mapas de calor” com a finalidade de ilustrar a ordem
+de importância dos fatores associados. Esta ordem de importância foi , determinada pelo posto
+(ordenamento) quanto à magnitude da associação multivariável com indicadores de
+produtividade. Verificou-se que, de modo geral, os fatores com maior influência na
+produtividade foram insatisfação com as condições de trabalho, percepção de exposição a
+elevado nível de estresse e relacionamentos interpessoais de baixa qualidade.
+
+      Quadro 1 - Mapa de calor de fatores associados a indicadores de redução da produtividade (3+
+                            dias/últimos 30 dias) em homens industriários.
+
+
+
+
+Fonte: SESI, ASSTI (2018-2022).
+
+
+      Quadro 2 - Mapa de calor de fatores associados a indicadores de redução da produtividade (3+
+                            dias/últimos 30 dias) em mulheres industriárias.
+
+
+
+
+Fonte: SESI, ASSTI (2018-2022).
+
+
+A maior parte dos dados usados nas análises de fatores associados foram provenientes da região sul
+do país (~75%). Isto suscitou o questionamento acerca da possibilidade de que os resultados
+                                                                                                 42
+
+
+
+
+pudessem ser diferentes em cada região, permitindo a identificação de diferentes fatores associados.
+Mais uma vez, é importante destacar que embora nas demais regiões a proporção de participantes
+tenha sido menor, as amostras eram suficientemente grandes para assegurar suficiente poder
+estatístico para as análises realizadas. A fim de esclarecer essa dúvida as análises realizadas com
+amostra total foram repetidas usando dados somente da região sul e os resultados permaneceram
+inalterados, exceto pela magnitude dos intervalos de confiança (resultados não apresentados).
+
+
+3.5 Análise de Redes
+
+
+Como mencionado na seção de procedimentos metodológicos, a análise de redes é um recurso
+estatístico que gera uma representação gráfica que permite visualizar e interpretar associações
+multivariadas entre múltiplos fatores. Na representação gráfica de uma rede, um dos aspectos
+a ser analisado é a importância dos “nós” no sistema, o que é realizado pela verificação de três
+parâmetros: força (strength), proximidade (closeness) e conectividade (betweenness).
+
+
+A medida de força é derivada da soma de todos os pesos dos caminhos que conectam um nó
+aos demais, sendo utilizada em redes ponderadas e indica a variável que tem mais força no
+sistema. A medida de proximidade é obtida pelo inverso das distâncias de um nó com todos os
+demais, o quão próximo está dos demais nós e quão central ele é na interpretação da rede. O
+grau de conectividade expressa o número de vezes que um nó faz parte do caminho mais curto
+entre todos os pares da rede, indicando a variável que mais se conectará a outros pares em
+uma “intervenção”. Por fim, há ainda a apresentação nos resultados dos valores de influência
+esperada (expected influence), o qual identifica a variável que tem maior influência e que
+espalha o efeito mais rapidamente sobre a rede, sendo por essa característica o fator a ser
+prioritariamente focalizado quando do planejamento de intervenções (EPSKAP et al., 2012).
+
+
+Para as análises apresentadas nesta seção, recorreu-se ao uso de índices em opção a múltiplos
+indicadores para tornar mais fácil a interpretação gráfica das redes. Assim, por exemplo, em
+vez de analisar vários indicadores de estilo de vida simultaneamente, optou-se neste caso por
+usar o IGEV (índice geral de estilo de vida).
+                                                                                                        43
+
+
+
+
+Na Tabela 8, observa-se os parâmetros de centralidade da primeira análise de rede, na qual se
+procurou analisar os fatores de influência (demográficos, psicossociais e morbidades) em
+relação ao IGEV. Os valores de influência esperada, indicam que a idade, hipertensão,
+hipercolesterolemia, artrite/reumatismo e depressão foram os fatores com maior influência no
+estilo de vida. Observou-se, ainda, que as variáveis que mais espalham o efeito na rede foram:
+idade, AVC/derrame e depressão. Os resultados sugerem que para uma melhoria rápida no
+estilo de vida dos trabalhadores a intervenção deveria focalizar prioritariamente no
+enfrentamento à depressão.
+
+   Tabela 8 - Índice de centralidade das variáveis sociodemográficas, estresse e enfermidades sobre a
+                                              variável IGEV.
+
+
+
+
+Fonte: Elaboração Própria
+
+
+Na Figura 21, ilustra-se as redes formadas entre fatores demográficos, psicossociais e de
+morbidade referida em relação à variável IGEV. A análise da representação gráfica da rede
+permite deduzir que as variáveis pensamentos negativos e pessimistas, insatisfação com as
+condições de trabalho e depressão interferem negativamente e de forma considerável no estilo
+de vida dos trabalhadores.
+                                                                                                      44
+
+
+
+
+ Figura 21 - Redes multivariadas de variáveis demográficas, psicossociais e morbidades sobre a variável
+                                                 IGEV.
+
+
+
+
+Fonte: Elaboração Própria
+
+
+Na Tabela 9, apresentam-se os parâmetros de centralidade das variáveis demográficas,
+psicossociais, comorbidades e estilo de vida sobre a variável Índice de Produtividade (IPRO).
+Notou-se que as variáveis idade, situação conjugal, hipertensão, hipercolesterolemia e
+artrite/reumatismo são os fatores com maior influência esperada nessa rede. Além disso,
+observou-se que as variáveis sexo, idade, escolaridade, número de filhos, AVC/derrame e
+depressão foram aquelas identificadas com maior potencial de espalhar efeito na rede.
+                                                                                                        45
+
+
+
+
+Tabela 9 - Índice de centralidade das variáveis demográficas, psicossociais, comorbidades e estilo de vida
+                                          sobre a variável IPRO.
+
+
+
+
+Fonte: Elaboração Própria
+
+
+Na Figura 22 está apresentada uma representação das relações entre os fatores sob análise e o
+IPRO. Os achados indicam a importância da variável satisfação com as condições de trabalho,
+extraindo-se da análise que quanto mais insatisfeito com as condições de trabalho menor o
+índice de produtividade dos(as) trabalhadores(as). Nessa mesma direção, observa-se ainda a
+relação entre a variável pensamentos negativos e pessimistas e IPRO, evidenciando-se que
+quanto mais frequentes os pensamentos negativos e pessimistas, menor é a produtividade. Por
+outro lado, notou-se uma relação direta entre o estilo de vida (IGEV) e o IPRO, assim quanto
+maior o valor do IGEV, maior o índice de produtividade. Por fim, a análise de rede indicou que a
+depressão foi observada como uma variável-chave (fator de influência) que poderá interferir
+rapidamente na rede.
+                                                                                                       46
+
+
+
+
+ Figura 22 - Redes multivariadas das variáveis demográficas, psicossociais, comorbidades e estilo de vida
+                                          sobre a variável IPRO.
+
+
+
+
+Fonte: Elaboração Própria
+
+
+Na Tabela 10, observa-se os índices de centralidade das variáveis sociodemográficas, estresse,
+enfermidades e estilo de vida sobre a variável IPST, mantendo-se o IPRO na análise. Na
+influência esperada essa rede identificou as variáveis que são mais influentes na percepção de
+segurança do trabalhador, a saber: idade, hipertensão, colesterol alto e artrite/reumatismo.
+                                                                                                       47
+
+
+
+
+Por outro lado, as variáveis que podem espalhar maior efeito na rede são: sexo, idade,
+escolaridade, AVC/derrame e depressão.
+
+
+Tabela 10 - Índice de centralidade de variáveis demográficas, psicossociais, comorbidades e estilo de vida
+                                          sobre a variável IPST.
+
+
+
+
+Fonte: Elaboração Própria
+
+
+Na Figura 23, destaca-se que com a inclusão do IPST na análise que já envolvia o IGEV e o IPRO,
+observou-se uma proximidade ainda maior dos três índices, caracterizando um agrupamento
+(cluster) na rede, aspecto que denota a forte inter-relação entre os mesmos. Nessa nova análise,
+o IPRO aumenta a força de ligação com a variável “insatisfação com as condições de trabalho” e
+com o próprio IGEV. Além disso, observa-se que a percepção de segurança no trabalho (IPST)
+atua na rede como um ponto por meio do qual as demais variáveis podem influenciar o estilo
+de vida e a produtividade. Por fim, nota-se a forte relação do nível de escolaridade com a
+percepção de segurança, o que pode derivar do fato de que as ocupações onde há uma
+percepção de segurança mais positiva são exatamente aquelas em que os trabalhadores têm
+maior escolaridade.
+                                                                                                       48
+
+
+
+
+Mais uma vez, os resultados sugerem que para uma melhoria rápida na percepção de
+segurança, além do estilo de vida, dever-se-ia priorizar o desenvolvimento de intervenções
+para enfrentamento da depressão.
+
+
+Figura 23 - Redes multivariadas das variáveis demográficas, psicossociais, comorbidades, estilo de vida e
+                                 produtividade sobre a variável IPST.
+
+
+
+
+Fonte: Elaboração Própria
+                                                                                            49
+
+
+
+
+4 CONSIDERAÇÕES FINAIS
+Com base nos resultados apresentados nas seções anteriores desse relatório é possível fazer
+quatro considerações finais:
+
+
+1. As estimativas dos parâmetros que foram objeto de análise no presente estudo estão, de
+modo geral, em consonância com o observado na população brasileira (VIGITEL, Pesquisa
+Nacional de Saúde). Em relação ao abuso de bebidas alcoólicas, no entanto, a prevalência entre
+os trabalhadores do setor industrial é aproximadamente o dobro da que se observa na
+população em geral.
+
+
+2. Prevalência nos indicadores psicossociais foi mais elevada entre as mulheres, exceto em
+relação à percepção negativa quanto aos relacionamentos interpessoais. Essa mesma diferença
+intersexual foi observada em relação aos indicadores de produtividade (faltas ao trabalho por
+motivo de saúde e fatores de redução da produtividade), com prevalências mais altas entre as
+mulheres. Achados que podem ter uma explicação em padrões culturais e socioeconômicos,
+que impõem às mulheres, ainda nos dias atuais, responsabilidades pelo cuidado da família,
+filhos e do próprio lar, levando-as a assumirem uma demanda e densidade de trabalho muito
+maior que a dos homens.
+
+
+3. Fatores psicossociais, em especial a insatisfação com as condições de trabalho e a percepção
+de elevado nível de estresse, foram fatores com maior magnitude de efeito sobre indicadores
+de produtividade. Por outro lado, como era de se esperar, a percepção de saúde e de estresse
+discriminaram fortemente a morbidade nesse grupo de trabalhadores.
+
+
+4. Valores de IGEV inferiores a seis pontos aumentam em 120% o risco de faltas ao trabalho
+por motivo de saúde, sendo que o risco aumenta para aproximadamente 160% quando os
+valores do IGEV são inferiores a cinco pontos.
+                                                                                               50
+
+
+
+
+                                      REFERÊNCIAS
+CALDARELLI, G. A perspective on complexity and networks science. Journal of
+Physics: Complexity, v. 1, n. 1, p. 1–6, 2020.
+
+EPSKAMP, S. et al. The GAUSSIAN Graphical Model in Cross-Sectional and Time-Series Data.
+Multivariate Behavioral Research 2018;53(4):453-480.
+
+FOYGEL, R.; DRTON, M. Extended Bayesian information criteria for Gaussian graphical models.
+Advances in neural information processing systems, v. 23, n. 18, p. 51-46, 2010.
+
+FRUCHTERMAN, T. M. J.; REINGOLD, E. M. Graph drawing by force-directed placement. Softw.
+Pract. Exp., n. 21, p. 1129-1164, 1991.
+
+GOLINO, H. F.; EPSKAMP, S. Exploratory graph analysis: A new approach for estimating the
+number of dimensions in psychological research. PLoS ONE, v. 12, n. 6, e0174035, 2017.
+
+HILTON, M. F.; SHERIDAN, J.; CLEARY, C. M.; WHITEFORD, H. A. Employee absenteeism
+measures reflecting current work practices may be instrumental in a re-evaluation of the
+relationship between psychological distress/mental health and absenteeism. Int J Methods
+Psychiatr Res., v. 18, n. 1, p. 37-47, 2009.
+
+HILTON, M. F.; WHITEFORD, H. A. Associations between psychological distress, workplace
+accidents, workplace failures and workplace successes. Int Arch Occup Environ Health,
+83(8):923-33, 2010.
+
+JALEL, R. et al. Modeling of soil tillage techniques using Fruchterman–Reingold Algorithm. Int. J.
+Environ. Sci. Technol., n. 18, p. 2987-2996, 2021.
+
+SCHULTZ, A. B.; EDINGTON, D. W. Employee health and presenteeism: a systematic review. J
+Occup Rehabil., v. 7, n. 3, p. 547-579, set. 2007.
+DIRETORIA DE EDUCAÇÃO E TECNOLOGIA - DIRET
+Rafael Esmeraldo Lucchesi Ramacciotti
+Diretor de Educação e Tecnologia
+
+SESI/DN
+Robson Braga de Andrade
+Diretor
+
+Rafael Esmeraldo Lucchesi Ramacciotti
+Diretor-Superintendente
+
+DIRETORIA DE OPERAÇÕES
+Paulo Mól Junior
+Diretor de Operações
+
+Gerência Executiva de Saúde e Segurança na Indústria
+Katyana Aragao Menescal
+Gerente Executiva de Saúde e Segurança na Indústria
+
+Gerência de Saúde e Segurança no Trabalho
+Gina Marini
+Gerente de Saúde e Segurança no Trabalho
+
+Claudio Patrus
+Geórgia Antony
+Equipe Técnica
+
+DIRETORIA DE COMUNICAÇÃO - DIRCOM
+Ana Maria Curado Matta
+Diretora de Comunicação
+
+Superintendência de Publicidade e Mídias Sociais
+Mariana Caetano Flores Pinto
+Superintendente de Publicidade e Mídias Sociais
+
+DIRETORIA DE SERVIÇOS CORPORATIVOS – DSC
+Fernando Augusto Trivellato
+Diretor de Serviços Corporativos
+
+Superintendência de Administração - SUPAD
+Maurício Vasconcelos de Carvalho
+Superintendente Administrativo
+
+Alberto Nemoto Yamaguti
+Normalização
+________________________________________________________________
+
+Universidade de Pernambuco
+Prof. Dr. Mauro Virgílio Gomes de Barros
+Consultoria Técnico-Científica
+
+Universidade Federal do Vale do São Francisco
+Prof. Dr. Ferdinando Oliveira Carvalho
+Consultoria Técnico-Científica
+
+Universidade Regional do Cariri
+Prof. Dr. Paulo Felipe Ribeiro Bandeira
+Consultoria Técnico-Científica
+

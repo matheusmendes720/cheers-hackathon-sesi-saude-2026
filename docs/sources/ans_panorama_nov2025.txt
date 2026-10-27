@@ -1,0 +1,1784 @@
+PANORAMA
+Saúde Suplementar
+
+
+R i o d e J a n e i r o - v. 8 – n º 1 0 | d e z e m b r o 2 0 2 5 – 3 º t r i m e s t r e 2 0 2 5
+                             © 2025 ANS. Esta obra é disponibilizada nos termos da Licença Creative Commons – Atribuição – Não
+                             Comercial - Compartilhamento pela mesma licença 4.0 Internacional. É permitida reprodução parcial ou total
+                             desta obra, desde que citada a fonte. O conteúdo desta e de outras obras da Agência Nacional de Saúde
+                             Suplementar pode ser acessado na página: http://www.ans.gov.br/biblioteca/index.html
+
+Versão online
+
+ELABORAÇÃO, DISTRIBUIÇÃO E INFORMAÇÕES:
+Agência Nacional de Saúde Suplementar – ANS
+ANS Diretoria de Gestão – DIGES
+Gerência de Comunicação Social – GCOMS/SECEX/PRESI
+Av. Augusto Severo, 84 – Glória
+CEP 20021-040 – Rio de Janeiro, RJ – Brasil
+Tel: +55 (21) 2105-0000
+Disque-ANS: 0800 701 9656
+www.gov.br/ans
+
+DIRETORIA COLEGIADA – DICOL
+Diretor-Presidente e Diretor de Desenvolvimento Setorial – DIDES
+Wadih Nemer Damous Filho
+Diretora de Gestão Interina - DIGES
+Carla de Figueiredo Soares
+Diretora de Fiscalização – DIFIS
+Eliane Aparecida de Castro Medeiros
+Diretor de Normas e Habilitação das Operadoras – DIOPE
+Jorge Antônio Aquino Lopes
+Diretora de Normas e Habilitação dos Produtos – DIPRO
+Lenise Barcellos de Mello Secchin
+
+EQUIPE TÉCNICA:
+Adriana Bion; Alexandre Fiori; Ana Cecília Faveret; Angela De Marchi; Angela Lugão; Carla Grilo; Carlos Gustavo Lopes; Carolina Hilal; Cátia Manti-
+ni; Cláudia Akemi Ramos Tanaka; Daniel Sasson; Fabio Matsumoto; Felipe Riani; Fernanda de Castro Souza; Flávia Marques; Flavia Tanaka; Flavia
+Souza; Flávio Alcoforado; Frederico Yasuo Noritomi; Gislaine Afonso de Souza; Graziela Scalercio; Isabella Eckstein; Iola Vasconcelos Robson
+Faria; Jacqueline Torres; Juliana Machado; Lalucha Silva; Leonardo Fernandes Ferreira; Luiz Vieira; Marcio Nunes de Paula; Maria Rachel Jasmim;
+Maria Tereza Pasinato; Mariana de Souza; Marluce Cristina Iotte de Almeida Chrispim; Marly Corrêa Peixoto; Mirella Amorim; Nina Zander; Pedro
+Villela; Renata de Campos Lopes da Silva; Rosana Neves; Sanya Franco Ruela; Sonia Marinho; Sophia Fukayama; Vanessa Maria Gomes de
+Carvalho; Washington Oliveira Alves
+
+PROJETO GRÁFICO:
+Gerência de Comunicação Social (GCOMS/SECEX/PRESI)
+
+NORMALIZAÇÃO:
+Sergio Pinheiro Rodrigues (CGDOP/GEQIN/DIGES)
+
+
+
+
+                                                              Ficha Catalográfica
+
+     A265b Agência Nacional de Saúde Suplementar (Brasil).
+     		 Boletim panorama: saúde suplementar. v.8 n. 10, 3º trimestre de 2025. 10 ed. Rio de Janeiro: ANS,
+           2025.
+      		 2Mb; ePub.
+           1.Saúde suplementar. 2.Dados em saúde. 3.Agência Nacional de Saúde Suplementar (Brasil). 3. Diretoria de
+           Desenvolvimento Setorial. I. Título.
+
+                                                                                                                                    CDD 302.23
+                                                                                                        Catalogação na fonte – Biblioteca ANS
+                                                            Panorama - Saúde Suplementar
+
+
+    CARTA DO PRESIDENTE
+
+Caros(as) leitores(as),
+As transformações que atravessam o setor de saúde suplementar exigem maturidade
+regulatória, capacidade de diálogo e um compromisso permanente com a qualidade
+assistencial. Ao assumir a presidência da Agência Nacional de Saúde Suplementar (ANS),
+reafirmei meu compromisso de ampliar e aprimorar a regulação, promovendo um ambiente
+sustentável para todos os atores do sistema.
+Meu objetivo, ao final dos próximos cinco anos, é consolidar uma Agência aberta à
+sociedade, mais eficiente na mediação entre beneficiários, prestadores e operadoras e
+assertiva na defesa do interesse público. Para isso, nos próximos anos, vamos incentivar
+a participação ativa da sociedade na construção da Agenda Regulatória, por meio de
+instrumentos como consultas e audiências públicas. Acreditamos que, assim, a regulação
+será de fato aderente às necessidades reais da população.
+Nesse contexto, a Diretoria de Desenvolvimento Setorial (DIDES), da qual sou diretor,
+desempenha papel estratégico na indução de melhorias que beneficiam toda a sociedade.
+A implementação do Programa Agora Tem Especialistas ganha centralidade, pois representa
+um avanço inédito ao fortalecer a integração entre os sistemas público e privado. Pela
+primeira vez na história do país, dívidas tributárias ou valores de ressarcimento ao SUS
+podem ser convertidos diretamente em atendimentos especializados, reduzindo filas e
+garantindo cuidado oportuno a milhões de brasileiros que não possuem planos de saúde.
+A DIDES também tem papel essencial na produção de informações setoriais, por meio de
+publicações como o Panorama da Saúde Suplementar, da abertura de bases de dados e da
+manutenção de painéis dinâmicos que permitem acompanhar a evolução do setor. Esses
+instrumentos apresentam dados e informações confiáveis e transparentes, proporcionando
+o empoderamento dos beneficiários e demais atores do setor.
+Estamos trabalhando com firmeza, diálogo e compromisso público para que a saúde
+suplementar seja cada vez mais justa, eficiente e orientada ao cidadão. A ANS está
+preparada para liderar este novo momento, que exige coragem, responsabilidade e visão de
+futuro.
+
+
+Wadih Damous
+
+
+
+
+                                                                                           3
+                                                              Panorama - Saúde Suplementar
+
+
+    APRESENTAÇÃO
+O Panorama da Saúde Suplementar destaca um dos principais avanços na integração entre
+o Sistema Único de Saúde (SUS) e a Saúde Suplementar em 2025: o Programa Agora Tem
+Especialistas. A edição de dezembro detalha a iniciativa, criada para ampliar o acesso da
+população a consultas, exames e procedimentos especializados, reduzindo filas e tempos de
+espera em todo o país.
+A publicação mostra que, nesse novo contexto, o componente Ressarcimento ao SUS assume
+papel estratégico ao permitir que operadoras de planos de saúde convertam dívidas em
+serviços prestados diretamente ao SUS, por meio de termos de compromisso firmados com
+gestores municipais e estaduais. Com isso, a Agência Nacional de Saúde Suplementar (ANS)
+reforça sua atuação no acompanhamento da execução desses serviços e na avaliação dos
+impactos sobre os beneficiários das operadoras participantes.
+A edição apresenta ainda os resultados do terceiro trimestre de 2025 e dados de beneficiários
+até outubro. O destaque é o crescimento dos planos exclusivamente odontológicos, que
+avançaram 2,88% em um ano, além da expansão de 2,70% nos planos médico-hospitalares
+— impulsionados exclusivamente pelas contratações coletivas empresariais.
+O relatório traz também informações atualizadas sobre a taxa de rotatividade do setor e
+sobre a utilização de serviços de saúde. Apesar de avanços em exames e atendimentos
+ambulatoriais, a maioria dos procedimentos permanece abaixo dos níveis registrados antes da
+pandemia. No Ressarcimento ao SUS, até setembro, foram registradas cobranças de R$ 1,05
+bilhão, com R$ 703 milhões efetivamente repassados ao Fundo Nacional de Saúde.
+No campo econômico-financeiro, o setor segue em trajetória positiva: o resultado líquido
+acumulado atingiu R$ 14 bilhões nos últimos quatro trimestres, marcando oito períodos
+consecutivos de crescimento. Já na área de relações com consumidores, a publicação destaca
+as ações fiscalizatórias orientadas pela regulação responsiva e os resultados das Ações de
+Fiscalização Planejada (AFPs) realizadas entre 2023 e 2025.
+Outro ponto que reforça o contínuo aperfeiçoamento da regulação é a publicação de 18 novos
+normativos entre junho e novembro, sendo oito deles relacionados à incorporação de 11 novas
+tecnologias ao Rol de Procedimentos. A edição também evidencia o compromisso da Agência
+com a participação social: no período analisado foram realizadas seis audiências públicas,
+nove consultas públicas e duas alterações no marco legal — entre elas, a promulgação da Lei
+nº 15.233/2025, que oficializou o Programa Agora Tem Especialistas.
+Com dados inéditos, análises de mercado e os principais destaques regulatórios do período, a
+nova edição do Panorama da Saúde Suplementar registra um momento de transformação para
+o setor.
+Boa leitura!
+
+
+
+
+                                                                                            4
+SUMÁRIO
+
+
+ 1 GRANDES NÚMEROS DO SETOR_________________ 6
+
+ 2 BENEFICIÁRIOS DE PLANOS DE SAÚDE____________ 7
+
+ 3 ASSISTÊNCIA À SAÚDE_______________________ 9
+
+ 4 CENÁRIO ECONÔMICO-FINANCEIRO_____________ 19
+
+ 5 INFORMAÇÕES DE DEMANDAS DO CONSUMIDOR___ 22
+
+ 6 PROGRAMAS E PROJETOS DA ANS______________ 27
+
+ 7 ASPECTOS NORMATIVOS E LEGAIS _____________ 29
+                                                                                    Panorama - Saúde Suplementar
+
+
+     1 GRANDES NÚMEROS DO SETOR
+Os grandes números do setor são apresentados na figura 1, a seguir, trazendo um
+compilado de informações de diversos sistemas de informações da ANS, de acordo com as
+últimas atualizações disponíveis. A quantidade de vínculos de beneficiários e operadoras,
+por tipo de assistência – médico-hospitalar ou odontológica, referem-se ao mês de outubro
+de 2025. Já a variação percentual de beneficiários refere-se ao período de 1 ano (out/2024
+a out/2025). O total de procedimentos, oriundos do SIP – Sistema de Informações de
+Produtos, referem-se ao ano de 2024. Apresenta-se também o total em Reais de receitas
+de contraprestações e despesas assistenciais em 2024.
+
+
+   Figura 1: Grandes Números do Setor de Saúde Suplementar
+
+
+               53,3                       2,70%                            35,1                         2,88%
+                milhões                      de alta de
+                                              out/2024
+                                                                           milhões                         de alta de
+                                                                                                            out/2024
+            de beneficiários                                           de beneficiários em
+           em planos médicos                 a out/2025              planos exclusivamente                 a out/2025
+             hospitalares –                                             odontológicos –
+                out/2025                                                    out/2025
+
+
+
+                       665
+         operadoras com beneficiários em planos
+                                                                                      315
+                                                                        operadoras com beneficiários em planos
+            de assistência médica – out/2025                            exclusivamente odontológicos– out/2025
+
+
+                                            PRODUÇÃO ASSISTENCIAL - 2024
+                    (consultas, exames, terapias, cirurgias e internações realizadas pelo setor)
+
+
+
+                1,7 bilhão                                             190,9 milhões
+         de procedimentos médico-hospitalares                              de procedimentos odontológicos
+
+
+                                        RECEITAS E DESPESAS DO SETOR - 2024
+  $$
+                    312,1
+ $$$ R$ de receita de contraprestações*
+                              bilhões                                  R$ 256,8 bilhões
+  $$
+                                                                                de despesas assistenciais*
+                 (mensalidade)
+
+Fonte: ANS/MS (diversos sistemas)
+*Nota: A partir do 4º trim. de 2024 não foram incluídos no painel de Dados Econômico-Financeiros da Saúde Suplementar os
+dados de entidades reguladas que celebraram Termo de Compromisso (TC) com a ANS que envolva prazos para regularização
+contábil. A Receita de Contraprestações refere-se a contraprestações efetivas.
+
+
+
+
+                                                                                                                           6
+                                                                                              Panorama - Saúde Suplementar
+
+
+           2 BENEFICIÁRIOS DE PLANOS DE SAÚDE
+Em outubro de 2025, o número de vínculos de beneficiários a planos de assistência
+médica chegou a 53.277.390, 2,70% a mais do que no mesmo mês do ano anterior.
+Os planos exclusivamente odontológicos tinham 35.104.258 vínculos de beneficiários,
+correspondendo a um aumento de 2,88% em relação ao ano anterior.
+O gráfico 1 apresenta a evolução do número de beneficiários nos últimos 10 anos, entre
+outubro de 2015 e outubro de 2025.
+
+
+          Gráfico 1 - Beneficiários de planos de saúde por cobertura assistencial
+          Brasil - outubro/2015-outubro/2025
+                                                                                                       51,9     53,3
+                                                                                              51,1
+Milhões
+          49,6                                                         49,0       50,3
+                    47,9     47,2        47,1       47,0      47,6
+
+
+
+                                                                                                       34,1     35,1
+                                                                                              31,8
+                                                                                  29,5
+                                                                       27,7
+                                         23,9       24,9      25,4
+          20,7      21,0     22,0
+
+
+
+
+           out/15   out/16   out/17       out/18     out/19   out/20    out/21     out/22     out/23   out/24   out/25
+
+                                    Assistência médica          Exclusivamente odontológico
+Fonte: SIB/ANS/MS - 10/2025
+
+
+
+
+O crescimento do número de beneficiários em planos de assistência médica foi apenas
+em planos coletivos empresariais (4,35%). Vale observar que a variação do número de
+beneficiários nos demais tipos de contratação tem sido negativa nos últimos anos. Entre
+os meses de outubro de 2024 e de 2025, os planos individuais tiveram uma diminuição de
+2,02% no número de beneficiários e os planos coletivos por adesão 0,75%.
+Em relação aos beneficiários de planos exclusivamente odontológicos, é importante
+destacar que as variações foram fortemente impactadas pelas movimentações de uma
+única operadora que informou a inclusão de mais de 1,6 milhões de vínculos em planos
+individuais entre 2023 e 2024 e o cancelamento de igual número entre 2024 e 2025.
+Para efeito de avaliação do crescimento do setor, quando excluídos os dados desta
+operadora do cálculo, resulta que o crescimento do número de beneficiários em planos
+odontológicos, entre outubro de 2024 e outubro de 2025, foi de 6,31%.
+
+
+
+
+                                                                                                                         7
+                                                                                                  Panorama - Saúde Suplementar
+
+
+Taxa de rotatividade
+A movimentação de entrada e saída de beneficiários nas operadoras é acompanhada
+pela ANS por meio da taxa de rotatividade1, que é calculada com dados de adesões e
+cancelamentos de vínculos ao longo de um período determinado.
+Em 2024, foram informadas 16.366.896 adesões e 15.638.015 cancelamentos em planos
+de assistência médica, resultado em uma taxa de rotatividade de 30,5%, ou seja, quase um
+terço dos vínculos foram substituídos ao longo do ano.
+A taxa contribui para a compreensão de diversos aspectos relativos ao mercado da saúde
+suplementar, tais como concorrência, qualidade da atenção à saúde, rede, serviço da
+operadora e oferta de programas de promoção e prevenção.
+Alguns aspectos devem ser considerados na análise deste indicador:
+• A taxa de rotatividade tem se mantido estável nos últimos anos, (32,2% em 2021,
+  29,5% em 2022, 29,1% em 2024 e 30,5% em 2025).
+• A taxa de rotatividade é diferenciada segundo os tipos de contratação do plano. Nos
+  planos individuais a taxa, em 2024, foi de 16,5%, nos planos coletivos por adesão
+  24,4% e nos coletivos empresariais 33,7%. Estes dados estão ilustrados no gráfico 2,
+  abaixo.
+• O número de beneficiários de planos coletivos empresariais representava, em dezembro
+  de 2024, 71,9% do total de beneficiários ativos. Os cancelamentos foram 78,2% do
+  total e as adesões 81,9%.
+• Em 2024, quase 8,5 milhões de cancelamentos foram motivados por desligamento do
+  beneficiário da empresa contratante. Este número representa 69,1% dos cancelamentos
+  em planos coletivos empresariais.
+• A taxa de rotatividade no mercado formal de trabalho é mais elevada que na saúde
+  suplementar. O CAGED (Cadastro Geral de Empregados e Desempregados), que
+  acompanha as admissões e demissões no mercado formal de trabalho, registrou em
+  2024, 25.607.844 admissões e 23.929.376, resultando em uma taxa de rotatividade de
+  52,6% (gráfico 2).
+
+
+
+
+1           Cálculo da taxa de rotatividade: o menor valor entre o número de adesões e de cancelamentos em 2024, dividido pelo número de benefi-
+ciários em dezembro de 2023 (representando o número de beneficiários no início de 2024).
+
+
+                                                                                                                                                   8
+                                                                                  Panorama - Saúde Suplementar
+
+
+   Gráfico 2 – Taxa de rotatividade no mercado formal de trabalho e nos planos de
+   assistência médica
+   Brasil - 2024
+
+          52,6%
+
+
+
+
+                                    33,7%
+
+                                                              24,4%
+
+                                                                                          16,5%
+
+
+
+
+   Mercado formal de           Planos coletivos        Planos coletivos por       Planos individuais ou
+        trabalho                 empresariais                 adesão                    familiares
+Fonte: SIB/ANS/MS - 10/2025 e MTE/Painel de Informações do Novo CAGED - 09/2025
+
+
+
+
+     3 ASSISTÊNCIA À SAÚDE
+Frequência de utilização de serviços de saúde
+O conjunto de indicadores a seguir tem por objetivo apresentar a evolução da utilização
+de serviços de saúde a partir de 2019, com base na relação de eventos por beneficiário
+(número de procedimentos realizados por pessoa), de forma a considerar o efeito do
+crescimento da base de beneficiários no período.
+O gráfico 3 apresenta a utilização de serviços de saúde no 2º trimestre entre os anos de
+2019 e 2025, por grupo de procedimentos, tendo por base o ano de 2019.
+No segundo trimestre de 2025, a utilização dos serviços de saúde caiu em todos os grupos
+de procedimentos. Quando comparamos com o mesmo período de 2019 – usado como
+referência por representar o padrão antes da pandemia de Covid-19 – apenas os grupos
+de “Exames” e “Outros atendimentos ambulatoriais” registraram uma utilização maior. Para
+os demais tipos de procedimentos, o número de atendimentos por pessoa ainda continua
+abaixo do que era observado em 2019.
+
+
+
+
+                                                                                                            9
+                                                                                  Panorama - Saúde Suplementar
+
+
+   Gráfico 3 - Índice de variação da frequência de utilização assistencial por beneficiário
+   (base 1, 2º trimestre de 2019)
+                               1,4
+
+                               1,3
+
+                               1,2
+
+                               1,1
+
+                               1,0
+
+                               0,9
+
+                               0,8
+
+                               0,7
+
+                               0,6
+
+                               0,5
+
+                               0,4
+                                        2T2019   2T2020    2T2021        2T2022       2T2023        2T2024       2T2025
+    Consultas Médicas                    1,00     0,50      0,77          0,89         0,94          0,95         0,89
+    Exames                               1,00     0,57      1,00          1,13         1,19          1,15         1,10
+    Internações                          1,00     0,75      0,81          0,98         0,98          1,00         0,97
+    Outros Atendimentos Ambulatoriais    1,00     0,61      0,84          0,97         1,06          1,09         1,03
+    Procedimentos Odontológicos          1,00     0,58      0,91          0,95         0,95          0,92         0,89
+    Terapias                             1,00     0,52      0,70          0,77         0,90          0,80         0,75
+    Total MH                             1,00     0,56      0,92          1,05         1,12          1,09         1,04
+
+Fonte: SIP/ANS (dados de 2019 a 2022: extração em 02/07/2023; dados de 2023: extração em 13/05/2025; dados de 2024
+e 1ºtrim/2025: extração em 09/06/2025; dados do 2ºtrim/2025: extração em 02/11/2025) e SIB/ANS (dados de 2019 a 2023:
+extração da base do SIB em 09/05/2024; dados de 2024 e 1ºtrim/2025: extração da Sala de Situação em 10/06/2025; dados do
+2ºtrim/2025: extração da Sala de Situação em 06/11/2025).
+
+
+
+
+O gráfico 4 apresenta a composição da produção assistencial médico-hospitalar do
+setor, por grupo assistencial, no segundo trimestre de cada ano entre 2019 e 2025. De
+modo geral a distribuição por grupo assistencial vem se mantendo estável desde 2019.
+Considerando o histórico do 2º trimestre de cada ano, os exames têm representado cerca
+de 60% dos eventos médico-hospitalares do setor. Já as internações são responsáveis por
+cerca de 0,5% dos atendimentos realizados.
+
+
+
+
+                                                                                                                          10
+                                                                                           Panorama - Saúde Suplementar
+
+
+   Gráfico 4 - Distribuição (%) da Produção Assistencial Médico-Hospitalar por Grupo de
+   Eventos (2019/2025)
+              0,5                              0,5
+                            0,7%                               0,5%             0,5%            0,5%
+                                                                                                               0,5%
+100%
+             4,9%           4,6%             3,7%              3,6%             4,0%            3,7%           3,6%
+
+ 90%                                         9,4%              9,6%             9,9%           10,5%          10,4%
+            10,4%          11,2%
+
+ 80%
+                                             14,2%             14,7%           14,5%           15,1%          14,9%
+            17,1%          15,1%
+ 70%
+
+ 60%
+
+ 50%
+
+ 40%
+                                             61,4%             61,3%           61,0%           60,7%          60,7%
+            56,6%          57,4%
+ 30%
+
+ 20%
+
+ 10%
+
+   0%
+          2º Tri 2019    2º Tri 2020    2º Tri 2021         2º Tri 2022      2º Tri 2023     2º Tri 2024    2º Tri 2025
+
+
+             Exames      Consultas Médicas           Outros Atendimentos Ambulatoriais        Terapias     Internações
+Fonte: SIP/ANS (dados de 2019 a 2022: extração em 02/07/2023; dados de 2023: extração em 13/05/2025; dados de 2024 e
+1ºtrim/2025: extração em 09/06/2025; dados do 2ºtrim/2025: extração em 02/11/2025).
+
+
+
+
+O gráfico 5 apresenta a variação na utilização dos serviços de assistência médico-
+hospitalar por beneficiário, com a comparação de cada trimestre, em relação ao mesmo
+período do ano anterior. Ao longo de 2024, observou-se uma trajetória de redução no uso
+desses serviços. No entanto, no quarto trimestre de 2024, houve uma leve reversão dessa
+tendência, com um pequeno aumento na utilização. No primeiro e segundo trimestres
+de 2025, a tendência de queda em relação aos mesmos trimestres do ano anterior foi
+retomada.
+
+
+
+
+                                                                                                                          11
+                                                                                                      Panorama - Saúde Suplementar
+
+
+   Gráfico 5 - Variação (%) do total de eventos médico-hospitalares por beneficiário em
+   relação ao mesmo trimestre do ano anterior
+
+
+
+
+                                                      10,10%
+                                                                                  5,66%                       2,42%
+
+
+                         - 9,28%                                                                                                   -0,20%
+
+
+
+
+  1º     2º     3º     4º     1º     2º     3º     4º     1º     2º     3º     4º     1º     2º     3º     4º     1º     2º     3º     4º     1º     2º
+tri/20 tri/20 tri/20 tri/20 tri/21 tri/21 tri/21 tri/21 tri/22 tri/22 tri/22 tri/22 tri/23 tri/23 tri/23 tri/23 tri/24 tri/24 tri/24 tri/24 tri/25 tri/25
+Fonte: SIP/ANS (dados de 2019 a 2022: extração em 02/07/2023; dados de 2023: extração em 13/05/2025; dados de 2024
+e 1ºtrim/2025: extração em 09/06/2025; dados do 2ºtrim/2025: extração em 02/11/2025) e SIB/ANS (dados de 2019 a 2023:
+extração da base do SIB em 09/05/2024; dados de 2024 e 1ºtrim/2025: extração da Sala de Situação em 10/06/2025; dados do
+2ºtrim/2025: extração da Sala de Situação em 06/11/2025).
+* Total de eventos de assistência médico-hospitalar informados pelas operadoras ao SIP considerando-se a soma dos grupos
+assistenciais (A. CONSULTAS MÉDICAS + B. OUTROS ATENDIMENTOS AMBULATORIAIS + C. EXAMES + D. TERAPIAS + E.
+INTERNAÇÕES), sobre o total de beneficiários da assistência médico-hospitalar informados ao SIB pelas operadoras.
+
+
+
+
+A mesma comparação é apresentada no gráfico 6 para os procedimentos odontológicos. A
+série apresenta estabilidade desde 2023, com pequenas flutuações ao longo do período.
+
+
+
+
+                                                                                                                                                     12
+                                                                                                       Panorama - Saúde Suplementar
+
+
+    Gráfico 6 - Variação (%) do total dos procedimentos odontológicos por beneficiário
+    em relação ao mesmo trimestre do ano anterior
+
+
+
+
+                                                                                                                                        1,65%
+
+                         -7,27%                                                                                   -3,45%
+                                                      - 1,0
+                                                                                 -4,03%
+
+
+
+
+   1º     2º     3º     4º     1º     2º     3º     4º     1º     2º     3º     4º     1º     2º     3º     4º     1º     2º     3º     4º     1º     2º
+ tri/20 tri/20 tri/20 tri/20 tri/21 tri/21 tri/21 tri/21 tri/22 tri/22 tri/22 tri/22 tri/23 tri/23 tri/23 tri/23 tri/24 tri/24 tri/24 tri/24 tri/25 tri/25
+Fonte: SIP/ANS (dados de 2019 a 2022: extração em 02/07/2023; dados de 2023: extração em 13/05/2025; dados de 2024
+e 1ºtrim/2025: extração em 09/06/2025; dados do 2ºtrim/2025: extração em 02/11/2025) e SIB/ANS (dados de 2019 a 2023:
+extração da base do SIB em 09/05/2024; dados de 2024 e 1ºtrim/2025: extração da Sala de Situação em 10/06/2025; dados do
+2ºtrim/2025: extração da Sala de Situação em 06/11/2025).
+
+
+
+
+Em 30/05/2025 foi lançado pelo Ministério da Saúde o Programa Agora Tem Especialistas,
+que tem por objetivo garantir mais agilidade, eficiência e equidade no acesso à saúde
+especializada, abrangendo consultas, exames, cirurgias, tratamentos oncológicos e demais
+atendimentos especializados da rede pública. No componente ambulatorial do Programa,
+atualmente estão contempladas as seguintes especialidades: cardiologia, ginecologia,
+oftalmologia, oncologia, ortopedia e otorrinolaringologia.
+O gráfico 7 mostra a distribuição das consultas por especialidade, considerando somente
+as consultas médicas ambulatoriais com especialidade informada ao SIP. Para traçar um
+paralelo com a saúde suplementar, estão sublinhadas em vermelho as especialidades
+contempladas pelo Programa Agora Tem Especialistas. Observamos que, no que tange
+às consultas médicas ambulatoriais, das especialidades destacadas no SIP, as mais
+consultadas na saúde suplementar no 2º trimestre de 2025 englobam as especialidades
+selecionadas pelo Programa. Ressalta-se que a oncologia não está entre as especialidades
+mais frequentes em termos de quantidade de consultas médicas, o que é esperado devido
+à natureza e à prevalência do câncer. Contudo, sua inclusão é de extrema importância para
+fins de prevenção, diagnóstico e o devido tratamento em tempo hábil.
+
+
+
+
+                                                                                                                                                      13
+                                                                                   Panorama - Saúde Suplementar
+
+
+   Gráfico 7 – Distribuição das consultas médicas ambulatoriais segundo a
+   especialidade informada ao SIP – 2º trimestre de 2025
+          Clínica Médica                                                                    11,24%
+Ginecologia e Obstetrícia                                                                  11,02%
+            Oftalmologia                                                           9,81%
+                Pediatria                                                       9,24%
+Traumatologia-ortopedia                                                    8,65%
+             Cardiologia                                                7,88%
+           Dermatologia                                         6,26%
+     Otorrinolaringologia                                5,32%
+              Psiquiatria                              5,12%
+          Endocrinologia                              4,83%
+                Urologia                    3,21%
+       Gastroenterologia                  2,87%
+           Cirurgia Geral               2,50%
+              Neurologia                2,44%
+    Alergia e Imunologia        1,13%
+       Tisiopneumologia         1,08%
+           Reumatologia         1,08%
+              Angiologia       1,04%
+           Neurocirurgia       0,89%
+              Mastologia      0,86%
+               Oncologia      0,81%
+             Proctologia      0,75%
+                Geriatria    0,70%
+            Hematologia      0,67%
+              Nefrologia     0,62%
+
+Fonte: SIP/ANS (dados do 2ºtrim/2025: extração em 02/11/2025)
+
+
+
+
+Vale lembrar que esses dados estão sujeitos a alterações pelas operadoras, de forma
+que os resultados aqui apresentados para o 2º trimestre de 2025 se baseiam nos dados
+enviados pelas operadoras ao SIP até a data de coleta (02/11/2025).
+
+
+Variação de valores de despesas médias de eventos assistenciais
+O indicador a seguir tem por objetivo apresentar a variação das despesas médias de alguns
+eventos assistenciais selecionados - Consulta Médica, Serviços Profissionais / Serviço de
+Apoio Diagnóstico e Terapêutico (SP/SADT), Internações, e Procedimentos Odontológicos. Os
+dados foram extraídos do banco de dados do Padrão TISS (Troca de Informações na Saúde
+Suplementar). Essa edição do Panorama, atualizada em relação a última publicação, avalia
+comparativamente dados acumulados até o 3º trimestre dos anos 2019 a 2025.
+O gráfico 8, a seguir, indica a variação das despesas médias por eventos selecionados.
+
+                                                                                                            14
+                                                                                 Panorama - Saúde Suplementar
+
+
+É possível observar a variação positiva das despesas médias para internações, ano-base
+2019, atingindo um pico em 2021, coincidindo com o período da Pandemia da Covid-19, e
+das medidas de distanciamento social.
+As despesas relativas às consultas médicas (39,9%%) e aos Serviços Profissionais e
+Serviço de Apoio Diagnóstico e Terapêutico (SP/SADT) (43,5%) foram crescentes ao longo
+de quase todo o período.
+As despesas médias com internações, que voltaram a acompanhar o crescimento dos
+grupos mencionados acima, apresentaram um discreto crescimento nos três primeiros
+trimestres de 2025, com uma variação acumulada de 43,1% em relação ao mesmo período
+de 2019.
+As despesas médias relativas aos atendimentos odontológicos, ao contrário, se mantiveram
+muito próximas dos níveis de 2019, com uma pequena redução, em 2025 (-0,3%).
+
+
+   Gráfico 8 - Variação de despesa média por evento ou procedimento
+   Brasil, 1º ao 3º trimestre/2019 - 1º ao 3º trimestre/2025
+150,0
+
+140,0
+
+130,0
+
+120,0
+
+110,0
+
+100,0
+              2019            2020             2021      2022             2023        2024       2025
+  90,0
+
+  80,0
+
+                           Consultas médicas                    Internações
+
+                           Procedimentos odontológicos          SP/SADT
+Fonte: TISS/ANS (setembro/2025)
+Nota: 1º ao 3º trimestre/2019 = 100
+
+
+
+
+Utilização da rede SUS por beneficiários
+Nos últimos cinco anos, das cerca de 12 milhões de internações anuais no âmbito do
+Sistema único de Saúde SUS e registradas em Autorizações de Internação Hospitalar
+(AIHs), cerca de 1,7% ocorreram em pacientes cobertos por planos privados de saúde
+com assistência médica. Já as internações ocorridas no SUS no ano de 2024, até o mês
+de setembro, notificadas pela ANS às operadoras no ano de 2025, representaram mais de
+2,05% do total do SUS. (gráfico 9).
+
+
+                                                                                                          15
+                                                                                     Panorama - Saúde Suplementar
+
+
+   Gráfico 9 - Internações registradas em AIH ocorridas no SUS em beneficiários de
+   planos de saúde – atendimentos de 2020 a setembro de 2024.
+ 14.000.000                                                                                            2,50%
+
+                                                                     2,11%
+ 12.000.000
+                                                                                              2,05%    2,00%
+ 10.000.000                       1,76%
+                                                   1,73%
+                1,56%                                                                                  1,50%
+  8.000.000
+
+  6.000.000
+                                                                                                       1,00%
+
+  4.000.000
+                                                                                                       0,50%
+  2.000.000
+
+          -                                                                                            0,00%
+                     2020             2021             2022               2023          2024 (Até
+                                                                                        Setembro)
+
+                              Atendimento RSUS          Atendimento SUS          Taxa
+Fonte: MS/Datasus e ANS/SGR (novembro/2025).
+Nota: O gráfico exibe o ano dos atendimentos ocorridos no SUS, cuja notificação no âmbito do Ressarcimento ao SUS ocorre cerca
+de 1 ano depois. Resultados passíveis de atualização.
+
+
+
+
+Em relação aos atendimentos ambulatoriais registrados por meio de Autorizações de
+Procedimento Ambulatorial de Média e Alta Complexidade (APAC), registrou-se em média
+26,2 milhões de procedimentos anuais no SUS, dos quais 4,3% identificados foram
+prestados a beneficiários de planos de saúde. Para atendimentos ocorridos no SUS no
+ano de 2023 e notificados pela ANS às operadoras em 2024, identificou-se parcela de
+atendimentos a beneficiários que alcançaram 4,06% em relação ao total realizado no
+SUS. Considerando-se os casos ocorridos até setembro de 2024 e notificados pela ANS às
+operadoras até setembro de 2025, este percentual ficou em 3,69% (gráfico 10).
+
+
+
+
+                                                                                                                           16
+                                                                                   Panorama - Saúde Suplementar
+
+
+   Gráfico 10 - Procedimentos Ambulatoriais de Média e Alta Complexidade registrados
+   em APAC ocorridos no SUS e em beneficiários de planos de saúde – atendimentos de
+   2020 a setembro de 2024.
+ 30.000.000                                                                                           5,00%
+                      4,32%             4,18%            4,20%                                        4,50%
+ 25.000.000
+                                                                                                      4,00%
+                                                                    4,06%                    3,69%
+                                                                                                      3,50%
+ 20.000.000
+                                                                                                      3,00%
+ 15.000.000                                                                                           2,50%
+                                                                                                      2,00%
+ 10.000.000
+                                                                                                      1,50%
+                                                                                                      1,00%
+  5.000.000
+                                                                                                      0,50%
+          -                                                                                           0,00%
+                    2020              2021            2022               2023          2024 (Até
+                                                                                       setembro)
+
+                              Atendimento RSUS         Atendimento SUS          Taxa
+Fonte: MS/Datasus e ANS/SGR (novembro/2025).
+ Nota: O gráfico exibe o ano dos atendimentos ocorridos no SUS, cuja notificação no âmbito do Ressarcimento ao SUS ocorre
+cerca de 1 ano depois. Resultados passíveis de atualização.
+Nota 2: São incluídos na cobrança de ressarcimento ao SUS os procedimentos ambulatoriais registrados em APACs nos grupos 02
+– Procedimentos com finalidade diagnóstica; 03 – Procedimentos Clínicos; 04 – Procedimentos Cirúrgicos; 05 – Transplantes de
+órgãos; e 07 - Órteses, próteses e materiais especiais.
+
+
+
+
+Quanto aos valores de atendimentos no âmbito do processo de Ressarcimento ao SUS,
+incluindo AIHs e APACs, foram cobrados até setembro de 2025 R$ 1,05 bilhões e
+repassados no mesmo período R$ 703 milhões ao FNS (gráficos 11 e 12). Esta condição
+está associada a eventuais variações na utilização do SUS por beneficiários, no lançamento
+regular de Avisos de Beneficiários Identificados (ABIs), no passivo de análises de
+impugnações e recursos no bojo do Processo Administrativo de Ressarcimento ao SUS, no
+procedimento de inscrição em Dívida Ativa, nas atividades de saneamento processual e de
+cobrança, com impactos sobre o resultado do Repasse ao Fundo Nacional de Saúde (FNS).
+
+
+
+
+                                                                                                                         17
+                                                                                                                                  Panorama - Saúde Suplementar
+
+
+                                  Gráfico 11 - Atendimentos e valores cobrados no Ressarcimento ao SUS –
+                                  Brasil (2020 a setembro de 2025).
+
+
+                                                                                      R$1.223,26
+                                       R$979,51              R$1.100,37                                                                     R$1.059,06
+
+                                                                                                                                                              Milhões
+                                                                                                                           R$956,67
+
+
+
+
+Quantidade de Atendimentos
+                                                                                                             R$725,15
+
+                                                   726.527
+                                                                           664.721
+                                       614.407                                                                                              579.818
+                                                                                                                        564.971
+                                                                                                   422.228
+
+
+
+
+                                      2020         2021                   2022                     2023                 2024             2025 (Até
+                                                                          Atendimentos                       Valor                       setembro)
+
+Fonte: SGR/ANS (novembro/2025).
+Nota: O gráfico exibe o ano de cobrança dos atendimentos ocorridos no SUS, podendo abranger casos ocorridos em competências
+variadas, a depender do andamento dos processos administrativos. Resultados passíveis de atualização.
+
+
+
+
+                                  Gráfico 12 - Valor anual repassado ao Fundo Nacional de Saúde (em R$ Milhões) –
+                                  Brasil (2020 a 2025).
+                                                                          R$ 972,81
+                                                  R$ 884,78
+                                     R$ 816,24
+                                                                                                                          R$ 769,42
+                                                                                                   R$ 726,94
+
+
+
+
+Valor repassado (em R$ Milhões)
+                                                                                                                                                 R$ 703,25
+
+
+
+
+                                        2020          2021                       2022                        2023                 2024                2025 (Até
+                                                                                                                                                      setembro)
+                                                                                     Valor
+Fonte: SGR/ANS (novembro/2025).
+Nota: O gráfico exibe o ano de repasse dos valores cobrados e pagos dos atendimentos ocorrido no SUS, podendo abranger
+casos ocorridos em competências variadas, a depender do andamento dos processos administrativos. Resultados passíveis de
+atualização.
+
+
+
+
+No portal da ANS, é possível consultar outros dados e publicações sobre o Ressarcimento
+ao SUS na área: Dados e Indicadores do setor > Dados e Publicações do Ressarcimento ao
+
+                                                                                                                                                                        18
+                                                                                          Panorama - Saúde Suplementar
+
+
+SUS. Disponível em: https://www.gov.br/ans/pt-br/acesso-a-informacao/perfil-do-setor/
+dados-e-indicadores-do-setor/dados-e-publicacoes-do-ressarcimento-ao-sus.
+
+
+       4 CENÁRIO ECONÔMICO-FINANCEIRO
+Evolução dos resultados
+O foco desta seção é o comportamento dos indicadores de resultado do setor de saúde
+suplementar na operação médico-hospitalar. Tais indicadores são apresentados em valores
+nominais (não ajustados pela inflação do período) ao longo dos últimos quatro anos,
+segregados entre resultado operacional, resultado financeiro e resultado líquido (gráfico 11).
+No 3º trimestre de 2025, o setor continua em seu viés de alta, renovando as máximas
+desde 2019, com exceção do período pandêmico, tanto no resultado líquido quanto no
+resultado operacional. O resultado líquido acumulado nos últimos quatro trimestres atingiu
+R$ 14 bilhões, (gráfico 13), completando 8 trimestres consecutivos de resultados positivos
+neste recorte.
+
+
+   Gráfico 13 - Resultados, Operadoras Médico-Hospitalares,
+   Acumulado em 12 meses (em R$ bilhões).
+                                                                                                                                           19,3
+                                      18,2 18,7 18,3                                                                               17,5
+                                                    18,0
+                               15,7
+                                           17,6                                                                             14,0
+                                    15,4                                                                                                   12,5
+       11,5 11,5 11,8
+ 9,6                    10,0                                                         10,4 10,5 11,2 10,9   9,6 9,7 10,2            10,9
+                                        9,6                            8,9 9,4 9,6
+                                                           7,4
+         7,2 6,3 6,4                                  6,4
+ 6,1 6,8                            7,9
+                                                                                       5,2
+                                                                                                                             9,9            9,3
+                                            4,8 4,5                                              4,4 5,6              8,5
+     6,1 5,8 6,0     3,1 2,4 3,2 4,3 4,6                                                                        7,7
+                                                                                                                             6,5     7,8
+                                                   2,6 1,2                        1,6       1,9
+ 4,9             4,1                        4,6                                                      0,8               4,0
+                                                           -0,8        -0,5 1,0                                 3,4
+                                          1,8 -0,9               -2,8                           -2,4
+                                                     -4,8
+                                                                                       -6,0
+                                                           -8,4
+                                                                                  -9,5
+                                                                      -10,7 -11,2
+                                                                -12,5
+
+
+
+
+ T1 T2 T3 T4 T1 T2 T3 T4 T1 T2 T3 T4 T1 T2 T3 T4 T1 T2 T3 T4 T1 T2 T3 T4 T1 T2 T3
+        2019                      2020                 2021         2022               2023                 2024                   2025
+
+                               Resultado Operacional          Resultado Financeiro            Resultado Líquido
+Fonte: ANS/DIOPS e Painel Econômico-Financeiro da Saúde Suplementar
+Nota: Os resultados referentes aos 1º, 2º e 3º trimestres são aproximações com base no efeito dos impostos e participações do
+exercício anterior. A apuração efetiva dessas contas geralmente se dá ao final do ano, portanto, seu efeito real nos últimos 12
+meses é conhecido apenas no 4º trimestre de cada ano.
+
+
+
+
+Também o resultado financeiro segue apresentando melhoras em relação ao trimestre
+anterior, atingindo R$ 12,5 bilhões, em seu terceiro trimestre consecutivo de alta.
+
+                                                                                                                                           19
+                                                                                                                          Panorama - Saúde Suplementar
+
+
+Sinistralidade
+A sinistralidade é um dos indicadores mais relevantes na operação de planos de saúde e
+representa, grosso modo, a porcentagem das receitas com contraprestações (mensalidades)
+pagas pelos contratantes, que é consumida com o pagamento de eventos indenizáveis
+(despesas assistenciais). A sinistralidade do setor é apresentada aqui através da média
+agregada e da mediana deste indicador entre as operadoras de planos de saúde.
+A análise da mediana permite limitar a influência de valores extremos na análise, enquanto
+a média é mais impactada pelas operadoras com maior volume de beneficiários.
+A mediana da sinistralidade (gráfico 14) mostrou ligeira queda de 0,2 p.p. em relação à
+medição anterior, mantendo a tendência notada ao longo do ano de 2025, enquanto a
+sinistralidade agregada continua em tendência mais acentuada de queda, com diminuição
+de 0,5 p.p. em relação ao trimestre anterior e 2,2 p.p. quando comparada ao mesmo
+período do ano anterior, novamente inferior aos patamares pré-pandêmicos do indicador
+para o trimestre.
+
+
+   Gráfico 14 - Sinistralidade Média e Mediana (%)
+   Operadoras médico-hospitalares, acumulado em 12 meses.
+                                                                                              89,7
+                                                                                       88,9          89,2 89,5
+                                                                                                                 88,7
+                                                                                88,1                                    87,7
+                                                                         87,1                                                  87,0
+                                                                  86,3
+                                                                                                                                      85,7
+              84,7 84,5                                                                                                                      84,8
+83,9 84,2                 84,2
+                                                           83,4                 84,0 84,1 84,4                                                      84,1 83,8
+                                                                         83,4                        83,2 82,9                                                  82,9
+                                                                  82,2                                                                                                 82,4
+              81,9 82,1                                                                                          82,1                                                         81,9
+       81,3                                                                                                             81,3 81,2 80,9 81,0 81,2 81,2
+80,7                                                                                                                                                            80,6
+                      81,8                                                                                                                                             79,8 79,6
+                                  79,6                     79,1
+                                                  78,1
+                                     77,4 77,7
+                           77,4
+                                           74,4
+                                    74,9
+                                                    74,5
+
+
+
+
+ T1 T2 T3 T4 T1 T2 T3 T4 T1 T2 T3 T4 T1 T2 T3 T4 T1 T2 T3 T4 T1 T2 T3 T4 T1 T2 T3
+         2019                     2020                       2021                        2022                      2023                       2024                     2025
+
+
+                                                                  Mediana                     Média/Agregado
+Fonte: ANS/DIOPS e Painel Econômico-Financeiro da Saúde Suplementar
+
+
+
+
+O gráfico 15 mostra a evolução da sinistralidade média nos terceiros trimestres de cada
+ano, desde 2019. Essa comparação oferece visão mais imediata do comportamento da
+sinistralidade e isola a sazonalidade presente na operação de planos de saúde. Este
+indicador também denota queda em relação ao ano anterior – 0,9 p.p., e encontra-se no
+mínimo da série histórica, com exceção do observado durante a pandemia.
+
+
+                                                                                                                                                                                     20
+                                                                                                              Panorama - Saúde Suplementar
+
+
+      Gráfico 15 - Sinistralidade média no trimestre (%) Operadoras médico-hospitalares.
+
+                                                                             93,2
+                                                        89,7                                         88,6
+                 86,8                                                                                                   85,3
+                                                                                                                                             83,4
+                                   78,0
+
+
+
+
+                                                                        3° trimestre
+
+                                          2019      2020        2021         2022        2023        2024     2025
+Fonte: ANS/DIOPS e Painel Contábil da Saúde Suplementar.
+
+
+
+
+Receitas e Despesas Assistenciais
+O gráfico 16 apresenta a evolução trimestral das contraprestações (receitas assistenciais) e
+eventos (despesas assistenciais) per capita acumulados em 12 meses, em valores nominais e
+em valores reais (descontada a inflação). Esses índices compõem o indicador de sinistralidade,
+sendo importante analisá-los separadamente para compreender sua evolução.
+
+
+      Gráfico 16 - Contraprestações e Eventos (Despesa Assistencial) per capita, valores
+      nominais e deflacionados (R$/mês) Planos médico-hospitalares, acumulado em 12 meses.
+                                          Contraprestações (nominal)                           Contraprestações (deflacionado)
+600
+                                          Eventos (nominal)                                    Eventos (deflacionado)
+
+550                                                                                                                                        526
+                                                                                                                                     511                     554 562
+                                                                                                                                                       542
+                                                                                                                               497               531
+500                                                                                                                     483
+                                                                                                                  458
+                                                                                                            445
+450
+
+                                                                       393 399                                                                         432 438
+400                                          378 383 381,7                                            432                                  423 423 427
+                                  368 370                                                422 420                                414
+                                                                                                                        400 407
+                                                                                   410
+                                                               383,1                                              383
+                                                                                                            375
+350                                                                                                   367
+       359 355 358 354 359                                                               357 356
+                                                                                   341
+300                                                                          325
+                                                                       314
+                                                               301
+                                                        288
+                        274 275
+                                  262 254 261 267
+250
+       260 258 260
+
+200
+       T1   T2   T3     T4   T1   T2   T3     T4   T1    T2     T3     T4    T1     T2    T3    T4     T1   T2    T3    T4     T1    T2    T3    T4    T1     T2    T3
+
+             2019                  2020                   2021                       2022                    2023                     2024                   2025
+Fonte : ANS/DIOPS, ANS/SIB, SIDRA/IBGE
+Notas: Total de contraprestações e eventos dos últimos 12 meses, exceto tributos diretos e variações de provisões técnicas,
+dividido pela soma de beneficiários nos últimos 12 meses. Valores deflacionados correspondem a valores nominais, descontada a
+inflação medida pelo IPCA. Apenas planos com formação de preço preestabelecida.
+
+
+                                                                                                                                                                    21
+                                                                                   Panorama - Saúde Suplementar
+
+
+A relação entre os valores nominais de receitas e despesas, apresentadas no gráfico
+16, define o patamar de sinistralidade apresentado nos gráficos anteriores. Em termos
+nominais, no último período analisado a receita per capita atingiu R$ 562 por mês,
+continuando a tendência de aumento neste valor. Já a despesa per capita apresentou ligeiro
+aumento, alcançando o valor mensal de R$ 438.
+Ao expurgar o efeito da inflação nestas séries históricas verifica-se comportamento diverso
+entre a receita, com leve alta no trimestre e a despesa, estável.
+
+
+      5 INFORMAÇÕES DE DEMANDAS DO CONSUMIDOR
+As informações apresentadas nesta seção referem-se ao acompanhamento mensal das
+reclamações registradas junto aos canais de atendimento da ANS.
+São itens de destaque: a evolução das reclamações NIP, a avaliação por natureza das
+reclamações (assistenciais e não assistenciais), o Índice Geral de Reclamações (IGR) e a
+Taxa de Intermediação Resolvida (TIR) e as Ações Planejadas de Fiscalização.
+
+
+Evolução das reclamações NIP
+O gráfico 17 apresenta a evolução das reclamações tratadas por meio na Notificação de
+Intermediação Preliminar (NIP), tanto as demandas de natureza assistencial quanto as de
+natureza não assistencial. Observa-se que, nos meses de janeiro a outubro de 2025, as
+reclamações NIP cadastradas na ANS apresentaram redução em relação ao mesmo período
+de 2024 e, também, em relação aos meses de março, maio, junho, julho, agosto e outubro
+de 2023, indicando uma tendência de redução neste indicador.  
+
+   Gráfico 17 - Evolução de reclamações NIP (assistencial e não assistencial).
+  40.000
+
+  35.000
+
+  30.000
+                                                                                               30.735           27.146
+  25.000
+                                                                                                                  23.368
+  20.000                                                                                                      18.710
+
+  15.000
+
+  10.000
+
+   5.000
+
+       0
+              jan       fev      mar       abr       mai       jun   jul    ago          set    out     nov    dez
+
+                                              2022         2023      2024         2025
+
+Fonte: Painéis de Fiscalização (ANS) (jan. 2022 a out.2025).
+
+
+
+                                                                                                                      22
+                                                                                       Panorama - Saúde Suplementar
+
+
+Natureza das demandas
+As demandas de natureza assistencial, ou seja, aquelas relacionadas a toda e qualquer
+restrição de acesso à cobertura assistencial, representaram 80,8%, do total de reclamações
+NIP cadastradas entre janeiro e outubro 2025, mantendo a preponderância em relação às
+demandas de natureza não assistencial (gráfico 18).
+
+
+   Gráfico 18 - Distribuição percentual de reclamações NIP por natureza das demandas.
+  100%
+   90%               19,5%                         17,3%                       19,6%                 19,2%
+   80%
+   70%
+   60%
+   50%
+   40%               80,5%                         82,1%                       80,4%                 80,8%
+   30%
+   20%
+   10%
+    0%
+                      2022                         2023                        2024                   2025
+                                                                                                  (Até outubro)
+
+                                                   Assistencial   Não Assistencial
+
+Fonte: Painéis de Fiscalização (ANS) (jan. 2022 a out. 2025).
+
+
+
+
+Índice Geral de Reclamações (IGR)
+O Índice Geral de Reclamações (IGR) é uma métrica calculada pela ANS com base nas
+reclamações registadas por consumidores e que foram processadas via Notificação
+de Intermediação Preliminar (NIP). Seu cálculo considera a relação entre a média de
+reclamações registadas por consumidores, em determinado período contra operadoras
+de planos de saúde registadas na ANS, e a média do número de beneficiários dessas
+operadoras, no mesmo período.
+O resultado obtido indica uma relação inversamente proporcional à satisfação dos
+beneficiários. Ou seja, quanto menor o valor do IGR, maior é a satisfação dos beneficiários
+com as operadoras.
+Importante destacar que o IGR não é calculado para as administradoras de benefícios, pois
+ainda não possuem informações sobre o total de vidas administradas (beneficiários) junto
+ao Sistema de Informação de Beneficiários (SIB-ANS), o que impossibilita o cálculo do IGR.
+Este é um importante indicador utilizado pela ANS. Pelo Painel IGR é possível verificar, por
+exemplo, a evolução de reclamações registradas na ANS com possibilidade de consulta por
+
+                                                                                                                  23
+                                                                                      Panorama - Saúde Suplementar
+
+
+período de tempo, porte de operadora ou, ainda, a evolução de uma operadora específica.
+Assim, é possível comparar o índice de uma operadora com a média nacional ou com o
+grupo de operadoras do mesmo porte, e verificar se aquela operadora está abaixo, acima ou
+dentro da média.
+O gráfico 19 mostra que os planos de assistência médico hospitalar tiveram no ano de
+2024 a média de 58,2 reclamações para cada 100 mil beneficiários, enquanto tal média
+nos meses de janeiro a outubro de 2025 foi de 50,6, reclamações para cada 100 mil
+beneficiário. Por sua vez, os planos exclusivamente odontológicos tiveram em média 1,0,
+reclamação para a mesma quantidade de beneficiários no período de janeiro a outubro de
+2025 e de 1,2 para cada 100 mil beneficiários, em 2024.
+ Os resultados observados no gráfico 19 indicam uma melhora nos resultados do IGR das
+operadoras de planos de saúde e de planos de cobertura exclusivamente odontológica em
+2025 (até outubro), em relação ao ano anterior, indicando um crescimento da satisfação do
+consumidor, mas, ainda acima do resultado de 2022 para os planos de assistência médico
+hospitalar.
+
+
+   Gráfico 19 - Índice Geral de Reclamações (IGR) por 100 mil beneficiários, por
+   cobertura assistencial.
+                                                                    58,2
+                                       54,4
+                                                                                             50,6
+
+
+
+         36,5
+
+
+
+
+                    1,2                           1,3                          1,2                    1,0
+
+             2022                          2023                         2024              2025 (até outubro)
+
+                               Médico Hospitalar        Exclusivamente Odontológico
+Fonte: Painéis de Fiscalização (ANS) (jan. 2022 a outubro. 2025).
+
+
+
+
+Taxa de Intermediação Resolvida (TIR)
+A Taxa de Intermediação Resolvida (TIR) é uma métrica calculada pela ANS com base nas
+reclamações registradas por consumidores e que foram processadas via Notificação de
+Intermediação Preliminar (NIP). A TIR permite avaliar a capacidade de resolução consensual
+de conflitos entre beneficiários e operadoras de planos de saúde e/ou administradoras
+de benefícios, por meio de mediação da ANS, ainda na fase eletrônica (seja a demanda
+de natureza assistencial ou não assistencial), sem necessidade de abertura de processo
+
+
+                                                                                                               24
+                                                                                                Panorama - Saúde Suplementar
+
+
+administrativo sancionador. Seus resultados são apresentados em formato de Painel
+Dinâmico, no site da ANS2, atualizados mensalmente.
+Esta taxa reflete a perspectiva dos consumidores em relação à solução de suas demandas
+logo após a fase de mediação, apresentando a proporção daquelas consideradas resolvidas
+na visão do consumidor3, em relação ao total de demandas NIP cadastradas no período
+analisado.
+Tal indicador tem por finalidade dar mais transparência às informações sobre as queixas
+registradas por consumidores junto aos canais de relacionamento da ANS, possibilitando
+à sociedade saber de que forma as operadoras de planos de saúde e administradoras de
+benefícios se comportam diante dessas demandas/reclamações.
+Até o lançamento desta ferramenta, a Agência utilizava como parâmetro a Taxa de
+Resolutividade (TR), que avaliava a demanda após o término do prazo concedido à
+operadora e após a análise do caso por um dos analistas da NIP.
+Em 2024, a Taxa de Intermediação Resolvida (TIR), da mediação de conflitos feita pela
+ANS por meio da Notificação de Intermediação Preliminar (NIP), alcançou índice médio
+de 77,4%. Em 2025 (até o mês de setembro), a TIR atingiu índice médio de 79,4%. Este
+dado refere-se ao conjunto das reclamações cadastradas na ANS, no período, e que foram
+passíveis de mediação (gráfico 20).
+
+
+    Gráfico 20 - Taxa de Intermediação Resolvida - TIR
+    (Demandas NIP Assistenciais e Não Assistenciais).
+
+                                                                                                                                     77,60%
+77,90%
+                                                                                                                                           77,30%
+    77,10%
+                                                                                                                                     76,20%
+    73,50%
+
+
+
+
+     jan fev mar abr mai jun jul ago set out nov dez jan fev mar abr mai jun jul ago set out nov dez jan fev mar abr mai jun jul ago set
+                            2023                                             2024                                    2025
+                                              TIR Geral           TIR Assistencial         TIR Não Assistencial
+Fonte: Painéis de Fiscalização (ANS) (de jan. 2023 a set. 2025).
+
+
+
+
+Ações de Fiscalização Planejada
+As Ações de Fiscalização Planejada (AFPs) correspondem a um conjunto de ações
+fiscalizatórias de natureza sistematizada, de escalonamento gradativo, com fundamento em
+princípios da regulação responsiva, que visam a estimular as operadoras de planos privados
+de assistência à saúde ao exercício da autorregulação ou ao equacionamento de questões e
+2            TIR- Dados e Indicadores do Setor - Painéis de Fiscalização (ANS)
+
+3          Isto é, demandas inativas com retorno do consumidor, informando que seu problema foi resolvido, bem como demandas inativadas por
+ausência de resposta do consumidor (presunção de resolução).
+
+
+                                                                                                                                              25
+                                                                         Panorama - Saúde Suplementar
+
+
+processos internos, para o aprimoramento dos serviços prestados aos consumidores. Nesse
+sentido, as Operadoras são monitoradas e enquadradas em uma das modalidades das AFPs
+a partir de seu desempenho em índices estabelecidos pela ANS, em especial o Índice Geral
+de Reclamações (IGR), que pode ser acessado através do site da Agência.
+Desde o segundo semestre de 2023, foram realizadas diligências no âmbito de 2 ações
+fiscalizatórias: Ação Planejada Focal de Fiscalização (APF) e Ação Planejada Preventiva de
+Fiscalização (APP), conforme ilustra a tabela 1 a seguir:
+
+
+   Tabela 1 – Ações de Fiscalização Planejada, 2023 a 2025
+
+                                   11 operadoras e 2 administradoras de benefícios, com a realização de
+ 2023       APF (Projeto-Piloto)
+                                   32 diligências na forma remota e 4 na modalidade in loco
+
+                                   7 operadoras e 2 administradoras de benefícios, tendo sido realizadas
+            APF
+                                   32 diligências remotas e 1 diligência in loco
+ 2024
+                                   5 operadoras e 1 administradora de benefícios, com 6 diligências remo-
+            APP
+                                   tas
+
+            APF                    4 operadoras, com 8 diligências na forma remota
+
+ 2025                              3 operadoras e 3 diligências na forma remota. Outras 3 operadoras
+            APP                    foram selecionadas para ações ainda em 2025, e encontram-se fase de
+                                   definição dos assuntos para tratamento pelas operadoras selecionadas.
+Fonte: processos SEI/ANS.
+
+Os processos do Projeto-Piloto da APF (2023) foram encerrados na sua quase totalidade,
+com a verificação de melhora na entrada de reclamações à ANS em 6 operadoras. Embora
+4 operadoras não tenham apresentado melhora substancial no registro de demandas de
+consumidor até o final do período de monitoramento, para duas delas foi verificada redução
+do IGR durante o ano de 2025. Ainda no ano de 2025, 2 das operadoras tiveram sua
+liquidação extrajudicial decretada pela ANS, em razão de graves anormalidades econômico-
+financeiras, enquanto uma teve o seu registro cancelado por incorporação societária.
+Das operadoras e administradoras de benefícios selecionadas para a APF/2024, 5
+apresentaram redução nas demandas e, para 4, ainda não tinham sido verificada melhora
+substancial no IGR.
+Na APP/2024, 5 das 6 operadoras participantes apresentaram melhora no IGR, até o fim
+do período de monitoramento. Em 2025, uma dessas operadoras experimentou grande
+aumento no IGR em razão da alienação da quase totalidade da sua carteira, como estratégia
+de negócios.
+Os processos administrativos das operadoras da APF/2025 e da APP/2025 ainda se
+encontram em curso, em estágios variados do fluxo da respectiva ação planejada. Os
+resultados serão apresentados ao fim do período de monitoramento, em relação ao registro
+de demandas de consumidor à ANS.
+
+                                                                                                           26
+                                                              Panorama - Saúde Suplementar
+
+
+Todas as operadoras permanecem em monitoramento até que os seus processos
+administrativos sejam arquivados.
+Em relação às operadoras que comercializam produtos exclusivamente odontológicos,
+atualmente, não há nenhuma selecionada para as Ações de Fiscalização Planejada (APF),
+tendo em vista que, por apresentarem valores de IGR muito abaixo dos das operadoras da
+segmentação médico-hospitalar.
+Cumpre ressaltar que a Diretoria de Fiscalização faz o monitoramento destes dados, que
+são utilizados para o planejamento e adoção de ações, tanto de caráter punitivo, quando
+indutivo de boas práticas pelas operadoras de planos de saúde. E, ainda, estes dados são
+subsídios para a reformulação das ações e estratégias fiscalizatórias no âmbito da revisão
+normativa em curso na Diretoria de Fiscalização da ANS.
+
+
+    6 PROGRAMAS E PROJETOS DA ANS
+Com a publicação da Medida Provisória (MP) nº 1.301 de 30 de maio de 2025, da Portaria
+GM/MS nº 7.266 de 18 de junho de 2025 e da Portaria Conjunta MS/AGU Nº 7.702 de 28
+de julho de 2025, o Ressarcimento ao SUS passa a fazer parte do Programa Agora Tem
+Especialistas, do Ministério da Saúde. Ainda em outubro de 2025, a MP foi convertida na
+Lei nº 15233/2025: https://www.in.gov.br/en/web/dou/-/lei-n-15.233-de-7-de-outubro-
+de-2025-661016471>.
+Destaca-se como objetivo do programa a ampliação do acesso da população a consultas,
+exames e procedimentos especiais, contribuindo para a redução dos tempos de espera em
+filas. Nesse cenário, foi instituído o componente Ressarcimento ao SUS (figura 2), a partir
+do qual se pretende aproveitar os recursos devidos, transformando dívidas das operadoras
+em serviços de saúde, por meio de assinatura de termo de compromisso e execução dos
+serviços aprovados pelos gestores do SUS nas regiões propostas.
+A participação das operadoras de planos privados de saúde na prestação de serviços
+prioritários ao SUS, mediante adesão voluntária e sem a necessidade de aportes financeiros
+extras por nenhuma das partes, vislumbra a geração de retorno imediato para a população,
+além de fortalecer a responsabilidade das operadoras junto ao sistema de saúde brasileiro.
+
+
+
+
+                                                                                          27
+                                                                                     Panorama - Saúde Suplementar
+
+
+   Figura 2 – Componentes do Programa Agora tem Especialistas
+
+
+
+
+Fonte: Site do Ministério da Saúde (link: https://www.gov.br/saude/pt-br/composicao/saes/agora-tem-especialistas)
+
+
+
+
+É importante ressaltar a corresponsabilidade da Agência Nacional de Saúde Suplementar
+(ANS) no que diz respeito ao acompanhamento do cumprimento dos termos de execução,
+bem como em relação ao monitoramento de eventuais impactos da adesão ao programa
+sobre a prestação da assistência aos beneficiários das operadoras participantes, e ao
+comportamento dessas empresas quanto à identificação de casos e o pagamento dos
+processos rotineiros de Ressarcimento ao SUS, que continuarão ocorrendo.
+Finalmente, vale apontar a contribuição do programa neste componente para a geração
+de oportunidade no que se refere à integração de dados em saúde no país, uma vez
+que os atendimentos prestados no bojo do novo programa serão registrados não apenas
+em Autorizações de Internação Hospitalares (AIH) e Autorizações de Procedimentos
+Ambulatoriais (APAC) - para redes que já possuem contratualização com o SUS -, mas
+também por meio do Conjunto Mínimo de Dados (CMD) - para aqueles hospitais que
+nunca atenderam ao SUS. Assim, colabora-se para a composição da Rede Nacional de
+Dados em Saúde (RNDS), plataforma do Ministério da Saúde para conectar e integrar o
+sistema de saúde de todo o Brasil, com vistas à interoperabilidade de dados, troca segura
+e padronizada de informações entre o setor público e privado, promovendo uma visão
+unificada do histórico de saúde do cidadão, melhorando a gestão, a eficiência e a qualidade
+do atendimento.
+No Portal do Ministério da Saúde, estão disponibilizados textos explicativos e links para a
+legislação específica do Programa Agora Tem Especialistas, navegue em: https://www.gov.
+br/saude/pt-br/composicao/saes/agora-tem-especialistas.
+
+
+                                                                                                                    28
+                                                                                 Panorama - Saúde Suplementar
+
+
+    7 ASPECTOS NORMATIVOS E LEGAIS
+Alterações no marco legal da Saúde Suplementar (Lei 9.656/1998)
+Lei nº 15.171/2025
+Em 17 de julho de 2025, foi publicada a Lei nº 15.171, que altera a Lei nº 9.797, de 6
+de maio de 1999, e a Lei nº 9.656, de 3 de junho de 1998, para ampliar o direito das
+mulheres à cirurgia plástica reparadora da mama em casos de mutilação total ou parcial.
+A alteração na Lei dos Planos de Saúde ocorre no Art. 10-A, referente à cobertura de
+cirurgia plástica reconstrutiva de mama, com a seguinte redação:
+                Art. 10-A. Cabe à operadora definida no inciso II do caput do art. 1º desta
+                Lei, por meio de sua rede de unidades conveniadas, prestar serviço de
+                cirurgia plástica reconstrutiva de mama, utilizando-se de todos os meios
+                e técnicas necessárias, para o tratamento de mutilação total ou parcial do
+                órgão.
+                § 1º Em caso de mutilação decorrente de tratamento cirúrgico, será
+                utilizada, salvo contraindicação médica, a técnica cirúrgica de reconstrução
+                simultânea ou imediata da mama, realizada em continuidade à intervenção
+                cirúrgica que provocou a mutilação, respeitada a autonomia da mulher
+                para, plenamente esclarecida, decidir livremente pela execução do
+                procedimento.
+                .............................................................................................................
+                ........................................ ” (NR) (Brasil, 2025).
+
+
+Lei nº 15.233/2025
+Em 7 de outubro de 2025, foi publicada a Lei nº 15.233, que institui o Programa Agora
+Tem Especialistas; dispõe sobre o Grupo Hospitalar Conceição S.A.; e altera algumas leis,
+incluindo a Lei nº 9.656/1998.
+Esta Lei é resultado da Conversão da Medida Provisória nº 1.301, de 2025, que foi
+divulgada na edição anterior do Panorama Saúde Suplementar.
+O Ministério da Saúde (MS) está conduzindo o planejamento para implementação do
+Programa. No que tange à saúde suplementar, a regulamentação específica ocorreu a partir
+da publicação de Portarias Conjuntas entre o MS e a Advocacia-Geral da União (AGU):
+• Portaria Conjunta MS/AGU nº 7.266, de 18/06/2025: Dispõe sobre o Programa
+  Agora Tem Especialistas, no âmbito do Sistema Único de Saúde – SUS. A seção V, arts.
+  11 e 12, tratam especificamente do Componente Ressarcimento ao SUS; e
+• Portaria Conjunta MS/AGU nº 7.702, de 28/07/2025: Dispõe sobre a
+  regulamentação do Componente Ressarcimento do Programa “Agora Tem Especialistas”.
+
+                                                                                                                         29
+                                                             Panorama - Saúde Suplementar
+
+
+Arcabouço normativo
+Nos meses junho a novembro de 2025, foram publicados dezoito novos normativos, sendo
+onze Resoluções Normativas (RN) referentes a alterações no Rol de Procedimentos e
+Eventos da ANS: RN nº 635; 637; 642; 643; 645; 646; 647; 648; 650; 651 e 652.
+As RNs nº 638 e 641 alteraram a RN nº 623, de 17/12/2024, que dispõe sobre as regras
+a serem observadas pelas Operadoras de Planos Privados de Assistência à Saúde e
+Administradoras de Benefícios nas solicitações de procedimentos ou serviços de cobertura
+assistencial apresentados pelos beneficiários, bem como não assistenciais, em qualquer
+modalidade de contratação.
+Os demais normativos publicados no período referem-se, especificamente:
+• RN nº 636, de 24/06/2025: Dispõe sobre a transmissão dos arquivos, entre operadoras
+  de planos privados de assistência à saúde e a ANS, das bases da Nota Técnica de
+  Registro de Produto (NTRP) e dos Comunicados de Reajustes de Planos Coletivos (RPC),
+  por meio do Programa Transmissor de Arquivos – PTA;
+• RN nº 639, de 07/07/2025: Revoga a RN ANS nº 551, de 11/11/2022, e desobriga as
+  operadoras do envio do SIP a partir de 02/03/2026;
+• RN nº 640, de 16/07/2025: Altera a RN nº 574, de 28/02/2023, que dispõe sobre os
+  critérios de constituição de Provisões Técnicas a serem observados pelas operadoras de
+  planos privados de assistência à saúde;
+• RN nº 644, de 30/09/2025: Altera a RN nº 506, de 30/03/2022, que institui o Programa
+  de Certificação de Boas Práticas em Atenção à Saúde de Operadoras de Planos Privados
+  de Assistência à Saúde;
+• RN nº 649, de 04/11/2025: Altera a RN ANS nº 137, de 14/11/2006 e revoga a
+  Instrução Normativa nº 20, de 29/04/2022, ambos referentes às entidades de
+  autogestão na saúde suplementar. A norma entrará em vigor em 01/07/2026.
+
+
+Rol de Procedimentos e Eventos em Saúde
+De julho até novembro de 20254, 8 novas Resoluções Normativas com atualização do Rol
+foram publicadas, e 11 novas tecnologias foram incorporadas (tabela 2).
+Além das novas tecnologias incorporadas, houve atualização da Diretriz de Utilização
+referente à imunoprofilaxia para o Vírus Sincicial Respiratório (VSR).
+
+
+
+
+4      Dados até 28/11/2025.
+
+
+                                                                                       30
+                                                                                        Panorama - Saúde Suplementar
+
+
+   Tabela 2 - Tecnologias incorporadas ao Rol de procedimentos da ANS, por grupo,
+   2022- 2025*
+                                                   2024      2024      2024      2024      2025      2025      2025     2025
+ Grupo                          2022     2023
+                                                   (1ºt)     (2ºt)     (3ºt)     (4º t)    (1º t)    (2ºt)     (3ºt)    (4ªt)
+
+ Terapia Antineoplásica
+                                 19         8         -         2        2         3         1         -         -           2
+ Oral
+
+ Terapia Imunobiológica
+ e Outras Terapias Para           9        12         1         2        6         3         2         3         2           1
+ Infusão
+
+ Testes Diagnósticos
+ (Laboratoriais e de              7         3         1         2         -        3         1         1         -           3
+ Imagem)
+
+ Procedimentos                    6         7         1         5        3         1         1         -         2           1
+
+ Total                           41        30         3        11        11        10        5         4         4           7
+Fonte: GGRAS/DIPRO/ANS (2025).
+*Notas:
+Tomando por base a data de publicação das RNs e não a vigência da cobertura.
+Dados até 28/11/2025.
+As atualizações do 2º tri de 2025 se devem a incorporações realizadas após a data de corte da publicação anterior (16/06).
+
+
+
+
+Monitoramento da participação social na produção normativa
+A participação social na ANS ocorreu por meio de audiências públicas e consultas públicas
+sobre os normativos em elaboração. No 2º e 3º trimestres, foram realizadas seis Audiências
+Públicas (AP) e nove Consultas Públicas (CP) foram encerradas no mesmo período.
+O processo de elaboração do Rol de Procedimentos e Eventos em Saúde representou a
+maioria dos mecanismos de participação realizados. Os demais temas abordados foram:
+• Aprimoramento das regras relacionadas às Autogestões;
+• Política de Preços e Reajustes; e
+• Visita técnico-assistencial para identificação de anormalidades assistenciais nas
+  operadoras de planos de assistência à saúde.
+O quadro 1, a seguir, ilustra os temas das normas e o número de contribuições em
+cada Consulta Pública (CP), encerradas entre abril e setembro de 2025, além de trazer
+informações sobre as Audiências Públicas (AP) realizadas no período.
+
+
+
+
+                                                                                                                                 31
+                                                                Panorama - Saúde Suplementar
+
+
+ Quadro 1 – Participação social, por tema e quantidade de contribuições (CPs) /
+ número de participantes (APs), encerradas entre abril e setembro de 2025.
+
+                                                         Nº Contribui-
+                                                          ções CP ou
+Tipo                Descrição                  Data                                 Link
+                                                         Informações
+                                                              AP
+
+       CP nº 153: Proposta de
+                                            10/04/2025                   https://componentes-
+       Resolução Normativa que busca
+CP                                          a                238         portal.ans.gov.br/link/
+       o aprimoramento das regras
+                                            26/05/2025                   ConsultaPublica/153
+       relacionadas às Autogestões.
+
+       CP nº 154: contribuições
+                                           09/04/2025                    https://componentes-
+       relacionadas às propostas de
+CP                                         a                 1011        portal.ans.gov.br/link/
+       atualização do Rol de Procedimentos
+                                           28/04/2025                    ConsultaPublica/154
+       e Eventos em Saúde.
+
+       CP nº 155: contribuições
+                                           15/05/2025                    https://componentes-
+       relacionadas às propostas de
+CP                                         a                 9844        portal.ans.gov.br/link/
+       atualização do Rol de Procedimentos
+                                           03/06/2025                    ConsultaPublica/155
+       e Eventos em Saúde.
+
+       CP nº 156: Proposta de Resolução
+       Normativa que altera a IN DIPRO
+       nº 53, de 2017, que regulamenta      22/05/2025                   https://componentes-
+CP     a visita técnico-assistencial para   a                 37         portal.ans.gov.br/link/
+       identificação de anormalidades       06/07/2025                   ConsultaPublica/157
+       assistenciais nas operadoras de
+       planos de assistência à saúde.
+
+       CP nº 157: contribuições
+                                           12/06/2025                    https://componentes-
+       relacionadas às propostas de
+CP                                         a                 714         portal.ans.gov.br/link/
+       atualização do Rol de Procedimentos
+                                           03/07/2025                    ConsultaPublica/157
+       e Eventos em Saúde.
+
+       CP nº 158: contribuições
+                                           10/07/2025                    https://componentes-
+       relacionadas às propostas de
+CP                                         a                 9844        portal.ans.gov.br/link/
+       atualização do Rol de Procedimentos
+                                           29/07/2025                    ConsultaPublica/158
+       e Eventos em Saúde.
+
+       CP nº 159: Nova participação
+       social com vistas a ampliar o       21/07/2025                    https://componentes-
+CP     debate público em torno da efetiva  a                 1577        portal.ans.gov.br/link/
+       implementação da Política de Preços 19/10/2025                    ConsultaPublica/159
+       e Reajustes dos Planos de Saúde
+
+       CP nº 160: contribuições
+                                           13/08/2025                    https://componentes-
+       relacionadas às propostas de
+CP                                         a                 3941        portal.ans.gov.br/link/
+       atualização do Rol de Procedimentos
+                                           01/09/2025                    ConsultaPublica/160
+       e Eventos em Saúde.
+
+
+
+                                                                                                   32
+                                                                  Panorama - Saúde Suplementar
+
+
+     CP nº 161: contribuições
+                                         10/09/2025                       https://componentes-
+     relacionadas às propostas de
+CP                                       a                     275        portal.ans.gov.br/link/
+     atualização do Rol de Procedimentos
+                                         29/09/2025                       ConsultaPublica/161
+     e Eventos em Saúde.
+
+                                                                       https://www.gov.br/
+                                                                       ans/pt-br/acesso-a-
+     AP nº 54: contribuições acerca de
+                                                                       informacao/participacao-
+     recomendação preliminar de não       16/04/2025,
+                                                                       da-sociedade/
+AP   incorporação para as seguintes       das 09:30 às Microsoft Teams
+                                                                       audiencias-publicas/
+     tecnologias (Tildrakizumabe e        12:30
+                                                                       audiencias-publicas-
+     Pirtobrutinibe).
+                                                                       realizadas-1/audiencia-
+                                                                       publica-54
+
+     AP nº 55: contribuições acerca
+     de recomendação preliminar
+     de não incorporação para as
+     seguintes tecnologias: (i) UAT 154
+                                                                          https://www.gov.br/
+     Anifrolumabe para Tratamento de
+                                                                          ans/pt-br/acesso-a-
+     pacientes com lupus eritematoso
+                                                                          informacao/participacao-
+     sistêmico (LES) com moderada a alta 21/05/2025,
+                                                                          da-sociedade/
+AP   atividade e falha à terapia tripla com das 9h30 às   Microsoft Teams
+                                                                          audiencias-publicas/
+     hidroxicloroquina + corticosteroide    12h30
+                                                                          audiencias-publicas-
+     + imunossupressor e (ii) UAT 159
+                                                                          realizadas-1/audiencia-
+     - Selpercatinibe para Tratamento
+                                                                          publica-no-55
+     de pacientes adultos e pediátricos
+     com carcinoma medular de tireoide
+     avançado ou metastático RET
+     positivo (RET+).
+
+
+
+
+                                                                                                    33
+                                                                   Panorama - Saúde Suplementar
+
+
+     AP nº 56: contribuições em relação
+     à recomendação preliminar
+     desfavorável das tecnologias: (i)
+     UAT 152 - Teste pré-natal não
+     invasivo (NIPT) para detecção de
+     aneuploidias fetais específicas, como
+     trissomia 21 (síndrome de Down),
+     trissomia 18 (síndrome de Edwards)
+     e trissomia 13 (síndrome de Patau),
+     por meio da análise de DNA fetal
+     circulante no sangue materno em
+     gestantes de alto risco; (ii) UAT 153
+     - Mepolizumabe em combinação                                          https://www.gov.br/
+     com corticosteroide intranasal no                                     ans/pt-br/acesso-a-
+     tratamento de pacientes adultos (≥                                    informacao/participacao-
+                                           27/06/2025,
+     18 anos) com rinossinusite crônica                                    da-sociedade/
+AP                                         das 09:00 às Microsoft Teams
+     com pólipos nasais grave, contagem                                    audiencias-publicas/
+                                           13:00
+     de eosinófilos ≥ 300 células/μL                                       audiencias-publicas-
+     e histórico de cirurgia, que não                                      realizadas-1/audiencia-
+     obtiveram controle adequado da                                        publica-no-56
+     doença com uso da terapia padrão;
+     e (iii) UAT 165 - Lenalidomida em
+     combinação com Tafasitamabe,
+     seguida de monoterapia com
+     Tafasitamabe, para o tratamento
+     de pacientes adultos com linfoma
+     difuso de grandes células B (LDGCB)
+     recidivante ou refratário, incluindo
+     LDGCB decorrente de linfoma de
+     baixo grau, e que não são elegíveis
+     para transplante autólogo de células-
+     tronco (ASCT).
+
+     AP nº 57: contribuições em relação
+     à recomendação preliminar
+     desfavorável das tecnologias: (i)
+     UAT 158 – Fremanezumabe no                                           https://www.gov.br/
+     tratamento preventivo de enxaqueca                                   ans/pt-br/acesso-a-
+     em adultos com pelo menos 4 dias                                     informacao/participacao-
+                                             18/07/2025,
+     de enxaqueca por mês, refratários                                    da-sociedade/
+AP                                           das 09:30 às Microsoft Teams
+     a três tratamentos prévios e (ii) UAT                                audiencias-publicas/
+                                             12:30
+     163 – Belimumabe no tratamento                                       audiencias-publicas-
+     adjuvante de pacientes adultos ((≥                                   realizadas-1/audiencia-
+     18 anos) com lúpus eritematoso                                       publica-no-57
+     sistêmico (LES) e alto grau de
+     atividade da doença apesar do uso
+     da terapia padrão
+
+
+
+
+                                                                                                 34
+                                                                       Panorama - Saúde Suplementar
+
+
+         AP nº 58: contribuições acerca de
+         recomendação preliminar de não
+         incorporação para as seguintes
+         tecnologias:
+         (i) UAT 160 - Implante de válvula
+         aórtica transcateter (TAVI) no
+         tratamento da estenose valvar
+         aórtica grave para pacientes com
+         risco cirúrgico baixo (escore STS-
+         PROM <4%) como primeira linha de                                      https://www.gov.br/
+         tratamento; e                                                         ans/pt-br/acesso-a-
+         (ii) UAT 166 - Dupilumabe no           28/08/2025,                    informacao/participacao-
+  AP                                                           Microsoft Teams
+         tratamento complementar de             das 14h às                     da-sociedade/
+         pacientes adultos com doença           17h.                           audiencias-publicas/
+         pulmonar obstrutiva crônica                                           audiencia-publica-no-58
+         (DPOC) associada à inflamação
+         tipo 2 (caracterizada por meio de
+         contagem de eosinófilos no sangue
+         maior ou igual a 300 células/mm3),
+         em uso de terapia tripla inalatória
+         (antimuscarínico de longa ação
+         (LAMA) + ß2-agonista de longa ação
+         (LABA) + corticoides inalatórios (CI))
+         e com perfil exacerbador.
+
+         AP nº 59: contribuições em relação
+         à recomendação preliminar
+         desfavorável das tecnologias: (i)
+         UAT 168 - Balão intragástrico
+         para tratamento de adultos com                                        https://www.gov.br/
+         obesidade graus I e II (IMC igual ou                                  ans/pt-br/acesso-a-
+         maior que 30 e menor que 40 Kg/                                       informacao/participacao-
+                                                 19/09/2025,
+         m2), sem sucesso na perda de peso                                     da-sociedade/
+  AP                                             das 9h30 às   Microsoft Teams
+         após intervenções convencionais e                                     audiencias-publicas/
+                                                 12h30.
+         (ii) UAT 173 - Cloridrato de alectinibe                               audiencias-publicas-
+         para tratamento adjuvante de câncer                                   realizadas-1/audiencia-
+         de pulmão não pequenas células                                        publica-no-59
+         (CPNPC) de estágio IB (tumores =4
+         cm) até IIIA após ressecção do tumor
+         que seja positivo para quinase de
+         linfoma anaplásico (ALK).
+Fonte: GPLAN/SECEX/PRESI/ANS (2025).
+
+
+
+
+                                                                                                     35
+PARA MAIS INFORMAÇÕES E OUTROS ESCLARECIMENTOS, ENTRE EM CONTATO COM A ANS.
+VEJA ABAIXO NOSSOS CANAIS DE ATENDIMENTO:
+
+
+
+
+                        Atendimento
+ Disque ANS
+                         Eletrônico              em Núcleos da ANS
+
+
+
+
+   ans.reguladora   @ANS_reguladora   company/ans_reguladora    @ans.reguladora   ansreguladoraoficial
+

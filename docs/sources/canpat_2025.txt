@@ -1,0 +1,627 @@
+Acidentes do trabalho no Brasil – 2016 a 2025
+Esta avaliação técnica, construída pelos Auditores-Fiscais do Trabalho, analisa os
+dados de acidentes de trabalho no Brasil entre 2016 e 2025, com base nas
+Comunicações de Acidentes de Trabalho (CAT) registradas junto ao INSS/eSocial. O
+estudo abrange 6,4 milhões de acidentes registrados, 27.486 óbitos, mais de 106
+milhões de dias perdidos e cerca de 249 milhões de dias debitados — indicador que
+captura o impacto permanente sobre a vida dos trabalhadores.
+
+Os dados revelam que, após queda expressiva em 2020, atribuída à pandemia de
+COVID-19 e à retração da atividade econômica, os acidentes e óbitos retomaram
+crescimento e atingiram patamares elevados em 2024 e 2025. Em 2025, o Brasil
+registrou 806.011 acidentes e 3.644 óbitos — o maior número da série histórica.
+
+A análise por setor econômico (CNAE) mostra que o transporte rodoviário de carga
+lidera em mortes absolutas (2.601 óbitos no período), enquanto obras de montagem
+industrial apresentam a maior taxa de incidência (Taxa CAT de 80.026 por 100.000
+trabalhadores). Por ocupação (CBO), o motorista de caminhão concentra 4.249 óbitos
+em dez anos — o trabalhador que mais morre no Brasil. Territorialmente, São Paulo
+concentra o maior volume absoluto, mas Tocantins, Mato Grosso e Maranhão
+apresentam as maiores taxas de letalidade.
+
+OBSERVAÇÕES:
+Taxa CAT (Taxa de Incidência): mede a frequência de acidentes em relação à
+população exposta. Fórmula: (Total de Acidentes / Total de Trabalhadores) × 100.000.
+Indica quantos acidentes ocorrem a cada 100.000 trabalhadores.
+
+Taxa de Letalidade: mede a gravidade dos acidentes. Fórmula: (Total de Óbitos / Total
+de Acidentes) × 1.000. Indica quantas mortes ocorrem a cada 1.000 acidentes
+registrados.
+
+Dias perdidos: tempo real de afastamento do trabalhador em decorrência do
+acidente. Mensura o impacto direto na produtividade e na vida do trabalhador durante
+o período de recuperação.
+
+Dias debitados: medida de gravidade permanente baseada em tabela de pesos
+(prevista em ABNT NBR). Atribui pontuação conforme o tipo de lesão (por exemplo:
+óbito recebe 6.000 pontos e amputações recebem pontuação elevada). Captura o
+impacto duradouro sobre a vida do trabalhador além do período de afastamento.
+
+
+
+Série histórica
+A tabela a seguir apresenta a evolução anual dos principais indicadores de acidentes
+de trabalho no Brasil. O ano de 2020 (destacado em amarelo) representa o ponto de
+inflexão causado pela pandemia de COVID-19 e deve ser interpretado com cautela
+para fins de análise de tendência.
+Principais observações da série histórica
+
+Crescimento pós-pandemia: os acidentes cresceram 65,8% entre 2020 (mínimo
+histórico) e 2025 (486.303 → 806.011). Os óbitos cresceram 60,8% neste mesmo
+período.
+
+Recorde histórico em 2025: o ano de 2025 registrou o maior número de acidentes
+(806.011) e de óbitos (3.644) da série.
+
+Redução da taxa CAT versus aumento absoluto: a Taxa CAT caiu de 29,39 (2016)
+para 17,94 (2025), reflexo do crescimento do emprego formal com carteira assinada.
+Contudo, o número absoluto de acidentes aumentou expressivamente, o que indica
+que a formalização do mercado de trabalho não veio acompanhada de proporcional
+melhora nas condições de segurança.
+
+Impacto sobre dias de trabalho: em dez anos, os trabalhadores brasileiros perderam
+mais de 106 milhões de dias de trabalho por acidentes. Os dias debitados totalizam
+248,8 milhões — cada um representando o impacto permanente de lesões graves e
+mortes.
+
+Aumento de dias perdidos em 2022-2024: houve salto de 7,5 milhões de dias
+perdidos (2021) para 16,5 milhões (2022), mantendo-se acima de 17-18 milhões em
+2023 e 2024. Esse fenômeno pode estar associado ao aumento de acidentes com
+maior gravidade e ao crescimento dos acidentes de trajeto.
+
+Mudança no perfil de tipo de acidente: os acidentes típicos representam 64,6% do
+total acumulado, seguidos pelos acidentes de trajeto (19,3%) e doenças ocupacionais
+(2,8%). Em 2020, as doenças saltaram para 35.290 — mais que o dobro do habitual —
+reflexo das doenças relacionadas ao COVID-19 notificadas como doença ocupacional.
+
+Participação feminina crescente: As mulheres representaram 34,2% do total
+acumulado de acidentes. A participação feminina cresceu consistentemente: em 2016
+eram 198.144 acidentes, chegando a 293.204 em 2025 — crescimento de 48%.
+Setores com forte presença feminina como saúde e serviços explicam parte desse
+crescimento.
+
+
+
+ANÁLISE POR SETOR ECONÔMICO (CNAE)
+
+A análise por CNAE permite identificar quais setores econômicos concentram o maior
+risco ocupacional no Brasil. Os rankings a seguir utilizam dados acumulados de 2016
+a 2025 e revelam perfis de risco distintos conforme a métrica adotada.
+
+
+
+Ranking por total de acidentes
+Destaca-se a saúde como setor crítico — as atividades hospitalares lideram em
+volume.
+                                                              Taxa       Tx.
+ #       Setor Econômico (CNAE)         Acidentes   Óbitos
+                                                              CAT       Letali.
+
+      Atendimento hospitalar (exceto
+ 1                                        500.032      221    6.378,9     21,69
+      pronto-socorro)
+
+ 2    Supermercados                       204.277      335    2.150,6     83,82
+
+ 3    Administração pública em geral      177.078      596    7.609,3   195,15
+
+      Transp. rodoviário de carga
+ 4                                        143.367    2.601    2.304,5   526,63
+      intermunicipal/interestadual
+
+      Atendimento em pronto-socorro /
+ 5                                        133.446       83    6.869,7     15,14
+      urgências
+
+ 6    Construção de edifícios             122.455      820    3.743,3   238,10
+
+      Coleta de resíduos não-
+ 7                                         84.937      220   11.164,8     65,99
+      perigosos
+
+ 8    Atividades do Correio Nacional       84.371       40    9.751,6     13,17
+
+ 9    Abate de aves                        80.372      166   11.844,4     50,13
+
+ 10   Restaurantes e similares             76.255      262    1.317,8    112,75
+
+
+
+
+Análise crítica: O setor de saúde concentra os dois primeiros lugares (hospitais e
+pronto-socorro), com quase 633 mil acidentes acumulados. A construção civil aparece
+na 6ª posição, mas com letalidade muito superior à saúde.
+
+
+
+Ranking por total de óbitos
+
+O ranking de óbitos apresenta um perfil completamente diferente do ranking de
+acidentes, evidenciando que volume de notificação e mortalidade não são fenômenos
+correlatos. O transporte rodoviário lidera de forma isolada.
+
+
+
+                                                              Taxa       Tx.
+ #       Setor Econômico (CNAE)         Acidentes   Óbitos                        Destaque
+                                                              CAT       Letali.
+
+      Transp. rodoviário de carga
+ 1                                        143.367    2.601   2.304,5    526,63    ★ Lidera
+      intermunicipal/interestadual
+ 2    Construção de edifícios           122.455       820   3.743,3    238,10
+
+
+ 3    Administração pública em geral    177.078       596   7.609,3    195,15
+
+
+      Atividades de vigilância e
+ 4                                        42.086      467   1.079,7    350,10
+      segurança privada
+
+
+ 5    Supermercados                     204.277       335   2.150,6     83,82
+
+
+      Transp. rodoviário de carga
+ 6                                        22.106      328   2.258,0    564,26
+      municipal
+
+      Comércio varejista de
+ 7                                        27.033      308     896,2    439,60
+      combustíveis
+
+      Construção de rodovias e
+ 8                                        26.889      298   4.505,6    325,17
+      ferrovias
+
+
+ 9    Serviços de engenharia              38.547      290   2.830,5    297,80
+
+
+      Transp. rodoviário de produtos
+ 10                                       15.008      282   2.289,1    880,04    ★ Letali.
+      perigosos
+
+
+
+
+Análise crítica: o transporte rodoviário de carga (intermunicipal e interestadual)
+acumulou 2.601 mortes em dez anos — mais que o triplo da 2ª colocada (construção
+de edifícios, 820 óbitos). Isso representa, em média, 260 motoristas mortos por ano
+nesse subsetor específico. A presença do transporte de produtos perigosos no 10º
+lugar, com 15.008 acidentes, mas 282 mortes (taxa de letalidade de 880/1.000), indica
+que quando ocorre acidente nesse segmento, as consequências são quase sempre
+fatais. A vigilância e segurança privada (4ª, 467 mortes) evidencia a violência como
+risco ocupacional relevante.
+
+
+
+Ranking por taxa CAT (incidência por 100.000 trabalhadores)
+A taxa CAT normaliza o risco pelo tamanho da força de trabalho do setor. Esse ranking
+revela setores com alta exposição relativa, que muitas vezes passam despercebidos
+no ranking de volume absoluto.
+                                                              Taxa       Tx.
+ #      Setor Econômico (CNAE)        Acidentes    Óbitos                         Destaque
+                                                              CAT       Letali.
+
+
+                                                                                        ★
+ 1    Obras de montagem industrial        11.497      106   80.026,2     183,62
+                                                                                    Record
+
+      Medição de consumo de
+ 2                                         4.764       19   51.357,1     148,41
+      energia elétrica, gás e água
+
+      Bancos múltiplos sem carteira
+ 3                                          190         1   34.519,2      14,29
+      comercial
+
+
+ 4    Fundição de ferro e aço            39.604        33   21.590,0      29,42
+
+
+      Comércio atacadista de café
+ 5                                          317         1   21.429,4      50,00
+      torrado e moído
+
+
+ 6    Frigorífico – abate de suínos      55.135        62   19.387,4      14,41
+
+
+      Moagem de trigo e fabricação
+ 7                                         6.295       19   19.361,2      72,40
+      de derivados
+
+      Regulação de atividades de
+ 8                                         8.050       22   16.592,3     101,60
+      saúde e educação
+
+      Extração de madeira em
+ 9                                         3.952       53   15.818,1     269,98
+      florestas plantadas
+
+      Outras atividades de serviços
+ 10                                        1.101        2   15.152,2      11,09
+      financeiros
+
+
+
+
+Análise crítica: Obras de montagem industrial apresentam taxa de incidência de
+80.026 acidentes por 100.000 trabalhadores — o equivalente a dizer que, em média,
+um a cada 1,25 trabalhadores desse setor sofre acidente em cada ano. Frigoríficos
+(suínos e bovinos) e fundições de ferro e aço também apresentam taxas acima de
+19.000/100.000.
+
+
+
+Ranking por taxa de letalidade (mortes por 1.000 acidentes)
+A taxa de letalidade é o indicador mais sensível para identificar onde os acidentes têm
+maior chance de ser fatais. Um valor elevado indica que, quando acontece o acidente,
+a chance de morte é alta.
+                                                             Taxa        Tx.
+ #       Setor Econômico (CNAE)         Acidentes   Óbitos                        Destaque
+                                                             CAT¹      Letali.²
+
+
+      Transp. rodoviário de produtos                                                   ★
+ 1                                         15.008      282   2.289,1    880,04
+      perigosos                                                                    Record
+
+      Serviço de táxi aéreo / locação
+ 2                                           548        26   1.041,6    734,51
+      aeronaves c/ tripulação
+
+      Serviço de pulverização e
+ 3                                           526        36    572,9     730,27
+      controle de pragas agrícolas
+
+      Extração de areia, cascalho ou
+ 4                                          2.445       40   1.365,2    703,60
+      pedregulho
+
+
+ 5    Criação de peixes em água doce         542        11   2.214,5    630,81
+
+
+      Comércio atacadista de
+ 6                                           945        17   1.040,4    583,88
+      combustíveis por transportador
+
+      Transp. rodoviário coletivo sob
+ 7                                          4.420       87   2.008,4    582,25
+      regime de fretamento
+
+      Transp. rodoviário de carga
+ 8                                         22.106      328   2.258,0    564,26
+      municipal
+
+
+ 9    Obras de terraplenagem               10.264      152   3.436,7    542,58
+
+
+ 10   Serviços de reboque de veículos       2.177       49   1.839,8    527,53
+
+
+
+
+Análise crítica: o transporte de produtos perigosos apresenta taxa de letalidade de
+880 mortes por 1.000 acidentes — ou seja, quase 1 morte a cada acidente registrado.
+O setor agrícola aéreo (táxi aéreo e pulverização agrícola) também aparece com
+letalidade acima de 700, o que indica que os poucos acidentes registrados nessa
+atividade tendem a ser fatais, dada a natureza do trabalho aéreo.
+
+
+
+ANÁLISE POR OCUPAÇÃO (CBO)
+
+A análise por ocupação identifica o trabalhador — não o setor — como unidade de
+análise.
+Ranking por total de acidentes
+
+                                                              Taxa        Tx.
+ #           Ocupação (CBO)              Acidentes   Óbitos                        Destaque
+                                                              CAT¹      Letali.²
+
+
+ 1    Técnico de enfermagem                372.092      182   1.626,3       1,48
+
+
+      Alimentador de linha de
+ 2                                         317.800      778    778,1      12,06
+      produção
+
+
+ 3    Faxineiro                            217.997      419    317,1        8,84
+
+
+      Motorista de caminhão (rotas
+ 4                                         135.620    4.249    340,4     103,95    ★ Mortes
+      regionais e internacionais)
+
+
+ 5    Servente de obras                    100.723      741    772,8      27,61
+
+
+ 6    Enfermeiro                            84.806       52   1.039,4       2,15
+
+
+ 7    Vendedor de comércio varejista        84.047      402    119,8      17,32
+
+
+ 8    Auxiliar de escritório, em geral      78.934      235    134,1      13,05
+
+
+ 9    Assistente administrativo             78.375      234    149,0      10,29
+
+
+      Auxiliar nos serviços de
+ 10                                         73.397      101    438,1        9,27
+      alimentação
+
+
+
+
+Análise crítica: O técnico de enfermagem, com 372.092 acidentes acumulados, é o
+trabalhador que mais sofre acidentes no Brasil em termos absolutos. Esse resultado é
+consistente com o que foi observado na análise por CNAE (setor hospitalar no topo). O
+alimentador de linha de produção ocupa o 2º lugar. A presença de vendedores,
+auxiliares de escritório e assistentes administrativos reflete a crescente formalização
+de setores de serviços e o crescimento dos acidentes de trajeto nessas categorias.
+
+
+
+Ranking por total de óbitos
+
+                                                               Taxa       Tx.
+ #           Ocupação (CBO)              Acidentes   Óbitos                        Destaque
+                                                               CAT¹     Letali.²
+
+      Motorista de caminhão (rotas
+ 1                                         135.620    4.249    340,4     103,95    ★ Lidera
+      regionais e internacionais)
+      Alimentador de linha de
+ 2                                        317.800       778     778,1      12,06
+      produção
+
+
+ 3    Servente de obras                   100.723       741     772,8      27,61
+
+
+ 4    Vigilante                            46.633       551     218,6      40,11
+
+
+      Motociclista no transporte de
+ 5                                         49.930       427     957,0      26,05
+      documentos/volumes
+
+
+ 6    Faxineiro                           217.997       419     317,1       8,84
+
+
+ 7    Ajudante de motorista                59.537       414     607,0      21,76
+
+
+ 8    Vendedor de comércio varejista       84.047       402     119,8      17,32
+
+
+ 9    Pedreiro                             47.015       372     557,9      27,47
+
+
+      Motorista de furgão ou veículo
+ 10                                        24.182       343     293,7      43,67
+      similar
+
+
+
+
+Análise crítica — O trabalhador que mais morre no Brasil: o motorista de
+caminhão concentrou 4.249 óbitos em dez anos — uma média de 425 mortes por ano,
+ou mais de 1 morte por dia. Esse número é 5,5 vezes maior que o 2º colocado
+(alimentador de linha de produção, 778 óbitos). O vigilante (4º, 551 mortes) reflete a
+violência como causa de morte ocupacional.
+
+
+
+Ranking por taxa CAT (incidência por 100.000 trabalhadores)
+
+                                                               Taxa       Tx.
+ #           Ocupação (CBO)            Acidentes    Óbitos                         Destaque
+                                                               CAT       Letali.
+
+      Agente de segurança
+ 1                                          829         17    10.232,1     16,05
+      penitenciária
+
+
+ 2    Rebarbador de metal                 18.687         9     8.415,2      1,44
+
+
+ 3    Avicultor                             306          0     6.860,6      0,00
+
+
+ 4    Ceramista                            7.508        31     6.584,5     16,74
+
+
+      Dirigente do serviço público
+ 5                                         1.534        21     6.293,1    123,61
+      municipal
+      Técnico em operação de
+ 6                                           466        1    6.215,4       0,58
+      equipamentos de TV
+
+      Auxiliar de enfermagem da
+ 7                                         1.931        1    6.113,4       0,06
+      estratégia de saúde da família
+
+
+ 8    Trabalhador da cultura de sisal         45        0    5.927,9       0,00
+
+
+      Técnico de enfermagem
+ 9                                         1.158        3    5.811,6       0,74
+      psiquiátrica
+
+
+
+
+Ranking por taxa de letalidade (mortes por 1.000 acidentes)
+
+                                                             Taxa        Tx.
+ #            Ocupação (CBO)            Acidentes   Óbitos                        Destaque
+                                                             CAT¹      Letali.²
+
+
+      Piloto comercial (exceto linhas                                                  ★
+ 1                                            27        10     63,2     487,66
+      aéreas)                                                                      Record
+
+
+ 2    Piloto de aeronaves                    206        30    100,4     480,86
+
+
+ 3    Piloto agrícola                         91        27    437,5     402,83
+
+
+ 4    Prefeito                                 8         2    503,8     200,00
+
+
+      Comandante da marinha
+ 5                                            95         2     79,3     200,00
+      mercante
+
+      Mergulhador profissional (raso
+ 6                                           512        18   1.496,3    188,88
+      e profundo)
+
+
+ 7    Piloto fluvial                         165         5    250,2     154,32
+
+
+ 8    Destroçador de pedra                   362         5    345,8     153,79
+
+
+ 9    Médico ginecologista e obstetra        428         3   1.918,5    140,00
+
+
+      Técnico em estruturas
+ 10                                          157         3    258,9     136,90
+      metálicas
+
+
+
+
+Análise crítica: Os pilotos (comercial, agrícola e de aeronaves) dominam o ranking de
+letalidade por ocupação, com taxas entre 400 e 487 mortes por 1.000 acidentes. O
+mergulhador profissional (188,88/1.000) e o destroçador de pedras (153,79/1.000)
+refletem ambientes de trabalho de altíssimo risco intrínseco. A presença do médico
+ginecologista (140/1.000) pode estar relacionada a acidentes de trajeto em plantões.
+
+
+
+ANÁLISE POR UNIDADE FEDERATIVA (UF)
+A distribuição geográfica dos acidentes de trabalho reflete o peso econômico de cada
+estado. A tabela a seguir apresenta os estados com maiores volumes de acidentes e
+óbitos no período 2016–2025.
+
+
+
+Top 10 estados – volume de acidentes e óbitos
+
+         Acidentes        Óbitos
+ UF                                   Taxa CAT     Taxa Letali.
+           (total)        (total)
+
+ SP    2.219.859              6.517       199,20          2,93
+
+ MG    657.459                3.269       189,50          4,99
+
+ PR    500.946                2.653       210,18          5,28
+
+ RS    516.033                1.623       240,38          3,13
+
+ SC    459.716                1.865       239,45          4,02
+
+ RJ    420.788                1.536       142,87          3,65
+
+ MT    134.549                1.257       240,04          9,24
+
+ GO    182.385                1.227       179,23          6,72
+
+ BA    180.598                1.100       122,48          5,95
+
+ PE    148.569                  676       138,27          4,53
+
+
+
+
+Concentração em São Paulo: São Paulo responde por 2.219.859 acidentes (34,4%
+do total nacional) e 6.517 óbitos (23,7%). Essa concentração reflete o tamanho da
+força de trabalho formal.
+
+
+
+Sul e Sudeste dominam o volume: os seis estados do Sul e Sudeste (SP, MG, RS,
+PR, SC, RJ) concentram 68% de todos os acidentes e 62% de todos os óbitos. Esse
+padrão é esperado dado o peso industrial e de serviços formais nessas regiões.
+Rankings por taxa CAT e taxa de letalidade
+
+  Ranking        maior taxa CAT        maior taxa de letalidade           Interpretação
+
+                                                                  MS tem alta incidência
+    1°       MS – 255,54              TO – 10,91                  relativa; TO tem acidentes
+                                                                  mais graves/fatais
+
+                                                                  RS destaca-se pela densidade
+    2°       RS – 240,38              MT – 9,24                   industrial; MT pela
+                                                                  agropecuária e transporte
+
+                                                                  MT combina alta incidência E
+    3°       MT – 240,04              MA – 8,55
+                                                                  alta letalidade
+
+                                                                  SC/PR têm forte setor
+    4°       SC – 239,45              RO – 8,23
+                                                                  industrial e agroindustrial
+
+                                                                  Norte e Nordeste com
+    5°       RO – 215,55              PI – 8,09
+                                                                  letalidade elevada
+
+                                                                  PA reflete riscos do
+    6°       ES – 215,16              PA – 7,71                   agronegócio e extrativismo
+                                                                  amazônico
+
+                                                                  GO combina agronegócio,
+    7°       PR – 210,18              GO – 6,72
+                                                                  frigoríficos e construção
+
+                                                                  SP volume alto, mas taxa
+    8°       SP – 199,20              BA – 5,95                   moderada; BA reflete setor de
+                                                                  serviços e agro
+
+                                                                  Região Norte com perfil de
+    9°       AM – 191,22              AC – 6,58
+                                                                  risco específico
+
+                                                                  MG fortemente industrial com
+    10°      MG – 189,50              PE – 4,53                   acidentes de gravidade
+                                                                  moderada
+
+
+
+
+Mato Grosso – estado de duplo alerta: MT aparece entre os 3 primeiros tanto na
+taxa CAT (240,04) quanto na taxa de letalidade (9,24), configurando o estado com
+maior risco ocupacional combinado do Brasil. O perfil econômico mato-grossense —
+dominado por agronegócio, transporte de commodities e construção de infraestrutura
+— explica essa dupla vulnerabilidade. Com 1.257 óbitos acumulados e taxa de
+letalidade 9,24, praticamente 1 em cada 100 acidentes registrados resulta em morte —
+o dobro da média nacional.
+Norte e Nordeste – letalidade oculta: Embora Tocantins, Maranhão, Pará, Rondônia
+e Piauí tenham volumes menores de acidentes, suas taxas de letalidade estão entre
+as maiores do país. Isso indica que quando o acidente ocorre nessas regiões, é mais
+provável que seja fatal.
+
