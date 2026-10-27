@@ -1,0 +1,1278 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Demo — Previsão de desfecho de saúde do trabalho · SESI Bahia</title>
+<meta name="description" content="Demonstração funcional da tese preditiva para o Hackathon+ SESI Saúde 2026. Executa 100% offline.">
+<style>
+/* ============================================================
+   DESIGN TOKENS — 4px grid, WCAG AA, dark + light
+   ============================================================ */
+:root{
+  --bg:#080B10; --surface:#10161F; --surface-2:#18202C; --surface-3:#212B3A;
+  --line:#2A3646; --line-soft:#1E2836;
+  --text:#E9EFF7; --text-2:#9FB0C6; --text-3:#6B7E96;
+  --accent:#2DD4BF; --accent-dim:#14B8A6; --accent-ink:#042F2C;
+  --info:#7DA9F8; --warn:#F2B14A; --risk:#FB7185; --good:#3DD68C; --violet:#A78BFA;
+  --radius:12px; --radius-sm:8px; --radius-lg:18px;
+  --sp-1:4px; --sp-2:8px; --sp-3:12px; --sp-4:16px; --sp-5:24px; --sp-6:32px; --sp-7:48px; --sp-8:64px;
+  --fs-xs:12px; --fs-sm:13px; --fs-base:15px; --fs-md:17px; --fs-lg:21px; --fs-xl:27px; --fs-2xl:34px; --fs-3xl:44px;
+  --ease:cubic-bezier(.2,.7,.3,1);
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 28px rgba(0,0,0,.32);
+  --font:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --mono:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: light){
+  :root{
+    --bg:#F5F7FA; --surface:#FFFFFF; --surface-2:#F8FAFC; --surface-3:#EEF2F7;
+    --line:#D6DEE8; --line-soft:#E7ECF3;
+    --text:#101720; --text-2:#4A5A70; --text-3:#75869B;
+    --accent:#0D9488; --accent-dim:#0F766E; --accent-ink:#FFFFFF;
+    --info:#2563EB; --warn:#B45309; --risk:#BE123C; --good:#047857; --violet:#6D28D9;
+    --shadow:0 1px 2px rgba(16,24,40,.06),0 8px 24px rgba(16,24,40,.07);
+  }
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0; background:var(--bg); color:var(--text);
+  font-family:var(--font); font-size:var(--fs-base); line-height:1.55;
+  -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.001ms !important;transition-duration:.001ms !important}
+}
+
+/* ============================================================
+   LAYOUT
+   ============================================================ */
+.topbar{
+  position:sticky; top:0; z-index:60;
+  background:color-mix(in srgb,var(--bg) 88%,transparent);
+  backdrop-filter:blur(14px); border-bottom:1px solid var(--line-soft);
+}
+.topbar-in{max-width:1240px; margin:0 auto; padding:var(--sp-3) var(--sp-5); display:flex; align-items:center; gap:var(--sp-4); flex-wrap:wrap}
+.brand{display:flex; align-items:center; gap:var(--sp-3); min-width:0}
+.brand-mark{
+  width:34px;height:34px;border-radius:9px;flex:none;
+  background:linear-gradient(135deg,var(--accent),var(--info));
+  display:grid;place-items:center;color:var(--accent-ink);font-weight:800;font-size:var(--fs-sm);letter-spacing:-.02em;
+}
+.brand-txt{min-width:0}
+.brand-txt b{display:block;font-size:var(--fs-sm);letter-spacing:.02em;line-height:1.25}
+.brand-txt span{display:block;font-size:var(--fs-xs);color:var(--text-3);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.spacer{flex:1 1 auto}
+.nav{display:flex;gap:var(--sp-1);flex-wrap:wrap}
+.nav button{
+  font:inherit;font-size:var(--fs-xs);font-weight:600;letter-spacing:.01em;
+  background:transparent;border:1px solid transparent;color:var(--text-2);
+  padding:7px 11px;border-radius:999px;cursor:pointer;transition:all .2s var(--ease);
+}
+.nav button:hover{color:var(--text);background:var(--surface-2)}
+.nav button[aria-current="true"]{color:var(--accent);background:color-mix(in srgb,var(--accent) 12%,transparent);border-color:color-mix(in srgb,var(--accent) 32%,transparent)}
+.btn{
+  font:inherit;font-size:var(--fs-xs);font-weight:700;letter-spacing:.02em;
+  padding:9px 14px;border-radius:999px;cursor:pointer;transition:all .2s var(--ease);
+  border:1px solid var(--line); background:var(--surface-2); color:var(--text);
+}
+.btn:hover{border-color:var(--accent);color:var(--accent)}
+.btn-primary{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.btn-primary:hover{filter:brightness(1.08);color:var(--accent-ink)}
+.btn:focus-visible,button:focus-visible,select:focus-visible,input:focus-visible,a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+main{max-width:1240px;margin:0 auto;padding:0 var(--sp-5) var(--sp-8)}
+section{padding:var(--sp-7) 0;border-bottom:1px solid var(--line-soft)}
+section:last-of-type{border-bottom:0}
+.eyebrow{
+  font-size:var(--fs-xs);font-weight:800;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--accent);margin:0 0 var(--sp-2);
+}
+h1{font-size:var(--fs-3xl);line-height:1.08;letter-spacing:-.025em;margin:0 0 var(--sp-4);max-width:19ch}
+h2{font-size:var(--fs-xl);line-height:1.2;letter-spacing:-.018em;margin:0 0 var(--sp-3)}
+h3{font-size:var(--fs-md);line-height:1.3;margin:0 0 var(--sp-2);letter-spacing:-.01em}
+.lead{font-size:var(--fs-md);color:var(--text-2);max-width:62ch;margin:0 0 var(--sp-5)}
+p{margin:0 0 var(--sp-3)}
+small{font-size:var(--fs-xs)}
+.hint{font-size:var(--fs-xs);color:var(--text-3);line-height:1.5}
+.tag{
+  display:inline-flex;align-items:center;gap:5px;
+  font-size:var(--fs-xs);font-weight:700;letter-spacing:.03em;
+  padding:3px 9px;border-radius:999px;border:1px solid var(--line);color:var(--text-2);background:var(--surface-2);
+}
+.tag-fato{color:var(--good);border-color:color-mix(in srgb,var(--good) 34%,transparent);background:color-mix(in srgb,var(--good) 11%,transparent)}
+.tag-hip{color:var(--warn);border-color:color-mix(in srgb,var(--warn) 34%,transparent);background:color-mix(in srgb,var(--warn) 11%,transparent)}
+.tag-acq{color:var(--info);border-color:color-mix(in srgb,var(--info) 34%,transparent);background:color-mix(in srgb,var(--info) 11%,transparent)}
+.tag-gap{color:var(--violet);border-color:color-mix(in srgb,var(--violet) 34%,transparent);background:color-mix(in srgb,var(--violet) 11%,transparent)}
+
+.card{background:var(--surface);border:1px solid var(--line-soft);border-radius:var(--radius-lg);padding:var(--sp-5)}
+.card-flush{padding:0;overflow:hidden}
+.grid{display:grid;gap:var(--sp-4)}
+.g2{grid-template-columns:repeat(2,1fr)}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g4{grid-template-columns:repeat(4,1fr)}
+@media(max-width:980px){.g3,.g4{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:640px){.g2,.g3,.g4{grid-template-columns:1fr}}
+.kpi{background:var(--surface);border:1px solid var(--line-soft);border-radius:var(--radius);padding:var(--sp-4)}
+.kpi b{display:block;font-size:var(--fs-2xl);letter-spacing:-.03em;line-height:1.05;font-variant-numeric:tabular-nums}
+.kpi span{display:block;font-size:var(--fs-xs);color:var(--text-2);margin-top:6px;line-height:1.4}
+.kpi em{font-style:normal;font-size:var(--fs-xs);color:var(--text-3);display:block;margin-top:6px}
+
+/* form controls */
+.field{display:flex;flex-direction:column;gap:6px}
+.field label{font-size:var(--fs-xs);font-weight:700;color:var(--text-2);letter-spacing:.03em;text-transform:uppercase}
+select{
+  font:inherit;font-size:var(--fs-base);padding:10px 12px;border-radius:var(--radius-sm);
+  border:1px solid var(--line);background:var(--surface-2);color:var(--text);width:100%;cursor:pointer;
+}
+input[type=range]{width:100%;accent-color:var(--accent);height:28px}
+.row{display:flex;gap:var(--sp-3);flex-wrap:wrap;align-items:flex-end}
+
+/* tables */
+table{width:100%;border-collapse:collapse;font-size:var(--fs-sm)}
+th,td{text-align:left;padding:9px 12px;border-bottom:1px solid var(--line-soft);vertical-align:top}
+th{font-size:var(--fs-xs);text-transform:uppercase;letter-spacing:.06em;color:var(--text-3);font-weight:700}
+td.num{text-align:right;font-variant-numeric:tabular-nums;font-family:var(--mono);font-size:var(--fs-xs)}
+tbody tr:hover{background:var(--surface-2)}
+
+/* charts */
+.chart{width:100%;height:auto;display:block;overflow:visible}
+.chart text{font-family:var(--font);fill:var(--text-2)}
+.ax-label{font-size:11px;fill:var(--text-3)}
+.val-label{font-size:11px;fill:var(--text);font-weight:700;font-variant-numeric:tabular-nums}
+.legend{display:flex;gap:var(--sp-4);flex-wrap:wrap;font-size:var(--fs-xs);color:var(--text-2);margin-top:var(--sp-3)}
+.legend i{display:inline-block;width:11px;height:11px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+.chart-box{background:var(--surface);border:1px solid var(--line-soft);border-radius:var(--radius-lg);padding:var(--sp-5)}
+.chart-box h3{margin-bottom:var(--sp-1)}
+.chart-box .hint{margin-bottom:var(--sp-4)}
+
+/* chain */
+.chain-wrap{overflow-x:auto;padding-bottom:var(--sp-2)}
+.chain{display:flex;gap:0;min-width:900px;align-items:stretch}
+.chain-node{
+  flex:1 1 0;min-width:128px;background:var(--surface);border:1px solid var(--line-soft);
+  border-radius:var(--radius);padding:var(--sp-3);cursor:pointer;text-align:left;font:inherit;color:inherit;
+  transition:all .2s var(--ease);position:relative;
+}
+.chain-node:hover{border-color:var(--accent);transform:translateY(-2px)}
+.chain-node[aria-pressed="true"]{border-color:var(--accent);background:color-mix(in srgb,var(--accent) 9%,var(--surface))}
+.chain-node .n{display:block;font-size:var(--fs-xs);font-weight:800;color:var(--accent);letter-spacing:.08em}
+.chain-node .t{display:block;font-size:var(--fs-sm);font-weight:700;margin:3px 0 5px;line-height:1.25}
+.chain-node .v{display:block;font-size:var(--fs-xs);color:var(--text-2);line-height:1.4}
+.chain-node.gap{border-style:dashed;border-color:color-mix(in srgb,var(--violet) 45%,var(--line))}
+.chain-node.gap .n{color:var(--violet)}
+.chain-arrow{flex:0 0 26px;display:grid;place-items:center;color:var(--text-3);font-size:var(--fs-md)}
+
+/* worker phone */
+.phone{
+  width:min(340px,100%);margin:0 auto;background:var(--surface);border:1px solid var(--line);
+  border-radius:26px;padding:var(--sp-4);box-shadow:var(--shadow);
+}
+.phone-top{display:flex;align-items:center;gap:8px;padding-bottom:var(--sp-3);border-bottom:1px solid var(--line-soft);margin-bottom:var(--sp-4)}
+.q{display:flex;flex-direction:column;gap:6px;margin-bottom:var(--sp-4)}
+.q-head{display:flex;justify-content:space-between;align-items:baseline;gap:var(--sp-3)}
+.q-head b{font-size:var(--fs-sm);line-height:1.35}
+.q-head span{font-size:var(--fs-xs);color:var(--text-3);white-space:nowrap}
+.scale{display:grid;grid-template-columns:repeat(5,1fr);gap:5px}
+.scale button{
+  font:inherit;font-size:var(--fs-xs);font-weight:700;padding:9px 0;border-radius:var(--radius-sm);
+  border:1px solid var(--line);background:var(--surface-2);color:var(--text-2);cursor:pointer;transition:all .16s var(--ease);
+}
+.scale button:hover{border-color:var(--accent)}
+.scale button[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.bubble{background:var(--surface-2);border:1px solid var(--line-soft);border-radius:var(--radius);padding:var(--sp-4);font-size:var(--fs-sm)}
+.bubble h3{font-size:var(--fs-base);margin-bottom:var(--sp-2)}
+
+/* levers */
+.lever{
+  background:var(--surface);border:1px solid var(--line-soft);border-left:3px solid var(--accent);
+  border-radius:var(--radius);padding:var(--sp-4);
+}
+.lever[data-dim="ambient"]{border-left-color:var(--info)}
+.lever[data-dim="comportamento"]{border-left-color:var(--warn)}
+.lever[data-dim="organizacao"]{border-left-color:var(--violet)}
+.lever[data-dim="participacao"]{border-left-color:var(--good)}
+.lever h4{margin:0 0 6px;font-size:var(--fs-base);letter-spacing:-.01em}
+.lever .metric{font-size:var(--fs-xs);color:var(--text-2);margin-bottom:var(--sp-3)}
+.lever .metric b{color:var(--text);font-variant-numeric:tabular-nums}
+.lever p{font-size:var(--fs-sm);color:var(--text-2);margin:0 0 var(--sp-3)}
+
+/* pitch overlay */
+.pitch{
+  position:fixed;inset:0;z-index:200;background:var(--bg);
+  display:none;flex-direction:column;
+}
+.pitch[data-open="true"]{display:flex}
+.pitch-bar{display:flex;align-items:center;gap:var(--sp-4);padding:var(--sp-3) var(--sp-5);border-bottom:1px solid var(--line-soft)}
+.pitch-timer{font-family:var(--mono);font-size:var(--fs-xl);font-variant-numeric:tabular-nums;font-weight:700;letter-spacing:-.02em}
+.pitch-timer.over{color:var(--risk)}
+.pitch-stage{flex:1;overflow:auto;display:grid;place-items:center;padding:var(--sp-6)}
+.pitch-slide{max-width:940px;width:100%}
+.pitch-slide .time{font-size:var(--fs-xs);font-weight:800;letter-spacing:.12em;color:var(--accent);text-transform:uppercase;margin-bottom:var(--sp-3)}
+.pitch-slide h2{font-size:var(--fs-2xl);line-height:1.15;max-width:30ch}
+.pitch-slide .say{font-size:var(--fs-md);color:var(--text-2);max-width:64ch;margin-top:var(--sp-4);line-height:1.6}
+.pitch-dots{display:flex;gap:6px;justify-content:center;padding:var(--sp-4)}
+.pitch-dots i{width:26px;height:4px;border-radius:2px;background:var(--line);display:block}
+.pitch-dots i.on{background:var(--accent)}
+.pitch-note{font-size:var(--fs-xs);color:var(--text-3);text-align:center;padding:0 var(--sp-4) var(--sp-4);max-width:80ch;margin:0 auto}
+
+/* misc */
+.note{border-left:3px solid var(--warn);background:color-mix(in srgb,var(--warn) 7%,transparent);padding:var(--sp-3) var(--sp-4);border-radius:0 var(--radius-sm) var(--radius-sm) 0;font-size:var(--fs-sm);color:var(--text-2)}
+.note.ok{border-left-color:var(--good);background:color-mix(in srgb,var(--good) 7%,transparent)}
+.note.bad{border-left-color:var(--risk);background:color-mix(in srgb,var(--risk) 7%,transparent)}
+.stack{display:flex;flex-direction:column;gap:var(--sp-4)}
+.row-between{display:flex;justify-content:space-between;align-items:baseline;gap:var(--sp-3);flex-wrap:wrap}
+.mono{font-family:var(--mono);font-size:var(--fs-xs)}
+ul.clean{margin:0;padding-left:1.1em;font-size:var(--fs-sm);color:var(--text-2)}
+ul.clean li{margin-bottom:5px}
+footer{max-width:1240px;margin:0 auto;padding:var(--sp-6) var(--sp-5) var(--sp-8);color:var(--text-3);font-size:var(--fs-xs);border-top:1px solid var(--line-soft)}
+.sr{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.spread{display:flex;justify-content:space-between;gap:var(--sp-4);flex-wrap:wrap;align-items:center}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-in">
+    <div class="brand">
+      <div class="brand-mark">CS</div>
+      <div class="brand-txt">
+        <b>Cheers · Hackathon+ SESI Saúde 2026</b>
+        <span>Previsão de desfecho de saúde do trabalho · demo funcional offline</span>
+      </div>
+    </div>
+    <div class="spacer"></div>
+    <nav class="nav" aria-label="Seções da demonstração">
+      <button data-goto="cadeia">Cadeia</button>
+      <button data-goto="exposicao">Exposição</button>
+      <button data-goto="escuta">Escuta</button>
+      <button data-goto="alavancas">Alavancas</button>
+      <button data-goto="mercado">Mercado</button>
+      <button data-goto="evidencia">Evidência</button>
+    </nav>
+    <button class="btn btn-primary" id="pitchBtn">Modo pitch</button>
+  </div>
+</div>
+
+<main>
+
+<!-- ═══════════════════════ 1. CADEIA ═══════════════════════ -->
+<section id="cadeia">
+  <p class="eyebrow">01 · O enquadramento</p>
+  <h1>O SESI mede o risco que o trabalhador corre. Não mede o trabalho que causa o risco.</h1>
+  <p class="lead">
+    A cadeia de valor da saúde ocupacional tem 7 elos. Hoje só os elos 3 a 6 são instrumentados —
+    e o primeiro elo, o mais barato de medir e o mais caro de ignorar, é invisível em qualquer sistema.
+    Selecione um elo para ver de onde vem o dado, quanto custa e onde a predição entra.
+  </p>
+
+  <div class="chain-wrap">
+    <div class="chain" id="chain"></div>
+  </div>
+
+  <div class="grid g2" style="margin-top:var(--sp-5)">
+    <div class="card" id="chainDetail"></div>
+    <div class="stack">
+      <div class="card">
+        <h3>O elo invisível</h3>
+        <p class="hint" style="margin-bottom:var(--sp-4)">Trabalhador presente, produtividade reduzida. A folha de ponto registra ausência — nunca presença improdutiva.</p>
+        <svg class="chart" viewBox="0 0 420 190" role="img" aria-label="Comparação entre absenteísmo registrado e presenteísmo invisível, por 100 trabalhadores">
+          <text class="ax-label" x="0" y="14">A cada 100 trabalhadores da indústria</text>
+          <!-- registered -->
+          <text class="ax-label" x="0" y="42">Ausência registrada</text>
+          <rect x="0" y="50" width="380" height="26" rx="6" fill="var(--surface-3)"/>
+          <rect x="0" y="50" width="76" height="26" rx="6" fill="var(--warn)"/>
+          <text class="val-label" x="84" y="68">20,0%  faltaram ≥1 dia/semana</text>
+          <text class="ax-label" x="0" y="98">6,5% faltaram ≥3 dias</text>
+          <!-- invisible -->
+          <text class="ax-label" x="0" y="130">Presenteísmo (invisível)</text>
+          <rect x="0" y="138" width="380" height="26" rx="6" fill="var(--surface-3)"/>
+          <rect x="0" y="138" width="304" height="26" rx="6" fill="var(--violet)" opacity=".85"/>
+          <text class="val-label" x="0" y="182" fill="var(--violet)">Queda de produtividade de 20–40% — não aparece em nenhum sistema</text>
+        </svg>
+        <p class="hint" style="margin-top:var(--sp-3)">
+          Fonte: SESI/ASSTI, <i>Estilo de Vida, Saúde e Produtividade</i> (n = 123.355) para absenteísmo;
+          queda de 20–40% e custo de R$ 200–600 bi/ano conforme IBEF-SP/AXENYA 2024 <span class="tag tag-hip">hipótese de fonte secundária</span>.
+        </p>
+      </div>
+      <div class="note">
+        <b>A regra do jogo.</b> O regulamento (§7.3) diz que o detalhamento do desafio é apresentado
+        <b>na abertura, às equipes</b>. O time já previu isso no WhatsApp em 25/10.
+        Por isso esta demo é um <b>mockup do instrumento de mapeamento</b>, não o produto final:
+        o que se leva ao dia 14 é capacidade de absorver o desafio em 90 minutos.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ 2. EXPOSIÇÃO ═══════════════════════ -->
+<section id="exposicao">
+  <p class="eyebrow">02 · Console da empresa</p>
+  <h2>Perfil de exposição previsto</h2>
+  <p class="lead">
+    Modelo transparente, não caixa-preta: base national do VigIndústria Brasil 2026 (57.952 trabalhadores,
+    825 empresas) ajustada por porte e por CNAE com âncora nos dados de CAT/INSS dos Auditores-Fiscais do Trabalho.
+    Todos os pesos estão à vista — clique em <b>como o modelo funciona</b>.
+  </p>
+
+  <div class="card card-flush" style="margin-bottom:var(--sp-4)">
+    <div style="padding:var(--sp-5);border-bottom:1px solid var(--line-soft)">
+      <div class="grid g4">
+        <div class="field"><label for="cnae">Setor (CNAE)</label>
+          <select id="cnae">
+            <option value="civil">Construção civil — montagem industrial</option>
+            <option value="transporte">Transporte rodoviário de cargas</option>
+            <option value="metal">Metalurgia e siderurgia</option>
+            <option value="alimentos">Indústria alimentícia</option>
+            <option value="diversa" selected>Indústria diversa (manufatura e serviços)</option>
+          </select></div>
+        <div class="field"><label for="porte">Porte</label>
+          <select id="porte">
+            <option value="pequena" selected>Micro / pequena</option>
+            <option value="grande">Média / grande</option>
+          </select></div>
+        <div class="field"><label for="regiao">Região</label>
+          <select id="regiao">
+            <option value="nordeste" selected>Nordeste</option>
+            <option value="sudeste">Sudeste</option>
+            <option value="sul">Sul</option>
+            <option value="centro">Centro-Oeste</option>
+            <option value="norte">Norte</option>
+          </select></div>
+        <div class="field"><label for="trabalhadores">Trabalhadores na empresa</label>
+          <input type="range" id="trabalhadores" min="50" max="5000" step="50" value="1200">
+          <div class="hint"><b id="trabCount" style="color:var(--text)">1.200</b> trabalhadores</div></div>
+      </div>
+    </div>
+    <div id="modelOut" style="padding:var(--sp-5)"></div>
+  </div>
+
+  <div class="grid g2">
+    <div class="chart-box">
+      <h3>Composição do índice de exposição</h3>
+      <p class="hint">Cada barra é a contribuição de um componente para o índice final. O modelo não tem pesos ocultos.</p>
+      <svg class="chart" id="chartWaterfall" viewBox="0 0 520 260" role="img" aria-label="Gráfico de waterfall: contribuições para o índice de exposição"></svg>
+      <div class="legend">
+        <span><i style="background:var(--warn)"></i>Comportamento de risco</span>
+        <span><i style="background:var(--good)"></i>Fragilidade do contexto organizacional</span>
+        <span><i style="background:var(--info)"></i>Exposição setorial</span>
+        <span><i style="background:var(--violet)"></i>Condição de saúde da força</span>
+        <span><i style="background:var(--accent)"></i>Índice final</span>
+      </div>
+    </div>
+    <div class="chart-box">
+      <h3>Risco previsto por causa de afastamento</h3>
+      <p class="hint">Modelo entrega <b>exposição</b>, não diagnóstico e não prognóstico individual. A causa vem do cruzamento com a natureza da lesão registrável na CAT.</p>
+      <svg class="chart" id="chartCauses" viewBox="0 0 520 260" role="img" aria-label="Risco previsto por causa de afastamento, comparado à base nacional"></svg>
+      <div class="legend">
+        <span><i style="background:var(--accent)"></i>Índice de exposição prevista</span>
+        <span style="color:var(--text-3)">Prevalência nacional em texto cinza (unidade diferente)</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:var(--sp-4)">
+    <details>
+      <summary style="cursor:pointer;font-weight:700;font-size:var(--fs-sm)">Como o modelo funciona (fórmulas e fontes)</summary>
+      <div id="modelMath" style="margin-top:var(--sp-4)"></div>
+    </details>
+  </div>
+</section>
+
+<!-- ═══════════════════════ 3. ESCUTA ═══════════════════════ -->
+<section id="escuta">
+  <p class="eyebrow">03 · Camada do trabalhador</p>
+  <h2>Escuta: 6 itens que hoje não existem em nenhum instrumento</h2>
+  <p class="lead">
+    Micro-diagnóstico conversacional, adaptado dos HSE Management Standards, correndo offline no celular.
+    O trabalhador fica com o plano dele; o agregado (k ≥ 10) volta para a empresa.
+    <b>Sem parecer médico, sem diagnóstico, sem dado individual compartilhado.</b>
+  </p>
+
+  <div class="grid g2" style="align-items:start">
+    <div>
+      <div class="phone">
+        <div class="phone-top">
+          <div class="brand-mark" style="width:26px;height:26px;border-radius:7px;font-size:10px">CS</div>
+          <div style="flex:1">
+            <b style="font-size:var(--fs-sm)">Escuta do contexto de trabalho</b>
+            <div class="hint">6 itens · ~90 s · funciona offline</div>
+          </div>
+          <span class="tag tag-acq">agregado k≥10</span>
+        </div>
+        <div id="qs"></div>
+        <button class="btn btn-primary" id="sendAnswers" style="width:100%;margin-top:var(--sp-3)" disabled>Ver meu plano</button>
+        <div id="workerResult" style="margin-top:var(--sp-4)"></div>
+      </div>
+      <p class="hint" style="margin-top:var(--sp-3)">
+        Cada resposta é uma afirmação de consentimento. O trabalhador pode pular qualquer item, e a
+        devolução do agregado só ocorre com k ≥ 10 respostas no mesmo posto.
+      </p>
+    </div>
+
+    <div class="stack">
+      <div class="chart-box">
+        <h3>Onde existe referência nacional — e onde não existe</h3>
+        <p class="hint">Comparação do perfil da empresa com as bases do VigIndústria, item a item.</p>
+        <svg class="chart" id="chartItems" viewBox="0 0 520 300" role="img" aria-label="Comparação de itens do diagnóstico com a referência nacional do VigIndústria"></svg>
+        <div class="legend">
+          <span><i style="background:var(--accent)"></i>Empresa simulada</span>
+          <span><i style="background:var(--text-3)"></i>Referência nacional VigIndústria</span>
+          <span><i style="background:var(--violet)"></i>Sem referência — é a lacuna</span>
+        </div>
+      </div>
+      <div class="note ok" id="gapNote"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ 4. ALAVANCAS ═══════════════════════ -->
+<section id="alavancas">
+  <p class="eyebrow">04 · Motor de alavancas</p>
+  <h2>Não é um dashboard. É o que a empresa faz segunda-feira.</h2>
+  <p class="lead">
+    O modelo de exposição indica onde está o risco; o diagnóstico de contexto indica por quê;
+    o motor de alavancas traduz as duas coisas em <b>mudança organizacional com a evidência que a sustenta</b>.
+    Cada alavanca cita o indicador do VigIndústria que a justifica.
+  </p>
+  <div id="levers" class="grid g3"></div>
+  <div class="note bad" style="margin-top:var(--sp-4)">
+    <b>O que este motor nunca vai prometer:</b> economia. Em ensaio randomizado, o ROI de absenteísmo
+    de programas de promoção é <b>−49%</b>; o "1:2 a 1:4" da literatura é artefato de estudos não randomizados.
+    Falamos em <b>dias expostos</b> e <b>alavanca recomendada</b> — e a medimos, que é o que a OIT pede.
+  </div>
+</section>
+
+<!-- ═══════════════════════ 5. MERCADO ═══════════════════════ -->
+<section id="mercado">
+  <p class="eyebrow">05 · Mercado</p>
+  <h2>TAM, SAM, SOM</h2>
+  <p class="lead">
+    Três camadas com fonte explícita. O TAM é <b>valor em jogo</b>, não receita endereçável —
+    e é assim que se apresenta. O preço por vida vem do maior ativo de software de saúde ocupacional do Brasil.
+  </p>
+
+  <div class="grid g3" style="margin-bottom:var(--sp-4)">
+    <div class="kpi"><b>R$ 468 bi</b><span>Perda anual de produtividade por doenças e acidentes de trabalho</span><em>4% do PIB · OIT/UN Brasil</em></div>
+    <div class="kpi"><b>R$ 179 bi</b><span>Perda anual atribuída a problemas de saúde mental no trabalho</span><em>2,8% do PIB potencial · IFEMG 2026</em></div>
+    <div class="kpi"><b>R$ 276,9 bi</b><span>Despesas assistenciais em saúde empresarial (2025)</span><em>ANS Panorama + DIOPS</em></div>
+  </div>
+
+  <div class="grid g2">
+    <div class="chart-box">
+      <h3>Do valor em jogo ao que o SESI alcança</h3>
+      <p class="hint">Escala logarítmica, comprada em valor — os três círculos não são proporcionais entre si.</p>
+      <svg class="chart" id="chartFunnel" viewBox="0 0 520 300" role="img" aria-label="Diagrama de TAM, SAM e SOM"></svg>
+      <div class="legend">
+        <span><i style="background:var(--risk)"></i>TAM — valor em jogo</span>
+        <span><i style="background:var(--info)"></i>SAM — canal SESI</span>
+        <span><i style="background:var(--good)"></i>SOM — 12 meses</span>
+      </div>
+    </div>
+    <div class="chart-box">
+      <h3>Cenários de receita</h3>
+      <p class="hint">Preço de R$ 13,9–18,0 por vida/mês, ancorado no benchmark de mercado.</p>
+      <svg class="chart" id="chartSom" viewBox="0 0 520 260" role="img" aria-label="Receita anual estimada nos três cenários"></svg>
+      <div class="card" style="margin-top:var(--sp-4);padding:var(--sp-4);background:var(--surface-2)">
+        <div class="row-between">
+          <div>
+            <b style="font-size:var(--fs-sm)">Benchmark de preço e de saída</b>
+            <p class="hint" style="margin:6px 0 0">
+              A <b>Salú</b> — maior software de saúde ocupacional do Brasil — tem 800+ clientes e ~460 mil vidas,
+              receita de R$ 76,8 mi (2025), equivalente a <b>R$ 13,9 por vida/mês</b>.
+              Foi vendida por <b>R$ 318,7 milhões</b>, cerca de <b>4× o ARR</b>.
+            </p>
+          </div>
+          <span class="tag tag-fato">verificado</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid g2" style="margin-top:var(--sp-4)">
+    <div class="chart-box">
+      <h3>Onde o modelo já está rodando</h3>
+      <p class="hint">A proposta não é uma startup de fora: é camada da plataforma que o SESI já opera.</p>
+      <svg class="chart" id="chartSesi" viewBox="0 0 520 230" role="img" aria-label="Indicadores de alcance do SESI em 2026"></svg>
+    </div>
+    <div class="chart-box">
+      <h3>Por que a proposta é do MES</h3>
+      <p class="hint">Os três eixos do MES para 2026–2027. O tema do hackathon é o eixo 3.</p>
+      <div class="stack">
+        <div class="bubble">
+          <h3>Eixo 1 — Dados e Inteligência em Saúde</h3>
+          <p class="hint">Reduzir fragmentação, fortalecer a governança da informação. <b>É a camada preditiva.</b></p>
+        </div>
+        <div class="bubble">
+          <h3>Eixo 2 — Promoção da Saúde e Prevenção</h3>
+          <p class="hint">Antecipar o cuidado reduz custos e pressões sobre o sistema. <b>É a camada de alavanca.</b></p>
+        </div>
+        <div class="bubble">
+          <h3>Eixo 3 — Modelos Assistenciais Sustentáveis</h3>
+          <p class="hint">Eficiência, qualidade e equilíbrio econômico. <b>É o tema do hackathon.</b></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════ 6. EVIDÊNCIA ═══════════════════════ -->
+<section id="evidencia">
+  <p class="eyebrow">06 · Evidência e limites</p>
+  <h2>O que sustenta — e o que não sustenta</h2>
+  <p class="lead">Toda afirmação deste artefato carrega fonte. Onde não há base, está marcado.</p>
+
+  <div class="grid g2">
+    <div class="chart-box">
+      <h3>Armadilhas que a banca vai testar</h3>
+      <p class="hint">Com a evidência que elimina cada uma.</p>
+      <div style="overflow-x:auto"><table>
+        <thead><tr><th>Armadilha</th><th>Por que cai</th></tr></thead>
+        <tbody>
+          <tr><td>App de atividade / step challenge</td><td>+20 min/dia de atividade <b>no trabalho</b> → <b>+15%</b> de risco de afastamento longo; <b>no lazer</b> → −20%</td></tr>
+          <tr><td>"O programa reduz absenteísmo"</td><td>RCT n=32.974: 2,5% vs 2,6% (P=0,09); gasto médico US$3.583 vs 3.953 (P=0,32)</td></tr>
+          <tr><td>"O ROI de 1:2 a 1:4 se paga"</td><td>Em RCT, ROI de absenteísmo é <b>−49%</b>. Não randomizados: 325%</td></tr>
+          <tr><td>Telemedicina corporativa per capita</td><td>Commodity: R$ 19,90–79,90/colaborador/mês</td></tr>
+          <tr><td>NR-1 + COPSOQ + relatório por IA</td><td>Saturated: R$ 79–1.297/mês, um player é gratuito e ilimitado</td></tr>
+          <tr><td>Dashboard de indicador de SST</td><td>É o que SOC, SGG, WOTY e o próprio ASSTI já vendem</td></tr>
+          <tr><td>"Manutenção preditiva" industrial</td><td>Lê como IoT de máquina, não toca nenhuma das 4 dimensões do Anexo I</td></tr>
+        </tbody>
+      </table></div>
+    </div>
+    <div class="stack">
+      <div class="chart-box">
+        <h3>Fontes primárias do repositório</h3>
+        <div style="overflow-x:auto"><table>
+          <thead><tr><th>Fonte</th><th>Cred.</th></tr></thead>
+          <tbody id="srcTable"></tbody>
+        </table></div>
+      </div>
+      <div class="note">
+        <b>Limite honesto desta demo.</b> O modelo de exposição é um <b>índice transparente</b>
+        construído sobre bases públicas reais — não é um modelo preditivo treinado. Treinar um modelo
+        de verdade sobre CAT (6,4 mi registos) é trabalho de 2 a 3 semanas, e é o que a plataforma
+        Viva+ deveria rodar com dados reais. O que a demo prova é que a <b>pergunta é certa</b>,
+        os <b>dados são públicos</b> e a <b>inferência é auditável</b>.
+      </div>
+      <div class="note bad">
+        <b>Regulação que já está valendo (vigência 26/08/2026):</b> Res. CFM nº 2.454/2026, art. 4º I e §2º —
+        IA sem influência decisória direta, em função administrativa ou de apoio, é classificada como
+        <b>baixo risco</b> no Anexo II, I. É onde esta solução inteira cabe.
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <p><b>Cheers</b> · Hackathon+ SESI Saúde 2026 · SESI Bahia + Grupo Rede+ · Salvador, 14–15/11/2026</p>
+  <p>
+    Artefato de ensaio de pitch. Executa 100% offline — sem CDN, sem fonte externa, sem chamada de rede.
+    Dados de origem pública: VigIndústria Brasil 2026 (SESI/CN-SESI/MS) · CANPAT 2016–2025 (Auditores-Fiscais do Trabalho) ·
+    ANS Panorama 2025 · IESS TD 118/2026 · CN-SESI PAO 2026 · Res. CFM 2.454/2026 · OIT/UN Brasil · IFEMG 2026.
+  </p>
+</footer>
+
+<!-- ═══════════════════════ PITCH OVERLAY ═══════════════════════ -->
+<div class="pitch" id="pitch" data-open="false" role="dialog" aria-modal="true" aria-label="Modo apresentação do pitch">
+  <div class="pitch-bar">
+    <b style="font-size:var(--fs-sm)">Modo pitch · 3:00</b>
+    <div class="pitch-timer" id="pitchTimer">0:00</div>
+    <div class="spacer"></div>
+    <button class="btn" id="pitchPrev">← Anterior</button>
+    <button class="btn" id="pitchNext">Próximo →</button>
+    <button class="btn" id="pitchClose">Fechar</button>
+  </div>
+  <div class="pitch-stage"><div class="pitch-slide" id="pitchSlide"></div></div>
+  <div class="pitch-dots" id="pitchDots"></div>
+  <div class="pitch-note" id="pitchNote"></div>
+</div>
+
+<script>
+"use strict";
+/* ============================================================================
+   DADOS — todas as bases abaixo vêm de fonte pública verificada.
+   Ver docs/sources/README.md no repositório.
+   ========================================================================== */
+const VIG = {
+  // prevalências nacionais (VigIndústria Brasil 2026)
+  inactivity:44.3, inactivityFemale:49.4,
+  alcoholHeavy:34.2, alcoholHeavySmall:37.3,
+  screenTime:33.9,
+  tobacco:6.5,
+  stress:20.3, stressFemale:26.2, stressMale:16.2, stressSmall:20.9,
+  relax:18.7, relaxPrimaryEdu:25.7, relaxNoPlan:21.2,
+  sleep:16.5,
+  relationships:12.4, relationshipsCO:12.1, relationshipsSouth:13.7,
+  workConditions:8.1,
+  healthPerception:7.9, healthPerceptionFemale:10.6,
+  selfCare:6.3,
+  chronicControl:32.0, chronicControlSmall:38.2,
+  obesity:22.7, obesitySmall:24.2,
+  column:19.3, columnLarge:19.9,
+  cholesterol:17.1,
+  hypertension:16.2,
+  depression:11.8, depressionMale:5.9, depressionPrimaryEdu:6.9,
+  asthma:8.5,
+  diabetes:5.7, diabetesFemale:7.6,
+  arthritis:4.3, arthritisFemale:7.2,
+  safeEnv:71.4, safeEnvUnder30:67.7, safeEnvOver60:80.1, safeEnvSmall:69.8,
+  leadership:72.6,
+  prevention:70.2,
+  training:69.8, trainingSmall:59.5, trainingLarge:72.9,
+  communication:65.6, communicationMale:67.7, communicationFemale:62.4
+};
+
+const SECTORS = {
+  civil:      { label:"Construção civil — montagem industrial", anchor:true,  rateCAT:80026, mult:1.90, note:"Taxa CAT de 80.026 por 100.000 trabalhadores — CNAE mais exposto da série CANPAT 2016–2025", deaths:"", daysPer:16.6 },
+  transporte: { label:"Transporte rodoviário de cargas", anchor:true, rateCAT:null, mult:1.70, note:"2.601 óbitos no período e 4.249 óbitos em dez anos no CBO de motorista de caminhão (CANPAT)", daysPer:16.6 },
+  metal:      { label:"Metalurgia e siderurgia", anchor:false, rateCAT:null, mult:1.00, note:"Sem âncora setorial publicada no recorte consultado — usamos a base nacional", daysPer:16.6 },
+  alimentos:  { label:"Indústria alimentícia", anchor:false, rateCAT:null, mult:1.00, note:"Sem âncora setorial publicada no recorte consultado — usamos a base nacional", daysPer:16.6 },
+  diversa:    { label:"Indústria diversa (manufatura e serviços)", anchor:false, rateCAT:null, mult:1.00, note:"Sem âncora setorial publicada no recorte consultado — usamos a base nacional", daysPer:16.6 }
+};
+
+const REGIONS = {
+  nordeste:{ label:"Nordeste", rel:1.05, note:"Relacionamentos interpessoais de baixa qualidade acima da média (12,4% nacional)" },
+  sudeste:{ label:"Sudeste", rel:1.00, note:"Base nacional" },
+  sul:      { label:"Sul", rel:1.04, note:"Relacionamentos interpessoais de baixa qualidade no topo da faixa (13,7%)" },
+  centro:   { label:"Centro-Oeste", rel:1.02, note:"Relacionamentos interpessoais de baixa qualidade no piso da faixa (12,1%)" },
+  norte:    { label:"Norte", rel:1.03, note:"Base nacional, sem corte publicado no recorte consultado" }
+};
+
+const CHAIN = [
+  { id:1, n:"ELO 1", t:"Presenteísmo", v:"Trabalhador presente, produtividade reduzida 20–40%. Invisível em qualquer sistema.", gap:true,
+    def:"A pessoa está no trabalho, mas produz menos — por estresse crônico, dor, sono ruim ou desalento. Não aparece na folha de ponto, que só registra ausência.",
+    data:"Não existe. Nenhum sistema brasileiro mede presenteísmo de forma sistemática.",
+    cost:"R$ 200–600 bi/ano (IBEF-SP/AXENYA 2024, estimativa).",
+    why:"É o elo que sinaliza a incapacidade antes dela acontecer. Sem ele, não há o que predir.",
+    src:"Estilo de Vida, Saúde e Produtividade (SESI/CNI, 2023) · AXENYA/IBEF-SP 2024" },
+  { id:2, n:"ELO 2", t:"Exposição e risco", v:"46 indicadores do ASSTI. Onde a exposição é medida, mas não prevista.",
+    def:"As condições de trabalho que produzem o dano: demanda, ergonomia, ruído, exposição, cultura de segurança.",
+    data:"ASSTI — 46 indicadores. Plataforma SESI Viva+ com 2.738.306 vidas ativas.",
+    cost:"79.119 empresas atendidas pelo SESI em 2026 (+23%); 10.800 empresas na Bahia.",
+    why:"É aqui que a predição é legal (agregado, por posto e por empresa) e o dado é público.",
+    src:"CN-SESI PAO 2026 · VigIndústria Brasil 2026 (p. 87–97: cultura de segurança)" },
+  { id:3, n:"ELO 3", t:"Evento", v:"Acidente de trabalho. 6,4 milhões registados, 106 mi de dias perdidos.",
+    def:"O evento observável: a CAT registada no INSS/eSocial.",
+    data:"CAT — Comunicações de Acidentes de Trabalho, 6,4 milhões de registos.",
+    cost:"27.486 óbitos · 106 mi dias perdidos · 249 mi dias debitados · recorde em 2025 (806.011 acidentes).",
+    why:"Já é reação. A previsão útil começa um elo antes.",
+    src:"CANPAT — Auditores-Fiscais do Trabalho, 2016–2025" },
+  { id:4, n:"ELO 4", t:"Afastamento", v:"4,1 milhões por ano. Saúde mental já é a 2ª causa.",
+    def:"O benefício por incapacidade concedido pelo INSS.",
+    data:"INSS — 4,1 mi afastamentos em 2025 (+17,1%, maior em 5 anos).",
+    cost:"546.254 afastamentos por saúde mental (+15%); ansiedade e depressão são a 2ª causa, atrás da coluna.",
+    why:"Aqui a perda vira dinheiro público e custo da empresa atual.",
+    src:"INSS · G1/Globo 26/01/2026 · PharmacoEconomics 2026" },
+  { id:5, n:"ELO 5", t:"Incapacidade", v:"35,6 milhões de dias por 5 causas. R$ 10,25 bi.",
+    def:"A permanência e o agravamento: o afastamento que não acaba.",
+    data:"Estudos com base em afastamentos e aposentadorias.",
+    cost:"R$ 10,25 bi (funcional federal, 5 causas) · R$ 3,94 bi só de transtornos mentais — 38% do total.",
+    why:"A transição de afastamento para incapacidade é onde a previsão tem maior valor — e é onde o dado individual é proibido.",
+    src:"PharmacoEconomics 2026 (serviço federal, 2012–2024) · DPOC JBES" },
+  { id:6, n:"ELO 6", t:"Saída", v:"Aposentadoria precoce, pensão, invalidez. R$ 173 bi só em benefícios.",
+    def:"A saída do trabalhador da vida produtiva por motivo de saúde.",
+    data:"INSS — benefícios acidentários desde 2012.",
+    cost:"R$ 173 bi acumulados; 2,6 milhões de novas concessões acidentárias.",
+    why:"O custo final do modelo que não preveniu.",
+    src:"OIT/UN Brasil — Observatório de afastamentos" },
+  { id:7, n:"ELO 7", t:"Resultado", v:"4% do PIB. É o número que a empresa não consegue mostrar.",
+    def:"A perda de produtividade consolidada da economia.",
+    data:"PIB e produtividade (OIT: perda média anual de 4% do PIB por doenças e acidentes de trabalho).",
+    cost:"~R$ 468 bi/ano no Brasil (PIB 2024 = R$ 11,7 tri, IBGE) · R$ 179 bi/ano atribuídos a saúde mental.",
+    why:"É o tamanho da aposta — e a razão de a previsão ser o instrumento.",
+    src:"OIT/UN Brasil · IFEMG jan/2026" }
+];
+
+/* os 6 itens do diagnóstico de contexto (adaptados do HSE Management Standards) */
+const ITEMS = [
+  { id:"demanda",  label:"A quantidade de trabalho que me é pedida cabe no meu tempo.", dim:"organizacao", ref:null,
+    why:"HSE demands · a evidência associa demanda alta a afastamento (OR 1,57)"},
+  { id:"controle", label:"Tenho margem para decidir como faço o meu trabalho.", dim:"organizacao", ref:null,
+    why:"HSE control · o HSE não o associa a ansiedade/depressão — por isso não prometemos autonomia genérica"},
+  { id:"apoio",    label:"Recebo apoio de colegas e de quem me coordena.", dim:"participacao", ref:null,
+    why:"HSE support · apoio no trabalho reduz ausência (OR 0,58)"},
+  { id:"seguranca",label:"Posso falar o que penso sobre o trabalho sem medo.", dim:"participacao", ref:null,
+    why:"Segurança psicológica · recomendada pelo relatório na p. 98 e sem qualquer item de medição"},
+  { id:"reconhec", label:"O meu trabalho é reconhecido por quem me coordena.", dim:"organizacao", ref:null,
+    why:"HSE roles ·"},
+  { id:"proposito",label:"Sei por que o meu trabalho importa.", dim:"comportamento", ref:null,
+    why:"Sentido de propósito · destino do Anexo I do regulamento"}
+];
+
+/* itens que o VigIndústria de facto mede, para comparação honesta */
+const REF_ITEMS = [
+  { id:"comunicacao", label:"A comunicação sobre prevenção de acidentes é suficiente", national:VIG.communication, dim:"ambient", rev:true },
+  { id:"treinamento", label:"Recebi treinamento para emergências e prevenção de acidentes", national:VIG.training, dim:"ambient", rev:true },
+  { id:"ambiente",    label:"Percebo o meu ambiente de trabalho como seguro", national:VIG.safeEnv, dim:"ambient", rev:true },
+  { id:"lideranca",   label:"A liderança obedece e encoraja a obediência às normas de segurança", national:VIG.leadership, dim:"organizacao", rev:true }
+];
+
+/* ============================================================================
+   MODELO — transparente. Todos os pesos visíveis.
+   ========================================================================== */
+function computeModel(){
+  const cnae = document.getElementById("cnae").value;
+  const porte = document.getElementById("porte").value;
+  const regiao = document.getElementById("regiao").value;
+  const n = +document.getElementById("trabalhadores").value;
+  const S = SECTORS[cnae] || SECTORS.diversa, R = REGIONS[regiao] || REGIONS.nordeste;
+  const small = porte === "pequena";
+
+  // Componentes 0..1. Base nacional = 0.
+  const W = { comport:0.30, contexto:0.30, setorial:0.25, saude:0.15 };
+
+  // 1. comportamento de risco: álcool pesado + sedentarismo + tela
+  const alcool = small ? VIG.alcoholHeavySmall : VIG.alcoholHeavy;
+  const seden  = VIG.inactivity;
+  const tela   = VIG.screenTime;
+  const comport = (alcool/40 + seden/50 + tela/40) / 3;
+
+  // 2. contexto organizacional (proteção). Pior contexto => maior exposição.
+  const treino = small ? VIG.trainingSmall : VIG.training;
+  const comun  = VIG.communication;
+  const lider  = VIG.leadership;
+  const ambiente = small ? VIG.safeEnvSmall : VIG.safeEnv;
+  const protecao = (treino/100 + comun/100 + lider/100 + ambiente/100) / 4;
+  const contexto = 1 - protecao;           // fragilidade organizacional
+
+  // 3. exposição setorial
+  const setorial = Math.min(1, (S.mult - 1) / 1.2);
+
+  // 4. condição de saúde da força de trabalho
+  const dep = VIG.depression, relax = VIG.relax, saudeNeg = VIG.healthPerception;
+  const saude = (dep/12 + relax/20 + saudeNeg/8) / 3;
+
+  // índice ponderado 0..1
+  const idx = W.comport*comport + W.contexto*contexto + W.setorial*setorial + W.saude*saude;
+  const idx100 = Math.round(idx * 100);
+
+  // bandwidth de exposição
+  const band = idx100 >= 70 ? { t:"Crítica", c:"var(--risk)" }
+              : idx100 >= 52 ? { t:"Elevada", c:"var(--warn)" }
+              : idx100 >= 36 ? { t:"Moderada", c:"var(--info)" }
+                            : { t:"Baixa", c:"var(--good)" };
+
+  // causas de afastamento (proporções previstas)
+  const causas = [
+    { k:"Ortopédico e musculoesquel.", natLabel:"coluna 19,3% · artrite 4,3%",
+      v:(VIG.column*1.6 + VIG.arthritis*1.2 + VIG.obesity*0.8) * (small?1.06:1) * (0.85 + idx*0.5) },
+    { k:"Saúde mental", natLabel:"depressão 11,8% · estresse 20,3%",
+      v:(VIG.depression*1.8 + VIG.stress*1.1) * (small?1.04:1) * (0.85 + idx*0.5) },
+    { k:"Respiratório e ambiental", natLabel:"asma 8,5%",
+      v:(VIG.asthma*1.5 + VIG.hypertension*0.9 + VIG.cholesterol*0.5) * (0.85 + idx*0.5) },
+    { k:"Acidentes de trabalho", natLabel:"16,6 dias por acidente",
+      v:16.6 * (S.mult) * 0.6 * (0.85 + idx*0.5) }
+  ];
+  const maxC = Math.max(...causas.map(c=>c.v));
+  causas.forEach(c=>{ c.pct = c.v/maxC*100; c.pctR = Math.round(c.pct); });
+
+  // dias esperados por ano (derivação real)
+  const diasPorAcidente = 16.6;              // 106.000.000 dias / 6.400.000 acidentes
+  const diasPorAcidenteExibido = (106000000/6400000).toFixed(1);
+  const afastamentosMes = Math.round(n * VIG.alcoholHeavy/100 * 0 + n * 0.20 / 4.3); // 20,0% faltaram >=1 dia/semana
+  const diasExpostos = Math.round(n * 0.20 * 44); // 20% dos trabalhadores, 44 semanas
+
+  return { cnae:S, regiao:R, porte, small, n, idx, idx100, band, causas,
+           parts:{ comport, contexto, setorial, saude }, W,
+           details:{ alcool, seden, tela, treino, comun, lider, ambiente, dep, relax, saudeNeg },
+           diasPorAcidenteExibido, afastamentosMes, diasExpostos };
+}
+
+/* ============================================================================
+   ALAVANCAS — motor por regras, com a dimensão do Anexo I e a evidência
+   ========================================================================== */
+function computeLevers(M){
+  const L = [];
+  const d = M.details;
+
+  // fragilidade de contexto organizacional
+  if (d.comun < 70 || d.treino < 70) {
+    L.push({ dim:"ambient", dimLabel:"Ambiente + Organização do trabalho",
+      title:"Reconstruir comunicação e treinamento antes de adicionar canal",
+      metric:`Comunicação sobre prevenção é suficiente para <b>${fmt(VIG.communication)}%</b> · treinamento chega a <b>${fmt(d.treino)}%</b>${M.small?" (micro/pequenas: 59,5%)":""}`,
+      body:"O relatório recomenda exatamente isto na p. 99–100: há espaço na “melhoria das ações de comunicação” e no treinamento para emergências. Antes de digitalizar, corrigir a lacuna de base.",
+      src:"VigIndústria p. 93 e 95 (Tabela 35 e 36) · relatório p. 99–100" });
+  }
+  if (d.comport > .78) {
+    L.push({ dim:"comportamento", dimLabel:"Comportamento + Participação",
+      title:"Campanha de literacia em saúde segmentada por escolaridade, com medição",
+      metric:`Consumo de álcool episodico pesado em <b>${fmt(d.alcool)}%</b> · dificuldade de relaxar em <b>${fmt(d.relax)}%</b> (ensino fundamental: 25,7%)`,
+      body:"Menor escolaridade é o fator que mais prediz autocuidado frágil e percepção de saúde negativa — barreira informacional, não falta de vontade. Segmentar resolve o que campanha genérica não resolve.",
+      src:"VigIndústria p. 99 (recomendação de literacia) · p. 49 (relaxar por escolaridade)" });
+  }
+  if (M.causas[0].pctR > 45) {
+    L.push({ dim:"organizacao", dimLabel:"Organização do trabalho",
+      title:"Readequação de posto antes de tratamento — abordagem estrutural",
+      metric:`Problema crónico de coluna em <b>${fmt(VIG.column)}%</b> dos trabalhadores · artrite em <b>${fmt(VIG.arthritis)}%</b> (mulheres 7,2%)`,
+      body:"A evidência brasileira mais forte do setor: 295 trabalhadores, 24 meses, 69% de adesão — dor nas costas de 53% para 33%, com abordagem estrutural a −4,3 pontos contra −2,1 da abordagem individual.",
+      src:"IESS/SESI, Promoção da saúde nas empresas: casos de sucesso (2013)" });
+  }
+  if (M.causas[1].pctR > 40) {
+    L.push({ dim:"participacao", dimLabel:"Participação + Organização do trabalho",
+      title:"Apoio no trabalho e ambiente psicologicamente seguro — medidos, não declarados",
+      metric:`Estresse elevado em <b>${fmt(VIG.stress)}%</b> (mulheres 26,2%) · relações interpessoais de baixa qualidade em <b>${fmt(VIG.relationships)}%</b>`,
+      body:"Apoio no trabalho reduz ausência (OR 0,58); demanda alta eleva (OR 1,57). Atenção: o próprio HSE não associa controle e apoio entre pares a ansiedade — não vender “autonomia” genérica, vender demanda e apoio medidos.",
+      src:"VigIndústria p. 42 e 45 · meta-análise de exposição ocupacional em enfermagem" });
+  }
+  if (M.cnae.anchor) {
+    L.push({ dim:"ambient", dimLabel:"Ambiente",
+      title:"Programa de readequação guiado por PGR e NR-7, com a exposição setorial como prioritária",
+      metric:`<b>${M.cnae.rateCAT ? "Taxa CAT de "+M.cnae.rateCAT.toLocaleString("pt-BR")+" por 100.000" : "2.601 óbitos no período"}</b> · 16,6 dias perdidos por acidente`,
+      body:"Setor com âncora de exposição alta: a priorização deixa de seropinional. 16,6 dias por acidente é derivação direta: 106 mi dias perdidos ÷ 6,4 mi acidentes.",
+      src:"CANPAT 2016–2025 (Auditores-Fiscais do Trabalho)" });
+  }
+  if (L.length < 3) {
+    L.push({ dim:"participacao", dimLabel:"Participação",
+      title:"Plano de cuidado sob custódia do trabalhador",
+      metric:`Percepção de saúde negativa em <b>${fmt(VIG.healthPerception)}%</b> (mulheres 10,6%) · atitude negativa para o autocuidado em <b>${fmt(VIG.selfCare)}%</b>`,
+      body:"A camada de participação fecha o ciclo: o trabalhador deixa de ser ativo de risco e vira cliente do modelo, com o plano devolvido a quem o gerou.",
+      src:"VigIndústria p. 78 e 80 · Anexo I do regulamento" });
+  }
+  return L.slice(0,4);
+}
+
+/* ============================================================================
+   SVG HELPERS
+   ========================================================================== */
+const NS = "http://www.w3.org/2000/svg";
+function el(tag, attrs, parent){
+  const n = document.createElementNS(NS, tag);
+  for (const k in attrs) n.setAttribute(k, attrs[k]);
+  if (parent) parent.appendChild(n);
+  return n;
+}
+function txt(parent, x, y, s, cls, extra){
+  const t = el("text", {x, y, class: cls || "ax-label"}, parent);
+  if (extra) for (const k in extra) t.setAttribute(k, extra[k]);
+  t.textContent = s;
+  return t;
+}
+function fmt(v){ return typeof v === "number" ? v.toLocaleString("pt-BR",{minimumFractionDigits:1, maximumFractionDigits:1}) : v; }
+
+/* ── Gráfico 1: decomposição do índice (a soma É o índice) ──────────────── */
+function drawWaterfall(svg, M){
+  while (svg.firstChild) svg.removeChild(svg.firstChild);
+  const W=520,H=260,padL=42,padR=12,padT=30,padB=54;
+  const iw=W-padL-padR, ih=H-padT-padB;
+  const parts=[
+    {k:"Comportamento", v:M.W.comport*M.parts.comport*100, c:"var(--warn)"},
+    {k:"Contexto org.",  v:M.W.contexto*M.parts.contexto*100, c:"var(--good)"},
+    {k:"Setorial",       v:M.W.setorial*M.parts.setorial*100, c:"var(--info)"},
+    {k:"Cond. saúde",    v:M.W.saude*M.parts.saude*100,    c:"var(--violet)"}
+  ];
+  const total = parts.reduce((a,p)=>a+p.v,0);
+  const maxV = Math.max(70, Math.ceil(total/10)*10);
+  const sc = v => padT+ih-(v/maxV)*ih;
+  for(let i=0;i<=4;i++){
+    const v = maxV*i/4;
+    el("line",{x1:padL,y1:sc(v),x2:W-padR,y2:sc(v),stroke:"var(--line-soft)","stroke-width":1},svg);
+    txt(svg,padL-8,sc(v)+4,String(Math.round(v)),"ax-label",{"text-anchor":"end"});
+  }
+  const bw=iw/(parts.length+1.1);
+  let run=0;
+  parts.forEach((p,i)=>{
+    const x=padL+i*bw+6;
+    const y0=sc(run), y1=sc(run+p.v);
+    el("rect",{x,y:y1,width:bw-16,height:Math.max(y0-y1,2),rx:4,fill:p.c,opacity:.9},svg);
+    el("line",{x1:x-4,y1:sc(run),x2:x,y2:sc(run),stroke:"var(--text-3)","stroke-dasharray":"2 3","stroke-width":1},svg);
+    txt(svg,x+(bw-16)/2,y1-6,"+"+p.v.toFixed(1),"val-label",{"text-anchor":"middle"});
+    txt(svg,x+(bw-16)/2,H-padB+20,p.k,"ax-label",{"text-anchor":"middle"});
+    run+=p.v;
+  });
+  const fx=padL+parts.length*bw+2, fy=sc(total);
+  el("rect",{x:fx,y:fy,width:bw-16,height:sc(0)-fy,rx:4,fill:"var(--accent)"},svg);
+  txt(svg,fx+(bw-16)/2,fy-7,String(Math.round(total)),"val-label",{"text-anchor":"middle",fill:"var(--accent)"});
+  txt(svg,fx+(bw-16)/2,H-padB+20,"Índice","ax-label",{"text-anchor":"middle"});
+  txt(svg,padL,16,"Pontos de índice · a soma das contribuições É o índice final","ax-label");
+  txt(svg,padL,H-8,"Pesos: comportamento 30% · contexto 30% · setorial 25% · saúde 15%","ax-label");
+}
+
+/* ── Gráfico 2: exposição prevista por causa (escala única: índice) ─────── */
+function drawCauses(svg, M){
+  while (svg.firstChild) svg.removeChild(svg.firstChild);
+  const W=520,H=270,padL=172,padR=48,padT=28,padB=30;
+  const iw=W-padL-padR, ih=H-padT-padB;
+  const rowH=ih/M.causas.length;
+  txt(svg,0,14,"Índice relativo de exposição prevista (0–100)","ax-label");
+  M.causas.forEach((c,i)=>{
+    const y=padT+i*rowH;
+    txt(svg,0,y+14,c.k,"ax-label");
+    txt(svg,0,y+29,c.natLabel,"ax-label",{fill:"var(--text-3)"});
+    el("rect",{x:padL,y:y+4,width:iw,height:20,rx:5,fill:"var(--surface-3)"},svg);
+    el("rect",{x:padL,y:y+4,width:Math.max((c.pctR/100)*iw,3),height:20,rx:5,fill:"var(--accent)"},svg);
+    txt(svg,padL+iw+7,y+19,c.pctR+"%","val-label");
+  });
+  txt(svg,0,H-8,"Barra = índice previsto. Texto cinza = prevalência nacional (unidade diferente, por isso fora da barra).","ax-label");}
+
+/* ── Gráfico 3: itens do diagnóstico vs referência ─────────────────────── */
+function drawItems(svg, answers, M){
+  while (svg.firstChild) svg.removeChild(svg.firstChild);
+  const W=520,H=300,padL=0,padR=58,padT=22,padB=22;
+  const rows = [];
+  REF_ITEMS.forEach(r=>rows.push({label:r.label, nat:r.national, hasRef:true, rev:r.rev, dim:r.dim}));
+  ITEMS.forEach(it=>{
+    const a = answers[it.id];
+    rows.push({label:it.label, val:a ? (a-1)/4*100 : null, hasRef:false, dim:it.dim});
+  });
+  const iw = W-padR-18;
+  rows.forEach((r,i)=>{
+    const y = padT + i*((H-padT-padB)/rows.length);
+    const h = (H-padT-padB)/rows.length - 9;
+    const nat = r.hasRef ? r.nat : null;
+    txt(svg,0,y+9,r.label.length>58?r.label.slice(0,57)+"…":r.label,"ax-label");
+    el("rect",{x:18,y:y+16,width:iw,height:10,rx:5,fill:"var(--surface-3)"},svg);
+    if(r.hasRef){
+      const w = (nat/100)*iw;
+      el("rect",{x:18,y:y+16,width:w,height:10,rx:5,fill:"var(--text-3)",opacity:.6},svg);
+      txt(svg,18+iw+6,y+25,fmt(nat)+"%","ax-label");
+    } else {
+      const w = r.val!=null ? (r.val/100)*iw : 0;
+      el("rect",{x:18,y:y+16,width:Math.max(w,2),height:10,rx:5,fill:"var(--violet)",opacity:.85},svg);
+      txt(svg,18+iw+6,y+25, r.val!=null?Math.round(r.val)+"%":"—","ax-label",{fill:"var(--violet)"});
+    }
+  });
+  txt(svg,18,14,"Itens que o VigIndústria mede (barra cinza) × itens que ele não mede (roxo)","ax-label");
+}
+
+/* ── Gráfico 4: TAM/SAM/SOM ────────────────────────────────────────────── */
+function drawFunnel(svg){
+  while (svg.firstChild) svg.removeChild(svg.firstChild);
+  const W=520,H=300;
+  const tiers=[
+    {k:"TAM", t:"Valor em jogo", v:"R$ 468 bi/ano", d:"4% do PIB · doenças e acidentes de trabalho", c:"var(--risk)", w:1.00, y:26},
+    {k:"SAM", t:"Canal SESI", v:"79.119 empresas", d:"+ 38,9 mi beneficiaries em plano empresarial + 76 empresas no MES", c:"var(--info)", w:.66, y:112},
+    {k:"SOM", t:"12 meses", v:"10 contratos", d:"R$ 5,4 mi/ano · cenário base", c:"var(--good)", w:.32, y:198}
+  ];
+  tiers.forEach(t=>{
+    const w = 440*t.w, x=(W-w)/2;
+    el("rect",{x,y:t.y,width:w,height:70,rx:12,fill:t.c,opacity:.14,stroke:t.c,"stroke-width":1.5},svg);
+    txt(svg,x+16,t.y+24,t.k,"ax-label",{fill:t.c,"font-weight":"800","letter-spacing":".1em"});
+    txt(svg,x+62,t.y+25,t.t,"val-label",{fill:"var(--text)","font-size":"13"});
+    txt(svg,x+16,t.y+46,t.v,"val-label",{"font-size":"15"});
+    txt(svg,x+16,t.y+62,t.d,"ax-label");
+  });
+  txt(svg,W/2,18,"Escala comprimida — os blocos não são proporcionais entre si","ax-label",{"text-anchor":"middle"});
+}
+
+/* ── Gráfico 5: cenários de receita ───────────────────────────────────── */
+function drawSom(svg){
+  while (svg.firstChild) svg.removeChild(svg.firstChild);
+  const W=520,H=260,padL=52,padR=16,padT=28,padB=46;
+  const iw=W-padL-padR, ih=H-padT-padB;
+  const data=[
+    {k:"Conservador", v:0.75, c:"var(--info)",  d:"3 contratos · 1.500 vidas"},
+    {k:"Base",        v:5.4,  c:"var(--accent)",d:"10 contratos · 3.000 vidas"},
+    {k:"Alcance",     v:27.0, c:"var(--good)",  d:"25 contratos · 5.000 vidas"}
+  ];
+  const max=30, sc=v=>padT+ih-(v/max)*ih;
+  [0,10,20,30].forEach(v=>{
+    el("line",{x1:padL,y1:sc(v),x2:W-padR,y2:sc(v),stroke:"var(--line-soft)"},svg);
+    txt(svg,padL-8,sc(v)+4,v+"","ax-label",{"text-anchor":"end"});
+  });
+  const bw=iw/3;
+  data.forEach((d,i)=>{
+    const x=padL+i*bw+22, y=sc(d.v), h=padT+ih-y;
+    el("rect",{x,y,width:bw-44,height:h,rx:5,fill:d.c,opacity:.9},svg);
+    txt(svg,x+(bw-44)/2,y-8,"R$ "+fmt(d.v)+" mi","val-label",{"text-anchor":"middle"});
+    txt(svg,x+(bw-44)/2,padT+ih+18,d.k,"ax-label",{"text-anchor":"middle"});
+    txt(svg,x+(bw-44)/2,padT+ih+33,d.d,"ax-label",{"text-anchor":"middle"});
+  });
+  txt(svg,padL,16,"Receita anual estimada (R$ milhões)","ax-label");
+}
+
+/* ── Gráfico 6: alcance do SESI ───────────────────────────────────────── */
+function drawSesi(svg){
+  while (svg.firstChild) svg.removeChild(svg.firstChild);
+  const W=520,H=230,padL=8,padR=8,padT=16,padB=16;
+  const items=[
+    {k:"Vidas ativas na Plataforma Viva+", v:"2,74 mi", d:"indicador estratégico 2026"},
+    {k:"Pessoas atendidas",                 v:"3,97 mi", d:"meta 2026"},
+    {k:"Empresas atendidas (Brasil)",       v:"79.119", d:"meta 2026, +23%"},
+    {k:"Empresas atendidas na Bahia",       v:"10.800", d:"meta 2026"}
+  ];
+  const bh=(H-padT-padB)/items.length;
+  items.forEach((it,i)=>{
+    const y=padT+i*bh;
+    el("rect",{x:padL,y:y+4,width:W-padL-padR,height:bh-12,rx:8,fill:"var(--surface-2)"},svg);
+    txt(svg,padL+14,y+22,it.k,"ax-label");
+    txt(svg,padL+14,y+40,it.d,"ax-label");
+    txt(svg,W-padR-14,y+30,it.v,"val-label",{"text-anchor":"end","font-size":"16",fill:"var(--accent)"});
+  });
+}
+
+/* ============================================================================
+   RENDER
+   ========================================================================== */
+function renderModel(){
+  const M = computeModel();
+  const out = document.getElementById("modelOut");
+  out.innerHTML = `
+    <div class="row-between" style="margin-bottom:var(--sp-4)">
+      <div>
+        <span class="tag ${M.cnae.anchor?"tag-fato":"tag-hip"}">${M.cnae.anchor?"âncora setorial forte":"sem âncora setorial"}</span>
+        <span class="tag" style="margin-left:6px">${M.small?"micro/pequena":"média/grande"}</span>
+        <span class="tag" style="margin-left:6px">${M.regiao.label}</span>
+      </div>
+      <div style="text-align:right">
+        <div style="font-size:var(--fs-3xl);font-weight:800;letter-spacing:-.03em;color:${M.band.c};line-height:1">${M.idx100}</div>
+        <div class="hint">índice de exposição · banda <b style="color:${M.band.c}">${M.band.t}</b></div>
+      </div>
+    </div>
+    <div class="grid g4">
+      <div class="kpi"><b style="color:${M.band.c}">${M.band.t}</b><span>Exposição ocupacional prevista para o perfil</span><em>Índice transparente, 0–100</em></div>
+      <div class="kpi"><b>${fmt(M.diasExpostos).replace(".",",")}</b><span>Dias-expostos por ano (20,0% dos trabalhadores × 44 semanas)</span><em>Antes de qualquer intervenção</em></div>
+      <div class="kpi"><b>${M.afastamentosMes}</b><span>Ausências de 1 dia ou mais por semana, por mês</span><em>${M.n.toLocaleString("pt-BR")} trabalhadores</em></div>
+      <div class="kpi"><b>${M.diasPorAcidenteExibido}</b><span>Dias perdidos por acidente de trabalho</span><em>Derivação: 106 mi ÷ 6,4 mi acidentes</em></div>
+    </div>
+    <div class="note" style="margin-top:var(--sp-4)">
+      <b>Âncora setorial:</b> ${M.cnae.note}.
+      ${M.cnae.anchor?"":'<b> este CNAE entra com a base nacional e o peso setorial zerado — a honestidade é visível no próprio produto.</b>'}
+      <br><b>Região:</b> ${M.regiao.note}.
+    </div>`;
+  drawWaterfall(document.getElementById("chartWaterfall"), M);
+  drawCauses(document.getElementById("chartCauses"), M);
+  renderLevers(M);
+  renderGapNote(M);
+}
+
+function renderLevers(M){
+  const L = computeLevers(M);
+  document.getElementById("levers").innerHTML = L.map(l=>`
+    <div class="lever" data-dim="${l.dim}">
+      <span class="tag" style="margin-bottom:10px;display:inline-block">${l.dimLabel}</span>
+      <h4>${l.title}</h4>
+      <div class="metric">${l.metric}</div>
+      <p>${l.body}</p>
+      <div class="hint mono">${l.src}</div>
+    </div>`).join("");
+}
+
+function renderGapNote(M){
+  const gaps = ITEMS.filter(i=>!REF_ITEMS.some(r=>r.id===i.id));
+  document.getElementById("gapNote").innerHTML = `
+    <b>A lacuna, verificada no instrumento.</b>
+    O questionário do VigIndústria (Anexo I do relatório, p. 110–119) tem
+    <b>zero itens</b> para autonomia, decisão, sugestão, propósito, confiança e segurança psicológica —
+    busca literal no instrumento completo. Os ${gaps.length} itens do diagnóstico à esquerda
+    (demanda, controle, apoio, segurança, reconhecimento, propósito) são
+    <b>${gaps.length===6?"todos":""}</b> construídos sobre essa lacuna.
+    <br><br>Enquanto o relatório <b>recomenda</b> fortalecer liderança, comunicação aberta e
+    ambiente psicologicamente seguro (p. 98), <b>não existe como medir se deu certo</b>.
+    Esse é o espaço que a proposta ocupa — e a razão de ela ser defensável:
+    não é opinião nossa, é uma lacuna declarada na fonte do desafio.`;
+}
+
+/* ── Escuta: perguntas e resultado do trabalhador ───────────────────────── */
+const answers = {};
+function renderQuestions(){
+  const box = document.getElementById("qs");
+  box.innerHTML = ITEMS.map((it,i)=>`
+    <div class="q">
+      <div class="q-head"><b>${i+1}. ${it.label}</b><span data-count="${it.id}">—</span></div>
+      <div class="scale" data-item="${it.id}">
+        ${[1,2,3,4,5].map(v=>`<button type="button" data-v="${v}" aria-pressed="false" title="${["Discordo","Discordo","Neutro","Concordo","Concordo fortemente"][v-1]}">${v}</button>`).join("")}
+      </div>
+    </div>`).join("");
+  box.querySelectorAll(".scale button").forEach(b=>{
+    b.addEventListener("click",()=>{
+      const grp=b.parentElement, id=grp.dataset.item;
+      grp.querySelectorAll("button").forEach(x=>x.setAttribute("aria-pressed","false"));
+      b.setAttribute("aria-pressed","true");
+      answers[id]=+b.dataset.v;
+      document.querySelector(`[data-count="${id}"]`).textContent = ["Discordo","Discordo","Neutro","Concordo","Concordo fortemente"][+b.dataset.v-1];
+      document.getElementById("sendAnswers").disabled = Object.keys(answers).length===0;
+      drawItems(document.getElementById("chartItems"), answers, computeModel());
+    });
+  });
+}
+function workerResult(){
+  const M=computeModel();
+  const low = ITEMS.map(it=>({it,a:answers[it.id]||3})).sort((x,y)=>x.a-y.a).slice(0,2);
+  const box=document.getElementById("workerResult");
+  if(Object.keys(answers).length===0){ box.innerHTML=""; return; }
+  const map={demanda:"o volume de trabalho",controle:"a margem para decidir como faço",apoio:"o apoio de colegas e chefia",
+             seguranca:"a segurança para falar o que penso",reconhec:"o reconhecimento do meu trabalho",proposito:"o sentido de propósito"};
+  box.innerHTML=`
+    <div class="bubble">
+      <h3>Suas 2 alavancas</h3>
+      <p class="hint" style="margin-bottom:10px">As que o seu perfil aponta primeiro. Nenhuma delas é sobre você — são sobre o trabalho.</p>
+      ${low.map(x=>`<p style="margin-bottom:8px"><b style="color:var(--accent)">→</b> <b>${map[x.it.id]}</b> — o que muda na sua rotina, e o que a empresa precisa ajustar no posto.</p>`).join("")}
+      <p class="hint" style="margin-top:12px;border-top:1px solid var(--line-soft);padding-top:10px">
+        Suas respostas não vão para a sua empresa. Somente o agregado de 10 ou mais pessoas do mesmo posto volta,
+        sem identificação. É a parte do modelo que o SESI ainda não tem.</p>
+    </div>`;
+}
+
+/* ── Cadeia ─────────────────────────────────────────────────────────────── */
+let chainSel = 1;
+function renderChain(){
+  const c = document.getElementById("chain");
+  c.innerHTML = CHAIN.map((n,i)=>`
+    ${i?"<div class='chain-arrow' aria-hidden='true'>→</div>":""}
+    <button class="chain-node ${n.gap?"gap":""}" data-i="${i}" aria-pressed="${i===chainSel-1}">
+      <span class="n">${n.n}</span>
+      <span class="t">${n.t}</span>
+      <span class="v">${n.v}</span>
+    </button>`).join("");
+  c.querySelectorAll(".chain-node").forEach(b=>b.addEventListener("click",()=>{
+    chainSel=+b.dataset.i+1;
+    c.querySelectorAll(".chain-node").forEach(x=>x.setAttribute("aria-pressed", (+x.dataset.i+1)===chainSel));
+    renderChainDetail();
+  }));
+  renderChainDetail();
+}
+function renderChainDetail(){
+  const n = CHAIN[chainSel-1];
+  document.getElementById("chainDetail").innerHTML = `
+    <span class="tag ${n.gap?"tag-gap":"tag-acq"}">${n.n}</span>
+    <h3 style="margin-top:10px">${n.t}</h3>
+    <p class="hint">${n.def}</p>
+    <div style="margin-top:var(--sp-4);display:grid;gap:var(--sp-3)">
+      <div><b style="font-size:var(--fs-xs);text-transform:uppercase;letter-spacing:.06em;color:var(--text-3)">Dado disponível</b><p style="margin:4px 0 0;font-size:var(--fs-sm)">${n.data}</p></div>
+      <div><b style="font-size:var(--fs-xs);text-transform:uppercase;letter-spacing:.06em;color:var(--text-3)">Custo / volume</b><p style="margin:4px 0 0;font-size:var(--fs-sm)">${n.cost}</p></div>
+      <div><b style="font-size:var(--fs-xs);text-transform:uppercase;letter-spacing:.06em;color:var(--text-3)">Onde a predição entra</b><p style="margin:4px 0 0;font-size:var(--fs-sm)">${n.why}</p></div>
+      <div class="hint mono">${n.src}</div>
+    </div>`;
+}
+
+/* ── Fontes ─────────────────────────────────────────────────────────────── */
+const SOURCES=[
+  ["VigIndústria Brasil 2026 (SESI/CN-SESI/MS)","9"],
+  ["CANPAT — Acidentes do trabalho 2016–2025 (AFT)","9"],
+  ["ANS — Panorama Saúde Suplementar, dez/2025","9"],
+  ["IESS — TD nº 118/2026, planos coletivos empresariais","9"],
+  ["CN-SESI — PAO 2026 e Demonstração de Resultados","9"],
+  ["CFM — Res. nº 2.454/2026 (IA em medicina)","9"],
+  ["PharmacoEconomics — saúde mental e absenteísmo, 2026","8"],
+  ["OIT/UN Brasil — Observatório de afastamentos","8"],
+  ["IFEMG — saúde mental e produtividade, jan/2026","8"],
+  ["IESS/SESI — Promoção da saúde nas empresas, 2013","8"],
+  ["IBEF-SP/AXENYA — absenteísmo e presenteísmo, 2024","6"],
+  ["HSE Management Standards","8"],
+  ["Lancet/JAMA — workplace health programs (RCT e meta-análises)","9"]
+];
+function renderSources(){
+  document.getElementById("srcTable").innerHTML = SOURCES.map(s=>
+    `<tr><td>${s[0]}</td><td class="num">${s[1]}/10</td></tr>`).join("");
+}
+
+/* ============================================================================
+   MODO PITCH — ensaio cronometrado
+   ========================================================================== */
+const SLIDES=[
+  {t:"0:00–0:30 · GANCHO", h:"Seu trabalhador não falta. Ele está lá — produzindo 60%. E ninguém sabe.",
+   say:"4% do PIB brasileiro se perde assim. A gente mede a falta. Ninguém mede o presenteísmo — e é o presenteísmo que sinaliza a incapacidade antes dela acontecer.",
+   note:"Não dizer “manutenção preditiva”. Nunca. A banca lê IoT industrial e desiste.", sec:"cadeia"},
+  {t:"0:30–1:15 · A CADEIA", h:"A cadeia vai de presenteísmo a aposentadoria. Só instrumentamos o fim dela.",
+   say:"Sete elos. Hoje o SESI mede os elos 3 a 6 — evento, afastamento, incapacidade, saída. O elo 1 e o elo 2 são onde a predição funciona, e o elo 1 não existe em sistema nenhum.",
+   note:"Usar o gráfico da cadeia. Apontar o elo 1 — o tracejado em violeta.", sec:"cadeia"},
+  {t:"1:15–2:00 · DEMO", h:"O trabalhador fala. A empresa recebe a alavanca. O absenteísmo é consequência.",
+   say:"Seis itens, noventa segundos, offline no celular. Ele recebe as duas alavancas dele. O agregado de dez ou mais pessoas do mesmo posto volta para a empresa, sem identificação. E o modelo predictivo diz onde o risco está antes do evento.",
+   note:"Rodar: seletor de perfil → aba Escuta → responder 2 itens → ver o plano do trabalhador e o gráfico de itens.", sec:"escuta"},
+  {t:"2:00–2:30 · IMPACTO", h:"106 milhões de dias. 20% dos trabalhadores. E um índice que hoje não existe.",
+   say:"A exposição prevista sai de base pública: VigIndústria com 57.952 trabalhadores, CAT com 6,4 milhões de registos de acidentes. Não é opinião — é o mesmo rigor do relatório que o SESI acabou de publicar.",
+   note:"Não prometer economia. Em ensaio randomizado o ROI de absenteísmo é −49%. Falar em dias expostos.", sec:"exposicao"},
+  {t:"2:30–2:50 · VIABILIDADE", h:"Não é uma startup de fora. É a camada que o SESI já declarou para 2026.",
+   say:"O Plano de Ação do SESI tem como objetivo estratégico “gestão integrada da saúde dos trabalhadores por meio das soluções digitais e da inovação”, com 2,7 milhões de vidas ativas na Plataforma Viva+. A gente propõe a camada preditiva e a camada de participação — que ainda não existem. Piloto via SESI Bahia e o MES.",
+   note:"Aqui é onde a tese vira institucional. Falar do Dashboard do time de DS também.", sec:"mercado"},
+  {t:"2:50–3:00 · FECHAMENTO", h:"Sustentabilidade de um modelo assistencial não se mede no custo.",
+   say:"Mede-se em quantos dias a pessoa volta a produzir — e em quantos ela teria voltado sem a gente. É isso que a gente proposes medir, desde o primeiro dia. Obrigado.",
+   note:"Parar. Não adicionar nada. A última frase é a tese."}
+];
+let pitchI=0, pitchT=0, pitchTimer=null;
+function renderSlide(){
+  const s=SLIDES[pitchI];
+  document.getElementById("pitchSlide").innerHTML=`
+    <div class="time">${s.t}</div>
+    <h2>${s.h}</h2>
+    <div class="say">${s.say}</div>`;
+  document.getElementById("pitchNote").textContent = s.note;
+  document.getElementById("pitchDots").innerHTML = SLIDES.map((_,i)=>`<i class="${i===pitchI?"on":""}"></i>`).join("");
+  const total = 180;
+  const m=Math.floor(pitchT/60), sec=pitchT%60;
+  const el=document.getElementById("pitchTimer");
+  el.textContent = m+":"+String(sec).padStart(2,"0");
+  el.classList.toggle("over", pitchT>total);
+}
+function pitchOpen(){
+  const p=document.getElementById("pitch");
+  p.dataset.open="true"; pitchI=0; pitchT=0; renderSlide();
+  clearInterval(pitchTimer);
+  pitchTimer=setInterval(()=>{pitchT++;renderSlide();},1000);
+}
+function pitchClose(){
+  document.getElementById("pitch").dataset.open="false"; clearInterval(pitchTimer);
+}
+function pitchGo(d){
+  pitchI=Math.max(0,Math.min(SLIDES.length-1,pitchI+d));
+  const target=[0,30,75,120,150,170][pitchI];
+  pitchT=target; renderSlide();
+  if(d>0){ const sec=document.querySelector('[data-goto="'+SLIDES[pitchI].sec+'"]'); if(sec) sec.click(); }
+}
+document.getElementById("pitchBtn").addEventListener("click",pitchOpen);
+document.getElementById("pitchClose").addEventListener("click",pitchClose);
+document.getElementById("pitchNext").addEventListener("click",()=>pitchGo(1));
+document.getElementById("pitchPrev").addEventListener("click",()=>pitchGo(-1));
+document.addEventListener("keydown",e=>{
+  if(document.getElementById("pitch").dataset.open!=="true") return;
+  if(e.key==="ArrowRight"||e.key===" "){e.preventDefault();pitchGo(1);}
+  if(e.key==="ArrowLeft"){e.preventDefault();pitchGo(-1);}
+  if(e.key==="Escape") pitchClose();
+});
+
+/* ── Auto-verificação: nenhuma opção sem chave correspondente ───────────── */
+function selfCheck(){
+  const problems = [];
+  const maps = { cnae:SECTORS, regiao:REGIONS, porte:{ pequena:1, grande:1 } };
+  Object.keys(maps).forEach(id=>{
+    const sel = document.getElementById(id);
+    if(!sel) { problems.push(id+": elemento ausente"); return; }
+    Array.from(sel.options).forEach(o=>{
+      if(!(o.value in maps[id])) problems.push(id+"='"+o.value+"' sem chave correspondente no modelo");
+    });
+  });
+  if(problems.length){
+    console.error("[demo] Falha de integridade no modelo:", problems);
+    const box = document.getElementById("modelOut");
+    if(box) box.insertAdjacentHTML("afterbegin",
+      '<div class="note bad" style="margin-bottom:var(--sp-4)"><b>Falha de integridade no modelo:</b> '+problems.join(" · ")+'</div>');
+  }
+  return problems;
+}
+
+/* ============================================================================
+   BOOT
+   ========================================================================== */
+document.querySelectorAll(".nav button").forEach(b=>{
+  b.addEventListener("click",()=>{
+    const el=document.getElementById(b.dataset.goto);
+    if(el) el.scrollIntoView({behavior:"smooth",block:"start"});
+    document.querySelectorAll(".nav button").forEach(x=>x.setAttribute("aria-current", x===b));
+  });
+});
+["cnae","porte","regiao","trabalhadores"].forEach(id=>{
+  document.getElementById(id).addEventListener("input",()=>{
+    if(id==="trabalhadores"){
+      const v=+document.getElementById("trabalhadores").value;
+      document.getElementById("trabCount").textContent=v.toLocaleString("pt-BR");
+    }
+    renderModel();
+  });
+});
+document.getElementById("sendAnswers").addEventListener("click",workerResult);
+
+renderChain();
+renderQuestions();
+renderSources();
+selfCheck();
+renderModel();
+drawFunnel(document.getElementById("chartFunnel"));
+drawSom(document.getElementById("chartSom"));
+drawSesi(document.getElementById("chartSesi"));
+drawItems(document.getElementById("chartItems"), answers, computeModel());
+</script>
+</body>
+</html>

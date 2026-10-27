@@ -267,6 +267,7 @@ docs/00-portfolio-oportunidades.md                     PORTFÓLIO DE OPORTUNIDAD
 docs/01-produtos-brainstorm.md                        10 conceitos de produto + shortlist de 3
 docs/02-cruzamento-whatsapp.md                       pesquisa × histórico do grupo (kit de mapeamento)
 docs/03-tese-preditiva.md                            cadeia de valor + TAM/SAM/SOM (direção D2b)
+pitch/demo.html                                      demo funcional offline (6 telas + modo pitch)
 docs/pesquisa/01-mapa-competitivo.md                  mapa competitivo (11 players, 5 camadas)
 docs/pesquisa/01-mapa-competitivo-fontes.md            bibliografia anotada do mapa
 docs/pesquisa/02-dimensionamento-mercado.md            dimensionamento e funil de custo
@@ -279,7 +280,9 @@ data/vigindustria-2026-raw.txt                         texto integral extraído 
 
 Os dois prints **não** são sobre o hackathon: são de outros dois programas. O de 07/10 é o Programa Aluno Empreendedor (inscrições até 22/10, CIMATEC Startups) e o de 13/10 é o INTEGRA SENAI Regional 2026 (3–5 integrantes, fase de prototipagem, prêmios R$ 600/400/300). O protótipo do hackathon pode servir de entrada no INTEGRA — trilha paralela, prazo do formulário a checar.
 
-**Próxima estrutura** (a criar pelo time quando o escopo fechar, não por este bootstrap): `pitch/` (roteiro, slides, ensaios), `prototype/` (código — só depois de 14/11).
+**Próxima estrutura** (a criar pelo time quando o escopo fechar, não por este bootstrap): `pitch/` (roteiro, slides, ensaios) · `prototype/` (código — só depois de 14/11).
+
+**`pitch/demo.html`** já existe: mockup funcional de arquivo único, **sem CDN, sem fonte externa, sem chamada de rede** — abre offline na máquina de qualquer membro (§11.2). Seis telas (Cadeia · Exposição · Escuta · Alavancas · Mercado · Evidência) + **Modo Pitch** com cronômetro de 3:00, setas do teclado e nota de apresentador por slide. Serve de ensaio cronometrado e de referência do que o protótipo final deve fazer. Modelo de exposição **transparente e auditável** (a soma das contribuições é o índice), com auto-verificação que acusa no console qualquer opção de seletor sem chave correspondente.
 
 As seções de setup, lint e teste entram no AGENTS.md em **13/11**, quando a stack for decidida com o desafio real à vista. Sem stack fixa, elas seriam ficção.
 
