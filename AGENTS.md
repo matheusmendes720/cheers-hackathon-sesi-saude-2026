@@ -261,6 +261,7 @@ chat.txt                                               mesmo export em texto pur
 WhatsApp Image 2026-10-07 at 16.05.05.jpeg             Programa Aluno Empreendedor (SENAI/CIMATEC/SEBRAE)
 WhatsApp Image 2026-10-13 at 11.27.18.jpeg             INTEGRA SENAI Regional 2026
 docs/00-portfolio-oportunidades.md                     PORTFÓLIO DE OPORTUNIDADES (comece aqui)
+docs/01-produtos-brainstorm.md                        10 conceitos de produto + shortlist de 3
 docs/pesquisa/01-mapa-competitivo.md                  mapa competitivo (11 players, 5 camadas)
 docs/pesquisa/01-mapa-competitivo-fontes.md            bibliografia anotada do mapa
 docs/pesquisa/02-dimensionamento-mercado.md            dimensionamento e funil de custo

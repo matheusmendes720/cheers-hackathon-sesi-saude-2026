@@ -1,0 +1,12 @@
+# Normaliza line endings no repo: LF em disco e no blob, em qualquer SO.
+# Necessário porque 5 pessoas com SOs diferentes vão editar estes arquivos.
+* text=auto eol=lf
+
+# Binarios: nunca converter
+*.pdf binary
+*.jpeg binary
+*.jpg binary
+*.png binary
+*.gif binary
+*.xlsx binary
+*.docx binary
