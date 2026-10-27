@@ -153,6 +153,7 @@ Erros que circulam no grupo do WhatsApp. **Nenhum agente deve propagá-los.**
 |---|---|---|---|
 | D1 | Confirmar inscrição individual dos 5 e o vínculo ao time "Cheers" | cada um | **08/11** |
 | D2 | Nicho dentro de saúde corporativa para atacar | Esteves + Moisés + Omena | 10/11 |
+| D2b | **Tese preditiva na cadeia de valor** (direção proposta por Matheus em 27/10) — calibrada em `docs/03-tese-preditiva.md`: *previsão de desfecho de saúde do trabalho* na cadeia de 7 elos (presenteísmo → exposição → evento → afastamento → incapacidade → saída → resultado), com TAM/SAM/SOM. **Não chamar de "manutenção preditiva"** — a banca lê como IoT industrial e o Anexo I rejeita. MVP = **um elo** (exposição + presenteísmo), não a cadeia inteira | Matheus + Moisés + Omena | 10/11 |
 | D3 | 10 ideias → shortlist de 3 → 1, pela rubrica | Matheus conduz | 11/11 |
 | D4 | Speaker do pitch (Moisés se voluntariou) | time | 12/11 |
 | D5 | Stack e arquitetura do protótipo | Matheus + luquinhas | **13/11**, na live de abertura |
@@ -265,6 +266,7 @@ WhatsApp Image 2026-10-13 at 11.27.18.jpeg             INTEGRA SENAI Regional 20
 docs/00-portfolio-oportunidades.md                     PORTFÓLIO DE OPORTUNIDADES (comece aqui)
 docs/01-produtos-brainstorm.md                        10 conceitos de produto + shortlist de 3
 docs/02-cruzamento-whatsapp.md                       pesquisa × histórico do grupo (kit de mapeamento)
+docs/03-tese-preditiva.md                            cadeia de valor + TAM/SAM/SOM (direção D2b)
 docs/pesquisa/01-mapa-competitivo.md                  mapa competitivo (11 players, 5 camadas)
 docs/pesquisa/01-mapa-competitivo-fontes.md            bibliografia anotada do mapa
 docs/pesquisa/02-dimensionamento-mercado.md            dimensionamento e funil de custo
