@@ -13,7 +13,7 @@ Ordem de precedência quando houver conflito:
 1. **Regulamento 2026** — `Regulamento Hackathon SESI Saude 2026.pdf` (no repo). Data de 08/10/2026, assinado em Salvador. É o documento que rege. *Ressalva: o cabeçalho diz "Minuta" e o item 6.1 ressalva que a programação pode mudar.*
 2. [Notícia oficial](https://www.sesibahia.com.br/detalhes-noticia?id=8312) — SESI Bahia, 09/10/2026
 3. [Landing page oficial](https://materiais.sesibahia.com.br/hackathon-saude) — formulário, tamanho de equipe
-4. [Formulário de inscrição](https://forms.cloud.microsoft/r/gzFVj3UiGX) — Microsoft Forms
+4. [Formulário de inscrição](https://forms.cloud.microsoft/r/gzFVj3UiGX) — Microsoft Forms. **As 22 perguntas foram lidas na íntegra em 31/10/2026** (API de runtime do Forms) e estão mapeadas em `docs/05-inscricao-formulario.md` — **não há campo de ODS, e não há campo de "nome do produto"**
 5. [VigIndústria Brasil 2026](https://static.portaldaindustria.com.br/portaldaindustria/noticias/media/filer_public/fc/83/fc836c73-55b5-4ed7-9e4c-13a54a95786c/relatorio_vigindustria_-_conecta_saude_2026.pdf) — relatório-base, ver [agenda](#agenda-de-pesquisa)
 6. `chat.md` / `chat.txt` — contexto do time. **Contém erros factuais** — ver [Correções](#correções-pendentes)
 
@@ -127,6 +127,10 @@ Erros que circulam no grupo do WhatsApp. **Nenhum agente deve propagá-los.**
 
 4. **Duração.** O documento que o Moisés colou no grupo diz "três dias imersivos" — e o regulamento diz o mesmo em §2.4. Mas o cronograma (§6.2) e o §2.6 delimitam o presencial em **14 e 15/11** (2 dias), com 13/11 online. §6.1 ressalva que a programação é planejamento e pode mudar.
 
+5. **Meta 3.8.** Até 31/10 este arquivo citava a meta 3.8 como *"Cobrir universalmente os serviços de saúde, incluindo atenção reabilitativa"*. **Não é o texto da ONU.** O oficial é *"Atingir a cobertura universal de saúde, incluindo a proteção do risco financeiro, o acesso a serviços de saúde essenciais de qualidade e o acesso a medicamentos e vacinas essenciais seguros, eficazes, de qualidade e a preços acessíveis para todos."* "Atenção reabilitativa" vem da **OMS** (Resolução WHA76.6, 2023), que define a reabilitação como componente essencial da meta 3.8 — é outra fonte. **Regra:** citar a meta pelo texto da ONU; "atenção reabilitativa" só com atribuição à OMS. Ver `docs/06-ods-metas.md` §2 e §5.
+
+6. **A mensagem de ODS reenviada no grupo (31/10).** O resumo "🌾 ODS 2: Fome Zero… / 🏭 ODS 9… / 🔗 A Intersecção" do **Moisés** (já em `chat.md`, 25/10 23:15) **foi reenviado**. É útil em **um** ponto — a lista oficial das metas 9.4 e 9.5, verificadas — e perigoso em **dois**: (a) toda a metade "ODS 2 = agricultura" (agrotech, cadeia de frio, biotecnologia) é **material de outro domínio**; (b) a seção **"🔗 A Intersecção"** propõe que o projeto seja *Agrotechs + IoT + cadeia de frio + biotecnologia* — **é o caminho para construir a coisa errada**: domínio errado, o Anexo I rejeita "incorporação de novas tecnologias", e é o produto mais crowded que existe sem nenhum dos 12 dias de pesquisa já feitos no repo. **A interseção correta é ODS 9 → ODS 3**, não ODS 9 → ODS 2. Ver `docs/06-ods-metas.md` §4.
+
 ---
 
 ## Equipe Cheers
@@ -151,21 +155,23 @@ Erros que circulam no grupo do WhatsApp. **Nenhum agente deve propagá-los.**
 
 | # | Decisão | Responsável | Prazo |
 |---|---|---|---|
-| D1 | Confirmar inscrição individual dos 5 e o vínculo ao time "Cheers" | cada um | **08/11** |
+| D1 | Confirmar inscrição individual dos 5 e o vínculo ao time "Cheers" — **texto de cada campo pronto em `docs/05-inscricao-formulario.md`** (22 perguntas lidas na íntegra; os textos prontos estão em §3) | cada um | **08/11** |
 | D2 | Nicho dentro de saúde corporativa para atacar — **PROPOSTA FECHADA 31/10**: saúde do trabalho na indústria, camada de **predição** (exposição) + **participação** (trabalhador com voz). Canônico em `docs/04-proposta.md` §1–4. *Validação do time: 10/11* | Esteves + Moisés + Omena | 10/11 |
 | D2b | **Tese preditiva na cadeia de valor** — **PROPOSTA FECHADA 31/10**: a cadeia de 7 elos (presenteísmo → exposição → evento → afastamento → incapacidade → saída → resultado) fica como **enquadramento do pitch** (slide 2), com TAM/SAM/SOM; **não** como escopo de produto. MVP = **um elo** (exposição + presenteísmo). **Não chamar de "manutenção preditiva"** — a banca lê como IoT industrial e o Anexo I rejeita. Também **não atribuir os R$ 468 bi (4% do PIB) ao presenteísmo** — esse número é de doenças e acidentes de trabalho. Ver `docs/03-tese-preditiva.md` + `docs/04-proposta.md` §5 | Matheus + Moisés + Omena | 10/11 |
 | D3 | 10 ideias → shortlist de 3 → 1, pela rubrica — **PROPOSTA FECHADA 31/10**: **A (Escuta + Alavanca)** com **C (Roda)** como camada que fecha o loop, **B (Aciona)** como expansão pós-hackathon. Escopo único de 32 h com **plano de corte declarado** em `docs/04-proposta.md` §5 | Matheus conduz | 11/11 |
 | D4 | Speaker do pitch (Moisés se voluntariou) | time | 12/11 |
 | D5 | Stack e arquitetura do protótipo | Matheus + luquinhas | **13/11**, na live de abertura |
 | D6 | Perguntas para mentores (abaixo) | time | 13/11 |
-| D7 | Quem cobre o slot de **designer** (§5.3) | time | **08/11** — vai no formulário |
+| D7 | **Quem cobre o slot de designer** (§5.3) — **o formulário tem uma opção "Design"** no campo de perfil (pergunta 8). Recomendação: **Esteves assume o design** e marca "Design"; se ninguém marcar, a equipe aparece com 3 dos 4 perfis do §5.3 | time | **08/11** — vai no formulário |
 | D8 | **Líder da equipe** para receber o prêmio (§9.5) + quem informa a conta | time | 10/11 |
 | D9 | **Inventário de equipamento** — cada um leva note, carregador, extensão, mouse, hdmi (§11.2) | cada um | 12/11 |
 | D10 | Onde dormir no local (sem dormitório, com chuveiro) (§11.3) | time | 12/11 |
-| D11 | **Time de 5 ou 6?** — §5.4.2 completa equipes com menos de 6; confirmar com a organização antes de fechar a inscrição | Matheus | **08/11** |
+| D11 | **Time de 5 ou 6?** — **resolvido pela leitura do formulário (31/10)**: a pergunta 20 diz *"Caso sua equipe seja selecionada e tenha menos de 6 pessoas, há a possibilidade de incluirmos mais pessoas"* — reconhecimento explícito do §5.4.2, não filtro. Responder **"Ciente"** e decidir internamente quem seria o 6º, se entrar | time | **08/11** |
 | D12 | **Disponibilidade online em 13/11, 18h30** para a live de abertura | todos | 13/11 |
 | D13 | **Nome do produto** — recomendação: **SINAL** (*o sinal que antecede a falta*); alternatas **Elo 1** e **Escuta**. Checar INPI e busca de marca antes de ir para o formulário | Matheus + Omena | **08/11** |
 | D14 | **Roteiro de 3 min** — `pitch/roteiro-3min.md` escrito (palavra por palavra, 2 ganchos, plano B de demo caída, 8 perguntas de banca, protocolo de 10 ensaios). Falta **ensaiar 10× em voz alta** | Moisés + time | 12/11 |
+| D15 | **Texto do formulário** — `docs/05-inscricao-formulario.md` com os textos prontos por membro. Cada um **personaliza** (5 respostas iguais = spam; §4.1.2 avalia "conhecimento na temática") | cada um | **08/11** |
+| D16 | **Metas ODS no formulário** — o formulário **não tem campo de ODS**; as metas (3.8, 3.d, 9.4, 9.5) entram nos campos de texto livre. Mapeamento verificado em `docs/06-ods-metas.md` | Matheus + Omena | **08/11** |
 
 ---
 
@@ -198,7 +204,7 @@ Pendentes, em ordem. Cada item vira um resumo de 1 página com link e data.
 
 1. **Caderno técnico do ASSTI (SESI/DN, 2023, 107 p.)** — quais indicadores compõem a 7ª dimensão (fatores de redução da produtividade), declarada e não analisada no VigIndústria. **É o próximo passo crítico.**
 2. **Os 3 eixos do MES 2026–2027** + os GTs (Promoção e Prevenção; Modelos Sustentáveis de Saúde Suplementar; Dados e Inteligência em Saúde). O MES tem **76 empresas-membro** (CN-SESI, 25/02/2026) — é a base de clientes potenciais e de validação. ⚠️ Circula "90 empresas"; a fonte primária diz 76.
-3. **ODS 3 (metas 3.1–3.9) e ODS 9 (metas 9.1–9.5)** — mapear a solução para metas nominais. Conectar "sustentabilidade do modelo assistencial" às metas 9.4 (eficiência no uso de recursos) e 9.5 (inovação/P&D) dá munição para o júri.
+3. ~~**ODS 3 (metas 3.1–3.9) e ODS 9 (metas 9.1–9.5)**~~ ✅ **CONCLUÍDO 31/10** — `docs/06-ods-metas.md`: metas 3.8, 3.d, 9.4 e 9.5 com o **texto oficial verificado**, o mapeamento de cada uma para a proposta, a correção da citação da 3.8 e o que rejeitar da mensagem de ODS que circulou no grupo. **As metas entram no formulário como conhecimento demonstrado** — o formulário não tem campo de ODS.
 4. **Modelos assistenciais** — SUS e atenção primária, RAPS, saúde suplementar (ANS), saúde ocupacional e saúde corporativa (MES), telemedicina, prontuário e interoperabilidade (HL7/FHIR, RNDS).
 5. **A dor específica do SESI** — as edições 2025 focaram em *experiência do cliente indústria*. Mapear o funil real: agendamento, triagem, emissão de ASO, rastreio de exames, encaminhamento, retorno ao trabalho, absenteísmo, sinistralidade, custo.
 6. **As edições de 2025** — ver o formato da demo vencedora e a dinâmica da maratona de 40 h.
@@ -216,6 +222,7 @@ Pendentes, em ordem. Cada item vira um resumo de 1 página com link e data.
 
 ### Perguntas para a organização (12/11, live de orientações)
 
+- **A descrição do próprio formulário diz "modelos sustentáveis de *saúde suplementar*"**, enquanto o regulamento (§2.1) e o Anexo I falam em *modelos assistenciais de saúde*. São dois recortes: plano/operadora (RN 465, ANS) × saúde ocupacional (ASSTI, NR-7, SESI). **O desafio detalhado é de qual lado?** É a bifurcação mais consequente do §7.3. *(Pergunta nova, 31/10.)*
 - **A demo do protótipo entra nos 3 minutos do pitch** ou o protótipo é julgado à parte, a partir do que foi entregue às 15h30?
 - Quais são os **desafios concretos** que serão apresentados na abertura, e as empresas por trás de cada um?
 - A organização libera algum **acesso a dados do SESI/ASSTI** para o protótipo, ou o time usa dados públicos?
@@ -279,6 +286,8 @@ docs/01-produtos-brainstorm.md                        10 conceitos de produto + 
 docs/02-cruzamento-whatsapp.md                       pesquisa × histórico do grupo (kit de mapeamento)
 docs/03-tese-preditiva.md                            cadeia de valor + TAM/SAM/SOM (direção D2b)
 docs/04-proposta.md                                  A PROPOSTA — documento canônico do produto (D2/D2b/D3)
+docs/05-inscricao-formulario.md                     as 22 perguntas do formulário + o texto de cada uma (D1/D7/D11/D15)
+docs/06-ods-metas.md                                metas ODS 3 e 9 verificadas + mapeamento + o que rejeitar
 pitch/demo.html                                      demo funcional offline (6 telas + Modo Pitch de 7 blocos)
 pitch/roteiro-3min.md                                roteiro do pitch palavra por palavra (D14)
 docs/pesquisa/01-mapa-competitivo.md                  mapa competitivo (11 players, 5 camadas)
