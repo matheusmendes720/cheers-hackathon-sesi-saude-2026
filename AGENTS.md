@@ -120,6 +120,7 @@ Erros que circulam no grupo do WhatsApp. **Nenhum agente deve propagá-los.**
 
 1. **ODS.** A página oficial e o próprio regulamento (§2.1) dizem "ODS 2 – Saúde e Bem-Estar". É erro de numeração do SESI: na Agenda 2030, **Saúde e Bem-Estar é o ODS 3**; ODS 2 é Fome Zero e Agricultura Sustentável. O resumo do Gemini compartilhado em 25/10 (`chat.md` 23:15) descreve ODS 2 como agricultura — agrotech, cadeia de frio, biotecnologia. **Material de outro domínio, inservível aqui.** A lista dos 17 objetivos que o Gabriel mandou está correta; ela é que contradiz o rótulo numérico do SESI.
    > Regra: toda referência a ODS neste workspace é **ODS 3 (Saúde e Bem-Estar) + ODS 9 (Indústria, Inovação e Infraestrutura)**.
+   > **Leitura do §2.1 (verificada no PDF em 31/10):** os ODS são *"parâmetro"* do desafio, **não cardápio** — e **não há campo de ODS no formulário**, então **a banca não pontua ODS**. ODS é narrativa, não nota. O que a banca pontua é §8, e §8 não cita ODS. Ver `docs/07-alavancas-regulamento.md` §0.
 
 2. **Prazo.** O grupo discute "jaja fecha" (25/10) e o print de 07/10 mostra 22/10 — mas 22/10 é o prazo do **Programa Aluno Empreendedor** (SENAI/CIMATEC/SEBRAE), outro programa. O prazo do hackathon é **08/11** (§3.1).
 
@@ -130,6 +131,8 @@ Erros que circulam no grupo do WhatsApp. **Nenhum agente deve propagá-los.**
 5. **Meta 3.8.** Até 31/10 este arquivo citava a meta 3.8 como *"Cobrir universalmente os serviços de saúde, incluindo atenção reabilitativa"*. **Não é o texto da ONU.** O oficial é *"Atingir a cobertura universal de saúde, incluindo a proteção do risco financeiro, o acesso a serviços de saúde essenciais de qualidade e o acesso a medicamentos e vacinas essenciais seguros, eficazes, de qualidade e a preços acessíveis para todos."* "Atenção reabilitativa" vem da **OMS** (Resolução WHA76.6, 2023), que define a reabilitação como componente essencial da meta 3.8 — é outra fonte. **Regra:** citar a meta pelo texto da ONU; "atenção reabilitativa" só com atribuição à OMS. Ver `docs/06-ods-metas.md` §2 e §5.
 
 6. **A mensagem de ODS reenviada no grupo (31/10).** O resumo "🌾 ODS 2: Fome Zero… / 🏭 ODS 9… / 🔗 A Intersecção" do **Moisés** (já em `chat.md`, 25/10 23:15) **foi reenviado**. É útil em **um** ponto — a lista oficial das metas 9.4 e 9.5, verificadas — e perigoso em **dois**: (a) toda a metade "ODS 2 = agricultura" (agrotech, cadeia de frio, biotecnologia) é **material de outro domínio**; (b) a seção **"🔗 A Intersecção"** propõe que o projeto seja *Agrotechs + IoT + cadeia de frio + biotecnologia* — **é o caminho para construir a coisa errada**: domínio errado, o Anexo I rejeita "incorporação de novas tecnologias", e é o produto mais crowded que existe sem nenhum dos 12 dias de pesquisa já feitos no repo. **A interseção correta é ODS 9 → ODS 3**, não ODS 9 → ODS 2. Ver `docs/06-ods-metas.md` §4.
+
+7. **"Agrotech + IoT + cadeia de frio + biotecnologia" está FORA do escopo por regulamento** — não por preferência. §7.2 é mandatório: *"As equipes deverão desenvolver soluções para **Desafios e soluções para a sustentabilidade dos modelos assistenciais de saúde** (Anexo I)"*. §2.1 fixa **dois** ODS como parâmetro (saúde + indústria) e §3.6 limita o ecossistema a saúde/TI/design/gestão; §2.3 diz que a ação **não tem caráter comercial**; §10.6 exige originalidade — e agrotech é o espaço mais crowded que existe. **Não existe "escolher qualquer ODS".** Se a proposta for reescrita, tem que ser reescrita *dentro* de saúde do trabalhador. Ver `docs/07-alvancas-regulamento.md` §1.
 
 ---
 
@@ -168,7 +171,7 @@ Erros que circulam no grupo do WhatsApp. **Nenhum agente deve propagá-los.**
 | D10 | Onde dormir no local (sem dormitório, com chuveiro) (§11.3) | time | 12/11 |
 | D11 | **Time de 5 ou 6?** — **resolvido pela leitura do formulário (31/10)**: a pergunta 20 diz *"Caso sua equipe seja selecionada e tenha menos de 6 pessoas, há a possibilidade de incluirmos mais pessoas"* — reconhecimento explícito do §5.4.2, não filtro. Responder **"Ciente"** e decidir internamente quem seria o 6º, se entrar | time | **08/11** |
 | D12 | **Disponibilidade online em 13/11, 18h30** para a live de abertura | todos | 13/11 |
-| D13 | **Nome do produto** — recomendação: **SINAL** (*o sinal que antecede a falta*); alternatas **Elo 1** e **Escuta**. Checar INPI e busca de marca antes de ir para o formulário | Matheus + Omena | **08/11** |
+| D13 | **Nome do produto** — recomendação: **SINAL** (*o sinal que antecede a falta*); alternatas **Elo 1** e **Escuta**. Checar INPI e busca de marca antes de ir para o formulário. ⚠️ **§10.1: a cessão de imagem/voz/nome cobre "o nome, imagem e características da solução"** — o nome do produto vai para patrocinadores e parceiros. Decidir isso ANTES de escolher | Matheus + Omena | **08/11** |
 | D14 | **Roteiro de 3 min** — `pitch/roteiro-3min.md` escrito (palavra por palavra, 2 ganchos, plano B de demo caída, 8 perguntas de banca, protocolo de 10 ensaios). Falta **ensaiar 10× em voz alta** | Moisés + time | 12/11 |
 | D15 | **Texto do formulário** — `docs/05-inscricao-formulario.md` com os textos prontos por membro. Cada um **personaliza** (5 respostas iguais = spam; §4.1.2 avalia "conhecimento na temática") | cada um | **08/11** |
 | D16 | **Metas ODS no formulário** — o formulário **não tem campo de ODS**; as metas (3.8, 3.d, 9.4, 9.5) entram nos campos de texto livre. Mapeamento verificado em `docs/06-ods-metas.md` | Matheus + Omena | **08/11** |
@@ -288,6 +291,7 @@ docs/03-tese-preditiva.md                            cadeia de valor + TAM/SAM/S
 docs/04-proposta.md                                  A PROPOSTA — documento canônico do produto (D2/D2b/D3)
 docs/05-inscricao-formulario.md                     as 22 perguntas do formulário + o texto de cada uma (D1/D7/D11/D15)
 docs/06-ods-metas.md                                metas ODS 3 e 9 verificadas + mapeamento + o que rejeitar
+docs/07-alvancas-regulamento.md                     alavancas de pontuação, restrições e o veredito de escopo (§2.1/§7.2)
 pitch/demo.html                                      demo funcional offline (6 telas + Modo Pitch de 7 blocos)
 pitch/roteiro-3min.md                                roteiro do pitch palavra por palavra (D14)
 docs/pesquisa/01-mapa-competitivo.md                  mapa competitivo (11 players, 5 camadas)
