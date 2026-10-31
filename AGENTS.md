@@ -278,14 +278,14 @@ Ao propor solução, sempre anexar: (1) a meta ODS específica, (2) o eixo do Co
 
 ## Estrutura do repositório
 
-Estado em 31/10/2026:
+Estado em 01/11/2026:
 
 ```
-README.md                                              entrada humana do time — "só leia 3 coisas" + o que fazer até sexta
+README.md                                              rosto público do repo (narrativa + dossiê + time + direitos) — o bloco operacional do time fica no fim
 AGENTS.md                                              este arquivo
 CONTRIBUTING.md                                        regras do repositório (6 regras, fluxo de PR, checklist de evidência)
 .gitignore                                              o que não entra no repo
-.github/PULL_REQUEST_TEMPLATE.md                       template de PR com checklist de evidência
+.github/PULL_REQUEST_TEMPLATE.md                       template de PR com checklist de evidência + regex de varredura
 Regulamento Hackathon SESI Saude 2026.pdf              regulamento oficial (§N)
 chat.md                                                export do WhatsApp em Markdown
 chat.txt                                               mesmo export em texto puro
@@ -307,7 +307,7 @@ pitch/slide-impacto.html                             slide único de impacto (A4
 pitch/apresentacao-interna.md                        apresentação de 10 min para o time, sem contexto prévio
 docs/10-mapa-de-build-32h.md                          plano de build hora a hora (2 turnos, CORTE 1/2, 3 trilhos, 8 riscos)
 docs/11-perguntas-para-a-organizacao.md                one-pager imprimível das 8 perguntas para a live de 12/11 (P1/P2/P3)
-docs/relatorios/                                       DOSSIÊ EM PDF (4 docs, ~53 p.) — fonte HTML + PDF gerado
+docs/relatorios/                                       DOSSIÊ EM PDF (4 docs, 58 p.) — fonte HTML + PDF gerado
 docs/relatorios/01-horizonte-de-trabalho               o horizonte explorado, o delta vs WhatsApp, decisões, calendário
 docs/relatorios/02-nucleo-e-gaps                       a tese, a 7ª dimensão, os 4 gaps, o mecanismo, o impacto honesto
 docs/relatorios/03-evidencia-mercado-regulacao         os 33 indicadores, a base científica, o mapa de preços, o escudo
@@ -342,6 +342,22 @@ As seções de setup, lint e teste entram no AGENTS.md em **13/11**, quando a st
 - Um tema de pesquisa por commit — o histórico é o log de raciocínio, e vai ser consultado durante a maratona.
 - Não commitar segredos (`.env`) nem dado real de paciente.
 - Manter os prints originais; não recomprimir.
+
+### Remote e GitHub (publicado em 01/11/2026)
+
+**`https://github.com/matheusmendes720/cheers-hackathon-sesi-saude-2026`** — repositório **público**, branch `main` como padrão, conta `matheusmendes720`.
+
+- Topics: `hackathon` · `sesi` · `saude-do-trabalhador` · `saude-ocupacional` · `odp` · `dados-publicos` · `brasil` · `pesquisa`.
+- 20 commits, 65 arquivos, ~29 MB (o grosso são os PDFs de terceiros em `docs/sources/`).
+- O README raiz é o **rosto público**: narrativa, lacuna com número, proposta, dossiê, fontes, time, contribuir e direitos — com o bloco operacional do time preservado no fim. Dois diagramas em **Mermaid** (renderizado nativamente pelo GitHub; validado com o parser oficial do mermaid v11).
+- **PR é obrigatório** — nada de commit direto na `main`. Convide os outros 4 como colaboradores: `gh api -X PUT repos/matheusmendes720/cheers-hackathon-sesi-saude-2026/collaborators/<usuario> -f permission=push` (precisa do username GitHub de cada um).
+
+**Duas decisões que ficaram com o time (não são bloqueios de documentação):**
+
+1. **Licença.** O repo foi criado **sem `LICENSE`** — padrão do GitHub é todos os direitos reservados, coerente com o §10.8 (os direitos autorais ficam com os criadores). Para liberar em MIT: botão **Add a license** do GitHub, ou `gh api -X PUT repos/matheusmendes720/cheers-hackathon-sesi-saude-2026/license -f license=mit`.
+2. **Redistribuição dos PDFs de terceiros** (~25 MB em `docs/sources/` + o regulamento na raiz). Tudo é publicamente baixável na origem e `docs/sources/README.md` traz a URL pública de cada PDF. Decidir entre manter rastreado ou trocar por links + hashes. **Não removeu nada do disco.**
+
+**Dado pessoal exposto:** `chat.md` / `chat.txt` (export do WhatsApp) e a tabela do time em `AGENTS.md` contêm **números de telefone dos membros da equipe**. Todos os 5 são colaboradores do repo, mas se o time preferir tirar do histórico público, ainda é possível (repo novo, sem forks) com `git filter-repo`.
 
 **Apagar arquivo neste PC (Windows):** use `rm -- "<caminho-absoluto>"` como **único comando** do bash — sem `cd` antes, sem `echo`/`;` depois. `Remove-Item` é bloqueado pela política de segurança. Para diretório: `rm -r -- "<caminho-absoluto>"`. O runtime roteia para o launcher recuperável (lixeira).
 
