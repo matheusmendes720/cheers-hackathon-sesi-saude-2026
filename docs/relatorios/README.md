@@ -1,13 +1,13 @@
 # O dossiê em PDF
 
-A consolidação de **tudo que a pesquisa produziu fora do grupo de WhatsApp** — 4 documentos, ~53 páginas, A4, com sumário clicável e a **fonte ao lado de cada número**.
+A consolidação de **tudo que a pesquisa produziu fora do grupo de WhatsApp** — 4 documentos, **58 páginas**, A4, com sumário clicável e a **fonte ao lado de cada número**.
 
 **É este material que vai para o time.** O repositório guarda a fonte; os PDFs são a forma de ler.
 
 | Doc | Arquivo | Páginas | O que responde |
 |---|---|---|---|
 | 01 | `01-horizonte-de-trabalho.pdf` | 12 | O mapa do que exploramos, o delta em relação ao grupo, as decisões em aberto, o calendário real |
-| 02 | `02-nucleo-e-gaps.pdf` | 16 | A tese, a 7ª dimensão do ASSTI, os 4 gaps, o mecanismo e o impacto honesto |
+| 02 | `02-nucleo-e-gaps.pdf` | 15 | A tese, a 7ª dimensão do ASSTI, os 4 gaps, o mecanismo e o impacto honesto |
 | 03 | `03-evidencia-mercado-regulacao.pdf` | 18 | Os 33 indicadores, a base científica, o mapa de preços, o escudo regulatório, as metas ODS |
 | 04 | `04-kit-13-11-e-build.pdf` | 13 | O protocolo de 90 min, os 5 kernels, as 32 h de build, os 8 riscos, o checklist do pitch |
 
@@ -71,10 +71,13 @@ O sumário continua sendo o mapa navegável (com âncoras clicáveis e a página
 
 | Script | Para que serve |
 |---|---|
-| `fix_toc.py` | Recalcula a paginação real e reescreve sumário + rodapés |
+| `render_pdf.cjs` | HTML → PDF (Playwright): rodapé numerado pelo motor, A4 retrato ou paisagem |
+| `fix_toc2.py` | **Recalcula a paginação real** e reescreve o sumário (lê o PDF já renderizado) |
+| `fix_toc.py` | Versão anterior do recalculo de paginação |
 | `verify.py` | Verificação final: páginas, âncoras, links, não-latinos |
 | `_check.py` | Diagnóstico: qual seção estoura a página |
 | `_tighten.py` | Aplica a classe `.tighter` nas tabelas longas |
+| `_polish.py` · `_renum.py` · `_strip_runfoot.py` | Ajustes finos de HTML e rodapé |
 
 Os que começam com `_` são auxiliares. **Rode a varredura de não-latinos antes de commitar** — a regra está em [`../../CONTRIBUTING.md`](../../CONTRIBUTING.md).
 

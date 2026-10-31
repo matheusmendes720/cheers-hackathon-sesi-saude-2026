@@ -2,7 +2,7 @@
 
 Índice de tudo que está no repositório, **ordenado pelo caminho de leitura** — não pela ordem em que os arquivos foram criados.
 
-> **Entrada do time:** [`../README.md`](../README.md) · **Dossiê em PDF:** [`relatorios/`](../relatorios/) · **Regras de contribuição:** [`../CONTRIBUTING.md`](../CONTRIBUTING.md)
+> **Entrada do time:** [`../README.md`](../README.md) · **Dossiê em PDF:** [`relatorios/`](relatorios/) · **Regras de contribuição:** [`../CONTRIBUTING.md`](../CONTRIBUTING.md)
 
 ---
 
@@ -14,7 +14,7 @@
 | 2 | [`../docs/04-proposta.md`](../docs/04-proposta.md) | A tese, o escopo de 32 h e a ordem de corte |
 | 3 | [`../pitch/roteiro-3min.md`](../pitch/roteiro-3min.md) | O pitch palavra por palavra, com plano B e 8 perguntas de banca |
 
-**O dossiê em PDF** (`relatorios/`) é a versão consolidada e pronta para enviar: 4 documentos, ~53 páginas, com sumário clicável e fonte em cada número.
+**O dossiê em PDF** (`relatorios/`) é a versão consolidada e pronta para enviar: 4 documentos, **58 páginas**, com sumário clicável e fonte em cada número.
 
 ---
 
