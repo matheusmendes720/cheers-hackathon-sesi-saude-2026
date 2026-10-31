@@ -151,7 +151,7 @@ Uma linha por pessoa. **Competência, não biografia.** Cada um fala a sua, em v
 | 3 | "De onde sai o modelo? É caixa-preta?" | "Não. VigIndústria (57.952 trabalhadores) + CAT (6,4 mi). Os pesos estão **à vista** na tela, e o modelo explica como funciona — abrimos isso na demo." |
 | 4 | "E a LGPD? Isso é dado de saúde do trabalhador." | "Nada de dado individual sai do aparelho dele. Só agregado, **k ≥ 10** no mesmo posto, e o trabalhador pode pular qualquer item. Sem decisão de emprego, sem ASO, sem parecer médico. IA só em função administrativa — faixa de baixo risco da Res. CFM 2.454/2026." |
 | 5 | "Isso é diagnóstico com IA?" | "Não. O motor de alavancas é **regras explicáveis**, não IA. Não há diagnóstico, não há triagem, não há parecer. E a evidência sustenta exatamente o que a gente usa: demanda e apoio — não 'autonomia genérica'." |
-| 6 | "Quem paga? Por que a empresa adota isso?" | "Gatilho: 20% faltaram ≥1 dia/semana e 34,4% não acham a comunicação de prevenção suficiente. Preço de referência: **R$ 13,9 por vida/mês** — a Salú, maior software de saúde ocupacional do Brasil, opera assim. Canal: SESI Bahia e MES." |
+| 6 | "Quem paga? Por que a empresa adota isso?" | "Essa ação não tem caráter comercial — o §2.3 do regulamento é explícito. A pergunta certa é **por que a empresa adota**. Gatilho: 20% faltaram ≥1 dia/semana e 34,4% não acham a comunicação de prevenção suficiente. E o canal **já existe**: é a Plataforma Viva+, com 2,7 milhões de vidas ativas, e o objetivo estratégico do PAO 2026. Se a empresa quiser ir além, é um módulo por vida — não um contrato de software." |
 | 7 | "A amostra do VigIndústria não é enviesada?" | "É, e o próprio relatório declara: são empresas que demandaram serviço ao SESI. Por isso o modelo é **transversal e transparente**, e o piloto é o teste. O relatório pede 'a continuidade do monitoramento sistemático' justamente porque essa é a lacuna." |
 | 8 | "Por que vocês? Vocês não são da área." | "Somos do ecossistema: informatics em saúde com doutorado e estágio real (Moisés), canal no SESI e no ecossistema médico (Esteves), produto e negócio (Omena), e a ponte com a incubação (Matheus). E o protótipo é **módulo da plataforma que o SESI já opera**." |
 
@@ -175,6 +175,8 @@ Uma linha por pessoa. **Competência, não biografia.** Cada um fala a sua, em v
 3. **A última frase** — tem que sair seca.
 
 **Regra de número:** se a banca perguntar algo cujo número você não tem, a resposta é *"isso a gente não mediu — o que a gente mediu foi X"*. **Nunca chutar número clínico ou estatística de mercado** (regra do `AGENTS.md`).
+
+**Regra de enquadramento (§2.3):** *"A ação não possui caráter comercial nem objetiva resultados financeiros, tendo finalidade cultural e social."* → o pitch fala de **impacto, autonomia e propósito** — não de faturamento, ROI ou modelo de negócio. Preço de referência só aparece se perguntarem, e como **capacidade de modules por vida**, nunca como a tese. Um slide de business model no centro do pitch é **fora do enquadramento da organização** e convida a banca a ler "startup", que é o pior enquadramento possível num evento sem caráter comercial.
 
 ---
 

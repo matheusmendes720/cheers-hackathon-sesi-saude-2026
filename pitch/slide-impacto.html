@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SINAL — slide único de impacto</title>
+<style>
+  :root{
+    --ink:#0B1118; --ink-2:#2A3646; --muted:#5B6B7E; --line:#D6DEE8;
+    --accent:#0D9488; --accent-soft:#E6F5F3; --warn:#B45309; --warn-soft:#FDF3E3;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{background:#EEF2F7;color:var(--ink);
+    font-family:"Inter","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;
+    -webkit-font-smoothing:antialiased}
+  .sheet{width:297mm;height:210mm;margin:20px auto;background:#fff;
+    padding:12mm 14mm 9mm;display:flex;flex-direction:column;position:relative;
+    box-shadow:0 18px 50px rgba(11,17,24,.18)}
+  @page{size:A4 landscape;margin:0}
+  @media print{
+    html,body{background:#fff}
+    .sheet{margin:0;box-shadow:none;width:297mm;height:210mm;
+      print-color-adjust:exact;-webkit-print-color-adjust:exact}
+    .noprint{display:none!important}
+  }
+  .top{display:flex;justify-content:space-between;align-items:flex-start;
+    border-bottom:2px solid var(--ink);padding-bottom:7px}
+  .brand{display:flex;align-items:center;gap:9px}
+  .mark{width:30px;height:30px;border-radius:8px;background:var(--accent);
+    color:#fff;font-weight:800;font-size:14px;display:flex;align-items:center;
+    justify-content:center;letter-spacing:.5px}
+  .brand b{font-size:16px;letter-spacing:2.5px;text-transform:uppercase}
+  .brand span{display:block;font-size:9.5px;color:var(--muted);letter-spacing:.4px;margin-top:1px}
+  .tag{font-size:9.5px;color:var(--muted);text-align:right;line-height:1.5;max-width:150mm}
+  .tag b{color:var(--ink-2);font-weight:600}
+
+  h1{font-size:23px;line-height:1.18;letter-spacing:-.4px;margin:11px 0 3px;font-weight:800}
+  .sub{font-size:12.5px;color:var(--ink-2);line-height:1.45;max-width:250mm}
+  .sub b{color:var(--accent);font-weight:700}
+
+  .grid{display:grid;grid-template-columns:1.32fr 1fr;gap:9mm;margin-top:9mm;flex:1}
+  .nums{display:grid;grid-template-columns:1fr 1fr;gap:5mm;align-content:stretch}
+  .strip{grid-column:1 / -1;border:1px solid var(--line);border-radius:9px;padding:4mm 5mm;
+    background:var(--surface-2,#F8FAFC)}
+  .h2{font-size:8.6px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);
+    font-weight:700;margin-bottom:2.5mm}
+  .strip-in{display:grid;grid-template-columns:1fr 1fr 1fr;gap:4mm}
+  .strip-in span{font-size:9.6px;line-height:1.35;color:var(--ink-2)}
+  .strip-in b{color:var(--ink);font-weight:700}
+  .num{border:1px solid var(--line);border-radius:9px;padding:6mm 5mm 5mm;
+    background:#fff;position:relative;overflow:hidden;display:flex;flex-direction:column}
+  .num::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--accent)}
+  .num.void::before{background:#B42318}
+  .n{font-size:33px;font-weight:800;line-height:1;letter-spacing:-1.2px}
+  .n small{font-size:15px;font-weight:700;letter-spacing:-.2px}
+  .lab{font-size:11px;line-height:1.4;margin-top:5px;font-weight:600}
+  .src{font-size:8.6px;color:var(--muted);margin-top:auto;padding-top:5px;line-height:1.35;
+    border-top:1px dotted var(--line)}
+  .src b{color:var(--ink-2);font-weight:600}
+
+  .side{display:flex;flex-direction:column;gap:5mm}
+  .box{border:1px solid var(--line);border-radius:9px;padding:4.5mm 5mm;background:#fff}
+  .box.grow{flex:1;display:flex;flex-direction:column}
+  .box.acc{background:var(--accent-soft);border-color:#A7DCD6}
+  .box.warn{background:var(--warn-soft);border-color:#E7C89A}
+  .h{font-size:9px;letter-spacing:1.6px;text-transform:uppercase;color:var(--muted);
+    font-weight:700;margin-bottom:3.5mm}
+  .box.acc .h{color:var(--accent)}
+  .box.warn .h{color:var(--warn)}
+  .lv{display:flex;gap:7px;align-items:baseline;margin-bottom:3mm}
+  .lv:last-child{margin-bottom:0}
+  .lv i{font-style:normal;font-weight:800;font-size:9.5px;color:var(--accent);
+    border:1px solid var(--accent);border-radius:4px;padding:1px 4px;flex:0 0 auto}
+  .lv p{font-size:10.3px;line-height:1.35}
+  .lv p b{font-weight:700}
+  .lv p em{font-style:normal;color:var(--muted);font-size:9.2px;display:block}
+  .gap{font-size:10.3px;line-height:1.45}
+  .gap b{font-weight:700}
+  .gap p{margin-bottom:2.5mm}
+  .gap p:last-child{margin-bottom:0}
+  .dims{display:flex;gap:4px;margin-top:3mm}
+  .d{flex:1;border-radius:5px;padding:3px 4px;text-align:center;font-size:8.4px;
+    font-weight:700;line-height:1.25;border:1px solid var(--line);color:var(--muted)}
+  .d.on{background:var(--accent);border-color:var(--accent);color:#fff}
+
+  footer{margin-top:7px;border-top:1px solid var(--line);padding-top:6px;
+    display:flex;justify-content:space-between;gap:8mm;font-size:8.8px;color:var(--muted);line-height:1.45}
+  footer b{color:var(--ink-2);font-weight:700}
+  .foot-l{max-width:175mm}
+  .foot-r{text-align:right;white-space:nowrap}
+  .warnbar{margin-top:5mm;background:#FFF8EC;border:1px solid #E7C89A;border-left:3px solid var(--warn);
+    border-radius:6px;padding:3mm 4mm;font-size:10.2px;line-height:1.4;color:#7A4A08}
+  .warnbar b{font-weight:800}
+</style>
+</head>
+<body>
+<div class="sheet">
+
+  <div class="top">
+    <div class="brand">
+      <div class="mark">CS</div>
+      <div>
+        <b>Cheers</b>
+        <span>SINAL · o sinal que antecede a falta</span>
+      </div>
+    </div>
+    <div class="tag">
+      <b>Hackathon+ SESI Saúde 2026</b> · Equipe Cheers<br>
+      Tema: <b>sustentabilidade dos modelos assistenciais de saúde</b><br>
+      ODS 3 (metas 3.8 · 3.d) e ODS 9 (metas 9.4 · 9.5)
+    </div>
+  </div>
+
+  <h1>O SESI mede o risco que o trabalhador corre. Não mede o trabalho que causa o risco.</h1>
+  <p class="sub">
+    A sétima dimensão do ASSTI — <b>fatores de redução da produtividade</b> — foi declarada e nunca analisada.
+    E o instrumento oficial de saúde do trabalho no Brasil tem <b>zero</b> itens de autonomia ou participação.
+    É essa camada que a gente constrói: o trabalhador fala, a empresa recebe <b>alavancas priorizadas</b>, o absenteísmo é consequência.
+  </p>
+
+  <div class="grid">
+    <div class="nums">
+
+      <div class="num">
+        <div class="n">20<small>%</small></div>
+        <div class="lab">dos trabalhadores faltaram <b>≥ 1 dia por semana</b> por saúde</div>
+        <div class="src"><b>SESI/ASSTI</b> — Estilo de Vida, Saúde e Produtividade · n = 123.355 trabalhadores</div>
+      </div>
+
+      <div class="num">
+        <div class="n">106<small> mi</small></div>
+        <div class="lab">de dias perdidos em <b>acidentes de trabalho</b> (2016–2025)</div>
+        <div class="src"><b>CANPAT / Auditores-Fiscais do Trabalho</b> — comunicações de acidentes de trabalho</div>
+      </div>
+
+      <div class="num">
+        <div class="n">4,1<small> mi</small></div>
+        <div class="lab">de <b>afastamentos</b> por incapacidade no INSS em 2025 — <b>+17,1%</b> em um ano</div>
+        <div class="src"><b>INSS</b> — afastamentos por incapacidade</div>
+      </div>
+
+      <div class="num void">
+        <div class="n">0</div>
+        <div class="lab">itens de <b>autonomia, participação ou propósito</b> no instrumento de coleta</div>
+        <div class="src"><b>VigIndústria Brasil 2026</b> (SESI) · pp. 110–119 · a 7ª dimensão declarada e não analisada na p. 16</div>
+      </div>
+
+      <div class="strip">
+        <div class="h2">O que a gente mede — e o que a empresa faz na segunda-feira</div>
+        <div class="strip-in">
+          <span><b>Dias expostos</b> por posto, antes e depois</span>
+          <span><b>3 alavancas priorizadas</b>, cada uma com o indicador nacional que a justifica</span>
+          <span><b>Mudança organizacional</b> no posto: demanda, apoio, reconhecimento, comunicação</span>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="side">
+
+      <div class="box acc">
+        <div class="h">O que a empresa recebe</div>
+        <div class="lv"><i>1</i><p><b>Reduzir a demanda de trabalho no posto</b><em>demanda OR 1,57 (1,04–2,36) para afastamento — meta-análise</em></p></div>
+        <div class="lv"><i>2</i><p><b>Fortalecer o apoio de colegas e chefia</b><em>apoio OR 0,58 (0,41–0,83): reduziu ausência</em></p></div>
+        <div class="lv"><i>3</i><p><b>Comunicar prevenção de forma que chegue</b><em>65,6% acham suficiente — em micro/pequenas, só 56,2%</em></p></div>
+      </div>
+
+      <div class="box grow">
+        <div class="h">As 4 dimensões do Anexo I</div>
+        <div class="dims">
+          <div class="d on">Comportam.</div>
+          <div class="d on">Ambiente</div>
+          <div class="d on">Organiz. do trab.</div>
+          <div class="d on">Participação</div>
+        </div>
+        <div class="gap" style="margin-top:auto">
+          <p>A 4ª dimensão — <b>participação das pessoas</b> — é a única que não tinha instrumento. É a que a gente cria.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="warnbar">
+    <b>Não prometemos economia.</b> Em ensaio randomizado (n = 32.974), o retorno de programa de absenteísmo foi <b>−49%</b>.
+    Prometemos <b>medir o efeito</b>: dias expostos, antes e depois. É o que a OIT e o relatório do SESI (p. 100) pedem.
+  </div>
+
+  <footer>
+    <div class="foot-l">
+      <b>Fontes:</b> VigIndústria Brasil 2026 (SESI) · SESI/ASSTI, <i>Estilo de Vida, Saúde e Produtividade</i> · CANPAT ·
+      INSS · Meta-análise de job strain e afastamento · Res. CFM 2.454/2026 (Anexo II, I — baixo risco) · Reg. 2026 §7.2 e Anexo I
+    </div>
+    <div class="foot-r">
+      <b>Cheers</b> · 31/10/2026<br>
+      <span class="noprint">protótipo funcional offline · pitch de 3 min</span>
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>

@@ -34,6 +34,8 @@ Item citado como `§N` = item do regulamento. Item `[a confirmar]` = precisa de 
 
 Em 27/10/2026 faltam **12 dias** para o fechamento das inscrições.
 
+> ⚠️ **O calendário em dias da semana (verificado em 31/10):** **08/11 é domingo** — as inscrições precisam estar prontas **até sexta 06/11** (restam só **5 dias úteis**). 12/11 é quinta, **13/11 é sexta** (live de abertura à noite) e **o evento inteiro é um fim de semana: sábado 14 + domingo 15**, com check-in às 07h30 de sábado. Planejar como **plantão de ~30 h com revezamento**, não como dois dias de trabalho normal. E o §4.3 dá **24 h para confirmar a seleção** — o e-mail pode chegar entre 10/11 e 12/11 e a confirmação cair no fim de semana: definir **agora** quem responde.
+
 **O presencial são 2 dias (14 e 15).** O 13/11 é a live online. O próprio regulamento se contradiz: §2.4 fala em *"três dias imersivos"*, mas §2.6 diz *"presencialmente em Salvador, Bahia, nos dias 14 e 15 de novembro"* e §6.2 em *"duração de 02 dias imersivos"*. O cronograma (§6.2) é o operativo; as páginas de marketing dizem "13 a 15" e "três dias".
 
 Duas consequências práticas: check-in às **07h30 no dia 14** significa sair de casa por volta das 5h30; e **13/11 à noite, todo mundo precisa estar online** para a live de abertura — se alguém contava com 13 dias de imersão presencial, está errado.
@@ -175,6 +177,7 @@ Erros que circulam no grupo do WhatsApp. **Nenhum agente deve propagá-los.**
 | D14 | **Roteiro de 3 min** — `pitch/roteiro-3min.md` escrito (palavra por palavra, 2 ganchos, plano B de demo caída, 8 perguntas de banca, protocolo de 10 ensaios). Falta **ensaiar 10× em voz alta** | Moisés + time | 12/11 |
 | D15 | **Texto do formulário** — `docs/05-inscricao-formulario.md` com os textos prontos por membro. Cada um **personaliza** (5 respostas iguais = spam; §4.1.2 avalia "conhecimento na temática") | cada um | **08/11** |
 | D16 | **Metas ODS no formulário** — o formulário **não tem campo de ODS**; as metas (3.8, 3.d, 9.4, 9.5) entram nos campos de texto livre. Mapeamento verificado em `docs/06-ods-metas.md` | Matheus + Omena | **08/11** |
+| D17 | **Quem responde o e-mail de confirmação em 24 h** (§4.3) — o aviso pode chegar entre 10/11 e 12/11 e a confirmação cair no **fim de semana**. Definir um substituto para cada membro | time | **10/11** |
 
 ---
 
@@ -186,7 +189,7 @@ Erros que circulam no grupo do WhatsApp. **Nenhum agente deve propagá-los.**
 
 **⚠️ E a consequência disso:** o que se leva ao dia 14 **não é uma solução pronta — é capacidade de absorver o desafio em 90 minutos.** Chegar com uma tese travada (O1+O3, por exemplo) incumpre exatamente o nivelamento que o §7.3 impõe, e as nossas 5 oportunidades podem não ser o desafio real. O ativo que construímos é o **kit de mapeamento**: grade das 4 dimensões do Anexo I · 33 indicadores com prevalência e CI · instrumento validado do VigIndústria · 9 datasets públicos · escudo regulatório (CFM 2.454/2026 Anexo II, I) · 5 armadilhas com evidência · mapa competitivo de 5 camadas. Ver `docs/02-cruzamento-whatsapp.md` §1.
 
-**Métrica de sucesso em 12/11:** 1 problema definido com evidência ✅ (`docs/04-proposta.md` §2) · 3 hipóteses ranqueadas ✅ (A/B/C em `docs/01`) · 1 roteiro de 3 min **escrito** ✅ (`pitch/roteiro-3min.md`) — **falta ensaiar 10× em voz alta** (D14) · 8 perguntas para os mentores ✅ (abaixo) · stack decidida no dia seguinte com o desafio real à vista.
+**Métrica de sucesso em 12/11:** 1 problema definido com evidência ✅ (`docs/04-proposta.md` §2) · 3 hipóteses ranqueadas ✅ (A/B/C em `docs/01`) · 1 roteiro de 3 min **escrito** ✅ (`pitch/roteiro-3min.md`) — **falta ensaiar 10× em voz alta** (D14) · 1 slide único de impacto ✅ (`pitch/slide-impacto.html`) · 1 protocolo de 90 min para o reveal ✅ (`docs/08-plano-90min.md`) · 8 perguntas para os mentores ✅ (abaixo) · stack decidida no dia seguinte com o desafio real à vista.
 
 **A proposta canônica do produto é `docs/04-proposta.md`** (31/10). Ela não substitui o §7.3: o desafio detalhado é revelado na abertura e pode reposicionar a tese — o §10 da proposta mapeia as **5 bifurcações** do kit para cada cenário, e o §5 traz o **plano de corte** que decide o que sai se o tempo apertar.
 
@@ -294,6 +297,8 @@ docs/06-ods-metas.md                                metas ODS 3 e 9 verificadas 
 docs/07-alvancas-regulamento.md                     alavancas de pontuação, restrições e o veredito de escopo (§2.1/§7.2)
 pitch/demo.html                                      demo funcional offline (6 telas + Modo Pitch de 7 blocos)
 pitch/roteiro-3min.md                                roteiro do pitch palavra por palavra (D14)
+docs/08-plano-90min.md                               o protocolo de 13/11: grade de decisão e escopo travado em 90 min
+pitch/slide-impacto.html                             slide único de impacto (A4 paisagem, imprimível, offline)
 docs/pesquisa/01-mapa-competitivo.md                  mapa competitivo (11 players, 5 camadas)
 docs/pesquisa/01-mapa-competitivo-fontes.md            bibliografia anotada do mapa
 docs/pesquisa/02-dimensionamento-mercado.md            dimensionamento e funil de custo
