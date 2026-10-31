@@ -13,7 +13,7 @@
   --text:#E9EFF7; --text-2:#9FB0C6; --text-3:#6B7E96;
   --accent:#2DD4BF; --accent-dim:#14B8A6; --accent-ink:#042F2C;
   --good:#3DD68C; --violet:#A78BFA;
-  --radius:12px; --radius-lg:18px;
+  --radius:12px; --radius-sm:10px; --radius-lg:18px;
   --sp-2:8px; --sp-3:12px; --sp-4:16px; --sp-5:24px; --sp-6:32px; --sp-7:48px; --sp-8:64px;
   --fs-xs:12px; --fs-sm:13px; --fs-base:15px; --fs-lg:21px; --fs-2xl:34px; --fs-3xl:44px;
   --font:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
@@ -50,10 +50,9 @@ h1 .mark{color:var(--accent)}
   font-size:var(--fs-lg); color:var(--text-2); margin:0 0 var(--sp-6); max-width:62ch;
 }
 .lede strong{color:var(--text); font-weight:600}
-.cards{display:grid; gap:var(--sp-4); margin:0 0 var(--sp-6)}
 .card{
   background:var(--surface); border:1px solid var(--line); border-radius:var(--radius);
-  padding:var(--sp-5);
+  padding:var(--sp-5); margin:0 0 var(--sp-6);
 }
 .card h2{
   font-size:var(--fs-sm); font-family:var(--mono); letter-spacing:.1em; text-transform:uppercase;
@@ -75,7 +74,7 @@ h1 .mark{color:var(--accent)}
 .actions{display:flex; flex-wrap:wrap; gap:var(--sp-3); margin-bottom:var(--sp-6)}
 .btn{
   display:inline-flex; align-items:center; gap:var(--sp-2);
-  padding:13px 22px; border-radius:var(--radius-sm,10px);
+  padding:13px 22px; border-radius:var(--radius-sm);
   font-weight:600; font-size:var(--fs-base); text-decoration:none; border:1px solid transparent;
   background:var(--accent); color:var(--accent-ink);
   transition:transform .12s ease, filter .12s ease;
@@ -87,13 +86,14 @@ h1 .mark{color:var(--accent)}
   font-size:var(--fs-sm); color:var(--text-3); margin:0;
   padding-top:var(--sp-5); border-top:1px solid var(--line-soft);
 }
-.note code{font-family:var(--mono); font-size:var(--fs-xs); color:var(--text-2)}
+.note b{color:var(--text-2)}
 .pill{
   display:inline-block; font-family:var(--mono); font-size:var(--fs-xs);
   padding:3px 10px; border-radius:999px; border:1px solid var(--line);
   color:var(--text-2); background:var(--surface-2); margin-right:var(--sp-2);
 }
 .pill.ok{color:var(--good); border-color:color-mix(in srgb, var(--good) 40%, transparent)}
+a{color:var(--accent)}
 @media (max-width:560px){
   h1{font-size:var(--fs-2xl)} .lede{font-size:var(--fs-base)}
   .wrap{padding:var(--sp-6) var(--sp-4) var(--sp-7)}
@@ -113,20 +113,18 @@ h1 .mark{color:var(--accent)}
     O SINAL mede — e devolve, por posto, as <strong>3 alavancas priorizadas</strong> que a empresa aplica, antes da falta.
   </p>
 
-  <div class="cards">
-    <div class="card">
-      <h2>Como funciona em três passos</h2>
-      <ol class="steps">
-        <li><b>Trabalhador</b> responde 6 itens no celular, em 90 s, <b>offline</b> — e pode pular qualquer um.</li>
-        <li><b>Posto (k ≥ 10)</b> vira um índice de contexto de trabalho 0–100. Nada individual sai do aparelho.</li>
-        <li><b>Empresa</b> recebe 3 alavancas priorizadas, cada uma com o indicador nacional que a justifica.</li>
-      </ol>
-    </div>
+  <div class="card">
+    <h2>Como funciona em três passos</h2>
+    <ol class="steps">
+      <li><b>Trabalhador</b> responde 6 itens no celular, em 90 s, <b>offline</b> — e pode pular qualquer um.</li>
+      <li><b>Posto (k ≥ 10)</b> vira um índice de contexto de trabalho 0–100. Nada individual sai do aparelho.</li>
+      <li><b>Empresa</b> recebe 3 alavancas priorizadas, cada uma com o indicador nacional que a justifica.</li>
+    </ol>
   </div>
 
   <div class="actions">
-    <a class="btn" href="demo.html">Abrir a demo</a>
-    <a class="btn ghost" href="slide-impacto.html">Ver o slide de impacto</a>
+    <a class="btn" href="pitch/demo.html">Abrir a demo</a>
+    <a class="btn ghost" href="pitch/slide-impacto.html">Ver o slide de impacto</a>
   </div>
 
   <p class="note">
@@ -134,7 +132,7 @@ h1 .mark{color:var(--accent)}
     <br><br>
     Demo funcional da equipe <b>Cheers</b> — 14 e 15 de novembro de 2026, Salvador.
     Todo número da demo tem fonte; a base completa está no
-    <a href="https://github.com/matheusmendes720/cheers-hackathon-sesi-saude-2026" style="color:var(--accent)">repositório</a>.
+    <a href="https://github.com/matheusmendes720/cheers-hackathon-sesi-saude-2026">repositório</a>.
   </p>
 
 </main>
