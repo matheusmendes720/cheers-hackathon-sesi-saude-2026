@@ -152,9 +152,9 @@ Erros que circulam no grupo do WhatsApp. **Nenhum agente deve propagá-los.**
 | # | Decisão | Responsável | Prazo |
 |---|---|---|---|
 | D1 | Confirmar inscrição individual dos 5 e o vínculo ao time "Cheers" | cada um | **08/11** |
-| D2 | Nicho dentro de saúde corporativa para atacar | Esteves + Moisés + Omena | 10/11 |
-| D2b | **Tese preditiva na cadeia de valor** (direção proposta por Matheus em 27/10) — calibrada em `docs/03-tese-preditiva.md`: *previsão de desfecho de saúde do trabalho* na cadeia de 7 elos (presenteísmo → exposição → evento → afastamento → incapacidade → saída → resultado), com TAM/SAM/SOM. **Não chamar de "manutenção preditiva"** — a banca lê como IoT industrial e o Anexo I rejeita. MVP = **um elo** (exposição + presenteísmo), não a cadeia inteira | Matheus + Moisés + Omena | 10/11 |
-| D3 | 10 ideias → shortlist de 3 → 1, pela rubrica | Matheus conduz | 11/11 |
+| D2 | Nicho dentro de saúde corporativa para atacar — **PROPOSTA FECHADA 31/10**: saúde do trabalho na indústria, camada de **predição** (exposição) + **participação** (trabalhador com voz). Canônico em `docs/04-proposta.md` §1–4. *Validação do time: 10/11* | Esteves + Moisés + Omena | 10/11 |
+| D2b | **Tese preditiva na cadeia de valor** — **PROPOSTA FECHADA 31/10**: a cadeia de 7 elos (presenteísmo → exposição → evento → afastamento → incapacidade → saída → resultado) fica como **enquadramento do pitch** (slide 2), com TAM/SAM/SOM; **não** como escopo de produto. MVP = **um elo** (exposição + presenteísmo). **Não chamar de "manutenção preditiva"** — a banca lê como IoT industrial e o Anexo I rejeita. Também **não atribuir os R$ 468 bi (4% do PIB) ao presenteísmo** — esse número é de doenças e acidentes de trabalho. Ver `docs/03-tese-preditiva.md` + `docs/04-proposta.md` §5 | Matheus + Moisés + Omena | 10/11 |
+| D3 | 10 ideias → shortlist de 3 → 1, pela rubrica — **PROPOSTA FECHADA 31/10**: **A (Escuta + Alavanca)** com **C (Roda)** como camada que fecha o loop, **B (Aciona)** como expansão pós-hackathon. Escopo único de 32 h com **plano de corte declarado** em `docs/04-proposta.md` §5 | Matheus conduz | 11/11 |
 | D4 | Speaker do pitch (Moisés se voluntariou) | time | 12/11 |
 | D5 | Stack e arquitetura do protótipo | Matheus + luquinhas | **13/11**, na live de abertura |
 | D6 | Perguntas para mentores (abaixo) | time | 13/11 |
@@ -164,6 +164,8 @@ Erros que circulam no grupo do WhatsApp. **Nenhum agente deve propagá-los.**
 | D10 | Onde dormir no local (sem dormitório, com chuveiro) (§11.3) | time | 12/11 |
 | D11 | **Time de 5 ou 6?** — §5.4.2 completa equipes com menos de 6; confirmar com a organização antes de fechar a inscrição | Matheus | **08/11** |
 | D12 | **Disponibilidade online em 13/11, 18h30** para a live de abertura | todos | 13/11 |
+| D13 | **Nome do produto** — recomendação: **SINAL** (*o sinal que antecede a falta*); alternatas **Elo 1** e **Escuta**. Checar INPI e busca de marca antes de ir para o formulário | Matheus + Omena | **08/11** |
+| D14 | **Roteiro de 3 min** — `pitch/roteiro-3min.md` escrito (palavra por palavra, 2 ganchos, plano B de demo caída, 8 perguntas de banca, protocolo de 10 ensaios). Falta **ensaiar 10× em voz alta** | Moisés + time | 12/11 |
 
 ---
 
@@ -175,7 +177,9 @@ Erros que circulam no grupo do WhatsApp. **Nenhum agente deve propagá-los.**
 
 **⚠️ E a consequência disso:** o que se leva ao dia 14 **não é uma solução pronta — é capacidade de absorver o desafio em 90 minutos.** Chegar com uma tese travada (O1+O3, por exemplo) incumpre exatamente o nivelamento que o §7.3 impõe, e as nossas 5 oportunidades podem não ser o desafio real. O ativo que construímos é o **kit de mapeamento**: grade das 4 dimensões do Anexo I · 33 indicadores com prevalência e CI · instrumento validado do VigIndústria · 9 datasets públicos · escudo regulatório (CFM 2.454/2026 Anexo II, I) · 5 armadilhas com evidência · mapa competitivo de 5 camadas. Ver `docs/02-cruzamento-whatsapp.md` §1.
 
-**Métrica de sucesso em 12/11:** 1 problema definido com evidência, 3 hipóteses ranqueadas, 1 roteiro de 3 min ensaiado em voz alta, 8 perguntas para os mentores, stack decidida no dia seguinte com o desafio real à vista.
+**Métrica de sucesso em 12/11:** 1 problema definido com evidência ✅ (`docs/04-proposta.md` §2) · 3 hipóteses ranqueadas ✅ (A/B/C em `docs/01`) · 1 roteiro de 3 min **escrito** ✅ (`pitch/roteiro-3min.md`) — **falta ensaiar 10× em voz alta** (D14) · 8 perguntas para os mentores ✅ (abaixo) · stack decidida no dia seguinte com o desafio real à vista.
+
+**A proposta canônica do produto é `docs/04-proposta.md`** (31/10). Ela não substitui o §7.3: o desafio detalhado é revelado na abertura e pode reposicionar a tese — o §10 da proposta mapeia as **5 bifurcações** do kit para cada cenário, e o §5 traz o **plano de corte** que decide o que sai se o tempo apertar.
 
 ---
 
@@ -224,16 +228,23 @@ Pendentes, em ordem. Cada item vira um resumo de 1 página com link e data.
 
 ## Estrutura do pitch (3 min — 60% da nota)
 
-| Tempo | Bloco | Conteúdo |
-|---|---|---|
-| 0:00–0:30 | Gancho | O problema em uma frase, com número |
-| 0:30–1:15 | Solução | O que fazemos, para quem, como funciona (com a demo rodando) |
-| 1:15–2:00 | Impacto | Métrica: R$, horas, %, vidas |
-| 2:00–2:30 | Viabilidade | Quem usa, como é adotado, por que escala |
-| 2:30–2:50 | Equipe | Uma linha por pessoa, competência, não biografia |
-| 2:50–3:00 | Fechamento | Pedido + assinatura |
+Roteiro palavra por palavra: **`pitch/roteiro-3min.md`** (31/10). O **Modo Pitch** do `demo.html` tem os mesmos 7 blocos, com cronômetro e nota de apresentador — o ensaio é feito nele.
 
-Regras: ensaiar em voz alta com cronômetro, **10 vezes**; **a demo tem que rodar offline** (rede do local não é garantida e o §11.2 não dá equipamento) — cada um roda no próprio note; slide único de impacto; ninguém fala mais de 3 minutos.
+| Tempo | Bloco | Conteúdo | Tela |
+|---|---|---|---|
+| 0:00–0:30 | Gancho | O problema em uma frase, com número. **2 versões** (A: o sinal invisível · B: a dimensão que não existe) — escolher no ensaio | Cadeia |
+| 0:30–1:00 | Cadeia e solução | Os 7 elos, o elo 1 invisível, o ciclo em 3 passos | Cadeia → Exposição |
+| 1:00–1:45 | Demo | Seletor → Exposição → "como o modelo funciona" → Escuta → 2 itens → "Ver meu plano" → Alavancas | Exposição → Escuta → Alavancas |
+| 1:45–2:15 | Impacto | 106 mi dias · 4,1 mi afastamentos · o índice que não existe. **Não prometer economia** | Exposição |
+| 2:15–2:40 | Viabilidade | Objetivo estratégico do PAO 2026 · 2,7 mi vidas na Viva+ · piloto BA + MES | Mercado |
+| 2:40–2:52 | Equipe | Uma linha por pessoa, competência, não biografia | — |
+| 2:52–3:00 | Fechamento | *"Mede-se em quantos dias a pessoa volta a produzir."* Parar. | — |
+
+Regras: ensaiar em voz alta com cronômetro, **10 vezes** (protocolo em `pitch/roteiro-3min.md` §10); **a demo tem que rodar offline** (rede do local não é garantida e o §11.2 não dá equipamento) — cada um roda no próprio note; **plano B declarado** (§8 do roteiro) para o caso de a demo cair; slide único de impacto; ninguém fala mais de 3 minutos.
+
+**Duas armadilhas de conteúdo, checadas contra a fonte:**
+- **65,6%** dos trabalhadores diz que a comunicação sobre prevenção de acidentes é **suficiente** → portanto **34,4%** diz que **não** é. Em micro/pequenas empresas, só **56,2%** a acham suficiente. (VigIndústria, T36, p. 95.)
+- **R$ 468 bi (4% do PIB)** é perda de produtividade por **doenças e acidentes de trabalho** — não é o presenteísmo. O presenteísmo (R$ 200–600 bi) é fonte secundária `[a confirmar]`.
 
 Como o pitch vale 6 e o protótipo 4, os 30 segundos de gancho e o bloco de viabilidade merecem mais tempo de ensaio que o común.
 
@@ -254,7 +265,7 @@ Ao propor solução, sempre anexar: (1) a meta ODS específica, (2) o eixo do Co
 
 ## Estrutura do repositório
 
-Estado em 27/10/2026:
+Estado em 31/10/2026:
 
 ```
 AGENTS.md                                              este arquivo
@@ -267,7 +278,9 @@ docs/00-portfolio-oportunidades.md                     PORTFÓLIO DE OPORTUNIDAD
 docs/01-produtos-brainstorm.md                        10 conceitos de produto + shortlist de 3
 docs/02-cruzamento-whatsapp.md                       pesquisa × histórico do grupo (kit de mapeamento)
 docs/03-tese-preditiva.md                            cadeia de valor + TAM/SAM/SOM (direção D2b)
-pitch/demo.html                                      demo funcional offline (6 telas + modo pitch)
+docs/04-proposta.md                                  A PROPOSTA — documento canônico do produto (D2/D2b/D3)
+pitch/demo.html                                      demo funcional offline (6 telas + Modo Pitch de 7 blocos)
+pitch/roteiro-3min.md                                roteiro do pitch palavra por palavra (D14)
 docs/pesquisa/01-mapa-competitivo.md                  mapa competitivo (11 players, 5 camadas)
 docs/pesquisa/01-mapa-competitivo-fontes.md            bibliografia anotada do mapa
 docs/pesquisa/02-dimensionamento-mercado.md            dimensionamento e funil de custo
@@ -280,9 +293,11 @@ data/vigindustria-2026-raw.txt                         texto integral extraído 
 
 Os dois prints **não** são sobre o hackathon: são de outros dois programas. O de 07/10 é o Programa Aluno Empreendedor (inscrições até 22/10, CIMATEC Startups) e o de 13/10 é o INTEGRA SENAI Regional 2026 (3–5 integrantes, fase de prototipagem, prêmios R$ 600/400/300). O protótipo do hackathon pode servir de entrada no INTEGRA — trilha paralela, prazo do formulário a checar.
 
-**Próxima estrutura** (a criar pelo time quando o escopo fechar, não por este bootstrap): `pitch/` (roteiro, slides, ensaios) · `prototype/` (código — só depois de 14/11).
+**Onde entra o código do produto:** `prototype/` — **só depois de 14/11**, com a stack decidida com o desafio real à vista (D5). Até lá, `pitch/` guarda roteiro, ensaios e a demo de arquivo único.
 
-**`pitch/demo.html`** já existe: mockup funcional de arquivo único, **sem CDN, sem fonte externa, sem chamada de rede** — abre offline na máquina de qualquer membro (§11.2). Seis telas (Cadeia · Exposição · Escuta · Alavancas · Mercado · Evidência) + **Modo Pitch** com cronômetro de 3:00, setas do teclado e nota de apresentador por slide. Serve de ensaio cronometrado e de referência do que o protótipo final deve fazer. Modelo de exposição **transparente e auditável** (a soma das contribuições é o índice), com auto-verificação que acusa no console qualquer opção de seletor sem chave correspondente.
+**`docs/04-proposta.md`** é o documento canônico do produto: nome, problema com número, ciclo da solução, escopo único de 32 h com **plano de corte**, grade das 4 dimensões, armadilhas com evidência, impacto, viabilidade e os 5 riscos. Ele **funde** as duas listas de escopo que existiam separadas (`docs/00` §4 e `docs/03` §4). Qualquer proposta nova deve ser escrita e comparada **contra ele**.
+
+**`pitch/demo.html`** já existe: mockup funcional de arquivo único, **sem CDN, sem fonte externa, sem chamada de rede** — abre offline na máquina de qualquer membro (§11.2). Seis telas (Cadeia · Exposição · Escuta · Alavancas · Mercado · Evidência) + **Modo Pitch** com cronômetro de 3:00, setas do teclado e nota de apresentador por slide — **7 blocos, na mesma divisão do roteiro**. Serve de ensaio cronometrado e de referência do que o protótipo final deve fazer. Modelo de exposição **transparente e auditável** (a soma das contribuições é o índice), com auto-verificação que acusa no console qualquer opção de seletor sem chave correspondente.
 
 As seções de setup, lint e teste entram no AGENTS.md em **13/11**, quando a stack for decidida com o desafio real à vista. Sem stack fixa, elas seriam ficção.
 
