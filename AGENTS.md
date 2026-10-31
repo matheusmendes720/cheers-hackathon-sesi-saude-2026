@@ -298,6 +298,7 @@ docs/07-alvancas-regulamento.md                     alavancas de pontuação, re
 pitch/demo.html                                      demo funcional offline (6 telas + Modo Pitch de 7 blocos)
 pitch/roteiro-3min.md                                roteiro do pitch palavra por palavra (D14)
 docs/08-plano-90min.md                               o protocolo de 13/11: grade de decisão e escopo travado em 90 min
+docs/09-por-que-esta-proposta.md                     a justificativa completa: os 4 gaps, a 7ª dimensão operacionalizada, o impacto honesto e o veredito sobre o agro
 pitch/slide-impacto.html                             slide único de impacto (A4 paisagem, imprimível, offline)
 pitch/apresentacao-interna.md                        apresentação de 10 min para o time, sem contexto prévio
 docs/pesquisa/01-mapa-competitivo.md                  mapa competitivo (11 players, 5 camadas)
