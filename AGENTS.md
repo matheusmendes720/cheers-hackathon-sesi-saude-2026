@@ -283,6 +283,9 @@ Estado em 31/10/2026:
 ```
 README.md                                              entrada humana do time — "só leia 3 coisas" + o que fazer até sexta
 AGENTS.md                                              este arquivo
+CONTRIBUTING.md                                        regras do repositório (6 regras, fluxo de PR, checklist de evidência)
+.gitignore                                              o que não entra no repo
+.github/PULL_REQUEST_TEMPLATE.md                       template de PR com checklist de evidência
 Regulamento Hackathon SESI Saude 2026.pdf              regulamento oficial (§N)
 chat.md                                                export do WhatsApp em Markdown
 chat.txt                                               mesmo export em texto puro
@@ -304,6 +307,12 @@ pitch/slide-impacto.html                             slide único de impacto (A4
 pitch/apresentacao-interna.md                        apresentação de 10 min para o time, sem contexto prévio
 docs/10-mapa-de-build-32h.md                          plano de build hora a hora (2 turnos, CORTE 1/2, 3 trilhos, 8 riscos)
 docs/11-perguntas-para-a-organizacao.md                one-pager imprimível das 8 perguntas para a live de 12/11 (P1/P2/P3)
+docs/relatorios/                                       DOSSIÊ EM PDF (4 docs, ~53 p.) — fonte HTML + PDF gerado
+docs/relatorios/01-horizonte-de-trabalho               o horizonte explorado, o delta vs WhatsApp, decisões, calendário
+docs/relatorios/02-nucleo-e-gaps                       a tese, a 7ª dimensão, os 4 gaps, o mecanismo, o impacto honesto
+docs/relatorios/03-evidencia-mercado-regulacao         os 33 indicadores, a base científica, o mapa de preços, o escudo
+docs/relatorios/04-kit-13-11-e-build                   o protocolo de 90 min, os 5 kernels, as 32 h, os 8 riscos
+docs/README.md                                         índice da documentação por caminho de leitura (A/B/C/D/E)
 docs/pesquisa/01-mapa-competitivo.md                  mapa competitivo (11 players, 5 camadas)
 docs/pesquisa/01-mapa-competitivo-fontes.md            bibliografia anotada do mapa
 docs/pesquisa/02-dimensionamento-mercado.md            dimensionamento e funil de custo

@@ -69,7 +69,24 @@ Repositório da equipe **Cheers** (5 pessoas) para o Hackathon+ SESI Saúde — 
 | **Saber o que construir** | `docs/04-proposta.md` §5 (escopo + plano de corte) · `docs/10-mapa-de-build-32h.md` (o plano hora a hora) |
 | **Preparar o reveal** | `docs/08-plano-90min.md` — grade de decisão de 4 testes, escopo travado às 20h de 13/11 |
 | **Ir à live de 12/11** | `docs/11-perguntas-para-a-organizacao.md` — one-pager imprimível com as 8 perguntas, em ordem de prioridade |
+| **Enviar o dossiê consolidado** | `docs/relatorios/` — 4 PDFs com sumário clicável, ~53 páginas: horizonte · núcleo e gaps · evidência e regulação · kit de 13/11 |
+| **Navegar a documentação** | `docs/README.md` — índice por caminho de leitura (entender a tese · verificar um número · entender as regras · a noite de 13/11) |
 | **Ver as fontes primárias** | `docs/sources/` (9 documentos) · `data/vigindustria-2026-raw.txt` (texto integral do relatório) |
+
+---
+
+## 📄 O dossiê em PDF (para mandar no grupo)
+
+A consolidação de **tudo que a pesquisa produziu fora do WhatsApp** — 4 documentos, ~53 páginas, A4, com **sumário clicável** e a **fonte ao lado de cada número**. Envie nesta ordem:
+
+| Doc | Arquivo | O que responde | Quem lê |
+|---|---|---|---|
+| **01** | `docs/relatorios/01-horizonte-de-trabalho.pdf` | O mapa do que exploramos, **o delta em relação ao grupo**, as decisões em aberto, o calendário real | **Todos** — é a entrada |
+| **02** | `docs/relatorios/02-nucleo-e-gaps.pdf` | A tese, a 7ª dimensão do ASSTI, os **4 gaps**, o mecanismo e o **impacto honesto** | **Todos** — é o que a gente vai defender |
+| **03** | `docs/relatorios/03-evidencia-mercado-regulacao.pdf` | Os 33 indicadores, a base científica, o **mapa de preços** dos concorrentes, o escudo regulatório, as metas ODS | Quem for **contestar número** |
+| **04** | `docs/relatorios/04-kit-13-11-e-build.pdf` | O **protocolo de 90 min**, os 5 kernels, as **32 h** de build, os 8 riscos, o checklist do pitch | **Todo o time na noite de 13/11** |
+
+O HTML-fonte fica ao lado de cada PDF, em `docs/relatorios/`. Para regerar depois de editar: `node scripts/render_html.cjs` (ver `docs/relatorios/README.md`).
 
 ---
 

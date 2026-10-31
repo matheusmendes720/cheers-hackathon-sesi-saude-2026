@@ -1,30 +1,42 @@
-# Segredos e credenciais
+# Sistema operacional
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editores
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Ambiente local
 .env
 .env.*
 !.env.example
-*.key
-*.pem
+*.local
 
-# Node
+# Node / build
 node_modules/
-.pnpm-store/
-.next/
 dist/
 build/
+.vite/
+.cache/
 
 # Python
 __pycache__/
 *.py[cod]
 .venv/
 venv/
+.pytest_cache/
 
-# Editores / SO
-.DS_Store
-Thumbs.db
-*.swp
-.idea/
-.vscode/
+# Artefatos temporarios do gerador de PDF
+docs/relatorios/_*.py
+docs/relatorios/fix_toc.py
+docs/relatorios/_check_png/
+docs/relatorios/*.tmp.pdf
 
-# Sistema operacional do runtime
-node_modules/
-.mavis/
+# Logs
+*.log
+npm-debug.log*
+yarn-error.log*
