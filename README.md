@@ -5,6 +5,16 @@
 Repositório da equipe **Cheers** (5 pessoas) para o **Hackathon+ SESI Saúde** — SESI Bahia + Grupo Rede+, Salvador, **14 e 15 de novembro de 2026**.
 
 ```
+ ██████╗██╗  ██╗███████╗███████╗██████╗ ███████╗
+██╔════╝██║  ██║██╔════╝██╔════╝██╔══██╗██╔════╝
+██║     ███████║█████╗  █████╗  ██████╔╝███████╗
+██║     ██╔══██║██╔══╝  ██╔══╝  ██╔══██╗╚════██║
+╚██████╗██║  ██║███████╗███████╗██║  ██║███████║
+╚═════╝╚═╝  ╚═╝╚══════╝╚══════╝╚═╝  ╚═╝╚══════╝
+                                               
+```
+
+```
 Evento       Hackathon+ SESI Saúde 2026 · SESI Bahia + Grupo Rede+
 Desafio     Sustentabilidade dos modelos assistenciais de saúde (Anexo I)
 Entrega      Protótipo funcional + pitch de 3 minutos (§6.3)
