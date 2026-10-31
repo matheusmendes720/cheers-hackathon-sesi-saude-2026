@@ -551,7 +551,7 @@ footer{max-width:1240px;margin:0 auto;padding:var(--sp-6) var(--sp-5) var(--sp-8
       <div class="note">
         <b>Limite honesto desta demo.</b> O modelo de exposição é um <b>índice transparente</b>
         construído sobre bases públicas reais — não é um modelo preditivo treinado. Treinar um modelo
-        de verdade sobre CAT (6,4 mi registos) é trabalho de 2 a 3 semanas, e é o que a plataforma
+        de verdade sobre CAT (6,4 mi registros) é trabalho de 2 a 3 semanas, e é o que a plataforma
         Viva+ deveria rodar com dados reais. O que a demo prova é que a <b>pergunta é certa</b>,
         os <b>dados são públicos</b> e a <b>inferência é auditável</b>.
       </div>
@@ -654,9 +654,9 @@ const CHAIN = [
     cost:"79.119 empresas atendidas pelo SESI em 2026 (+23%); 10.800 empresas na Bahia.",
     why:"É aqui que a predição é legal (agregado, por posto e por empresa) e o dado é público.",
     src:"CN-SESI PAO 2026 · VigIndústria Brasil 2026 (p. 87–97: cultura de segurança)" },
-  { id:3, n:"ELO 3", t:"Evento", v:"Acidente de trabalho. 6,4 milhões registados, 106 mi de dias perdidos.",
+  { id:3, n:"ELO 3", t:"Evento", v:"Acidente de trabalho. 6,4 milhões de registros, 106 mi de dias perdidos.",
     def:"O evento observável: a CAT registada no INSS/eSocial.",
-    data:"CAT — Comunicações de Acidentes de Trabalho, 6,4 milhões de registos.",
+    data:"CAT — Comunicações de Acidentes de Trabalho, 6,4 milhões de registros.",
     cost:"27.486 óbitos · 106 mi dias perdidos · 249 mi dias debitados · recorde em 2025 (806.011 acidentes).",
     why:"Já é reação. A previsão útil começa um elo antes.",
     src:"CANPAT — Auditores-Fiscais do Trabalho, 2016–2025" },
@@ -1163,24 +1163,27 @@ function renderSources(){
    MODO PITCH — ensaio cronometrado
    ========================================================================== */
 const SLIDES=[
-  {t:"0:00–0:30 · GANCHO", h:"Seu trabalhador não falta. Ele está lá — produzindo 60%. E ninguém sabe.",
-   say:"4% do PIB brasileiro se perde assim. A gente mede a falta. Ninguém mede o presenteísmo — e é o presenteísmo que sinaliza a incapacidade antes dela acontecer.",
-   note:"Não dizer “manutenção preditiva”. Nunca. A banca lê IoT industrial e desiste.", sec:"cadeia"},
-  {t:"0:30–1:15 · A CADEIA", h:"A cadeia vai de presenteísmo a aposentadoria. Só instrumentamos o fim dela.",
-   say:"Sete elos. Hoje o SESI mede os elos 3 a 6 — evento, afastamento, incapacidade, saída. O elo 1 e o elo 2 são onde a predição funciona, e o elo 1 não existe em sistema nenhum.",
+  {t:"0:00–0:30 · GANCHO", h:"Seu trabalhador não falta. Ele está lá — produzindo menos. E ninguém sabe.",
+   say:"De cada cem trabalhadores da indústria, vinte faltaram pelo menos um dia na semana por saúde. Esse número a gente conhece — é o absenteísmo. O que ninguém mede é o oposto: o trabalhador que está lá, presente, produzindo menos. A folha de ponto registra a ausência; nenhum sistema no Brasil registra a presença improdutiva. E é esse número que antecipa a incapacidade.",
+   note:"Nunca dizer “manutenção preditiva”. Nunca atribuir os R$ 468 bi (4% do PIB) ao presenteísmo — esse número é de doenças e acidentes de trabalho.", sec:"cadeia"},
+  {t:"0:30–1:00 · A CADEIA E A SOLUÇÃO", h:"Sete elos. Só os do 3 ao 6 são instrumentados.",
+   say:"A cadeia tem sete elos: presenteísmo, exposição, acidente, afastamento, incapacidade, saída, resultado. Hoje o SESI instrumenta do três ao seis. O elo um não existe em sistema nenhum — e é no um e no dois que a predição funciona, antes do evento. A proposta: seis perguntas ao trabalhador, offline; o agregado do posto com k≥10 vira índice; e um modelo transparente devolve três alavancas — o que mudar no trabalho, não o que está doente.",
    note:"Usar o gráfico da cadeia. Apontar o elo 1 — o tracejado em violeta.", sec:"cadeia"},
-  {t:"1:15–2:00 · DEMO", h:"O trabalhador fala. A empresa recebe a alavanca. O absenteísmo é consequência.",
-   say:"Seis itens, noventa segundos, offline no celular. Ele recebe as duas alavancas dele. O agregado de dez ou mais pessoas do mesmo posto volta para a empresa, sem identificação. E o modelo predictivo diz onde o risco está antes do evento.",
-   note:"Rodar: seletor de perfil → aba Escuta → responder 2 itens → ver o plano do trabalhador e o gráfico de itens.", sec:"escuta"},
-  {t:"2:00–2:30 · IMPACTO", h:"106 milhões de dias. 20% dos trabalhadores. E um índice que hoje não existe.",
-   say:"A exposição prevista sai de base pública: VigIndústria com 57.952 trabalhadores, CAT com 6,4 milhões de registos de acidentes. Não é opinião — é o mesmo rigor do relatório que o SESI acabou de publicar.",
-   note:"Não prometer economia. Em ensaio randomizado o ROI de absenteísmo é −49%. Falar em dias expostos.", sec:"exposicao"},
-  {t:"2:30–2:50 · VIABILIDADE", h:"Não é uma startup de fora. É a camada que o SESI já declarou para 2026.",
-   say:"O Plano de Ação do SESI tem como objetivo estratégico “gestão integrada da saúde dos trabalhadores por meio das soluções digitais e da inovação”, com 2,7 milhões de vidas ativas na Plataforma Viva+. A gente propõe a camada preditiva e a camada de participação — que ainda não existem. Piloto via SESI Bahia e o MES.",
-   note:"Aqui é onde a tese vira institucional. Falar do Dashboard do time de DS também.", sec:"mercado"},
-  {t:"2:50–3:00 · FECHAMENTO", h:"Sustentabilidade de um modelo assistencial não se mede no custo.",
-   say:"Mede-se em quantos dias a pessoa volta a produzir — e em quantos ela teria voltado sem a gente. É isso que a gente proposes medir, desde o primeiro dia. Obrigado.",
-   note:"Parar. Não adicionar nada. A última frase é a tese."}
+  {t:"1:00–1:45 · DEMO", h:"O trabalhador fala. A empresa recebe a alavanca. O absenteísmo é consequência.",
+   say:"Esta é a empresa: CNAE, porte, região, trabalhadores. A exposição prevista sai do VigIndústria — 57.952 trabalhadores, 825 empresas — cruzado com a CAT, 6,4 milhões de registros. Os pesos estão à vista. Agora o outro lado: no celular, offline, seis itens — volume de trabalho, margem para decidir, apoio, reconhecimento, propósito e segurança. Ele pode pular qualquer um. E recebe as duas alavancas dele, não um relatório. Repara no gráfico: em violeta, os itens que não têm referência nacional — porque não existem. E aqui estão as três alavancas da empresa, cada uma com o indicador que a justifica.",
+   note:"Rodar: seletor de perfil → aba Exposição → abrir “como o modelo funciona” → aba Escuta → responder 2 itens → “Ver meu plano” → gráfico de itens → aba Alavancas.", sec:"escuta"},
+  {t:"1:45–2:15 · IMPACTO", h:"106 milhões de dias. 4,1 milhões de afastamentos. E um índice que hoje não existe.",
+   say:"106 milhões de dias perdidos em acidentes de trabalho; 4,1 milhões de afastamentos no INSS em 2025, 17% acima do ano anterior. E o número que a gente acrescenta: um índice de contexto de trabalho que não existe em lugar nenhum do Brasil. E aqui a gente é honesto — não prometemos economia: em ensaio randomizado o retorno de absenteísmo é negativo em 49%. Prometemos medir o efeito.",
+   note:"Não prometer economia. Falar em dias expostos, antes e depois.", sec:"exposicao"},
+  {t:"2:15–2:40 · VIABILIDADE", h:"Não é uma startup de fora. É a camada que o SESI já declarou para 2026.",
+   say:"O Plano de Ação do SESI 2026 tem como objetivo estratégico, literalmente, “gestão integrada da saúde dos trabalhadores por meio das soluções digitais e da inovação”. A Plataforma Viva+ já tem 2,7 milhões de vidas ativas. A gente propõe a camada que ainda não existe: a de previsão e a de participação. Piloto na Bahia — 10.800 empresas atendidas — e com as 76 empresas do MES.",
+   note:"Aqui a tese vira institucional. Falar do Dashboard do time de DS também.", sec:"mercado"},
+  {t:"2:40–2:52 · EQUIPE", h:"Cinco pessoas: saúde, TI, produto, canal.",
+   say:"Moisés — informática em saúde, doutorado em IA no atendimento médico e estágio real na área. Esteves — articulação com o SESI e o ecossistema médico, com validação clínica. Omena — produto e negócio: o que o cliente adota e por que escala. luquinhas — velocidade de prototipagem. Matheus — coordenação, front-end e a ponte com o ecossistema de incubação.",
+   note:"Uma linha por pessoa. Competência, não biografia. Não paraphrasear bio.", sec:""},
+  {t:"2:52–3:00 · FECHAMENTO", h:"Sustentabilidade de um modelo assistencial não se mede no custo.",
+   say:"Mede-se em quantos dias a pessoa volta a produzir — e em quantos ela teria voltado sem a gente. É isso que a gente mede desde o primeiro dia. Obrigado.",
+   note:"Parar. Não adicionar nada. O silêncio é o fecho.", sec:""}
 ];
 let pitchI=0, pitchT=0, pitchTimer=null;
 function renderSlide(){
@@ -1208,7 +1211,7 @@ function pitchClose(){
 }
 function pitchGo(d){
   pitchI=Math.max(0,Math.min(SLIDES.length-1,pitchI+d));
-  const target=[0,30,75,120,150,170][pitchI];
+  const target=[0,30,60,105,135,160,172][pitchI];
   pitchT=target; renderSlide();
   if(d>0){ const sec=document.querySelector('[data-goto="'+SLIDES[pitchI].sec+'"]'); if(sec) sec.click(); }
 }
