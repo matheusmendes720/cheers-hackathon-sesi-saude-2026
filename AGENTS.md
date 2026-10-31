@@ -348,7 +348,7 @@ As seções de setup, lint e teste entram no AGENTS.md em **13/11**, quando a st
 **`https://github.com/matheusmendes720/cheers-hackathon-sesi-saude-2026`** — repositório **público**, branch `main` como padrão, conta `matheusmendes720`.
 
 - Topics: `hackathon` · `sesi` · `saude-do-trabalhador` · `saude-ocupacional` · `odp` · `dados-publicos` · `brasil` · `pesquisa`.
-- 20 commits, 65 arquivos, ~29 MB (o grosso são os PDFs de terceiros em `docs/sources/`).
+- 21 commits, 65 arquivos, ~29 MB (o grosso são os PDFs de terceiros em `docs/sources/`).
 - O README raiz é o **rosto público**: narrativa, lacuna com número, proposta, dossiê, fontes, time, contribuir e direitos — com o bloco operacional do time preservado no fim. Dois diagramas em **Mermaid** (renderizado nativamente pelo GitHub; validado com o parser oficial do mermaid v11).
 - **PR é obrigatório** — nada de commit direto na `main`. Convide os outros 4 como colaboradores: `gh api -X PUT repos/matheusmendes720/cheers-hackathon-sesi-saude-2026/collaborators/<usuario> -f permission=push` (precisa do username GitHub de cada um).
 
