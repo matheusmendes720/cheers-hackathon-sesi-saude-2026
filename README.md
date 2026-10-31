@@ -258,7 +258,7 @@ git push -u origin feat/mapa-de-build
 
 ## Padrão de evidência e fontes primárias
 
-Todo número deste repositório é rastreável até a fonte original. Os PDFs estão versionados em [`docs/sources/`](docs/sources/) — com a **URL pública de cada um** e a regra de uso em [`docs/sources/README.md`](docs/sources/README.md).
+Todo número deste repositório é rastreável até a fonte original. O índice das fontes está em [`docs/sources/`](docs/sources/) — com a **URL pública de cada PDF** e a regra de uso em [`docs/sources/README.md`](docs/sources/README.md). **Os PDFs de terceiros não são versionados** — é material publicado por outras instituições, e redistribuir não é o lugar certo; cada um se baixa pela URL original. O que **é** versionado é o **texto extraído** de cada fonte, que é o que sustenta a citação com página e linha aqui dentro.
 
 | Fonte | O que sustenta |
 |---|---|

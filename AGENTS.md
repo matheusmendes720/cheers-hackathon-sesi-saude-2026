@@ -289,8 +289,6 @@ CONTRIBUTING.md                                        regras do repositório (6
 Regulamento Hackathon SESI Saude 2026.pdf              regulamento oficial (§N)
 chat.md                                                export do WhatsApp em Markdown
 chat.txt                                               mesmo export em texto puro
-WhatsApp Image 2026-10-07 at 16.05.05.jpeg             Programa Aluno Empreendedor (SENAI/CIMATEC/SEBRAE)
-WhatsApp Image 2026-10-13 at 11.27.18.jpeg             INTEGRA SENAI Regional 2026
 docs/00-portfolio-oportunidades.md                     PORTFÓLIO DE OPORTUNIDADES (comece aqui)
 docs/01-produtos-brainstorm.md                        10 conceitos de produto + shortlist de 3
 docs/02-cruzamento-whatsapp.md                       pesquisa × histórico do grupo (kit de mapeamento)
@@ -318,12 +316,12 @@ docs/pesquisa/01-mapa-competitivo-fontes.md            bibliografia anotada do m
 docs/pesquisa/02-dimensionamento-mercado.md            dimensionamento e funil de custo
 docs/research/falhas-do-modelo-atual.md                falhas do modelo + contra-argumentos
 docs/viabilidade-stack-dados-regulatorio.md           stack, datasets e escudo regulatório
-docs/sources/                                          fontes primárias (PDF + texto extraído)
+docs/sources/                                          fontes primárias (texto extraído versionado; PDFs de terceiros nao versionados)
 data/vigindustria-2026.md                              indicadores curados, com página e tabela
 data/vigindustria-2026-raw.txt                         texto integral extraído do PDF (119 p.)
 ```
 
-Os dois prints **não** são sobre o hackathon: são de outros dois programas. O de 07/10 é o Programa Aluno Empreendedor (inscrições até 22/10, CIMATEC Startups) e o de 13/10 é o INTEGRA SENAI Regional 2026 (3–5 integrantes, fase de prototipagem, prêmios R$ 600/400/300). O protótipo do hackathon pode servir de entrada no INTEGRA — trilha paralela, prazo do formulário a checar.
+Os dois prints do WhatsApp (Programa Aluno Empreendedor e INTEGRA SENAI Regional 2026) **não são sobre o hackathon** — e desde 01/11 **não são versionados** (`.gitignore`), porque são material de outro programa. O de 07/10 é o Programa Aluno Empreendedor (inscrições até 22/10, CIMATEC Startups) e o de 13/10 é o INTEGRA SENAI Regional 2026 (3–5 integrantes, fase de prototipagem, prêmios R$ 600/400/300). O protótipo do hackathon pode servir de entrada no INTEGRA — trilha paralela, prazo do formulário a checar.
 
 **Onde entra o código do produto:** `prototype/` — **só depois de 14/11**, com a stack decidida com o desafio real à vista (D5). Até lá, `pitch/` guarda roteiro, ensaios e a demo de arquivo único.
 
@@ -348,14 +346,14 @@ As seções de setup, lint e teste entram no AGENTS.md em **13/11**, quando a st
 **`https://github.com/matheusmendes720/cheers-hackathon-sesi-saude-2026`** — repositório **público**, branch `main` como padrão, conta `matheusmendes720`.
 
 - Topics: `hackathon` · `sesi` · `saude-do-trabalhador` · `saude-ocupacional` · `odp` · `dados-publicos` · `brasil` · `pesquisa`.
-- Histórico completo da pesquisa, do brainstorm ao dossiê em PDF. 65 arquivos, ~29 MB (o grosso são os PDFs de terceiros em `docs/sources/`).
+- Histórico completo da pesquisa, do brainstorm ao dossiê em PDF. **54 arquivos, 3,2 MB** — o repo é leve de propósito: os PDFs de terceiros não são versionados (ver a decisão 2 abaixo).
 - O README raiz é o **rosto público**: narrativa, lacuna com número, proposta, dossiê, fontes, time, contribuir e direitos — com o bloco operacional do time preservado no fim. Dois diagramas em **Mermaid** (renderizado nativamente pelo GitHub; validado com o parser oficial do mermaid v11).
 - **PR é obrigatório** — nada de commit direto na `main`. Convide os outros 4 como colaboradores: `gh api -X PUT repos/matheusmendes720/cheers-hackathon-sesi-saude-2026/collaborators/<usuario> -f permission=push` (precisa do username GitHub de cada um).
 
 **Duas decisões que ficaram com o time (não são bloqueios de documentação):**
 
 1. **Licença.** O repo foi criado **sem `LICENSE`** — padrão do GitHub é todos os direitos reservados, coerente com o §10.8 (os direitos autorais ficam com os criadores). Para liberar em MIT: botão **Add a license** do GitHub, ou `gh api -X PUT repos/matheusmendes720/cheers-hackathon-sesi-saude-2026/license -f license=mit`.
-2. **Redistribuição dos PDFs de terceiros** (~25 MB em `docs/sources/` + o regulamento na raiz). Tudo é publicamente baixável na origem e `docs/sources/README.md` traz a URL pública de cada PDF. Decidir entre manter rastreado ou trocar por links + hashes. **Não removeu nada do disco.**
+2. **Redistribuição dos PDFs de terceiros** — **DECIDIDO em 01/11:** os 9 PDFs de `docs/sources/` e as 2 imagens do WhatsApp **saíram do versionamento** (`.gitignore` + `git rm --cached`), **sem reescrever o histórico público**. O material continua no disco de quem baixou; a URL pública de cada PDF está em `docs/sources/README.md`, e o **texto extraído** (`.txt`), que é o que se cita, segue versionado. O **regulamento continua versionado** — é a fonte de verdade dos §N e tem 195 KB. Efeito: o repo foi de ~29 MB para **3,2 MB**, com 54 arquivos.
 
 **Dado pessoal exposto:** `chat.md` / `chat.txt` (export do WhatsApp) e a tabela do time em `AGENTS.md` contêm **números de telefone dos membros da equipe**. Todos os 5 são colaboradores do repo, mas se o time preferir tirar do histórico público, ainda é possível (repo novo, sem forks) com `git filter-repo`.
 

@@ -1,6 +1,12 @@
-# Fontes primárias baixadas
+# Fontes primárias
 
-Todas verificadas no original em 27/10/2026. PDFs são a fonte; os `.txt` são o texto extraído (para busca e citação de linha).
+Todas verificadas no original em 27/10/2026.
+
+> **Os PDFs não são versionados neste repositório.** São material de terceiros, publicado por outras instituições — redistribuir aqui não é o lugar certo. Cada um se baixa pela **URL pública** da coluna *Fonte*. O que **é** versionado é o **texto extraído** (`.txt`), que é o que sustenta a citação com página e linha dentro do repo.
+>
+> A regra está no `.gitignore` (`docs/sources/*.pdf`). Para quem for usar o material offline, basta baixar os 9 PDFs pelas URLs abaixo — e o `Regulamento Hackathon SESI Saude 2026.pdf`, na raiz do repo, continua versionado, porque é a fonte de verdade dos §N.
+
+Os PDFs são a fonte; os `.txt` são o texto extraído (para busca e citação de linha).
 
 | Arquivo | O que é | Por que importa | Fonte |
 |---|---|---|---|

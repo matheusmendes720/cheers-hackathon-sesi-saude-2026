@@ -30,11 +30,21 @@ __pycache__/
 venv/
 .pytest_cache/
 
-# Artefatos temporarios do gerador de PDF
+# Artefatos temporarios do generador de PDF
 docs/relatorios/_*.py
 docs/relatorios/fix_toc.py
 docs/relatorios/_check_png/
 docs/relatorios/*.tmp.pdf
+
+# PDF de terceiros: nao versionados.
+# O material e de terceiros e nao se redistribui pelo repo - cada PDF se
+# baixa pela URL publica registrada em docs/sources/README.md.
+# O texto extraido (.txt), que e o que se cita no repo, continua versionado.
+docs/sources/*.pdf
+
+# Prints do WhatsApp de outros programas (Programa Aluno Empreendedor e
+# INTEGRA SENAI Regional 2026) - nao são do hackathon e nao versionados.
+WhatsApp Image *.jpeg
 
 # Logs
 *.log

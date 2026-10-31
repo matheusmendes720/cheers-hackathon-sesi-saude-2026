@@ -25,8 +25,8 @@ Sofisticação vem de **dados e padrões**, não de framework. Vite + PWA sobra 
 | Dataset | URL | Granularidade | Offline | Uso na solução |
 |---|---|---|---|---|
 | CAT — INSS (acidentes de trabalho) | `dadosabertos.inss.gov.br/dataset/comunicacoes-de-acidente-de-trabalho-cat-plano-de-dados-abertos-jun-2023-a-jun-2027` | 1 acidente: CID-10, CBO, CNAE, natureza da lesão, afastamento | sim (CSV mensal) | **núcleo**: sinistralidade, absenteísmo, mapa de risco |
-| VigIndústria Brasil 2026 (no repo) | `static.portaldaindustria.com.br/.../relatorio_vigindustria_-_conecta_saude_2026.pdf` | agregada: 825 empresas, 57.952 trabalhadores, 33 indicadores | sim | baseline do pitch e 4 dimensões do Anexo I |
-| ANS Panorama nov/2025 (no repo) | `docs/sources/ans_panorama_nov2025.pdf` | agregada nacional | sim | despesas assistenciais e sinistralidade setorial |
+| VigIndústria Brasil 2026 (baixado, não versionado) | `static.portaldaindustria.com.br/.../relatorio_vigindustria_-_conecta_saude_2026.pdf` | agregada: 825 empresas, 57.952 trabalhadores, 33 indicadores | sim | baseline do pitch e 4 dimensões do Anexo I |
+| ANS Panorama nov/2025 (baixado, não versionado) | `docs/sources/ans_panorama_nov2025.pdf` | agregada nacional | sim | despesas assistenciais e sinistralidade setorial |
 | ANS SIB/ICB por UF | `dadosabertos.ans.gov.br/FTP/PDA/dados_de_beneficiarios_por_operadora/` | por beneficiário, sem dado clínico (BA ≈ 44 MB) | sim | absenteísmo/turnover por perfil |
 | ANS TISS ambulatorial/hospitalar + dicionário | `dadosabertos.ans.gov.br/FTP/PDA/TISS/` | mensal por UF, XML | sim (1 UF/1 mês) | custo assistencial; prova de leitura de padrão real |
 | ANS painel de glosas | `dadosabertos.ans.gov.br/FTP/PDA/painel_de_glosas-057/` | agregada | sim | custo da negação: onde o modelo vaza dinheiro |
