@@ -68,6 +68,7 @@ Repositório da equipe **Cheers** (5 pessoas) para o Hackathon+ SESI Saúde — 
 | **Entender a regulação** | `docs/viabilidade-stack-dados-regulatorio.md` · o PDF do regulamento na raiz |
 | **Saber o que construir** | `docs/04-proposta.md` §5 (escopo + plano de corte) · `docs/10-mapa-de-build-32h.md` (o plano hora a hora) |
 | **Preparar o reveal** | `docs/08-plano-90min.md` — grade de decisão de 4 testes, escopo travado às 20h de 13/11 |
+| **Ir à live de 12/11** | `docs/11-perguntas-para-a-organizacao.md` — one-pager imprimível com as 8 perguntas, em ordem de prioridade |
 | **Ver as fontes primárias** | `docs/sources/` (9 documentos) · `data/vigindustria-2026-raw.txt` (texto integral do relatório) |
 
 ---

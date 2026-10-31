@@ -303,6 +303,7 @@ docs/09-por-que-esta-proposta.md                     a justificativa completa: o
 pitch/slide-impacto.html                             slide único de impacto (A4 paisagem, imprimível, offline)
 pitch/apresentacao-interna.md                        apresentação de 10 min para o time, sem contexto prévio
 docs/10-mapa-de-build-32h.md                          plano de build hora a hora (2 turnos, CORTE 1/2, 3 trilhos, 8 riscos)
+docs/11-perguntas-para-a-organizacao.md                one-pager imprimível das 8 perguntas para a live de 12/11 (P1/P2/P3)
 docs/pesquisa/01-mapa-competitivo.md                  mapa competitivo (11 players, 5 camadas)
 docs/pesquisa/01-mapa-competitivo-fontes.md            bibliografia anotada do mapa
 docs/pesquisa/02-dimensionamento-mercado.md            dimensionamento e funil de custo
