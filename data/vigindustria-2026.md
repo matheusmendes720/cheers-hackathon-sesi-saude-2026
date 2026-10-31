@@ -27,6 +27,27 @@
 
 **Viés declarado pelo próprio relatório (p. 17):** a amostra de conveniência (recrutamento de empresas que *voluntariamente* demandaram serviços ao SESI) pode comprometer a representatividade. O relatório afirma que comparou as características demográficas das duas estratégias e optou pela combinação. **Este é o principal contra-argumento a usar contra nós mesmos se a banca pressionar a representatividade.**
 
+### As 7 dimensões do ASSTI — e por que a 7ª ficou de fora (p. 16, texto literal)
+
+> *"Os resultados focalizam em **seis das sete dimensões** do Sistema de Avaliação em Saúde e Segurança do Trabalhador da Indústria - ASSTI (SESI, 2023), conforme ilustrado na Figura 1, a saber: (1) fatores demográficos; (2) fatores comportamentais; (3) bem-estar mental; (4) morbidade; (5) percepção de saúde e autocuidado; e, (6) cultura de segurança. **Não foram analisados, os fatores de redução da produtividade por não estarem alinhados ao propósito do presente estudo.**"*
+> — VigIndústria Brasil 2026, **p. 16**
+
+| # | Dimensão do ASSTI | Status no VigIndústria |
+|---|---|---|
+| 1 | Fatores demográficos | ✅ analisada |
+| 2 | Fatores comportamentais | ✅ analisada |
+| 3 | Bem-estar mental | ✅ analisada |
+| 4 | Morbidade | ✅ analisada |
+| 5 | Percepção de saúde e autocuidado | ✅ analisada |
+| 6 | Cultura de segurança | ✅ analisada |
+| 7 | **Fatores de redução da produtividade** | 🔴 **declarada, não analisada** — *"por não estarem alinhados ao propósito do presente estudo"* (p. 16) |
+
+**A 7ª não é uma dimensão fraca — é a segunda mais bem validada do instrumento (p. 21):**
+> *"…os fatores de cultura de segurança (CR = 0,975; AVE = 0,783), morbidade referida (CR = 0,902; AVE = 0,472) e **fatores de redução da produtividade (CR = 0,863; AVE = 0,581)** apresentaram os melhores indicadores de consistência interna, sendo que os fatores de cultura de segurança e os **fatores de redução da produtividade também apresentaram evidências satisfatórias de validade convergente (AVE > 0,50)**."*
+> — VigIndústria Brasil 2026, **p. 21**
+
+⚠️ **Nome do ASSTI — duas grafias na literatura:** o relatório do VigIndústria (p. 16) escreve *"Sistema de Avaliação em Saúde e Segurança do Trabalhador da Indústria"*; o caderno técnico de 2023 (`docs/sources/sesi_produtividade_2023.txt`, p. ex. 210) escreve *"Metodologia ASSTI (Avaliação de Saúde e Segurança em Trabalhadores da Indústria)"*. **Usar a do VigIndústria** — é o documento que a banca vai ler.
+
 ### Instrumento (p. 18–21, Anexo I p. 110–119)
 
 O questionário **foi administrado por chatbot** — ferramenta que simula conversa humana por texto — embarcado em plataforma digital com preenchimento **online e offline** (offline em tablets, conectados depois a um servidor). O sistema fazia *skip logic* automático, crítica imediata de respostas inválidas, cronometragem da duração da entrevista e alimentação direta e contínua no banco de dados do ASSTI.

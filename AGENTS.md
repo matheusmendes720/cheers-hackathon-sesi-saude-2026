@@ -299,6 +299,7 @@ pitch/demo.html                                      demo funcional offline (6 t
 pitch/roteiro-3min.md                                roteiro do pitch palavra por palavra (D14)
 docs/08-plano-90min.md                               o protocolo de 13/11: grade de decisão e escopo travado em 90 min
 pitch/slide-impacto.html                             slide único de impacto (A4 paisagem, imprimível, offline)
+pitch/apresentacao-interna.md                        apresentação de 10 min para o time, sem contexto prévio
 docs/pesquisa/01-mapa-competitivo.md                  mapa competitivo (11 players, 5 camadas)
 docs/pesquisa/01-mapa-competitivo-fontes.md            bibliografia anotada do mapa
 docs/pesquisa/02-dimensionamento-mercado.md            dimensionamento e funil de custo
