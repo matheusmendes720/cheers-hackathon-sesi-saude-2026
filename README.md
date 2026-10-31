@@ -156,6 +156,7 @@ O índice completo, **ordenado pelo caminho de leitura** (e não pela ordem em q
 | | [`docs/11-perguntas-para-a-organizacao.md`](docs/11-perguntas-para-a-organizacao.md) | One-pager imprimível com as **8 perguntas** para a live de 12/11 |
 | **E · Pitch** | [`pitch/roteiro-3min.md`](pitch/roteiro-3min.md) | O pitch **palavra por palavra**, plano B e 8 perguntas de banca |
 | | [`pitch/demo.html`](pitch/demo.html) | A **demo funcional offline** — abre com duplo clique, sem rede. Tela "Modo Pitch" com cronômetro |
+| | 🌐 [matheusmendes720.github.io/cheers-hackathon-sesi-saude-2026](https://matheusmendes720.github.io/cheers-hackathon-sesi-saude-2026/) | **A demo publicada no GitHub Pages** — mesma demo, servida pela `main`, sempre em dia com o repo |
 | | [`pitch/slide-impacto.html`](pitch/slide-impacto.html) | O slide único de impacto, A4 paisagem, imprimível |
 | | [`pitch/apresentacao-interna.md`](pitch/apresentacao-interna.md) | A apresentação de 10 min para o time, sem contexto prévio |
 

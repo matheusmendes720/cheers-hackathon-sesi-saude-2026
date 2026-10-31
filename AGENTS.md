@@ -345,6 +345,9 @@ As seções de setup, lint e teste entram no AGENTS.md em **13/11**, quando a st
 
 **`https://github.com/matheusmendes720/cheers-hackathon-sesi-saude-2026`** — repositório **público**, branch `main` como padrão, conta `matheusmendes720`.
 
+**Demo no GitHub Pages:** **`https://matheusmendes720.github.io/cheers-hackathon-sesi-saude-2026/`** — a raiz do repo é a raiz do site (`source[branch]=main`, `source[path]=/`), então `index.html` é o landing e a demo vive em `/pitch/demo.html`. **Sem workflow e sem cópia:** o Pages serve a `main` direto, então o que está publicado nunca sai de sincronia com o repo. O link está no campo *Website* e na descrição do About.
+> ⚠️ A API do Pages só aceita `source[path]` = `/` ou `/docs` — **não** dá para publicar a pasta `pitch/` como raiz. Por isso o `index.html` do landing mora na raiz do repo e aponta para `pitch/demo.html`.
+
 - Topics: `hackathon` · `sesi` · `saude-do-trabalhador` · `saude-ocupacional` · `odp` · `dados-publicos` · `brasil` · `pesquisa`.
 - Histórico completo da pesquisa, do brainstorm ao dossiê em PDF. **54 arquivos, 3,2 MB** — o repo é leve de propósito: os PDFs de terceiros não são versionados (ver a decisão 2 abaixo).
 - O README raiz é o **rosto público**: narrativa, lacuna com número, proposta, dossiê, fontes, time, contribuir e direitos — com o bloco operacional do time preservado no fim. Dois diagramas em **Mermaid** (renderizado nativamente pelo GitHub; validado com o parser oficial do mermaid v11).
