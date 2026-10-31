@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Cheers — Horizonte de Trabalho</title>
+<style>
+@page { size: A4 portrait; margin: 14mm 12mm; }
+* { -webkit-print-color-adjust: exact; print-color-adjust: exact; box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  font-size: 10.5pt; line-height: 1.55; color: #16202C; background: #fff;
+  -webkit-font-smoothing: antialiased;
+}
+@media screen {
+  html { background: #d0d0d0; }
+  body { margin: 0; padding: 20px 0; }
+  body > section { width: 210mm; min-height: 297mm; margin: 0 auto 20px; background: #fff;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.18); overflow: hidden; }
+}
+
+:root{
+  --accent:#0D9488; --accent-dim:#0F766E; --accent-ink:#FFFFFF;
+  --ink:#16202C; --ink2:#3B4A5A; --muted:#6B7A8C;
+  --surface:#F5F7FA; --surface2:#EEF2F7; --line:#D6DEE8; --linesoft:#E7ECF3;
+  --info:#2563EB; --warn:#B45309; --risk:#BE123C; --good:#047857; --violet:#6D28D9;
+}
+
+.page { position: relative; min-height: 269mm; padding-top: 11mm; padding-bottom: 3mm; break-after: page; }
+.page:last-child { break-after: auto; }
+.runhead { position: absolute; top: 0; left: 0; right: 0; height: 7mm;
+  border-bottom: 0.5pt solid var(--line); font-size: 8pt; color: var(--muted); line-height: 7mm; }
+.runhead .l { float: left; } .runhead .r { float: right; }
+.runfoot { position: absolute; bottom: 0; left: 0; right: 0; height: 8mm;
+  border-top: 0.5pt solid var(--line); font-size: 8pt; color: var(--muted); line-height: 8mm; text-align: center; }
+
+.eyebrow { font-size: 8pt; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; color: var(--accent); margin: 0 0 2mm; }
+h1 { font-size: 24pt; line-height: 1.15; margin: 0 0 3mm; letter-spacing: -0.4px; }
+h2 { font-size: 15pt; line-height: 1.2; margin: 0 0 2mm; letter-spacing: -0.2px; page-break-after: avoid; }
+h3 { font-size: 11.5pt; margin: 0 0 1.5mm; color: var(--accent-dim); page-break-after: avoid; }
+h4 { font-size: 10pt; margin: 0 0 1mm; color: var(--ink); }
+p { margin: 0 0 2.5mm; }
+.rule { height: 2.2mm; background: var(--accent); width: 26mm; margin: 0 0 4mm; border-radius: 1mm; }
+.lead { font-size: 11pt; color: var(--ink2); margin: 0 0 4mm; }
+ul, ol { margin: 0 0 3mm; padding-left: 5mm; }
+li { margin-bottom: 1.2mm; }
+strong { color: var(--ink); }
+code { font-family: "Cascadia Mono", Consolas, monospace; font-size: 9pt; background: var(--surface2); padding: 0.3mm 1mm; border-radius: 1mm; }
+
+table { width: 100%; border-collapse: collapse; margin: 0 0 3mm; font-size: 9pt; line-height: 1.42; }
+thead th { background: var(--accent); color: #fff; text-align: left; padding: 2mm 2.5mm; font-size: 8.5pt; font-weight: 700; }
+tbody td { border-bottom: 0.5pt solid var(--linesoft); padding: 1.8mm 2.5mm; vertical-align: top; }
+tbody tr:nth-child(even) td { background: var(--surface); }
+table.dense { font-size: 8pt; line-height: 1.32; }
+table.dense thead th { padding: 1.6mm 2mm; font-size: 8pt; }
+table.dense tbody td { padding: 1.2mm 2mm; }
+td.n { white-space: nowrap; }
+.src { font-size: 7.5pt; color: var(--muted); margin: -2mm 0 3mm; }
+
+.kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 3mm; margin: 0 0 4mm; }
+.kpi { background: var(--surface); border: 0.5pt solid var(--line); border-left: 2.4mm solid var(--accent); border-radius: 1.5mm; padding: 3mm; }
+.kpi .v { font-size: 16pt; font-weight: 700; color: var(--accent-dim); line-height: 1.1; }
+.kpi .l { font-size: 8.5pt; color: var(--ink2); margin-top: 1mm; }
+.kpis.c3 { grid-template-columns: repeat(3, 1fr); }
+.kpis.c2 { grid-template-columns: repeat(2, 1fr); }
+
+.cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 3mm; margin: 0 0 3mm; }
+.card { border: 0.5pt solid var(--line); border-radius: 1.5mm; padding: 3mm; background: #fff; page-break-inside: avoid; }
+.card .t { font-weight: 700; font-size: 10.5pt; margin-bottom: 1mm; }
+.card .d { font-size: 9pt; color: var(--ink2); }
+
+.callout { background: var(--surface); border-left: 2.4mm solid var(--accent); border-radius: 1.2mm; padding: 3mm 3.5mm; margin: 0 0 3mm; font-size: 9.5pt; page-break-inside: avoid; }
+.callout.warn { border-left-color: var(--warn); background: #FFF8EF; }
+.callout.risk { border-left-color: var(--risk); background: #FEF2F4; }
+.callout.good { border-left-color: var(--good); background: #EFF9F3; }
+.callout .ct { font-weight: 700; font-size: 9pt; text-transform: uppercase; letter-spacing: 0.6px; color: var(--muted); margin-bottom: 1mm; }
+
+.quote { background: var(--surface2); border-radius: 1.2mm; padding: 3.5mm 4mm; margin: 0 0 3mm; font-size: 9.5pt; font-style: italic; color: var(--ink); page-break-inside: avoid; }
+.quote .att { font-style: normal; font-size: 8pt; color: var(--muted); margin-top: 1.5mm; }
+
+.pill { display: inline-block; font-size: 7.5pt; font-weight: 700; padding: 0.6mm 2mm; border-radius: 3mm; white-space: nowrap; }
+.pill-ok { background: #E8F5E9; color: #2E7D32; }
+.pill-warn { background: #FFF3E0; color: #E65100; }
+.pill-bad { background: #FFEBEE; color: #C62828; }
+.pill-good { background: #E3F2FD; color: #1565C0; }
+.pill-best { background: #F3E5F5; color: #6A1B9A; }
+
+.toc { margin: 0 0 4mm; }
+.toc-row { display: block; text-decoration: none; color: var(--ink); border-bottom: 0.5pt dotted var(--line);
+  padding: 1.8mm 0; font-size: 10pt; page-break-inside: avoid; }
+.toc-row .n { display: inline-block; width: 7mm; color: var(--accent); font-weight: 700; font-size: 9pt; }
+.toc-row .p { float: right; color: var(--muted); font-size: 9pt; }
+.toc-row .sub { display: block; font-size: 8.5pt; color: var(--muted); margin-left: 7mm; }
+
+.chain { display: flex; align-items: stretch; gap: 2mm; margin: 0 0 3mm; }
+.chain .node { flex: 1; border: 0.5pt solid var(--line); border-top: 2.4mm solid var(--accent); border-radius: 1.5mm; padding: 3mm; background: #fff; }
+.chain .node .h { font-weight: 700; font-size: 9.5pt; margin-bottom: 1mm; }
+.chain .node .b { font-size: 8.5pt; color: var(--ink2); }
+.chain .arrow { align-self: center; color: var(--accent); font-size: 14pt; font-weight: 700; }
+
+.steps { counter-reset: st; margin: 0 0 3mm; padding: 0; list-style: none; }
+.steps li { position: relative; padding-left: 9mm; margin-bottom: 2mm; font-size: 9.5pt; }
+.steps li:before { counter-increment: st; content: counter(st); position: absolute; left: 0; top: 0.3mm;
+  width: 6mm; height: 6mm; border-radius: 50%; background: var(--accent); color: #fff;
+  font-size: 8.5pt; font-weight: 700; text-align: center; line-height: 6mm; }
+
+.cover { background: linear-gradient(155deg, #0F766E 0%, #0D9488 45%, #115E59 100%); color: #fff; padding: 0; }
+.cover .inner { padding: 0 0 0 0; height: 100%; display: flex; flex-direction: column; justify-content: space-between; }
+.cover .band { margin: -14mm -12mm 0 -12mm; padding: 26mm 18mm 18mm 18mm; }
+.cover .kicker { font-size: 9pt; letter-spacing: 2px; text-transform: uppercase; opacity: 0.85; margin-bottom: 5mm; }
+.cover h1 { color: #fff; font-size: 30pt; }
+.cover .sub { font-size: 13pt; opacity: 0.92; margin-top: 3mm; max-width: 150mm; }
+.cover .foot { position: absolute; bottom: 0; left: -12mm; right: -12mm; margin: 0; padding: 8mm 18mm 10mm 18mm; background: rgba(0,0,0,0.16); font-size: 9pt; display: flex; justify-content: space-between; }
+.cover .meta { font-size: 9.5pt; }
+.cover .meta b { display: block; font-size: 7.5pt; text-transform: uppercase; letter-spacing: 1.2px; opacity: 0.7; font-weight: 600; margin-bottom: 0.5mm; }
+.cover .meta span { display: block; margin-bottom: 3mm; }
+
+.warnbar { background: #FFF8EF; border: 0.5pt solid #F0D9B5; border-radius: 1.5mm; padding: 3mm 4mm; margin-bottom: 4mm; font-size: 9.5pt; }
+.warnbar b { color: var(--warn); }
+</style>
+</head>
+<body>
+
+<!-- ============ CAPA ============ -->
+<section class="page cover">
+  <div class="inner">
+    <div class="band">
+      <div class="kicker">Hackathon+ SESI Saúde 2026 · Equipe Cheers</div>
+      <h1>O horizonte de trabalho</h1>
+      <div class="sub">Tudo que a pesquisa produziu <b>fora do grupo de WhatsApp</b> — o mapa do que exploramos, o que já está fechado, o que só o time decide, e o que depende do reveal de 13/11.</div>
+    </div>
+    <div class="foot">
+      <div class="meta">
+        <b>Documento</b>
+        <span>01 de 04 — Horizonte de Trabalho</span>
+        <span>Leitura: 10 minutos</span>
+      </div>
+      <div class="meta" style="text-align:right">
+        <b>Data</b>
+        <span>31 de outubro de 2026</span>
+        <span>Salvador, Bahia</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SUMÁRIO ============ -->
+<section class="page">
+  <div class="runhead"><span class="l">Cheers · Horizonte de Trabalho</span><span class="r">Sumário</span></div>
+  <div class="eyebrow">01 — Horizonte de Trabalho</div>
+  <h2>O que está neste documento</h2>
+  <div class="rule"></div>
+  <p class="lead">Este é o índice da pesquisa que <b>não está no WhatsApp</b>. Tudo aqui foi lido, verificado e consolidado entre 27 e 31 de outubro. Se você só ler uma página, leia a <a href="#p3" style="color:var(--accent)">p. 3</a>.</p>
+
+  <nav class="toc">
+    <a class="toc-row" href="#p3"><span class="n">1</span>O estado em uma página<span class="p">3</span><span class="sub">O que está fechado, o que está em aberto, e o que 13/11 decide</span>
+    <a class="toc-row" href="#p4"><span class="n">2</span>O delta: o que mudou em relação ao grupo<span class="p">4</span><span class="sub">10 itens que circulavam no WhatsApp e foram corrigidos pela fonte primária</span>
+    <a class="toc-row" href="#p5"><span class="n">3</span>O horizonte explorado em 3 camadas<span class="p">5</span><span class="sub">O que o tema obriga → onde está a dor → o que dá para construir em 32 h</span>
+    <a class="toc-row" href="#p6"><span class="n">4</span>O kit de mapeamento<span class="p">6</span><span class="sub">Os 7 ativos que a gente leva para a abertura de 13/11</span>
+    <a class="toc-row" href="#p7"><span class="n">5</span>A agenda de pesquisa: o que falta<span class="p">7</span><span class="sub">4 de 8 concluídos, e o próximo passo crítico</span>
+    <a class="toc-row" href="#p8"><span class="n">6</span>As decisões em aberto<span class="p">8</span><span class="sub">D1 a D17, com responsável e prazo — a parte que só o time resolve</span>
+    <a class="toc-row" href="#p9"><span class="n">7</span>O calendário real<span class="p">9</span><span class="sub">08/11 é domingo, o evento é fim de semana: como planejar os 30 h</span>
+    <a class="toc-row" href="#p10"><span class="n">8</span>O que 13/11 fecha e o que não fecha<span class="p">10</span><span class="sub">Três níveis de revelation, um só que reposiciona a tese</span>
+    <a class="toc-row" href="#p11"><span class="n">9</span>Os pontos que só existem no chat<span class="p">11</span><span class="sub">13 decisões e correções que ficaram só na conversa</span>
+    <a class="toc-row" href="#p12"><span class="n">10</span>Índice do dossiê: quem lê o quê<span class="p">12</span><span class="sub">Os 4 documentos, o que cada um responde, e o que não foi mandando</span>
+  </nav>
+
+  <div class="callout">
+    <div class="ct">Como usar este dossiê</div>
+    Os 4 PDFs são <b>independentes</b> e podem ser lidos fora de ordem. Se você só tem 10 minutos: <b>01</b> (este) e <b>02</b> (o núcleo). Se você vai apresentar: <b>04</b> e o roteiro em <code>pitch/roteiro-3min.md</code>. Se você está se inscrevendo: <b>01</b> p. 8 e o texto pronto no <code>docs/05-inscricao-formulario.md</code>.
+  </div>
+</section>
+
+<!-- ============ 1. ESTADO EM UMA PÁGINA ============ -->
+<section class="page" id="p3">
+  <div class="runhead"><span class="l">Cheers · Horizonte de Trabalho</span><span class="r">1 · O estado em uma página</span></div>
+  <div class="eyebrow">Capítulo 1</div>
+  <h2>O estado em uma página</h2>
+  <div class="rule"></div>
+
+  <div class="kpis">
+    <div class="kpi"><div class="v">12</div><div class="l">documentos de pesquisa e pitch prontos e versionados</div></div>
+    <div class="kpi"><div class="v">33</div><div class="l">indicadores do VigIndústria curados com página e tabela</div></div>
+    <div class="kpi"><div class="v">11</div><div class="l">concorrentes mapeados em 5 camadas</div></div>
+    <div class="kpi"><div class="v">32 h</div><div class="l">de escopo de build, com ordem de corte escrita</div></div>
+  </div>
+
+  <h3>O que já está fechado</h3>
+  <ul>
+    <li><b>A tese</b> — saúde do trabalho na indústria, camada de <b>predição</b> (exposição) + <b>participação</b> (trabalhador com voz). A 7ª dimensão do ASSTI é a 4ª dimensão do Anexo I com outro nome.</li>
+    <li><b>O produto</b> — escopo único de 32 h em 5 componentes, com ordem de corte declarada antes de começar.</li>
+    <li><b>O pitch</b> — 7 blocos, palavra por palavra, com plano B e 8 perguntas de banca.</li>
+    <li><b>O regulamento</b> — lido integralmente (11 p. + Anexo I). Onde a nota está e o que restringe.</li>
+    <li><b>O formulário</b> — as 22 perguntas lidas na íntegra; o texto de cada campo já está pronto para cada um de nós.</li>
+    <li><b>O slide</b> — A4 paisagem, imprimível, offline, com a fonte de cada número.</li>
+  </ul>
+
+  <h3>O que ainda depende de nós</h3>
+  <div class="warnbar">
+    <b>Quatro decisões que só o time pode tomar, e o prazo real é sexta 06/11</b> (08/11 é domingo — são 5 dias úteis). São elas: <b>D7</b> quem marca o perfil "Design" no formulário; <b>D8</b> quem é o líder da equipe (o prêmio cai na conta de uma pessoa só e o SESI não media desacordo entre nós, §9.5 + §9.7); <b>D11</b> se entrar um 6º membro, quem; <b>D17</b> quem responde o e-mail de confirmação em 24 h, que pode cair no fim de semana. Detalhes na p. 8.
+  </div>
+
+  <h3>O que 13/11 decide</h3>
+  <p>Only o <b>núcleo da implementação</b>. A tese nasce de uma lacuna <b>declarada na fonte do tema</b> — a 7ª dimensão do ASSTI, "não analisada" (VigIndústria p. 16), com zero itens no questionário (p. 110–119). Isso é propriedade do tema, não palpite sobre um desafio específico. <b>Nenhum anúncio de desafio invalida a tese</b>; o que 13/11 faz é escolher <b>qual das 5 bifurcações</b> do kit a gente assume.</p>
+
+  <div class="callout good">
+    <div class="ct">O marco</div>
+    Em 12/11 às 13h tem a live de orientações da organização. Em <b>13/11 às 18h30</b> tem a abertura com o desafio real. Entre uma coisa e outra: inscrição concluída, ensaio do pitch rodado, slide impresso, e o escopo travado às 20h de 13/11.
+  </div>
+</section>
+
+<!-- ============ 2. O DELTA ============ -->
+<section class="page" id="p4">
+  <div class="runhead"><span class="l">Cheers · Horizonte de Trabalho</span><span class="r">2 · O delta em relação ao grupo</span></div>
+  <div class="eyebrow">Capítulo 2</div>
+  <h2>O delta: o que mudou em relação ao grupo</h2>
+  <div class="rule"></div>
+  <p class="lead">A tabela mais importante deste dossiê. Cada linha é algo que <b>circulava no WhatsApp</b> e que a leitura das fontes primárias corrigiu. Se alguém do time ainda acredita na coluna 1, a gente vai trabalhar sobre base errada.</p>
+
+  <table class="dense">
+    <thead><tr><th style="width:31%">O que circula no grupo</th><th style="width:38%">O que a pesquisa apurou</th><th style="width:31%">Por que muda a decisão</th></tr></thead>
+    <tbody>
+      <tr><td>"ODS 2 – Saúde e Bem-Estar"</td><td>É <b>ODS 3</b> (ODS 2 é Fome Zero e Agricultura Sustentável). O SESI errou a numeração; o conteúdo que quer dizer está certo. E o §2.1 os chama de <b>parâmetro</b>, não de cardápio.</td><td>Não existe "escolher qualquer ODS". Toda referência no workspace = <b>ODS 3 + ODS 9</b>. E o <b>formulário não tem campo de ODS</b> — logo a banca não pontua ODS. É narrativa.</td></tr>
+      <tr><td>"São três dias imersivos"</td><td>§2.4 fala em três dias, mas <b>§2.6 e §6.2 delimitam 14 e 15/11 presencial</b>. O 13/11 é a live online de abertura.</td><td>Planejar como <b>plantão de ~30 h com revezamento</b>, não como dois dias de trabalho normal. Check-in 07h30 de sábado.</td></tr>
+      <tr><td>"Inscrição fecha dia 22/10" / "jaja fecha"</td><td>22/10 é o prazo do <b>Programa Aluno Empreendedor</b> (outro programa). O do hackathon é <b>08/11</b> — que é <b>domingo</b>.</td><td>Prazo real de trabalho: <b>sexta 06/11</b>. São 5 dias úteis. Isso muda o dimensionamento do que dá para fazer antes da live.</td></tr>
+      <tr><td>"Basta uma inscrição do time"</td><td><b>§3.3.1</b>: cada integrante se inscreve individualmente, informando o nome do grupo.</td><td><b>5 inscrições</b>, cada uma com texto <b>diferente</b>. §4.1.2 avalia "conhecimento na temática" — 5 respostas iguais é spam.</td></tr>
+      <tr><td>"Agrotech + IoT + cadeia de frio + biotecnologia"</td><td>Fora de escopo <b>por regulamento</b>: §7.2 (objeto), §2.1, §2.3 (sem caráter comercial), §3.6 (ecossistema de saúde), §10.6 (originalidade).</td><td>Não é preferência. A interseção correta é <b>ODS 9 → ODS 3</b>. O "sexy" que a banca paga está no <b>craft do protótipo</b> (Sofisticação + UX + Maturidade = 40% da nota).</td></tr>
+      <tr><td>"Um app que mede atividade física"</td><td>Atividade moderada <b>no trabalho</b>: +20 min/dia → <b>+15% de risco de afastamento longo</b> (p = 0,02). <b>No lazer</b> → −20%. A Centeni captou R$ 5 mi e devolveu R$ 2,5 mi em jul/2026.</td><td>Mede a coisa errada. E o Anexo I rejeita "incorporação de novas tecnologias" como resposta.</td></tr>
+      <tr><td>"A solução vai reduzir o absenteísmo em X%"</td><td>Em <b>ensaio randomizado</b> (n = 32.974) o ROI de absenteísmo é <b>−49%</b>. A meta 2025 (23 estudos) é <b>indeterminada</b>. A OIT estima que <b>90%</b> das ações de promoção em empresas não têm sucesso.</td><td>A gente <b>não promete economia</b>. Promete <b>medir</b>: dias expostos antes/depois, 3 alavancas priorizadas, 1º antes/depois. §2.3 proíbe o enquadramento comercial.</td></tr>
+      <tr><td>"O SESI mede 7 dimensões, então a participação está coberta"</td><td>A 7ª dimensão — <b>fatores de redução da produtividade</b> — foi <b>declarada e nunca analisada</b> (p. 16). O questionário tem <b>zero</b> itens de autonomia, participação, propósito ou segurança psicológica (p. 110–119).</td><td>É a <b>lacuna do tema</b>, não um detalhe de implementação. E a 7ª é a <b>segunda mais bem validada</b> do instrumento (CR 0,863 · AVE 0,581).</td></tr>
+      <tr><td>"Manutenção preditiva"</td><td>A banca lê como IoT industrial — exatamente a "incorporação de novas tecnologias" que o Anexo I diz que <b>não</b> é a resposta. E não toca nenhuma das 4 dimensões.</td><td>Dizer <b>"previsão de desfecho de saúde do trabalho"</b>. Nenhum sensor, nenhuma máquina no slide.</td></tr>
+      <tr><td>"R$ 468 bi (4% do PIB) é o custo do presenteísmo"</td><td>Esse número é perda de produtividade por <b>doenças e acidentes de trabalho</b> (OIT/UN Brasil). O presenteísmo é R$ 200–600 bi/ano <b>[a confirmar]</b>.</td><td>Citar os 468 bi como número do <b>setor</b>, nunca do presenteísmo. E nunca somar os três pools de mercado — eles se sobrepõem.</td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout risk">
+    <div class="ct">A armadilha que custa a desclassificação</div>
+    <b>§11.8</b> — "vantagem indevida mediante meios fraudulentos" desclassifica o participante <b>e o grupo</b>. Construir o produto antes de 14/11, ou chegar com a tese travada, é o risco que o regulamento pune. Por isso: <b>inscrição, ensaio, slide e pesquisa até 13/11 — código só depois do reveal</b>.
+  </div>
+</section>
+
+<!-- ============ 3. O HORIZONTE ============ -->
+<section class="page" id="p5">
+  <div class="runhead"><span class="l">Cheers · Horizonte de Trabalho</span><span class="r">3 · O horizonte explorado</span></div>
+  <div class="eyebrow">Capítulo 3</div>
+  <h2>O horizonte explorado, em três camadas</h2>
+  <div class="rule"></div>
+  <p class="lead">O repositório não é uma coleção de textos soltos. É uma cadeia em três camadas: o que o <b>tema obriga</b>, onde a <b>dor está</b>, e o que <b>cabe em 32 horas</b>. Cada documento do repo existe para responder a uma dessas camadas.</p>
+
+  <div class="cards">
+    <div class="card">
+      <div class="t">Camada 1 · O que o tema obriga</div>
+      <div class="d"><b>Regulamento lido integralmente</b> (11 p. + Anexo I): onde a nota está (§8, peso 6/4), o que é entregável (§6.3), o que é vedado (§2.3, §7.2, §10.6, §11.8).<br><b>As 4 dimensões do Anexo I</b>: comportamento · ambiente · organização do trabalho · participação das pessoas — com destino em autonomia, participação, bem-estar e propósito.<br><b>O formulário oficial</b>: as 22 perguntas lidas na íntegra via API de runtime.</div>
+    </div>
+    <div class="card">
+      <div class="t">Camada 2 · Onde está a dor</div>
+      <div class="d"><b>VigIndústria Brasil 2026</b> (n = 57.952 trabalhadores, 825 empresas): 33 indicadores curados com prevalência, IC 95% e página/tabela.<br><b>A 7ª dimensão do ASSTI</b>: declarada, nunca analisada, 2ª mais bem validada do instrumento, zero itens no questionário.<br><b>Mapa competitivo</b>: 11 players em 5 camadas, com preço e lacuna.<br><b>Regulação</b>: CFM 2.454/2026, LGPD, NR-1/NR-7, RN 465, ANVISA, RNDS/FHIR.</div>
+    </div>
+    <div class="card">
+      <div class="t">Camada 3 · O que cabe em 32 h</div>
+      <div class="d"><b>Escuta</b> (6 h) — 6 itens no celular, offline, 90 s, opt-out por bloco.<br><b>Plano do trabalhador</b> (8 h) — PWA offline, agregado com k ≥ 10.<br><b>Exposição prevista</b> (8 h) — pesos à vista sobre base pública.<br><b>Motor de alavancas</b> (6 h) — <b>nunca corta</b>.<br><b>Export FHIR/eSocial</b> (4 h) — 1º a cortar.<br>Ordem de corte: <b>Export → Escuta → Plano → Exposição</b>.</div>
+    </div>
+    <div class="card">
+      <div class="t">A peça que amarra as três</div>
+      <div class="d">O <b>Anexo I</b> do desafio pede 4 dimensões. O instrumento oficial do SESI cobre <b>3</b> — e a 4ª não tem <b>nenhum</b> item.<br>Isso significa que a solução proposta não é uma <b>feature</b> que a gente somou: é a <b>única dimensão que nenhum sistema no país instrumenta</b>.<br>E é por isso que a tese <b>sobrevive ao reveal</b> — ela é uma lacuna do tema, não uma aposta sobre um desafio específico.</div>
+    </div>
+  </div>
+
+  <h3>Como cada documento serve a uma camada</h3>
+  <table class="dense">
+    <thead><tr><th style="width:44%">Documento</th><th style="width:12%">Camada</th><th>Para que serve</th></tr></thead>
+    <tbody>
+      <tr><td><code>docs/04-proposta.md</code></td><td><span class="pill pill-best">3</span></td><td>A proposta canônica: tese, escopo, ordem de corte, 5 bifurcações. <b>É o documento que decide.</b></td></tr>
+      <tr><td><code>docs/07-alavancas-regulamento.md</code></td><td><span class="pill pill-good">1</span></td><td>As 7 alavancas de pontuação e as 14 restrições R1–R14. <b>É o documento que impede o auto-sabotagem.</b></td></tr>
+      <tr><td><code>docs/09-por-que-esta-proposta.md</code></td><td><span class="pill pill-best">1+2</span></td><td>Os 4 gaps empilhados, a 7ª dimensão operacionalizada, o impacto honesto em 5 níveis de confiança.</td></tr>
+      <tr><td><code>data/vigindustria-2026.md</code></td><td><span class="pill pill-good">2</span></td><td>Os 33 indicadores com a citação literal das p. 16, 21 e 95. <b>É onde se busca o número.</b></td></tr>
+      <tr><td><code>docs/08-plano-90min.md</code></td><td><span class="pill pill-warn">reveal</span></td><td>O protocolo de 13/11: grade de decisão de 4 testes, 5 bifurcações, escopo travado às 20h.</td></tr>
+      <tr><td><code>docs/10-mapa-de-build-32h.md</code></td><td><span class="pill pill-best">3</span></td><td>O plano hora a hora dos 2 turnos, com CORTE 1, CORTE 2 e os 3 trilhos paralelos.</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- ============ 4. O KIT ============ -->
+<section class="page" id="p6">
+  <div class="runhead"><span class="l">Cheers · Horizonte de Trabalho</span><span class="r">4 · O kit de mapeamento</span></div>
+  <div class="eyebrow">Capítulo 4</div>
+  <h2>O kit de mapeamento</h2>
+  <div class="rule"></div>
+  <p class="lead">Este é o ativo real que a gente leva para a abertura de 13/11. Não é uma solução pronta — é a capacidade de <b>absorver o desafio em 90 minutos</b>. Sete peças, todas com fonte.</p>
+
+  <div class="cards">
+    <div class="card"><div class="t">1 · A grade das 4 dimensões</div><div class="d">Comportamento · ambiente · organização do trabalho · participação das pessoas, cruzadas com o que o instrumento mede de fato. Mostra onde há cobertura e onde há <b>zero</b> — é o Gap 1.</div></div>
+    <div class="card"><div class="t">2 · 33 indicadores com prevalência e IC</div><div class="d">Todos com página e tabela de origem. Mais o contraste com o Vigitel 2024 (álcool da indústria 34,2% vs 20,4% da população geral) e os recortes por porte e gênero.</div></div>
+    <div class="card"><div class="t">3 · O instrumento validado</div><div class="d">ASSTI: 7 dimensões, 46 indicadores, administração por chatbot, offline. AFC: CFI 0,973 · TLI 0,971 · RMSEA 0,060. <b>Não inventamos questionário</b> — operacionalizamos um construto que o SESI já validou.</div></div>
+    <div class="card"><div class="t">4 · 9 datasets públicos</div><div class="d">CAT/INSS, VigIndústria, ANS Panorama, ANS SIB por UF, TISS, glosas, DATASUS, e-SUS/Previne, IBGE SIDRA + CID-10 + eSocial XSD. <b>Tudo offline, tudo público.</b></div></div>
+    <div class="card"><div class="t">5 · O escudo regulatório</div><div class="d">CFM 2.454/2026 (IA de baixo risco, Anexo II, I) · CFM 2.382/2024 (Atesta CFM) · LGPD art. 11 e 13 · NR-1/NR-7 · RN 465 art. 14 §2º · ANVISA RDC 751/2022 · RNDS/FHIR.</div></div>
+    <div class="card"><div class="t">6 · Mapa competitivo em 5 camadas</div><div class="d">11 players com preço, fricção e a lacuna que deixam. Serve para o pitch: <b>não é "não existe solução"</b>, é "ninguém cruza falta ↔ saúde ↔ população, e ninguém dá voz ao trabalhador".</div></div>
+  </div>
+
+  <div class="callout">
+    <div class="ct">A sétima peça: 39 armadilhas com a evidência que as mata</div>
+    Doze são numéricas ou de citação (o 65,6% invertido, os R$ 468 bi, o "ODS 2", a meta 3.8 com o texto errado, o "90 empresas" do MES). Vinte e sete são de tese ou de produto (app de atividade, dashboard de SST, telemedicina, NR-1 SaaS, IA que simula parecer médico, score individual, promessa de economia). Cada uma com o trecho de regulamento ou o dado que a refuta.
+  </div>
+
+  <div class="callout warn">
+    <div class="ct">Onde a evidência ainda é fraca — e vamos dizer isso para a banca antes que ela pergunte</div>
+    O VigIndústria declara o próprio viés: a amostra de conveniência (empresas que <b>voluntariamente</b> demandaram serviço ao SESI) "pode comprometer a representabilidade" (p. 17). É o nosso principal contra-argumento, e é nosso. A base é <b>transversal</b> (jul–dez/2025) — <b>não há antes/depois</b>, e é exatamente por isso que o produto promete medir e não promisingir.
+  </div>
+</section>
+
+<!-- ============ 5. AGENDA ============ -->
+<section class="page" id="p7">
+  <div class="runhead"><span class="l">Cheers · Horizonte de Trabalho</span><span class="r">5 · A agenda de pesquisa</span></div>
+  <div class="eyebrow">Capítulo 5</div>
+  <h2>A agenda de pesquisa: o que falta</h2>
+  <div class="rule"></div>
+  <p class="lead">Oito itens de pesquisa foram mapeados. Quatro estão concluídos e já são o material deste dossiê. Quatro continuam abertos — e o primeiro deles é o que mais reforça a tese.</p>
+
+  <table>
+    <thead><tr><th style="width:6%">#</th><th style="width:40%">Item</th><th style="width:12%">Estado</th><th>Onde está / o que falta</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td><b>Caderno técnico do ASSTI</b> (SESI/DN, 2023, 107 p.) — quais indicadores compõem a 7ª dimensão (fatores de redução da produtividade)</td><td><span class="pill pill-warn">aberto</span></td><td><b>É o próximo passo crítico.</b> Ninguém leu. É onde estão os itens da 7ª dimensão — a leitura completa fecha o argumento de "operacionalizamos um construto já validado". <b>Alto valor para o pitch, baixo custo.</b></td></tr>
+      <tr><td>2</td><td>Os 3 eixos do MES 2026–2027 e os grupos de trabalho</td><td><span class="pill pill-ok">feito</span></td><td>Eixo 3 é o próprio tema do hackathon. <b>76 empresas-membro</b> (CN-SESI, 25/02/2026) — a base de clientes e de validação. Circula "90"; a fonte primária diz 76.</td></tr>
+      <tr><td>3</td><td>Metas ODS 3 e 9 com texto oficial</td><td><span class="pill pill-ok">feito</span></td><td><code>docs/06-ods-metas.md</code> — 3.8, 3.d, 9.4, 9.5 verificadas, com a correção da citação da 3.8 e o que rejeitar da mensagem do grupo.</td></tr>
+      <tr><td>4</td><td>Modelos assistenciais — SUS/APS, RAPS, saúde suplementar, ocupacional, telemedicina, interoperabilidade</td><td><span class="pill pill-ok">feito</span></td><td><code>docs/00</code> + <code>docs/pesquisa/02</code>. <b>Lacuna registrada:</b> o formulário fala em "modelos sustentáveis de <b>saúde suplementar</b>", o regulamento em "modelos assistenciais". É a bifurcação mais consequente do §7.3 — vai para a organização em 12/11.</td></tr>
+      <tr><td>5</td><td>A dor específica do SESI — o funil real: agendamento, triagem, ASO, rastreio de exames, encaminhamento, retorno ao trabalho, absenteísmo, sinistralidade, custo</td><td><span class="pill pill-warn">parcial</span></td><td>O funil está mapeado. Falta o <b>detalhe do SESI-BA</b> (15 carretas, 500+ credenciadas, Centro de Inovação em Prevenção da Incapacidade com WDP/SAW/RTW — auto-diagnóstico "em breve" na Viva+).</td></tr>
+      <tr><td>6</td><td>As edições 2025 — formato da demo vencedora e a dinâmica da maratona</td><td><span class="pill pill-bad">aberto</span></td><td>Não afeta a tese, mas ajuda a calibrar o formato da demo. <b>Baixa prioridade.</b></td></tr>
+      <tr><td>7</td><td>Regulação e risco</td><td><span class="pill pill-ok">feito</span></td><td><code>docs/viabilidade-stack-dados-regulatorio.md</code> — CFM 2.454/2026, CFM 2.382/2024, LGPD art. 11, NR-1/NR-7, RN 465, ANVISA, RNDS/FHIR.</td></tr>
+      <tr><td>8</td><td>Benchmark competitivo</td><td><span class="pill pill-ok">feito</span></td><td><code>docs/pesquisa/01-mapa-competitivo.md</code> — 11 players, 5 camadas, 4 portas de entrada com a intensidade da barreira.</td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout">
+    <div class="ct">Regra de ouro da agenda</div>
+    <b>Não refaça o que está feito.</b> Os itens 2, 3, 4, 7 e 8 já viraram documento. O que falta é o item 1 (o caderno do ASSTI) e o complemento do item 5. Até 12/11, a prioridade é <b>inscrição, ensaio e slide</b> — a pesquisa extra só entra se sobrar folga depois disso.
+  </div>
+</section>
+
+<!-- ============ 6. DECISÕES ============ -->
+<section class="page" id="p8">
+  <div class="runhead"><span class="l">Cheers · Horizonte de Trabalho</span><span class="r">6 · As decisões em aberto</span></div>
+  <div class="eyebrow">Capítulo 6</div>
+  <h2>As decisões em aberto</h2>
+  <div class="rule"></div>
+  <p class="lead">Duas naturezas diferentes. As <b>propostas fechadas</b> (D2, D2b, D3) precisam da validação do time até 10/11 — mas já estão escritas e justificadas. As <b>decisões logísticas</b> (D7, D8, D11, D17) não têm resposta certa: são de vocês, e têm prazo.</p>
+
+  <table class="dense">
+    <thead><tr><th style="width:7%">#</th><th style="width:47%">Decisão</th><th style="width:20%">Responsável</th><th style="width:11%">Prazo</th><th style="width:15%">Estado</th></tr></thead>
+    <tbody>
+      <tr><td><b>D2</b></td><td>Nicho: saúde do trabalho na indústria, camada de predição (exposição) + participação (trabalhador com voz)</td><td>Esteves + Moisés + Omena</td><td>10/11</td><td><span class="pill pill-good">proposta fechada</span></td></tr>
+      <tr><td><b>D2b</b></td><td>A cadeia de 7 elos fica como enquadramento do pitch (slide 2), não como escopo. MVP = <b>um</b> elo: exposição + presenteísmo</td><td>Matheus + Moisés + Omena</td><td>10/11</td><td><span class="pill pill-good">proposta fechada</span></td></tr>
+      <tr><td><b>D3</b></td><td>Shortlist: <b>A (Escuta + Alavanca)</b> como núcleo, C (Roda) como camada que fecha o loop, B (Aciona) como expansão pós-hackathon</td><td>Matheus conduz</td><td>11/11</td><td><span class="pill pill-good">proposta fechada</span></td></tr>
+      <tr><td><b>D7</b></td><td><b>Quem marca o perfil "Design"</b> no formulário. Recomendação: Esteves assume. Sem isso a equipe aparece com 3 dos 4 perfis do §5.3</td><td>Time</td><td><b>08/11</b></td><td><span class="pill pill-bad">bloqueia inscrição</span></td></tr>
+      <tr><td><b>D8</b></td><td><b>Líder da equipe</b> para receber o prêmio (§9.5 — cai numa conta só) e quem informa a conta. §9.7: o SESI não media desacordo entre membros</td><td>Time</td><td>10/11</td><td><span class="pill pill-warn">decisão do time</span></td></tr>
+      <tr><td><b>D11</b></td><td>Se entrar um 6º membro, <b>quem</b>. A pergunta 20 do formulário é só reconhecimento do §5.4.2, não filtro — mas §5.4.1 prioriza a equipe indicada</td><td>Time</td><td><b>08/11</b></td><td><span class="pill pill-warn">decisão do time</span></td></tr>
+      <tr><td><b>D13</b></td><td><b>Nome do produto</b>: SINAL (o sinal que antecede a falta) · alternatas Elo 1, Escuta. Checar INPI. §10.1: o nome vai para patrocinadores e parceiros</td><td>Matheus + Omena</td><td><b>08/11</b></td><td><span class="pill pill-warn">decisão do time</span></td></tr>
+      <tr><td><b>D14</b></td><td><b>Ensaiar o roteiro 10× em voz alta</b> com cronômetro. O roteiro está escrito; o ensaio é o que falta — e o pitch vale 60% da nota</td><td>Moisés + time</td><td>12/11</td><td><span class="pill pill-warn">em aberto</span></td></tr>
+      <tr><td><b>D15</b></td><td>Texto do formulário: <b>cada um personaliza</b> a sua resposta. 5 respostas iguais é spam</td><td>Os 5</td><td><b>08/11</b></td><td><span class="pill pill-bad">bloqueia inscrição</span></td></tr>
+      <tr><td><b>D16</b></td><td>Metas ODS nos campos de texto livre (não há campo de ODS no formulário)</td><td>Matheus + Omena</td><td><b>08/11</b></td><td><span class="pill pill-ok">mapeado</span></td></tr>
+      <tr><td><b>D17</b></td><td><b>Quem responde o e-mail de confirmação em 24 h</b> (§4.3). O aviso pode chegar entre 10/11 e 12/11 e a confirmação cair no fim de semana. Definir um substituto para cada um</td><td>Time</td><td>10/11</td><td><span class="pill pill-warn">decisão do time</span></td></tr>
+      <tr><td><b>D5</b></td><td>Stack e arquitetura do protótipo</td><td>Matheus + luquinhas</td><td>13/11</td><td><span class="pill pill-warn">com o desafio real</span></td></tr>
+      <tr><td><b>D9/D10</b></td><td>Inventário de equipamento (notebook, carregador, extensão, mouse, hdmi — §11.2) e onde dormir (§11.3, sem dormitório)</td><td>Cada um + time</td><td>12/11</td><td><span class="pill pill-warn">logística</span></td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout risk">
+    <div class="ct">A regra do §9.7 merece ser dita em voz alta no grupo</div>
+    "A destinação da premiação é de responsabilidade exclusiva de cada equipe vencedora, não cabendo à Comissão Organizadora qualquer envolvimento em questões ou desacordos entre os membros da equipe." Ou seja: <b>o combinado entre vocês tem que estar sólido antes do dia 14</b>. Isso é conversa de time, não detalhe de secretaria.
+  </div>
+</section>
+
+<!-- ============ 7. CALENDÁRIO ============ -->
+<section class="page" id="p9">
+  <div class="runhead"><span class="l">Cheers · Horizonte de Trabalho</span><span class="r">7 · O calendário real</span></div>
+  <div class="eyebrow">Capítulo 7</div>
+  <h2>O calendário real</h2>
+  <div class="rule"></div>
+  <p class="lead">O regulamento traz as datas; o que ele não traz é o dia da semana. Recalculando, <b>08/11 é domingo</b> — então o prazo de trabalho é <b>sexta 06/11</b>. E o evento inteiro é um <b>fim de semana</b>. Isso muda a logística, não só o cronograma.</p>
+
+  <table>
+    <thead><tr><th style="width:16%">Data</th><th style="width:14%">Dia</th><th style="width:36%">O que acontece</th><th>O que a gente entrega nesse dia</th></tr></thead>
+    <tbody>
+      <tr><td>até <b>06/11</b></td><td>sex</td><td><b>Prazo real das inscrições</b> (o oficial é 08/11, domingo)</td><td>As 5 inscrições individuais, com 5 textos diferentes · D7 (perfil Design) decidido · D11 (6º membro) decidido · D13 (nome + INPI)</td></tr>
+      <tr><td>08/11</td><td><span class="pill pill-bad">dom</span></td><td>Fim oficial das inscrições (§3.1). O Forms fecha tecnicamente em 09/11 00h15</td><td>Nada — dia de descanso. <b>Não conte com esse dia para nada.</b></td></tr>
+      <tr><td>10/11</td><td>ter</td><td>—</td><td><b>Validação do time</b> da tese (D2, D2b, D3) · <b>D8</b> líder · <b>D17</b> substituto para o e-mail de 24 h</td></tr>
+      <tr><td><b>12/11, 13h</b></td><td>qui</td><td><b>Live de orientações da organização</b> + divulgação dos selecionados</td><td>As <b>8 perguntas</b> (3 são P1 e destravam o escopo) · confirmação de presença em <b>24 h</b> (§4.3) — pode cair no fim de semana</td></tr>
+      <tr><td>12/11</td><td>qui</td><td>—</td><td><b>D14</b>: 10 ensaios do roteiro com cronômetro · slide impresso · <b>D9</b> inventário de equipamento · <b>D10</b> onde dormir</td></tr>
+      <tr><td><b>13/11, 18h30</b></td><td><span class="pill pill-bad">sex à noite</span></td><td><b>Live de abertura</b> — o desafio detalhado é revelado (§7.3)</td><td><b>Todos online</b> (D12) · protocolo de 90 min · <b>escopo travado às 20h</b> · <b>D5</b> stack decidida com o desafio à vista</td></tr>
+      <tr><td><b>14/11, 07h30</b></td><td><span class="pill pill-bad">sáb</span></td><td><b>Check-in</b> — abertura, desenvolvimento e mentorias (presencial)</td><td>Turno 1 do build, 08h30–23h30. <b>Sair de casa ~5h30.</b> CORTE 1 às 23h30</td></tr>
+      <tr><td><b>15/11, 13h</b></td><td><span class="pill pill-bad">dom</span></td><td><b>CORTE 2</b> — freeze de escopo. Só bug fix a partir daqui</td><td>Backup em 2 notebooks + pendrive + slide impresso</td></tr>
+      <tr><td><b>15/11, 15h30</b></td><td><span class="pill pill-bad">dom</span></td><td><b>Entrega do protótipo</b> (§6.3)</td><td>Protótipo funcional rodando</td></tr>
+      <tr><td><b>15/11, 16h</b></td><td><span class="pill pill-bad">dom</span></td><td><b>Apresentação do pitch</b> a partir das 16h · avaliação · premiação</td><td>3 minutos cronometrados. <b>Encerramento às 19h.</b></td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout warn">
+    <div class="ct">O alerta operacional</div>
+    Do check-in (07h30 de sábado) à entrega (15h30 de domingo) são <b>32 h de relógio</b> com a equipe acordada — e o pitch é no mesmo dia da entrega. Planeje como <b>plantão com revezamento</b>: os devs programam, o time de conteúdo attendendo as mentorias, e ninguém dorme no posto sem combinarem turnos. <b>§11.3</b>: não há dormitório, mas há chuveiro.
+  </div>
+</section>
+
+<!-- ============ 8. O QUE 13/11 FECHA ============ -->
+<section class="page" id="p10">
+  <div class="runhead"><span class="l">Cheers · Horizonte de Trabalho</span><span class="r">8 · O que 13/11 fecha</span></div>
+  <div class="eyebrow">Capítulo 8</div>
+  <h2>O que 13/11 fecha — e o que não fecha</h2>
+  <div class="rule"></div>
+  <p class="lead">O §7.3 diz que o detalhamento do desafio "será apresentado na abertura do evento, diretamente às equipes". Muita gente leu isso como "tudo muda". Não é. O reveal opera em <b>três níveis</b>, e só um deles reposiciona o trabalho.</p>
+
+  <table>
+    <thead><tr><th style="width:16%">Nível</th><th style="width:38%">O quê</th><th style="width:14%">Quando</th><th style="width:32%">Muda?</th></tr></thead>
+    <tbody>
+      <tr><td><b>1 · Tema / objeto</b></td><td>"Desafios e soluções para a <b>sustentabilidade dos modelos assistenciais de saúde</b>" (§2.1 + Anexo I)</td><td><b>Já está no regulamento</b></td><td><span class="pill pill-ok">Não muda</span> É o que o §7.2 obriga. É o objeto, não a hipótese.</td></tr>
+      <tr><td><b>2 · Desafio específico</b></td><td>As questões levantadas pelas <b>empresas do Conecta Saúde 2026</b></td><td><b>13/11</b> (§7.3)</td><td><span class="pill pill-warn">É revelado</span> Define <b>qual</b> pergunta da empresa a gente ataca.</td></tr>
+      <tr><td><b>3 · Direcionamento</b></td><td>"as informações e direcionamentos necessários para o desenvolvimento das soluções" (§7.3)</td><td><b>13/11</b></td><td><span class="pill pill-warn">É revelado</span> Define as restricciones de execução (dados, formato, escopo).</td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout good">
+    <div class="ct">Por que a tese sobrevive ao reveal</div>
+    Nossa tese <b>não é uma hipótese sobre o desafio</b>. Ela é uma <b>lacuna declarada na fonte do tema</b>: a 7ª dimensão do ASSTI, "não analisada" (p. 16), com zero itens no questionário (p. 110–119). Isso é propriedade do <b>tema</b>, não de um desafio específico. <b>Nenhum anúncio de desafio pode invalidá-la.</b>
+  </div>
+
+  <h3>As 5 bifurcações do kit — o que assume em cada cenário</h3>
+  <table>
+    <thead><tr><th style="width:30%">Se o desafio vier sobre…</th><th style="width:38%">O núcleo que fica</th><th>O que sai</th></tr></thead>
+    <tbody>
+      <tr><td>Exposição e risco ocupacional</td><td><b>Exposição prevista + Escuta</b> — o caso base, já desenhado</td><td>Export FHIR</td></tr>
+      <tr><td>Saúde mental no trabalho</td><td><b>Escuta</b> (demanda, apoio, reconhecimento, propósito) — a exposição sai do MVP</td><td>Módulo de exposição</td></tr>
+      <tr><td>Interoperabilidade / prontuário</td><td><b>Export FHIR/RNDS</b> vira o núcleo; a Escuta vira o caso de uso</td><td>Motor de exposição</td></tr>
+      <tr><td>Fragmentação entre saúde ocupacional e saúde suplementar</td><td><b>Plano do trabalhador + motor de alavancas</b> — RN 465 art. 14 §2º como a própria tese</td><td>Nada: é o cenário mais próximo</td></tr>
+      <tr><td>Dashboard / indicador (o cenário pior)</td><td><b>Reancorar nas 4 dimensões</b> — participation vira o diferencial, não mais um gráfico</td><td>Toda a camada de dashboard</td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout">
+    <div class="ct">O único cenário em que a tese muda</div>
+    Se o desafio vier com um recorte <b>fora de saúde do trabalhador</b> — por exemplo, saúde suplementar puro ou uma frente de agro. Aí a bifurcação assume, e o argumento institucional (PAO 2026 + canal Viva+) vira o plano B. Mas o <b>§7.2 continua mandando</b> em modelos assistenciais, e a lacuna da 4ª dimensão continua sendo do tema.
+  </div>
+</section>
+
+<!-- ============ 9. OS PONTOS QUE SÓ EXISTEM NO CHAT ============ -->
+<section class="page" id="p11">
+  <div class="runhead"><span class="l">Cheers · Horizonte de Trabalho</span><span class="r">9 · Os pontos que só existem no chat</span></div>
+  <div class="eyebrow">Capítulo 9</div>
+  <h2>Os pontos que só existem no chat</h2>
+  <div class="rule"></div>
+  <p class="lead">Treze coisas que foram decididas, corrigidas ou entendidas na conversa e <b>não chegaram a virar arquivo no repositório</b>. Nenhuma delas muda a tese — mas várias mudam a forma de falar com a banca, e duas delas são decisões de organização do time.</p>
+
+  <table class="dense">
+    <thead><tr><th style="width:4%">#</th><th style="width:44%">O ponto</th><th style="width:52%">Por que importa</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td><b>O diagnóstico: "não está no zero — está com tudo escrito e nada fechado."</b> O pedido original era sair do zero sem nada concreto.</td><td>Não há registro do "<b>não consigo sair do zero</b>" — e é importante porque é a<b> diferença entre começar do zero e fechar o que existe</b>. Isso definiu a ordem de trabalho: decisão primeiro, fala depois.</td></tr>
+      <tr><td>2</td><td><b>O time achava o agrotech "mais sexy"</b> — e isso foi a camada de gosto que motivou a virada.</td><td>O <code>docs/07</code> e o <code>docs/09</code> registram o <b>veredito técnico</b>, mas não o fato de que existia uma <b>preferência declarada</b>. Também não ficou escrito o <b>reframing</b>: "sexy é variável de pitch, não de domínio" → transpor IoT/dashboard/precisão para PWA offline, pesos à vista, demo ao vivo, 90 s no celular.</td></tr>
+      <tr><td>3</td><td><b>A sequência de bolhas de WhatsApp</b> — a resposta curta, em mensagens, para colar no grupo.</td><td>Existe como conteúdo, não como arquivo. Continua válida para explicar a virada do agro sem tom de bronca. Está no fim do dossiê.</td></tr>
+      <tr><td>4</td><td><b>Como as 22 perguntas foram obtidas:</b> pela API de runtime do Forms (<code>prefetchFormUrl</code> + <code>$expand=questions($expand=choices)</code>), não pelo HTML da página.</td><td>O HTML da landing page <b>não traz as perguntas</b>. Se alguém tentar refazer a leitura pela tela, vai concluir que o formulário não tem campo de ODS — <b>e está certo: ele não tem</b>. Mas o que ele tem (perfil com "Design", pergunta 20) só aparece pela API.</td></tr>
+      <tr><td>5</td><td><b>123 respostas</b> (<code>rowCount</code>) e o <code>EndTime</code> técnico <b>09/11 00h15</b>.</td><td>Foi o que sustentou a conclusão "domingo na prática, sexta 06/11 no trabalho" — e a decisão de não contar com 08/11.</td></tr>
+      <tr><td>6</td><td><b>O rótulo "ODS 2 – Saúde e Bem-Estar" está na imagem do banner</b>, não no texto da landing page.</td><td>Evita a conclusão errada de que a página oficial "escolhe" ODS. A página fala em "soluções tecnológicas que transformam a saúde na Indústria", "equipes de 4 a 6 pessoas — te ajudamos a formar uma", inscrições até 08.10 e prêmios de R$ 9 mil / 4 mil / 2 mil. <b>Nenhuma menção a ODS no texto.</b></td></tr>
+      <tr><td>7</td><td><b>O plano de relatórios-âncora</b> (horizonte / núcleo+gaps / kit 13/11) e o critério de que são 3.</td><td>É a estrutura deste dossiê — e ela responde ao pedido original: "introduzir o horizonte de trabalho, o core da proposta com os gaps, e o que depende de 13/11".</td></tr>
+      <tr><td>8</td><td><b>A ordem escolhida pelo dono: PDFs primeiro, repositório público depois</b> (commits, PR em equipe, colaboradores, documentação legível).</td><td>É a decisão de sequênca que organiza o resto do trabalho. O repo público é a <b>etapa seguinte</b>, não esta.</td></tr>
+      <tr><td>9</td><td><b>O "Modo Pitch" da demo é o instrumento de ensaio</b> — cronômetro e nota de apresentador, com os mesmos 7 blocos e os mesmos tempos do roteiro.</td><td>Ensaiar é feito <b>dentro</b> da demo, não em slide separado. É por isso que os tempos batem exatamente (0:00 · 0:30 · 1:00 · 1:45 · 2:15 · 2:40 · 2:52).</td></tr>
+      <tr><td>10</td><td><b>O padrão de erro do modelo</b>: caracteres corrompidos gerados na escrita de arquivos — glifos de outro alfabeto colados no meio de palavras em português, palavras em inglês coladas no meio de frases, e o particípio trocado — todos corrigidos.</td><td>A <b>regra "rodar varredura de não-latinos antes de commitar"</b> está implícita nos scripts, não num checklist do <code>AGENTS.md</code>. Vale passar a ser explícita — e vale revisar os arquivos já escritos.</td></tr>
+      <tr><td>11</td><td><b>A aritmética do build antes de virar documento</b>: 47 dev-h brutos → ~38 efetivos → <b>32 de escopo + 6 de folga</b>, e o porquê de 32 (a reconciliação das duas listas de escopo divergentes).</td><td>O <code>docs/10</code> mostra o 32, mas não a reconciliação. É a memória do porquê — e é o que impede alguém de "ajustar" o escopo para 30 ou 36 sem saber o que quebrou.</td></tr>
+      <tr><td>12</td><td><b>A lição do clique fora da viewport</b> — <code>dispatched: true</code> pode não disparar o handler.</td><td>Foi para a memória do agente, não para o repo — decisão consciente, porque o <code>AGENTS.md</code> já registra o essencial. Vale lembrar na hora de validar a demo.</td></tr>
+      <tr><td>13</td><td><b>O que foi feito por iniciativa própria</b>, além do pedido: ler o PDF do regulamento, ler o formulário pela API, verificar a demo no browser, checar INPI e busca de marca para o nome do produto.</td><td>É a diferença entre o que foi pedido e o que foi entregue. Vale porque <b>cada um desses passos encontrou algo que muda a decisão</b> — inclusive o INPI, que podevetar o nome antes do formulário.</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- ============ 10. ÍNDICE DO DOSSIÊ ============ -->
+<section class="page" id="p12">
+  <div class="runhead"><span class="l">Cheers · Horizonte de Trabalho</span><span class="r">10 · Índice do dossiê</span></div>
+  <div class="eyebrow">Capítulo 9</div>
+  <h2>Índice do dossiê: quem lê o quê</h2>
+  <div class="rule"></div>
+
+  <table>
+    <thead><tr><th style="width:8%">Doc</th><th style="width:27%">Arquivo</th><th style="width:33%">O que responde</th><th>Quem lê</th></tr></thead>
+    <tbody>
+      <tr><td><b>01</b></td><td><code>01-horizonte-de-trabalho.pdf</code></td><td>O mapa do que exploramos, o delta em relação ao grupo, as decisões em aberto, o calendário real</td><td><b>Todos</b>, primeiro. É a entrada</td></tr>
+      <tr><td><b>02</b></td><td><code>02-nucleo-e-gaps.pdf</code></td><td>A tese, a 7ª dimensão do ASSTI, os <b>4 gaps</b>, o mecanismo da proposta e o impacto honesto</td><td><b>Todos</b>. É o que a gente vai defender</td></tr>
+      <tr><td><b>03</b></td><td><code>03-evidencia-mercado-regulacao.pdf</code></td><td>Os números com fonte, o mapa competitivo com preço, o escudo regulatório, as metas ODS</td><td>Quem vai <b>contestar número</b> — e quem vai à banca</td></tr>
+      <tr><td><b>04</b></td><td><code>04-kit-13-11-e-build.pdf</code></td><td>O protocolo de 90 min, as bifurcações, o plano de build de 32 h, o checklist do pitch e as 8 perguntas para a organização</td><td><b>Todo o time na noite de 13/11</b>. É o operational</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Documentos de apoio que ficam no repositório (não foram para o grupo)</h3>
+  <table>
+    <thead><tr><th style="width:36%">Arquivo</th><th>Por que não foi para o WhatsApp</th></tr></thead>
+    <tbody>
+      <tr><td><code>AGENTS.md</code></td><td>371 linhas do meu mapa de trabalho: correções, histórico de decisão, armadilhas. Serve para quem mantém o repo, não para ler.</td></tr>
+      <tr><td><code>chat.md</code> · <code>chat.txt</code></td><td>O export do grupo com os erros factuais. É evidência de origem, não material de leitura.</td></tr>
+      <tr><td><code>docs/sources/</code> + <code>data/vigindustria-2026-raw.txt</code></td><td>9 PDFs e 119 páginas de texto integral. <b>Se citarem, vão direto à fonte.</b></td></tr>
+      <tr><td><code>docs/00</code> · <code>01</code> · <code>02</code> · <code>03</code></td><td>Pesquisa intermediária que já virou <code>docs/04</code> e <code>docs/09</code>. Fica no repo para rastreabilidade.</td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout warn">
+    <div class="ct">Três coisas que precisam acontecer antes de sexta 06/11</div>
+    <b>1.</b> As <b>5 inscrições individuais</b>, cada uma com a voz de quem escreve (texto pronto em <code>docs/05-inscricao-formulario.md</code> §3). <b>2.</b> A decisão do slot de <b>Design</b> (D7). <b>3.</b> O <b>nome do produto</b> com checagem de INPI (D13) — porque o §10.1 leva o nome para patrocinadores. <b>E a decisão do líder (D8) e do substituto para o e-mail de 24 h (D17) até 10/11.</b>
+  </div>
+
+  <div class="callout good">
+    <div class="ct">E depois?</div>
+    Em <b>12/11 às 13h</b> a gente leva as 8 perguntas para a live da organização (o one-pager está em <code>docs/11-perguntas-para-a-organizacao.md</code>, 1 página, P1/P2/P3). Em <b>13/11 às 18h30</b> a gente descobre o tema real — e o escopo se trava em 90 minutos, com o plano do doc 04. <b>Aí sim começa o produto.</b>
+  </div>
+</section>
+
+</body>
+</html>

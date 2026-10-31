@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Cheers — O kit de 13/11 e o plano de build</title>
+<style>
+@page { size: A4 portrait; margin: 14mm 12mm; }
+* { -webkit-print-color-adjust: exact; print-color-adjust: exact; box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  font-size: 10.5pt; line-height: 1.55; color: #16202C; background: #fff;
+  -webkit-font-smoothing: antialiased;
+}
+@media screen {
+  html { background: #d0d0d0; }
+  body { margin: 0; padding: 20px 0; }
+  body > section { width: 210mm; min-height: 297mm; margin: 0 auto 20px; background: #fff;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.18); overflow: hidden; }
+}
+:root{
+  --accent:#0D9488; --accent-dim:#0F766E;
+  --ink:#16202C; --ink2:#3B4A5A; --muted:#6B7A8C;
+  --surface:#F5F7FA; --surface2:#EEF2F7; --line:#D6DEE8; --linesoft:#E7ECF3;
+  --info:#2563EB; --warn:#B45309; --risk:#BE123C; --good:#047857; --violet:#6D28D9;
+}
+.page { position: relative; min-height: 269mm; padding-top: 11mm; padding-bottom: 3mm; break-after: page; }
+.page:last-child { break-after: auto; }
+.runhead { position: absolute; top: 0; left: 0; right: 0; height: 7mm;
+  border-bottom: 0.5pt solid var(--line); font-size: 8pt; color: var(--muted); line-height: 7mm; }
+.runhead .l { float: left; } .runhead .r { float: right; }
+.runfoot { position: absolute; bottom: 0; left: 0; right: 0; height: 8mm;
+  border-top: 0.5pt solid var(--line); font-size: 8pt; color: var(--muted); line-height: 8mm; text-align: center; }
+.eyebrow { font-size: 8pt; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; color: var(--accent); margin: 0 0 2mm; }
+h1 { font-size: 24pt; line-height: 1.15; margin: 0 0 3mm; letter-spacing: -0.4px; }
+h2 { font-size: 15pt; line-height: 1.2; margin: 0 0 2mm; letter-spacing: -0.2px; page-break-after: avoid; }
+h3 { font-size: 11.5pt; margin: 0 0 1.5mm; color: var(--accent-dim); page-break-after: avoid; }
+p { margin: 0 0 2.5mm; }
+.rule { height: 2.2mm; background: var(--accent); width: 26mm; margin: 0 0 4mm; border-radius: 1mm; }
+.lead { font-size: 11pt; color: var(--ink2); margin: 0 0 4mm; }
+ul, ol { margin: 0 0 3mm; padding-left: 5mm; }
+li { margin-bottom: 1.2mm; }
+strong { color: var(--ink); }
+code { font-family: "Cascadia Mono", Consolas, monospace; font-size: 9pt; background: var(--surface2); padding: 0.3mm 1mm; border-radius: 1mm; }
+table { width: 100%; border-collapse: collapse; margin: 0 0 3mm; font-size: 9pt; line-height: 1.42; }
+thead th { background: var(--accent); color: #fff; text-align: left; padding: 2mm 2.5mm; font-size: 8.5pt; font-weight: 700; }
+tbody td { border-bottom: 0.5pt solid var(--linesoft); padding: 1.8mm 2.5mm; vertical-align: top; }
+tbody tr:nth-child(even) td { background: var(--surface); }
+table.dense { font-size: 8pt; line-height: 1.32; }
+table.dense thead th { padding: 1.6mm 2mm; font-size: 8pt; }
+table.dense tbody td { padding: 1.2mm 2mm; }
+.src { font-size: 7.5pt; color: var(--muted); margin: -2mm 0 3mm; }
+.kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 3mm; margin: 0 0 4mm; }
+.kpi { background: var(--surface); border: 0.5pt solid var(--line); border-left: 2.4mm solid var(--accent); border-radius: 1.5mm; padding: 3mm; }
+.kpi .v { font-size: 16pt; font-weight: 700; color: var(--accent-dim); line-height: 1.1; }
+.kpi .l { font-size: 8.5pt; color: var(--ink2); margin-top: 1mm; }
+.cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 3mm; margin: 0 0 3mm; }
+.card { border: 0.5pt solid var(--line); border-radius: 1.5mm; padding: 3mm; background: #fff; page-break-inside: avoid; }
+.card .t { font-weight: 700; font-size: 10.5pt; margin-bottom: 1mm; }
+.card .d { font-size: 9pt; color: var(--ink2); }
+.callout { background: var(--surface); border-left: 2.4mm solid var(--accent); border-radius: 1.2mm; padding: 3mm 3.5mm; margin: 0 0 3mm; font-size: 9.5pt; page-break-inside: avoid; }
+.callout.warn { border-left-color: var(--warn); background: #FFF8EF; }
+.callout.risk { border-left-color: var(--risk); background: #FEF2F4; }
+.callout.good { border-left-color: var(--good); background: #EFF9F3; }
+.callout .ct { font-weight: 700; font-size: 9pt; text-transform: uppercase; letter-spacing: 0.6px; color: var(--muted); margin-bottom: 1mm; }
+.quote { background: var(--surface2); border-radius: 1.2mm; padding: 3.5mm 4mm; margin: 0 0 3mm; font-size: 9.5pt; font-style: italic; color: var(--ink); page-break-inside: avoid; }
+.quote .att { font-style: normal; font-size: 8pt; color: var(--muted); margin-top: 1.5mm; }
+.pill { display: inline-block; font-size: 7.5pt; font-weight: 700; padding: 0.6mm 2mm; border-radius: 3mm; white-space: nowrap; }
+.pill-ok { background: #E8F5E9; color: #2E7D32; }
+.pill-warn { background: #FFF3E0; color: #E65100; }
+.pill-bad { background: #FFEBEE; color: #C62828; }
+.pill-good { background: #E3F2FD; color: #1565C0; }
+.pill-best { background: #F3E5F5; color: #6A1B9A; }
+.toc { margin: 0 0 4mm; }
+.toc-row { display: block; text-decoration: none; color: var(--ink); border-bottom: 0.5pt dotted var(--line);
+  padding: 1.6mm 0; font-size: 10pt; page-break-inside: avoid; }
+.toc-row .n { display: inline-block; width: 7mm; color: var(--accent); font-weight: 700; font-size: 9pt; }
+.toc-row .p { float: right; color: var(--muted); font-size: 9pt; }
+.toc-row .sub { display: block; font-size: 8.5pt; color: var(--muted); margin-left: 7mm; }
+.cover { background: linear-gradient(155deg, #0F766E 0%, #0D9488 45%, #115E59 100%); color: #fff; padding: 0; }
+.cover .inner { height: 100%; display: flex; flex-direction: column; justify-content: space-between; }
+.cover .band { margin: -14mm -12mm 0 -12mm; padding: 26mm 18mm 18mm 18mm; }
+.cover .kicker { font-size: 9pt; letter-spacing: 2px; text-transform: uppercase; opacity: 0.85; margin-bottom: 5mm; }
+.cover h1 { color: #fff; font-size: 30pt; }
+.cover .sub { font-size: 13pt; opacity: 0.92; margin-top: 3mm; max-width: 150mm; }
+.cover .foot { position: absolute; bottom: 0; left: -12mm; right: -12mm; margin: 0; padding: 8mm 18mm 10mm 18mm; background: rgba(0,0,0,0.16); font-size: 9pt; display: flex; justify-content: space-between; }
+.cover .meta { font-size: 9.5pt; }
+.cover .meta b { display: block; font-size: 7.5pt; text-transform: uppercase; letter-spacing: 1.2px; opacity: 0.7; font-weight: 600; margin-bottom: 0.5mm; }
+.cover .meta span { display: block; margin-bottom: 3mm; }
+.timeline { margin: 0 0 3mm; font-family: "Cascadia Mono", Consolas, monospace; font-size: 8.5pt; line-height: 1.7; white-space: pre; overflow: hidden; }
+.timeline .hl { color: var(--accent-dim); font-weight: 700; }
+.timeline .warn { color: var(--risk); font-weight: 700; }
+.check { list-style: none; padding-left: 0; margin: 0 0 3mm; }
+.check li { padding-left: 6mm; position: relative; margin-bottom: 1.4mm; font-size: 9.5pt; }
+.check li:before { content: "☐"; position: absolute; left: 0; top: -0.4mm; color: var(--accent); font-weight: 700; }
+.codebox { background: var(--surface2); border: 0.5pt solid var(--line); border-radius: 1.2mm; padding: 3mm 3.5mm; font-family: "Cascadia Mono", Consolas, monospace; font-size: 8.5pt; line-height: 1.6; white-space: pre; margin: 0 0 3mm; }
+.steps { counter-reset: st; margin: 0 0 3mm; padding: 0; list-style: none; }
+.steps li { position: relative; padding-left: 9mm; margin-bottom: 2.5mm; font-size: 9.5pt; }
+.steps li:before { counter-increment: st; content: counter(st); position: absolute; left: 0; top: 0.3mm;
+  width: 6mm; height: 6mm; border-radius: 50%; background: var(--accent); color: #fff;
+  font-size: 8.5pt; font-weight: 700; text-align: center; line-height: 6mm; }
+</style>
+</head>
+<body>
+
+<!-- ============ CAPA ============ -->
+<section class="page cover">
+  <div class="inner">
+    <div class="band">
+      <div class="kicker">Documento 04 de 04 · Equipe Cheers</div>
+      <h1>O kit de 13/11 e o plano de build</h1>
+      <div class="sub">O procedimento da noite em que o desafio é revelado, a grade que escolhe o escopo em 90 minutos, e as <b>32 h</b> de build com dois cortes declarados.</div>
+    </div>
+    <div class="foot">
+      <div class="meta">
+        <b>Documento</b>
+        <span>04 de 04 — Kit de 13/11 e plano de build</span>
+        <span>Uso operacional · 13 e 14/11</span>
+      </div>
+      <div class="meta" style="text-align:right">
+        <b>Regra de ouro</b>
+        <span>Às 20h00 de 13/11, o escopo está travado</span>
+        <span>Não às 21h. Não "amanhã".</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SUMÁRIO ============ -->
+<section class="page">
+  <div class="runhead"><span class="l">Cheers · Kit de 13/11 e plano de build</span><span class="r">Sumário</span></div>
+  <div class="eyebrow">Documento 04</div>
+  <h2>O que está neste documento</h2>
+  <div class="rule"></div>
+  <p class="lead">Este é o documento <b>operacional</b>. Ele é para ler na noite de 13/11 e para consultar no meio da madrugada de sábado. Ele tem duas partes: <b>como decidir em 90 minutos</b>, e <b>como construir em 32 horas</b>.</p>
+
+  <nav class="toc">
+    <a class="toc-row" href="#p3"><span class="n">1</span>O que 13/11 revela<span class="p">3</span><span class="sub">Três níveis de revelation e a grade de decisão de 4 testes</span>
+    <a class="toc-row" href="#p4"><span class="n">2</span>Os 5 kernels<span class="p">4</span><span class="sub">O que fica em cada cenário — e o pior cenário</span>
+    <a class="toc-row" href="#p5"><span class="n">3</span>O protocolo de 90 minutos<span class="p">5</span><span class="sub">O cronômetro, bloco a bloco</span>
+    <a class="toc-row" href="#p6"><span class="n">4</span>Quem faz o quê na live<span class="p">6</span><span class="sub">A divisão por pessoa e o template de 6 campos</span>
+    <a class="toc-row" href="#p7"><span class="n">5</span>As 4 armadilhas da noite<span class="p">7</span><span class="sub">E os 5 artefatos que precisam estar prontos às 20h</span>
+    <a class="toc-row" href="#p8"><span class="n">6</span>O build — a conta e a grade<span class="p">8</span><span class="sub">32 h de escopo em 32 h de relógio com 2 devs, dormindo</span>
+    <a class="toc-row" href="#p9"><span class="n">7</span>Bloco a bloco e a ordem de corte<span class="p">9</span><span class="sub">O que roda, o que morre, e a que horas</span>
+    <a class="toc-row" href="#p10"><span class="n">8</span>Os 3 trilhos paralelos<span class="p">10</span><span class="sub">Conteúdo, mentoria e dado — e o checklist de cada dev</span>
+    <a class="toc-row" href="#p11"><span class="n">9</span>Os 8 riscos e o protocolo do freeze<span class="p">11</span><span class="sub">O que quebra, e o que fazer quando breaks</span>
+    <a class="toc-row" href="#p12"><span class="n">10</span>O checklist do pitch e a logística<span class="p">12</span><span class="sub">Ensaio, plano B, equipamento e onde dormir</span>
+    <a class="toc-row" href="#p13"><span class="n">11</span>As 8 perguntas para a organização<span class="p">13</span><span class="sub">Para a live de 12/11 — P1, P2, P3</span>
+  </nav>
+
+  <div class="callout risk">
+    <div class="ct">A regra que vale acima de todas</div>
+    <b>§7.3 e §11.8.</b> O detalhamento do desafio "será apresentado na abertura do evento, diretamente às equipes", e vantagem indevida desclassifica o participante <b>e o grupo</b>. Por isso: <b>até 13/11, nada de código de produto.</b> O que se leva para a abertura é o <b>kit</b> — e o kit é o que está neste dossiê.
+  </div>
+</section>
+
+<!-- ============ 1. O QUE 13/11 REVELA ============ -->
+<section class="page" id="p3">
+  <div class="runhead"><span class="l">Cheers · Kit de 13/11 e plano de build</span><span class="r">1 · O que 13/11 revela</span></div>
+  <div class="eyebrow">Capítulo 1</div>
+  <h2>O que 13/11 revela</h2>
+  <div class="rule"></div>
+  <p class="lead">O reveal opera em <b>três níveis</b>. Só um deles reposiciona o trabalho — e é por isso que 90 minutos são suficientes.</p>
+
+  <table class="dense">
+    <thead><tr><th style="width:16%">Nível</th><th style="width:40%">O quê</th><th style="width:14%">Quando</th><th style="width:30%">O que fazemos</th></tr></thead>
+    <tbody>
+      <tr><td><b>1 · Tema</b></td><td>"Desafios e soluções para a <b>sustentabilidade dos modelos assistenciais de saúde</b>" (§2.1 + Anexo I)</td><td><b>Já está no regulamento</b></td><td>Nada. É o objeto, não a hipótese.</td></tr>
+      <tr><td><b>2 · Desafio</b></td><td>As questões levantadas pelas <b>empresas do Conecta Saúde 2026</b></td><td>13/11 (§7.3)</td><td>Escolher <b>qual</b> pergunta da empresa a gente ataca</td></tr>
+      <tr><td><b>3 · Direção</b></td><td>"as informações e direcionamentos necessários para o desenvolvimento das soluções" (§7.3)</td><td>13/11</td><td>Registrar as <b>restrições</b> de execução: dados, formato, escopo</td></tr>
+    </tbody>
+  </table>
+
+  <h3>A grade de decisão — 4 testes, nesta ordem</h3>
+  <p>O desafio escolhido é o que passa em <b>≥3 dos 4</b>. A ordem importa: o teste 1 filtra o que é dashboard, o teste 2 filtra o que é impossível em 32 h, e só depois o teste 3 e 4 olham o valor.</p>
+  <table class="dense">
+    <thead><tr><th style="width:6%">#</th><th style="width:16%">Teste</th><th style="width:34%">Pergunta</th><th>Por quê</th></tr></thead>
+    <tbody>
+      <tr><td><b>T1</b></td><td><b>Integração</b></td><td>O desafio cobre <b>≥3 das 4 dimensões</b> do Anexo I?</td><td>O Anexo I: "soluções integradas, capazes de articular dimensões como comportamento, ambiente, organização do trabalho e participação das pessoas". Se cobre 1, é dashboard — e o Anexo I rejeita dashboard</td></tr>
+      <tr><td><b>T2</b></td><td><b>Dado</b></td><td>Existe <b>dado público</b> que responde à pergunta?</td><td>Sem dado = sem protótipo em 32 h. O kit tem 9 datasets (VigIndústria, CAT, eSocial, ANS, CN-SESI, CANPAT, INSS, PIB setorial, IPEA) — só funciona se a pergunta cair neles</td></tr>
+      <tr><td><b>T3</b></td><td><b>Mensurabilidade</b></td><td>Existe um indicador de <b>antes e depois</b>?</td><td>Se não dá para medir, não dá para prometer — e §8.1.2 (Impacto) é 20% da nota</td></tr>
+      <tr><td><b>T4</b></td><td><b>Nossa evidência</b></td><td>A nossa evidência forte (<b>7ª dimensão morta · 0 itens · 65,6%</b>) é a <b>resposta direta</b> ao desafio?</td><td>É o que nos torna verificáveis em 10 segundos na frente de uma banca que lê o relatório do SESI</td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout">
+    <div class="ct">Regra de desempate</div>
+    Se dois desafios passarem em 3/4, escolhe o que <b>a empresa do Conecta Saúde pagaria para resolver</b> — o Anexo I diz que os desafios vêm das empresas, e quem tem dor paga. <b>Se nenhum passar em 3/4</b>, não é motivo de pânico: é motivo para reler o §3.3 (as 5 bifurcações) e escolher o kernel que responde ao conjunto.
+  </div>
+
+  <div class="callout risk">
+    <div class="ct">A armadilha do "sexy" — de novo, e agora com o desafio na mão</div>
+    <b>Se um desafio anunciado parecer "mais sexy" e estiver fora do §7.2, ele é distração</b> — é exatamente a armadilha da mensagem de ODS. A pergunta que substitui o instinto: <b>"Se a empresa do Conecta Saúde pagasse para resolver isto, ela pagaria?"</b> Se a resposta for não, não é o desafio deles — e a banca, recrutada pelo SESI (§1.2), vai saber.
+  </div>
+</section>
+
+<!-- ============ 2. OS 5 KERNELS ============ -->
+<section class="page" id="p4">
+  <div class="runhead"><span class="l">Cheers · Kit de 13/11 e plano de build</span><span class="r">2 · Os 5 kernels</span></div>
+  <div class="eyebrow">Capítulo 2</div>
+  <h2>Os 5 kernels</h2>
+  <div class="rule"></div>
+  <p class="lead">O kit não tem uma tese só. Tem <b>cinco kernels</b>, e o §10 de <code>docs/04-proposta.md</code> mapeia o resto. O que muda em 13/11 é <b>qual é o núcleo</b> — o resto é ajuste.</p>
+
+  <table class="dense">
+    <thead><tr><th style="width:24%">Se o desafio for sobre…</th><th style="width:30%">Núcleo (obrigatório)</th><th style="width:22%">Corte imediato</th><th>O que fica como camada</th></tr></thead>
+    <tbody>
+      <tr><td><b>Participação / autonomia / propósito</b></td><td><b>Escuta</b> (6 itens) + <b>Motor de alavancas</b></td><td>Export FHIR · Plano do trabalhador</td><td>Exposição prevista vira a camada de contexto</td></tr>
+      <tr><td><b>Ausenteísmo / custo / previsão de desfecho</b></td><td><b>Modelo de exposição prevista</b> + <b>Motor de alavancas</b></td><td>Escuta vira 4 itens · Plano vira 1 alavanca</td><td>Escuta entra se sobrar tempo</td></tr>
+      <tr><td><b>Risco / exposição / prevenção / laudo</b></td><td><b>Exposição prevista</b> + <b>Motor de alavancas</b> + orquestração de prazo</td><td>Escuta inteira</td><td>—</td></tr>
+      <tr><td><b>Retorno ao trabalho / incapacidade / readaptação</b></td><td><b>Catálogo de demandas por posto</b> + plano de retorno</td><td>Exposição prevista vira tabela</td><td>Export FHIR vira o entregável institucional</td></tr>
+      <tr><td><b>Fragmentação / interoperabilidade / SUS-plano</b></td><td><b>Export FHIR R4 (RNDS) + eSocial</b> + trajectory</td><td>Escuta vira acessória</td><td>—</td></tr>
+    </tbody>
+  </table>
+
+  <h3>O pior cenário — e o que se faz nele</h3>
+  <div class="callout risk">
+    <div class="ct">Desafio sobre "dashboard / BI / dados"</div>
+    É o cenário em que o Anexo I é acionado contra a gente: <i>"a resposta não está apenas na incorporação de novas tecnologias"</i>. <b>A saída:</b> reancorar nas 4 dimensões e dizer, <b>na primeira frase do pitch</b>, que dashboard sem participação não é modelo assistencial. O kernel vira <b>Escuta + Motor de alavancas</b>, e o dashboard é o <b>veículo</b> — o painel de exposição vira a tela que a empresa abre na segunda-feira. Isso é o que já está construído, e é por isso que o MVP não é "um dashboard".
+  </div>
+
+  <h3>Os 3 componentes e o que cada um custa</h3>
+  <table class="dense">
+    <thead><tr><th style="width:22%">Componente</th><th style="width:10%">Horas</th><th style="width:40%">Entregável verificável</th><th>Prioridade de corte</th></tr></thead>
+    <tbody>
+      <tr><td><b>Motor de alavancas</b></td><td>6 h</td><td>3 alavancas priorizadas, cada uma com o indicador nacional que a justifica · <b>as regras à vista</b></td><td><span class="pill pill-bad">NUNCA CORTA</span></td></tr>
+      <tr><td><b>Exposição prevista</b></td><td>8 h</td><td>índice 0–100 + composição em waterfall + risco por causa, <b>todos os pesos visíveis</b></td><td>3º (vira tabela)</td></tr>
+      <tr><td><b>Escuta</b></td><td>6 h</td><td>6 itens no celular, offline, 90 s, opt-out por bloco</td><td>1º (vira 4 itens)</td></tr>
+      <tr><td><b>Plano do trabalhador</b></td><td>8 h</td><td>PWA instalável + agregação k ≥ 10 + devolve as 2 alavancas dele</td><td>2º (devolve 1)</td></tr>
+      <tr><td><b>Export FHIR/eSocial</b></td><td>4 h</td><td>Bundle FHIR R4 (RNDS) + validador eSocial</td><td>4º</td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout good">
+    <div class="ct">A ordem de corte está escrita antes de começar</div>
+    <b>Export → Escuta → Plano → Exposição.</b> O <b>Motor de alavancas nunca sai</b> — é a promessa inteira. E essa ordem não muda quando o kernel muda: o que muda é <b>qual componente é o primeiro a ser construído</b>, não a ordem em que se abre mão deles.
+  </div>
+</section>
+
+<!-- ============ 3. O CRONÔMETRO ============ -->
+<section class="page" id="p5">
+  <div class="runhead"><span class="l">Cheers · Kit de 13/11 e plano de build</span><span class="r">3 · O protocolo de 90 minutos</span></div>
+  <div class="eyebrow">Capítulo 3</div>
+  <h2>O protocolo de 90 minutos</h2>
+  <div class="rule"></div>
+  <p class="lead">13/11, <b>18h30 → 20h00</b>. Cinco blocos de 15 minutos, um de 30. Ninguém fala nos dois primeiros blocos: <b>escutar é trabalho</b>.</p>
+
+  <table class="dense">
+    <thead><tr><th style="width:14%">Tempo</th><th style="width:20%">Bloco</th><th style="width:14%">Quem</th><th style="width:34%">O que fazer</th><th>Saída</th></tr></thead>
+    <tbody>
+      <tr><td><b>0:00–0:15</b></td><td><b>Escuta sem falar</b></td><td>os 5, em silêncio</td><td>Anotar as <b>falas literais</b> das empresas do Conecta Saúde 2026. Quais palavras se repetem? Quem falou de quê? <b>Ninguém discute ainda.</b></td><td>5 anotações brutas, uma por pessoa</td></tr>
+      <tr><td><b>0:15–0:30</b></td><td><b>Mapear nas 4 dimensões</b></td><td>Matheus</td><td>Para cada desafio anunciado: quais das 4 dimensões do Anexo I ele toca?</td><td>Challenge cards, uma por desafio, com as 4 dimensões marcadas</td></tr>
+      <tr><td><b>0:30–0:45</b></td><td><b>Testar o kit</b></td><td>Moisés + Omena</td><td>O desafio conecta a algum dos 5 kernels (O1–O5) ou aos 3 shortlisted (A/B/C)? Os dados públicos do kit respondem?</td><td>1 ou 2 desafios com "atende" / "não atende"</td></tr>
+      <tr><td><b>0:45–1:00</b></td><td><b>Decidir</b></td><td><b>time inteiro</b></td><td>Aplicar a grade de decisão (T1–T4)</td><td><b>1 desafio escolhido</b></td></tr>
+      <tr><td><b>1:00–1:30</b></td><td><b>Travar o escopo</b></td><td>Matheus escreve, os 5 revisam</td><td>Escrever os 6 campos. Escolher 1–3 componentes do MVP. Escrever a frase de 10 s.</td><td><b>1 página "escopo travado"</b></td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout risk">
+    <div class="ct">A regra de ouro do cronômetro</div>
+    <b>Às 20h00, o escopo está travado.</b> Não às 21h, não "amanhã". Quem decide às 20h decide com o cansaço do dia; quem decide às 21h decide sem dormir e sem protótipo.
+  </div>
+
+  <h3>O que muda em 13/11 — e o que não muda</h3>
+  <div class="cards">
+    <div class="card"><div class="t">Muda</div><div class="d">O <b>núcleo</b> (qual kernel), o <b>desafio</b> específico, a <b>frase de 10 segundos</b>, e o <b>gancho</b> do pitch (0:00–0:30).</div></div>
+    <div class="card"><div class="t">Não muda</div><div class="d">Os outros <b>6 blocos</b> do roteiro, a <b>grade de 4 dimensões</b>, os <b>9 datasets</b>, o <b>escudo regulatório</b>, a <b>estrutura da demo</b> e a <b>ordem de corte</b>.</div></div>
+  </div>
+
+  <div class="callout good">
+    <div class="ct">Por que o roteiro está pronto antes do reveal</div>
+    O roteiro de 3 min foi escrito para sobreviver à mudança de domínio — ele é sobre o <b>método</b> (escuta → alavanca → medição), não sobre o setor. <b>Só o gancho e a frase de 10 s mudam.</b> É por isso que ele existe antes de 13/11: <b>para não ser reescrito às 23h de uma sexta-feira.</b>
+  </div>
+</section>
+
+<!-- ============ 4. QUEM FAZ O QUÊ ============ -->
+<section class="page" id="p6">
+  <div class="runhead"><span class="l">Cheers · Kit de 13/11 e plano de build</span><span class="r">4 · Quem faz o quê na live</span></div>
+  <div class="eyebrow">Capítulo 4</div>
+  <h2>Quem faz o quê na live</h2>
+  <div class="rule"></div>
+  <p class="lead">Para ninguém ficar parado olhando. Cada pessoa tem uma pergunta para responder, e as perguntas são <b>independentes</b> — é assim que o time chega ao bloco de decisão com tudo pronto.</p>
+
+  <table class="dense">
+    <thead><tr><th style="width:16%">Pessoa</th><th style="width:30%">Papel na live</th><th>Por quê</th></tr></thead>
+    <tbody>
+      <tr><td><b>Moisés</b></td><td>escuta e anota as falas literais</td><td>é o especialista; conhece o vocabulário do SESI</td></tr>
+      <tr><td><b>Matheus</b></td><td>mapeia nas 4 dimensões e escreve o escopo travado</td><td>Product Owner</td></tr>
+      <tr><td><b>Omena</b></td><td>testa o kit contra viabilidade e canal</td><td>é quem fecha a venda</td></tr>
+      <tr><td><b>Esteves</b></td><td>testa o kit contra o <b>DESAFIO</b> (a pergunta da empresa) e a validação clínica</td><td>é a ponte com o cliente real</td></tr>
+      <tr><td><b>luquinhas</b></td><td>testa o kit contra o <b>tempo de build</b> — "isso é 32 h ou 60 h?"</td><td>quem vai ter que construir na madrugada</td></tr>
+    </tbody>
+  </table>
+
+  <h3>O template de 6 campos — preencher na hora, 13/11</h3>
+  <div class="codebox">DESAFIO ANUNCIADO (literal, 1 frase):
+_______________________________________________
+DIMENSÕES DO ANEXO I COBERTAS:  [ ] comporta  [ ] ambiente  [ ] org. do trab.  [ ] participação
+EIXO DO KIT QUE ATENDE:          O__   TESTES PASSADOS: T1 __ T2 __ T3 __ T4 __
+NÚCLEO DO MVP (1–3 componentes):
+  1. ______________________________  h
+  2. ______________________________  h
+  3. ______________________________  h
+PLANO DE CORTE (o que sai se apertar): ______________
+FRASE DE 10 S QUE ABRE O PITCH:
+  "_______________________________________________"</div>
+
+  <h3>Conferência antes de dormir (13/11, 20h00)</h3>
+  <ul class="check">
+    <li>O escopo fecha em <b>≤ 32 h</b> de build com 2 devs?</li>
+    <li>Existe <b>dado público</b> para cada número que vai aparecer no slide?</li>
+    <li>A frase de 10 s <b>não contém</b> "manutenção preditiva" nem promessa de ROI?</li>
+    <li>O pitch continua <b>3 minutos</b>?</li>
+    <li>Todo mundo sabe qual é o <b>núcleo</b> e qual é o <b>primeiro corte</b>?</li>
+  </ul>
+
+  <div class="callout">
+    <div class="ct">O produto da noite — 5 artefatos prontos às 20h de 13/11</div>
+    <b>1.</b> A página "escopo travado" (Matheus, 20h) · <b>2.</b> o slide único de impacto atualizado com os números do desafio real (Matheus, 22h) · <b>3.</b> o roteiro de 3 min reescrito — só o gancho e a frase de 10 s (Moisés, 23h) · <b>4.</b> o mapa do protótipo, com o que entra em cada tela e o plano de corte (luquinhas, 23h) · <b>5.</b> as dúvidas para os mentores, atualizadas (Matheus, manhã de 14/11).
+  </div>
+</section>
+
+<!-- ============ 5. AS ARMADILHAS DA NOITE ============ -->
+<section class="page" id="p7">
+  <div class="runhead"><span class="l">Cheers · Kit de 13/11 e plano de build</span><span class="r">5 · As 4 armadilhas da noite</span></div>
+  <div class="eyebrow">Capítulo 5</div>
+  <h2>As 4 armadilhas da noite</h2>
+  <div class="rule"></div>
+  <p class="lead">Estas quatro vão acontecer. A pergunta não é "se" — é "quem pega".</p>
+
+  <table class="dense">
+    <thead><tr><th style="width:6%">#</th><th style="width:36%">A armadilha</th><th>Como evitar</th></tr></thead>
+    <tbody>
+      <tr><td><b>A1</b></td><td><b>Travar a tese antes de ouvir.</b> Chegar com "nós já temos a solução pronta"</td><td>§7.3 é nivelamento. Chegar com <b>kit</b>, não com <i>vertex</i>. Se alguém do time defender a tese atual antes do bloco 0:15, é porque está com medo de refazer — e <b>refazer é mais barato que construir errado</b></td></tr>
+      <tr><td><b>A2</b></td><td><b>Ficar 90 minutos discutindo.</b> A discussão mais viável é a que mata a noite</td><td>Cronômetro de 15 em 15. <b>Às 20h00 decide, ponto.</b> O registro das decisões é no template de 6 campos, não na conversa</td></tr>
+      <tr><td><b>A3</b></td><td><b>Aceitar o desafio "sexy" fora do §7.2</b></td><td>§2 + a pergunta "a empresa pagaria?"</td></tr>
+      <tr><td><b>A4</b></td><td><b>Construir antes de travar o escopo.</b> Às 22h alguém começa a codar</td><td>O §4 do roteiro tem a ordem de sacrifício. <b>Ninguém toca em código antes do escopo travado.</b> §11.8: vantagem indevida desclassifica o grupo</td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout warn">
+    <div class="ct">A armadilha que não está na lista — e é a que mais custa</div>
+    <b>Chorar o escopo.</b> O kernel muda, a ordem de corte <b>não</b>. É tentador recomeçar do zero porque "o desafio é outro". <b>Não.</b> A regra é: mantém-se a ordem de corte, muda-se o que entra primeiro. E o que entra primeiro é decidido na grade de 4 testes, não na preferência da noite.
+  </div>
+
+  <h3>A transição: da live para o build</h3>
+  <ol class="steps">
+    <li><b>20h00 — escopo travado.</b> A página de 6 campos está preenchida e todo mundo leu. <b>Só a partir daqui existe código.</b></li>
+    <li><b>20h00–22h00 — D5: stack decidida.</b> Matheus + luquinhas escolhem a stack <b>com o desafio real à vista</b>. A recomendação da análise é <b>Vite + React + TS, com dados locais (JSON + SQLite) e PWA instalável</b> — 4 h de setup, que é o que deixa folga para o motor de alavancas.</li>
+    <li><b>22h00 — o slide é atualizado</b> com os números do desafio real, se houver.</li>
+    <li><b>23h00 — o roteiro é reescrito</b> (só o gancho e a frase de 10 s) e o mapa do protótipo está desenhado.</li>
+    <li><b>23h00 — dormir.</b> Check-in às 07h30 de sábado significa sair de casa às 05h30. <b>Dormir antes é o que garante as 32 h de build.</b></li>
+  </ol>
+
+  <div class="callout good">
+    <div class="ct">A frase para fechar a noite</div>
+    "Não é que a gente achou o desafio. É que a gente tem o <b>método</b> — e o método funciona em qualquer um deles. O que mudou foi o <b>kernel</b>. O motor, a escuta e a medição continuam."
+  </div>
+</section>
+
+<!-- ============ 6. A CONTA E A GRADE ============ -->
+<section class="page" id="p8">
+  <div class="runhead"><span class="l">Cheers · Kit de 13/11 e plano de build</span><span class="r">6 · O build — a conta e a grade</span></div>
+  <div class="eyebrow">Capítulo 6</div>
+  <h2>O build — a conta e a grade</h2>
+  <div class="rule"></div>
+  <p class="lead">A conta vem primeiro porque é ela que decide. Quem planeja 32 h de escopo como 32 h de relógio <b>entrega 14 h atrasado</b>.</p>
+
+  <table class="dense">
+    <thead><tr><th style="width:52%">Item</th><th style="width:48%">Valor</th></tr></thead>
+    <tbody>
+      <tr><td>Janela total — 14/11 07h30 (check-in) → 15/11 15h30 (entrega)</td><td><b>32 h de relógio</b></td></tr>
+      <tr><td>Menos check-in e abertura</td><td>−1 h → <b>08h30</b> é o início real do build</td></tr>
+      <tr><td>Menos almoço (1 h) e jantar (1 h)</td><td>−2 h</td></tr>
+      <tr><td>Menos <b>dormo dos 2 devs</b></td><td>−5 h</td></tr>
+      <tr><td><b>Tempo de build dos devs</b></td><td><b>≈ 21 h de relógio, com 2 devs = 42 dev-h</b></td></tr>
+      <tr><td>Desse total, <b>escopo puro</b></td><td><b>32 dev-h</b> (Motor 6 · Exposição 8 · Escuta 6 · Plano 8 · Export 4)</td></tr>
+      <tr><td><b>Sobra para integração, teste, polimento e imprevisto</b></td><td><b>≈ 10 dev-h (31%)</b></td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout good">
+    <div class="ct">A folga de 31% não é luxo — é o que absorve o imprevisto</div>
+    Ela é o motivo de o corte existir. <b>Se às 23h30 a folga já acabou, o corte não é opcional.</b>
+  </div>
+
+  <h3>A grade dos dois turnos</h3>
+  <div class="timeline">14/11  07h30  ▓ check-in + abertura (todos)
+       08h30  ┌─ TURNO 1 ─ devs construindo ─────────────────┐
+       12h00  │  Motor de alavancas                          │
+       13h00  │  almoço                                     │
+       17h00  │  Exposição prevista                          │
+       18h00  │  integração motor↔exposição + pausa          │
+       19h00  │  jantar                                     │
+       23h30  │  Escuta + Plano (parte 1)                   │
+23/11  00h00  ╞══ <span class="warn">CORTE 1 — decisão de escopo</span> ═════════╡
+       05h00  ╞══ 💤 os 2 devs dormem (5 h) ═════════════════╡
+       07h00  ├─ TURNO 2 ─ devs fechando ────────────────────┤
+       11h00  │  Plano (parte 2) + Export                   │
+       13h00  │  integração total + polimento + testes       │
+15/11  13h00  ╞══ <span class="warn">CORTE 2 — FREEZE DE ESCOPO</span> ═════════╡
+       14h30  │  só bug fix + teste do fluxo completo        │
+       15h30  └  🧊 FREEZE DO CÓDIGO + backup + ensaio final ┘
+       15h30  📦 ENTREGA DO PROTÓTIPO
+       16h00  🎤 PITCH (3 min)
+       19h00  🏁 encerramento</div>
+
+  <div class="callout warn">
+    <div class="ct">O alerta de calendário que ninguém tinha no radar</div>
+    Check-in às <b>07h30 de um sábado</b>, depois de uma live na sexta que termina às 20h30, com entrega às <b>15h30 de domingo</b>. <b>Quem planejar 2 dias de trabalho normal vai quebrar na sexta à noite.</b> Planejar como <b>um plantão de 30 h com revezamento</b> é o que funciona.
+  </div>
+</section>
+
+<!-- ============ 7. BLOCO A BLOCO ============ -->
+<section class="page" id="p9">
+  <div class="runhead"><span class="l">Cheers · Kit de 13/11 e plano de build</span><span class="r">7 · Bloco a bloco e a ordem de corte</span></div>
+  <div class="eyebrow">Capítulo 7</div>
+  <h2>Bloco a bloco</h2>
+  <div class="rule"></div>
+  <p class="lead">O que os devs fazem, e a hora em que cada coisa pode morrer. <b>Entregável verificável</b> em todas as linhas — nada de "terminar a feature".</p>
+
+  <table class="dense">
+    <thead><tr><th style="width:6%">Bloco</th><th style="width:18%">Horário</th><th style="width:7%">Dev-h</th><th style="width:22%">Componente</th><th style="width:33%">Entregável verificável</th><th>Corta?</th></tr></thead>
+    <tbody>
+      <tr><td><b>A</b></td><td>14/11 08h30–12h00</td><td>7</td><td><b>Motor de alavancas</b> (6 h)</td><td>3 alavancas priorizadas, cada uma com o indicador nacional que a justifica · <b>as regras à vista</b></td><td><span class="pill pill-bad">NUNCA CORTA</span></td></tr>
+      <tr><td>—</td><td>12h00–13h00</td><td>—</td><td>almoço</td><td>—</td><td>—</td></tr>
+      <tr><td><b>B</b></td><td>13h00–17h00</td><td>8</td><td><b>Exposição prevista</b> (8 h)</td><td>índice 0–100 + composição em waterfall + risco por causa, <b>todos os pesos visíveis</b></td><td>3º (vira tabela)</td></tr>
+      <tr><td><b>C</b></td><td>17h00–18h00</td><td>2</td><td>integração motor ↔ exposição</td><td>o par (exposição, contexto) produz as 3 alavancas</td><td>—</td></tr>
+      <tr><td>—</td><td>18h00–19h00</td><td>—</td><td>jantar</td><td>—</td><td>—</td></tr>
+      <tr><td><b>D</b></td><td>19h00–22h00</td><td>6</td><td><b>Escuta</b> (6 h)</td><td>6 itens no celular, offline, 90 s, opt-out por bloco</td><td>1º (vira 4 itens)</td></tr>
+      <tr><td><b>E</b></td><td>22h00–23h30</td><td>3</td><td><b>Plano do trabalhador</b> — parte 1 (8 h)</td><td>PWA instalável + agregação k ≥ 10 + devolve as 2 alavancas dele</td><td>2º (devolve 1)</td></tr>
+      <tr><td>🔴</td><td>23h30–00h00</td><td>1</td><td><b>CORTE 1</b></td><td>o que roda às 23h30 fica; o que não roda, sai — <b>agora</b></td><td>—</td></tr>
+      <tr><td>💤</td><td>00h00–05h00</td><td>—</td><td><b>os 2 devs dormem</b></td><td>o build está completo às 05h00</td><td>—</td></tr>
+      <tr><td><b>F</b></td><td>05h00–07h00</td><td>4</td><td><b>Plano</b> — parte 2</td><td>tela final do trabalhador, contador de k, nota de privacidade</td><td>—</td></tr>
+      <tr><td><b>G</b></td><td>07h00–11h00</td><td>8</td><td><b>Export</b> (4 h) + integração total</td><td>Bundle FHIR R4 (RNDS) + validador eSocial · <b>fluxo inteiro rodando</b></td><td>4º</td></tr>
+      <tr><td><b>H</b></td><td>11h00–13h00</td><td>4</td><td>polimento, ajuste de UX, testes</td><td>zero erro no console; fluxo testado em 2 máquinas</td><td>—</td></tr>
+      <tr><td>🔴</td><td>13h00–13h30</td><td>1</td><td><b>CORTE 2 — freeze de escopo</b></td><td>a partir daqui é <b>só bug fix</b>. Nenhum item novo</td><td>—</td></tr>
+      <tr><td>🧊</td><td>13h30–15h30</td><td>4</td><td>freeze do código, backup, ensaio final</td><td>protótipo em <b>2 notebooks</b> + pendrive + slide impresso</td><td>—</td></tr>
+    </tbody>
+  </table>
+
+  <h3>As regras do corte — escritas antes, aplicadas na hora</h3>
+  <table class="dense">
+    <thead><tr><th style="width:26%">Corte</th><th style="width:48%">Ordem de sacrifício</th><th>O que sobra</th></tr></thead>
+    <tbody>
+      <tr><td><b>CORTE 1</b> — 14/11 23h30</td><td>1º <b>Export</b> → 2º <b>Escuta</b> (vira 4 itens) → 3º <b>Plano</b> (devolve 1 alavanca) → 4º <b>Exposição</b> (vira tabela)</td><td><b>Motor de alavancas</b> — sempre. É o que entrega a promessa</td></tr>
+      <tr><td><b>CORTE 2</b> — 15/11 13h00</td><td>nada sai. <b>Nada novo entra.</b></td><td>—</td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout risk">
+    <div class="ct">Regra de ouro</div>
+    <b>Depois das 23h30 de sábado, ninguém começa feature nova.</b> Se alguém começar uma tela nova, a tela nova morre.
+  </div>
+</section>
+
+<!-- ============ 8. OS TRILHOS ============ -->
+<section class="page" id="p10">
+  <div class="runhead"><span class="l">Cheers · Kit de 13/11 e plano de build</span><span class="r">8 · Os 3 trilhos paralelos</span></div>
+  <div class="eyebrow">Capítulo 8</div>
+  <h2>Os 3 trilhos paralelos</h2>
+  <div class="rule"></div>
+  <p class="lead">Os devs <b>não</b> podem atender mentoria (§6.2 — "Desenvolvimento e Mentorias"). Então o time de conteúdo fica livre para isso, que é exatamente o que precisa acontecer.</p>
+
+  <table class="dense">
+    <thead><tr><th style="width:14%">Quem</th><th style="width:30%">14/11 (08h30–23h30)</th><th style="width:28%">15/11 (05h00–13h00)</th><th>15/11 (13h00–15h30)</th></tr></thead>
+    <tbody>
+      <tr><td><b>Moisés</b></td><td><b>Mentorias</b> (2ª–4ª do dia) — extrair o que importa e o que é acionável. Tarde: <b>checar cada número que aparece na tela contra a fonte</b>. Noite: <b>ensaios 1–5</b> do roteiro (gancho sozinho, cronometrado)</td><td><b>Ensaios 6–10</b> + <b>ensaio 9 com queda de demo simulada</b> (mata o processo e lê o plano B)</td><td>Revisão do roteiro com o que foi construído. <b>Ensaios 10–12</b> com o protótipo real</td></tr>
+      <tr><td><b>Esteves</b></td><td><b>Design das telas</b> — o protótipo tem que parecer com o slide de impacto. <b>Validação clínica dos 6 itens</b> com o parceiro médico (a pergunta faz sentido pra um trabalhador real?). Tarde: <b>imprimir o slide</b></td><td>Revisão visual do protótipo contra o slide. Foto do protótipo rodando</td><td><b>Print/foto do protótipo</b> para o plano de Continuação (não é exigência, mas é o que o §10.8 valoriza)</td></tr>
+      <tr><td><b>Omena</b></td><td><b>Dados institucionais</b>: Viva+ (2.738.306 vidas), PAO 2026 (objetivo estratégico), 10.800 empresas na BA, 76 empresas do MES, benchmark Salú (R$ 13,9/vida/mês). <b>Plano de piloto</b> com o SESI-BA</td><td>Conferir os números do slide contra a fonte, um por um. <b>Bloco de viabilidade</b> do pitch</td><td>Ensaios do bloco de viabilidade. Contato com a rede credenciada para o pós-hackathon</td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout good">
+    <div class="ct">A regra do time de conteúdo</div>
+    <b>Nenhum dev é interrompido</b> entre 08h30 e 23h30 por causa de dúvida de conteúdo — o dev responde no <b>intervalo das 18h</b> (1 h de pausa + integração).
+  </div>
+
+  <h3>O checklist de cada dev às 23h30 (antes de dormir)</h3>
+  <ul class="check">
+    <li>O protótipo <b>abre offline</b> com o Wi-Fi desligado?</li>
+    <li>O fluxo completo roda do início ao fim <b>em 90 s</b> (seletor → exposição → escuta → 2 itens → plano → alavancas)?</li>
+    <li><b>Zero erro no console</b>?</li>
+    <li>Cada número na tela tem a fonte na mesma tela ou no slide?</li>
+    <li><b>Se meu partner dormir e o meu note morrer, meu partner sabe rodar o meu?</b> <i>(cada um roda o build do outro — isso é obrigatório, não opcional)</i></li>
+    <li>O build está <b>commitado</b> e com <b>tag</b> (<code>v1.0-corte1</code>), para dar pra voltar?</li>
+  </ul>
+
+  <div class="callout warn">
+    <div class="ct">As 3 linhas que este plano protege</div>
+    <b>1.</b> Não começa feature nova depois das 23h30 de sábado. <b>2.</b> O motor de alavancas nunca sai do corte — é a promessa inteira. <b>3.</b> A entrega das 15h30 de domingo é <b>sagrada</b> — o corte existe para ela, não o contrário.
+  </div>
+</section>
+
+<!-- ============ 9. RISCOS E FREEZE ============ -->
+<section class="page" id="p11">
+  <div class="runhead"><span class="l">Cheers · Kit de 13/11 e plano de build</span><span class="r">9 · Os 8 riscos e o protocolo do freeze</span></div>
+  <div class="eyebrow">Capítulo 9</div>
+  <h2>Os 8 riscos e o protocolo do freeze</h2>
+  <div class="rule"></div>
+
+  <table class="dense">
+    <thead><tr><th style="width:6%">#</th><th style="width:34%">Risco</th><th>Plano</th></tr></thead>
+    <tbody>
+      <tr><td><b>R1</b></td><td><b>Um dev dorme e o outro trava num bug</b></td><td>Os dois dormem juntos (00h–05h). O CORTE 1 às 23h30 garante que o que estiver rodando às 05h00 está <b>completo</b>. Bug de madrugada só entra se for impeditivo (não abre tela / não carrega)</td></tr>
+      <tr><td><b>R2</b></td><td><b>A demo não abre offline na máquina do local</b></td><td>Zero recurso externo (sem CDN, sem fonte web). Testar em <b>2 notebooks</b> no dia 15. <b>Backup em pendrive</b> com o HTML + slide impresso. Plano B: o roteiro §8 lido do slide</td></tr>
+      <tr><td><b>R3</b></td><td><b>Zoom, tela, brilho, fonte pequena no projetor do SESI</b></td><td>Modo apresentação, zoom travado, brilho no máximo, <b>número grande</b>, slide único <b>impresso em A4</b> (2 cópias)</td></tr>
+      <tr><td><b>R4</b></td><td><b>O build estoura</b></td><td>Dois cortes com horário fixo. A folga de 10 dev-h é o amortecedor; se ela acabar antes das 23h30, o corte acontece mais cedo</td></tr>
+      <tr><td><b>R5</b></td><td><b>Alguém do time adoece ou não aparece</b></td><td>§9.7: o SESI <b>não media</b> desacordo entre membros. Por isso <b>cada componente tem 1 dono primário e 1 suplente</b>, e o pitch tem 5 linhas independentes (se um faltar, a linha dele é omitida, não improvisada)</td></tr>
+      <tr><td><b>R6</b></td><td><b>A rede do local cai</b></td><td>O protótipo não faz chamada de rede nenhuma. Testar com o Wi-Fi desligado às 13h30</td></tr>
+      <tr><td><b>R7</b></td><td><b>O número na tela está errado</b></td><td>Todo número tem fonte. <b>Revisão cruzada</b>: Omena confere contra a fonte, Moisés contra o paper, Esteves contra o slide</td></tr>
+      <tr><td><b>R8</b></td><td><b>O git trava ou o note perde o build</b></td><td>Commit a cada bloco fechado + <b>tag</b> em cada corte + <b>cópia em pendrive</b> às 14h30</td></tr>
+    </tbody>
+  </table>
+
+  <h3>O protocolo do freeze — 15/11, 13h30 → 15h30</h3>
+  <table class="dense">
+    <thead><tr><th style="width:16%">Hora</th><th>Ação</th></tr></thead>
+    <tbody>
+      <tr><td><b>13h30</b></td><td><b>Freeze de escopo.</b> A lista de features está fechada. Daqui em diante só entra bug</td></tr>
+      <tr><td>13h30–14h15</td><td>Bug fix + <b>teste do fluxo completo em 2 notebooks</b>, com o Wi-Fi desligado</td></tr>
+      <tr><td>14h15–14h45</td><td><b>Backup duplo</b>: commit final + tag + <b>cópia em pendrive</b> + <b>slide impresso</b> (2 cópias) + <b>foto do protótipo</b> rodando</td></tr>
+      <tr><td>14h45–15h15</td><td><b>Ensaio final do pitch com o protótipo real</b> — os 3 min, cronometrados, no modo apresentação</td></tr>
+      <tr><td>15:15–15:30</td><td><b>Silêncio.</b> Ninguém mexe em mais nada. Todos no modo apresentação, tela travada, brilho no máximo</td></tr>
+      <tr><td><b>15h30</b></td><td><b>Entrega do protótipo</b></td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout good">
+    <div class="ct">O ensaio é feito dentro da demo</div>
+    O <b>Modo Pitch</b> da demo tem os mesmos 7 blocos e os mesmos tempos do roteiro, com cronômetro e nota de apresentador. <b>Ensaiar é rodar a demo</b> — e é por isso que os tempos batem exatamente: 0:00 · 0:30 · 1:00 · 1:45 · 2:15 · 2:40 · 2:52.
+  </div>
+</section>
+
+<!-- ============ 10. CHECKLIST DO PITCH E LOGÍSTICA ============ -->
+<section class="page" id="p12">
+  <div class="runhead"><span class="l">Cheers · Kit de 13/11 e plano de build</span><span class="r">10 · O checklist do pitch e a logística</span></div>
+  <div class="eyebrow">Capítulo 10</div>
+  <h2>O checklist do pitch e a logística</h2>
+  <div class="rule"></div>
+
+  <h3>Antes de 12/11</h3>
+  <ul class="check">
+    <li>As <b>5 inscrições individuais</b> submetidas, cada uma com texto diferente (D1, D7, D11, D13, D15, D16)</li>
+    <li>D8 — <b>líder da equipe</b> definido e conta informada à organização</li>
+    <li>D17 — <b>substituto definido</b> para o e-mail de confirmação de 24 h (§4.3)</li>
+    <li><b>10 ensaios</b> do roteiro em voz alta, com cronômetro (D14)</li>
+    <li>Slide de impacto <b>impresso</b> (A4 paisagem, 2 cópias)</li>
+    <li>D9 — <b>inventário de equipamento</b> de cada um · D10 — <b>onde dormir</b> decidido</li>
+    <li><b>Todos online</b> em 13/11 às 18h30 (D12)</li>
+  </ul>
+
+  <h3>O que cada um leva — §11.2 não dá equipamento</h3>
+  <ul class="check">
+    <li>Notebook carregado, com o build <b>testado offline</b></li>
+    <li><b>Carregador</b> (a tomada do local pode não ter lugar)</li>
+    <li><b>Extensão</b> (e cabo HDMI se o projetor for da sala)</li>
+    <li>Mouse</li>
+    <li><b>Pendrive</b> com o build + o slide em PDF</li>
+    <li><b>Documento impresso</b>: slide de impacto (A4 paisagem) + o roteiro de 3 min</li>
+    <li>Celular carregado (é por onde chega a confirmação de seleção)</li>
+  </ul>
+
+  <div class="callout">
+    <div class="ct">E onde dormir — §11.3</div>
+    <b>Não há dormitório, mas há chuveiro.</b> Dormir no local economiza 1 h de translado às 05h30 de sábado — <b>vale</b>. Decidir até 12/11.
+  </div>
+
+  <h3>A agenda hora a hora, de 12 a 15/11</h3>
+  <table class="dense">
+    <thead><tr><th style="width:18%">Quando</th><th style="width:30%">O quê</th><th>Quem</th></tr></thead>
+    <tbody>
+      <tr><td><b>12/11 13h</b></td><td>Live de orientações da organização — as <b>8 perguntas</b> (3 são P1)</td><td>Matheus fala, o time anota</td></tr>
+      <tr><td><b>12/11 até 23h</b></td><td>Confirmação da seleção (24 h, §4.3) · ensaios 1–5 · slide impresso · D9 e D10</td><td>Todos</td></tr>
+      <tr><td><b>13/11 18h30–20h</b></td><td>Live de abertura · <b>escopo travado às 20h</b></td><td>Todos, com divisão pré-definida</td></tr>
+      <tr><td><b>13/11 20h–23h</b></td><td>D5 stack · slide atualizado · roteiro reescrito · mapa do protótipo · <b> dormir</b></td><td>Matheus, Moisés, luquinhas</td></tr>
+      <tr><td><b>14/11 07h30</b></td><td>Check-in</td><td>Todos</td></tr>
+      <tr><td><b>14/11 08h30–23h30</b></td><td>Turno 1 do build · <b>CORTE 1 às 23h30</b> · mentorias</td><td>Devs / Conteúdo</td></tr>
+      <tr><td><b>15/11 05h–13h</b></td><td>Turno 2 · integração · <b>CORTE 2 às 13h</b></td><td>Devs / Conteúdo</td></tr>
+      <tr><td><b>15/11 13h30–15h30</b></td><td>Freeze, backup, ensaio final</td><td>Todos</td></tr>
+      <tr><td><b>15/11 15h30 / 16h / 19h</b></td><td><b>Entrega · Pitch · Encerramento</b></td><td>Moisés fala</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- ============ 11. AS 8 PERGUNTAS ============ -->
+<section class="page" id="p13">
+  <div class="runhead"><span class="l">Cheers · Kit de 13/11 e plano de build</span><span class="r">11 · As 8 perguntas para a organização</span></div>
+  <div class="eyebrow">Capítulo 11</div>
+  <h2>As 8 perguntas para a organização</h2>
+  <div class="rule"></div>
+  <p class="lead">Para a live de orientações de <b>12/11 às 13h</b>. Ordenadas por consequência, não por tema. <b>Se der só 5 minutos, pergunte 1, 2 e 3.</b></p>
+
+  <h3>P1 · Bloqueiam o escopo — perguntar primeiro</h3>
+  <table class="dense">
+    <thead><tr><th style="width:5%">#</th><th style="width:52%">Pergunta</th><th>Por que destrava</th></tr></thead>
+    <tbody>
+      <tr><td><b>1</b></td><td><b>"Modelos sustentáveis de saúde suplementar" ou "modelos assistenciais de saúde"?</b> A descrição do formulário diz <i>saúde suplementar</i>; o regulamento (§2.1) e o Anexo I dizem <i>modelos assistenciais</i>. São dois recortes: plano/operadora (RN 465, ANS) × saúde ocupacional (ASSTI, NR-7, SESI). <b>O desafio detalhado de 13/11 é de qual lado?</b></td><td>É a bifurcação mais consequente do §7.3. Define se a nossa proposta é <b>diretamente o desafio</b> ou precisa ser reposicionada. As 5 bifurcações do kit já estão mapeadas para qualquer um dos dois lados.</td></tr>
+      <tr><td><b>2</b></td><td><b>A demo do protótipo entra nos 3 minutos do pitch, ou o protótipo é julgado à parte</b> a partir do que foi entregue às 15h30 de domingo?</td><td>Se for à parte, a estratégia muda: o pitch pode ser mais conceitual e o protótipo precisa se sustentar sozinho. Se for dentro, cada segundo de demo tem que render nota de pitch (60% do total). Não está no §8.</td></tr>
+      <tr><td><b>3</b></td><td><b>Quais são os desafios concretos que serão apresentados na abertura?</b> E as empresas por trás de cada um — alguma delas vai estar disponível para <b>validar o protótipo</b>?</td><td>O §7.3 só revela na abertura. Se a empresa que formulou o desafio estiver disponível, validamos com o cliente real em vez de hipótese. É o que separa um protótipo de uma maquete.</td></tr>
+    </tbody>
+  </table>
+
+  <h3>P2 · Mudam a forma do protótipo</h3>
+  <table class="dense">
+    <thead><tr><th style="width:5%">#</th><th style="width:52%">Pergunta</th><th>Por que destrava</th></tr></thead>
+    <tbody>
+      <tr><td><b>4</b></td><td><b>A organização libera acesso a dados do SESI/ASSTI</b> (anonimizados) para o protótipo, ou o time usa dados públicos?</td><td>Se houver dado real, o protótipo sai do terreno da simulação. Se não, usamos os 9 datasets públicos já mapeados e declaramos isso na tela — o que é honesto e pontuado por maturidade.</td></tr>
+      <tr><td><b>5</b></td><td><b>A composição do §5.3 (gestor, designer, 2 TI, especialista) é filtro de seleção ou apenas recomendação?</b></td><td>Se for filtro, a complementação do §5.4.2 pode ser um problema real. Como a equipe indicada tem prioridade (§5.4.1), queremos entender a ordem de prevalência.</td></tr>
+      <tr><td><b>6</b></td><td><b>Equipes indicadas com menos de 6 integrantes são complementadas?</b> O §5.4.1 prioriza a equipe indicada; o §5.4.2 completa equipes com menos de 6. <b>Qual prevalece?</b></td><td>Somos 5. Queremos saber se entramos com 5 ou se o sexto membro entra por indicação da Comissão — e quem seria, para não descobrir isso no meio do build.</td></tr>
+    </tbody>
+  </table>
+
+  <h3>P3 · Fecham a operação</h3>
+  <table class="dense">
+    <thead><tr><th style="width:5%">#</th><th style="width:52%">Pergunta</th><th>Por que destrava</th></tr></thead>
+    <tbody>
+      <tr><td><b>7</b></td><td><b>Como é definido o líder da equipe</b> para fins do prêmio? O §9.5 diz que a premiação cai na conta do membro indicado como líder; o §9.7 diz que a destinação é responsabilidade exclusiva da equipe.</td><td>Precisamos ter o líder designado e a conta informada <b>antes</b> de 14/11, e o combinado entre nós registrado — porque o SESI não media desacordo de equipe.</td></tr>
+      <tr><td><b>8</b></td><td><b>Há rede para os participantes e para as demonstrações no local?</b></td><td>O §11.2 não fornece equipamento: a demo roda na máquina de um de nós. Se o local tiver rede, dá para instalar dependências antes; se não, o protótipo é 100% offline por construção.</td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout good">
+    <div class="ct">Depois da live</div>
+    <b>12/11 à noite</b> → o time valida a tese e fecha o nome do produto e o líder. <b>13/11, 18h30</b> → abertura com o desafio real, e o escopo se trava em 90 minutos. <b>Aí sim começa o produto.</b>
+  </div>
+</section>
+
+</body>
+</html>

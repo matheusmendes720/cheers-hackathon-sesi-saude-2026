@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Cheers — O núcleo: tese, 7ª dimensão e os 4 gaps</title>
+<style>
+@page { size: A4 portrait; margin: 14mm 12mm; }
+* { -webkit-print-color-adjust: exact; print-color-adjust: exact; box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  font-size: 10.5pt; line-height: 1.55; color: #16202C; background: #fff;
+  -webkit-font-smoothing: antialiased;
+}
+@media screen {
+  html { background: #d0d0d0; }
+  body { margin: 0; padding: 20px 0; }
+  body > section { width: 210mm; min-height: 297mm; margin: 0 auto 20px; background: #fff;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.18); overflow: hidden; }
+}
+:root{
+  --accent:#0D9488; --accent-dim:#0F766E;
+  --ink:#16202C; --ink2:#3B4A5A; --muted:#6B7A8C;
+  --surface:#F5F7FA; --surface2:#EEF2F7; --line:#D6DEE8; --linesoft:#E7ECF3;
+  --info:#2563EB; --warn:#B45309; --risk:#BE123C; --good:#047857; --violet:#6D28D9;
+}
+.page { position: relative; min-height: 269mm; padding-top: 11mm; padding-bottom: 3mm; break-after: page; }
+.page:last-child { break-after: auto; }
+.runhead { position: absolute; top: 0; left: 0; right: 0; height: 7mm;
+  border-bottom: 0.5pt solid var(--line); font-size: 8pt; color: var(--muted); line-height: 7mm; }
+.runhead .l { float: left; } .runhead .r { float: right; }
+.runfoot { position: absolute; bottom: 0; left: 0; right: 0; height: 8mm;
+  border-top: 0.5pt solid var(--line); font-size: 8pt; color: var(--muted); line-height: 8mm; text-align: center; }
+.eyebrow { font-size: 8pt; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; color: var(--accent); margin: 0 0 2mm; }
+h1 { font-size: 24pt; line-height: 1.15; margin: 0 0 3mm; letter-spacing: -0.4px; }
+h2 { font-size: 15pt; line-height: 1.2; margin: 0 0 2mm; letter-spacing: -0.2px; page-break-after: avoid; }
+h3 { font-size: 11.5pt; margin: 0 0 1.5mm; color: var(--accent-dim); page-break-after: avoid; }
+p { margin: 0 0 2.5mm; }
+.rule { height: 2.2mm; background: var(--accent); width: 26mm; margin: 0 0 4mm; border-radius: 1mm; }
+.lead { font-size: 11pt; color: var(--ink2); margin: 0 0 4mm; }
+ul, ol { margin: 0 0 3mm; padding-left: 5mm; }
+li { margin-bottom: 1.2mm; }
+strong { color: var(--ink); }
+code { font-family: "Cascadia Mono", Consolas, monospace; font-size: 9pt; background: var(--surface2); padding: 0.3mm 1mm; border-radius: 1mm; }
+table { width: 100%; border-collapse: collapse; margin: 0 0 3mm; font-size: 9pt; line-height: 1.42; }
+thead th { background: var(--accent); color: #fff; text-align: left; padding: 2mm 2.5mm; font-size: 8.5pt; font-weight: 700; }
+tbody td { border-bottom: 0.5pt solid var(--linesoft); padding: 1.8mm 2.5mm; vertical-align: top; }
+tbody tr:nth-child(even) td { background: var(--surface); }
+table.dense { font-size: 8pt; line-height: 1.32; }
+table.tighter { font-size: 7.4pt; line-height: 1.24; }
+table.tighter thead th { padding: 1.3mm 1.6mm; font-size: 7.4pt; }
+table.tighter tbody td { padding: 0.9mm 1.6mm; }
+table.dense thead th { padding: 1.6mm 2mm; font-size: 8pt; }
+table.dense tbody td { padding: 1.2mm 2mm; }
+.kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 3mm; margin: 0 0 4mm; }
+.kpi { background: var(--surface); border: 0.5pt solid var(--line); border-left: 2.4mm solid var(--accent); border-radius: 1.5mm; padding: 3mm; }
+.kpi .v { font-size: 16pt; font-weight: 700; color: var(--accent-dim); line-height: 1.1; }
+.kpi .l { font-size: 8.5pt; color: var(--ink2); margin-top: 1mm; }
+.cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 3mm; margin: 0 0 3mm; }
+.card { border: 0.5pt solid var(--line); border-radius: 1.5mm; padding: 3mm; background: #fff; page-break-inside: avoid; }
+.card .t { font-weight: 700; font-size: 10.5pt; margin-bottom: 1mm; }
+.card .d { font-size: 9pt; color: var(--ink2); }
+.callout { background: var(--surface); border-left: 2.4mm solid var(--accent); border-radius: 1.2mm; padding: 3mm 3.5mm; margin: 0 0 3mm; font-size: 9.5pt; page-break-inside: avoid; }
+.callout.warn { border-left-color: var(--warn); background: #FFF8EF; }
+.callout.risk { border-left-color: var(--risk); background: #FEF2F4; }
+.callout.good { border-left-color: var(--good); background: #EFF9F3; }
+.callout .ct { font-weight: 700; font-size: 9pt; text-transform: uppercase; letter-spacing: 0.6px; color: var(--muted); margin-bottom: 1mm; }
+.quote { background: var(--surface2); border-radius: 1.2mm; padding: 3.5mm 4mm; margin: 0 0 3mm; font-size: 9.5pt; font-style: italic; color: var(--ink); page-break-inside: avoid; }
+.quote .att { font-style: normal; font-size: 8pt; color: var(--muted); margin-top: 1.5mm; }
+.pill { display: inline-block; font-size: 7.5pt; font-weight: 700; padding: 0.6mm 2mm; border-radius: 3mm; white-space: nowrap; }
+.pill-ok { background: #E8F5E9; color: #2E7D32; }
+.pill-warn { background: #FFF3E0; color: #E65100; }
+.pill-bad { background: #FFEBEE; color: #C62828; }
+.pill-good { background: #E3F2FD; color: #1565C0; }
+.pill-best { background: #F3E5F5; color: #6A1B9A; }
+.toc { margin: 0 0 4mm; }
+.toc-row { display: block; text-decoration: none; color: var(--ink); border-bottom: 0.5pt dotted var(--line);
+  padding: 1.6mm 0; font-size: 10pt; page-break-inside: avoid; }
+.toc-row .n { display: inline-block; width: 7mm; color: var(--accent); font-weight: 700; font-size: 9pt; }
+.toc-row .p { float: right; color: var(--muted); font-size: 9pt; }
+.toc-row .sub { display: block; font-size: 8.5pt; color: var(--muted); margin-left: 7mm; }
+.chain { display: flex; align-items: stretch; gap: 2mm; margin: 0 0 3mm; }
+.chain .node { flex: 1; border: 0.5pt solid var(--line); border-top: 2.4mm solid var(--accent); border-radius: 1.5mm; padding: 3mm; background: #fff; }
+.chain .node .h { font-weight: 700; font-size: 9.5pt; margin-bottom: 1mm; }
+.chain .node .b { font-size: 8.5pt; color: var(--ink2); }
+.chain .arrow { align-self: center; color: var(--accent); font-size: 14pt; font-weight: 700; }
+.steps { counter-reset: st; margin: 0 0 3mm; padding: 0; list-style: none; }
+.steps li { position: relative; padding-left: 9mm; margin-bottom: 2.5mm; font-size: 9.5pt; }
+.steps li:before { counter-increment: st; content: counter(st); position: absolute; left: 0; top: 0.3mm;
+  width: 6mm; height: 6mm; border-radius: 50%; background: var(--accent); color: #fff;
+  font-size: 8.5pt; font-weight: 700; text-align: center; line-height: 6mm; }
+.cover { background: linear-gradient(155deg, #0F766E 0%, #0D9488 45%, #115E59 100%); color: #fff; padding: 0; }
+.cover .inner { height: 100%; display: flex; flex-direction: column; justify-content: space-between; }
+.cover .band { margin: -14mm -12mm 0 -12mm; padding: 26mm 18mm 18mm 18mm; }
+.cover .kicker { font-size: 9pt; letter-spacing: 2px; text-transform: uppercase; opacity: 0.85; margin-bottom: 5mm; }
+.cover h1 { color: #fff; font-size: 30pt; }
+.cover .sub { font-size: 13pt; opacity: 0.92; margin-top: 3mm; max-width: 150mm; }
+.cover .foot { position: absolute; bottom: 0; left: -12mm; right: -12mm; margin: 0; padding: 8mm 18mm 10mm 18mm; background: rgba(0,0,0,0.16); font-size: 9pt; display: flex; justify-content: space-between; }
+.cover .meta { font-size: 9.5pt; }
+.cover .meta b { display: block; font-size: 7.5pt; text-transform: uppercase; letter-spacing: 1.2px; opacity: 0.7; font-weight: 600; margin-bottom: 0.5mm; }
+.cover .meta span { display: block; margin-bottom: 3mm; }
+.ladder { margin: 0 0 3mm; }
+.ladder .lv { display: flex; gap: 3mm; margin-bottom: 2mm; page-break-inside: avoid; align-items: flex-start; }
+.ladder .tag { flex: 0 0 26mm; font-size: 7.5pt; font-weight: 700; padding: 1mm 2mm; border-radius: 3mm; text-align: center; margin-top: 0.5mm; }
+.ladder .txt { flex: 1; font-size: 9.5pt; }
+.lv1 .tag { background: #E8F5E9; color: #2E7D32; } .lv2 .tag { background: #E3F2FD; color: #1565C0; }
+.lv3 .tag { background: #FFF3E0; color: #E65100; } .lv4 .tag { background: #FFF3E0; color: #E65100; }
+.lv5 .tag { background: #FFEBEE; color: #C62828; }
+</style>
+</head>
+<body>
+
+<!-- ============ CAPA ============ -->
+<section class="page cover">
+  <div class="inner">
+    <div class="band">
+      <div class="kicker">Documento 02 de 04 · Equipe Cheers</div>
+      <h1>O núcleo</h1>
+      <div class="sub">A tese, a 7ª dimensão do ASSTI, os <b>quatro gaps</b> empilhados, o mecanismo da proposta e o impacto honesto que dá para prometer.</div>
+    </div>
+    <div class="foot">
+      <div class="meta">
+        <b>Documento</b>
+        <span>02 de 04 — O núcleo</span>
+        <span>Leitura: 12 minutos</span>
+      </div>
+      <div class="meta" style="text-align:right">
+        <b>Base</b>
+        <span>VigIndústria Brasil 2026 (p. 16, 21, 95, 98, 100, 110–119)</span>
+        <span>Regulamento 2026 · Anexo I</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SUMÁRIO ============ -->
+<section class="page">
+  <div class="runhead"><span class="l">Cheers · O núcleo</span><span class="r">Sumário</span></div>
+  <div class="eyebrow">Documento 02</div>
+  <h2>O que está neste documento</h2>
+  <div class="rule"></div>
+  <p class="lead">Este é o documento que a gente <b>leva para a banca</b>. Ele responde: qual é a lacuna, por que ela é do tema, como a proposta a resolve ponta a ponta e — o mais importante — <b>o que dá para prometer e o que não dá</b>.</p>
+
+  <nav class="toc">
+    <a class="toc-row" href="#p3"><span class="n">1</span>A tese em uma frase<span class="p">3</span><span class="sub">E por que ela não pode ser invalidada pelo reveal de 13/11</span>
+    <a class="toc-row" href="#p4"><span class="n">2</span>A 7ª dimensão do ASSTI<span class="p">4</span><span class="sub">Declarada, nunca analisada, e a segunda mais bem validada do instrumento</span>
+    <a class="toc-row" href="#p5"><span class="n">3</span>Gap 1 · De dimensão<span class="p">5</span><span class="sub">As 4 dimensões do Anexo I × o que o instrumento mede — e os zero itens</span>
+    <a class="toc-row" href="#p6"><span class="n">4</span>Gap 2 · De ciclo<span class="p">6</span><span class="sub">A cadeia de 7 elos: onde a predição funciona e onde ninguém olha</span>
+    <a class="toc-row" href="#p7"><span class="n">5</span>Gap 3 · De decisão<span class="p">7</span><span class="sub">33 indicadores que não dizem "aqui está o foco" e nunca são medidos de novo</span>
+    <a class="toc-row" href="#p8"><span class="n">6</span>Gap 4 · De incumbente<span class="p">9</span><span class="sub">Quem ocupa o espaço hoje e por que nenhum deles resolve</span>
+    <a class="toc-row" href="#p9"><span class="n">7</span>O mecanismo, em três passos<span class="p">10</span><span class="sub">Trabalhador → posto → empresa, e as 4 pontas do sistema</span>
+    <a class="toc-row" href="#p10"><span class="n">8</span>A ponta de regulação<span class="p">11</span><span class="sub">Cada restrição do regulamento, transformada em argumento</span>
+    <a class="toc-row" href="#p11"><span class="n">9</span>A 7ª dimensão operacionalizada<span class="p">12</span><span class="sub">Os 6 itens, a pergunta literal e as regras do instrumento</span>
+    <a class="toc-row" href="#p12"><span class="n">10</span>O dia a dia<span class="p">13</span><span class="sub">Seis momentos de um dia de trabalho — é o que a banca vê na demo</span>
+    <a class="toc-row" href="#p13"><span class="n">11</span>O impacto honesto<span class="p">14</span><span class="sub">5 níveis de confiança, e a base científica que sustenta 2 das 3 alavancas</span>
+    <a class="toc-row" href="#p14"><span class="n">12</span>O que fica fora — e por quê<span class="p">15</span><span class="sub">4 cortes explícitos, o steelman do agrotech e a resposta curta</span>
+    <a class="toc-row" href="#p15"><span class="n">13</span>Resumo em 4 linhas<span class="p">17</span><span class="sub">O que a gente diz se perguntarem "resuma"</span>
+  </nav>
+
+  <div class="callout">
+    <div class="ct">Três regras que valem para todo este documento</div>
+    <b>1.</b> Todo número leva fonte — página e tabela. <b>2.</b> Não prometer economia: em ensaio randomizado (n = 32.974) o ROI de absenteísmo é <b>−49%</b>. <b>3.</b> Não chamar de "manutenção preditiva" — o Anexo I rejeita essa leitura.
+  </div>
+</section>
+
+<!-- ============ 1. A TESE ============ -->
+<section class="page" id="p3">
+  <div class="runhead"><span class="l">Cheers · O núcleo</span><span class="r">1 · A tese em uma frase</span></div>
+  <div class="eyebrow">Capítulo 1</div>
+  <h2>A tese em uma frase</h2>
+  <div class="rule"></div>
+
+  <div class="callout good">
+    <div class="ct">A tese</div>
+    <b>O SESI mede o risco que o trabalhador corre, mas não mede o trabalho que causa o risco.</b> A sétima dimensão do ASSTI — <i>fatores de redução da produtividade</i> — foi declarada e nunca analisada, e o questionário oficial não tem <b>nenhum</b> item de autonomia, participação ou propósito. A gente operacionaliza essa dimensão: o trabalhador responde 6 itens no celular, o agregado anônimo do posto vira um índice, e isso cruza com a exposição prevista para virar <b>3 alavancas priorizadas</b> para a empresa.
+  </div>
+
+  <h3>De onde ela vem — a lacuna está na fonte do tema, não no palpite</h3>
+  <div class="quote">
+    "Os resultados focalizam em <b>seis das sete dimensões</b> do Sistema de Avaliação em Saúde e Segurança do Trabalhador da Indústria — ASSTI (SESI, 2023), conforme ilustrado na Figura 1, a saber: (1) fatores demográficos; (2) fatores comportamentais; (3) bem-estar mental; (4) morbidade; (5) percepção de saúde e autocuidado; e, (6) cultura de segurança. <b>Não foram analisados, os fatores de redução da produtividade por não estarem alinhados ao propósito do presente estudo.</b>"
+    <div class="att">— VigIndústria Brasil 2026, p. 16</div>
+  </div>
+
+  <p>Isso é uma <b>lacuna declarada</b> — o relatório mais recente e mais completo do SESI sobre saúde do trabalhador diz, com todas as letras, que a 7ª dimensão ficou de fora. E o questionário que instrumentaliza o ASSTI (Anexo I do relatório, p. 110–119) não tem nenhum item que capture a dimensão que o Anexo I do <b>desafio</b> pede: participação, autonomia, propósito.</p>
+
+  <h3>Por que isso não muda em 13/11</h3>
+  <table class="dense">
+    <thead><tr><th style="width:22%">Nível</th><th style="width:44%">O que é</th><th style="width:16%">Quando</th><th style="width:18%">Muda?</th></tr></thead>
+    <tbody>
+      <tr><td><b>1 · Tema</b></td><td>"Desafios e soluções para a <b>sustentabilidade dos modelos assistenciais de saúde</b>" (§2.1 + Anexo I)</td><td>Já está no regulamento</td><td><span class="pill pill-ok">Não</span></td></tr>
+      <tr><td><b>2 · Desafio</b></td><td>As questões levantadas pelas empresas do Conecta Saúde 2026</td><td>13/11 (§7.3)</td><td><span class="pill pill-warn">É revelado</span></td></tr>
+      <tr><td><b>3 · Direção</b></td><td>"as informações e direcionamentos necessários para o desenvolvimento das soluções"</td><td>13/11 (§7.3)</td><td><span class="pill pill-warn">É revelado</span></td></tr>
+    </tbody>
+  </table>
+
+  <p><b>O que muda em 13/11 é o núcleo da implementação, não a tese.</b> A tese é uma lacuna do <b>tema</b>; o desafio é um <b>recorte</b> dentro do tema. Nenhum anúncio de desafio invalida uma lacuna declarada na fonte que dá nome ao tema. O que 13/11 faz é escolher <b>qual das 5 bifurcações</b> do kit a gente assume — e o escopo de 32 h se ajusta em 90 minutos.</p>
+
+  <div class="callout warn">
+    <div class="ct">E o único cenário em que a tese muda</div>
+    Se o desafio vier com recorte <b>fora de saúde do trabalhador</b> — saúde suplementar puro, ou uma frente de agro. Aí a bifurcação assume e o argumento institucional (PAO 2026 + canal Viva+) vira o plano B. Mas o <b>§7.2 continua mandando</b> em modelos assistenciais, e a lacuna da 4ª dimensão continua sendo do tema.
+  </div>
+</section>
+
+<!-- ============ 2. A 7ª DIMENSÃO ============ -->
+<section class="page" id="p4">
+  <div class="runhead"><span class="l">Cheers · O núcleo</span><span class="r">2 · A 7ª dimensão do ASSTI</span></div>
+  <div class="eyebrow">Capítulo 2</div>
+  <h2>A 7ª dimensão do ASSTI</h2>
+  <div class="rule"></div>
+  <p class="lead">Este é o achado que sustenta a proposta inteira. Não é uma interpretação nossa — é uma frase escrita no relatório e um número na página seguinte.</p>
+
+  <div class="kpis">
+    <div class="kpi"><div class="v">7</div><div class="l">dimensões do ASSTI (SESI, 2023)</div></div>
+    <div class="kpi"><div class="v">6</div><div class="l">foram analisadas no VigIndústria</div></div>
+    <div class="kpi"><div class="v">0</div><div class="l">itens de participação, autonomia ou propósito (p. 110–119)</div></div>
+    <div class="kpi"><div class="v">2ª</div><div class="l">posição em consistência interna entre todas as dimensões (p. 21)</div></div>
+  </div>
+
+  <div class="quote">
+    "…os fatores de cultura de segurança (CR = 0,975; AVE = 0,783), morbidade referida (CR = 0,902; AVE = 0,472) e <b>fatores de redução da produtividade (CR = 0,863; AVE = 0,581)</b> apresentaram os melhores indicadores de consistência interna, sendo que os fatores de cultura de segurança e os <b>fatores de redução da produtividade também apresentaram evidências satisfatórias de validade convergente (AVE &gt; 0,50)</b>."
+    <div class="att">— VigIndústria Brasil 2026, p. 21</div>
+  </div>
+
+  <div class="callout good">
+    <div class="ct">O ponto que fecha a tese</div>
+    <b>Não é uma dimensão fraca. É a bateria completa, validada, que ninguém usou.</b> O instrumento inteiro foi desenhado, piloto-testado e validado (CFI 0,973 · TLI 0,971 · RMSEA 0,060 · SRMR 0,130; teste-reteste PABAK &gt; 0,7) — e a 7ª dimensão ficou fora do primeiro relatório porque "não estava alinhada ao propósito do presente estudo". Ou seja: ela existe, está validada, e <b>falta alguém querer medi-la</b>.
+  </div>
+
+  <h3>A verificação literal no questionário (p. 110–119)</h3>
+  <table class="dense">
+    <thead><tr><th style="width:44%">Termo procurado no instrumento completo</th><th style="width:16%">Ocorrências</th><th>O que aparece, quando aparece</th></tr></thead>
+    <tbody>
+      <tr><td>autonomia · autônomo · decisão · decidir · sugestão · engajamento</td><td><b>0</b></td><td>—</td></tr>
+      <tr><td>voz do trabalhador · propósito · confiança · segurança psicológica</td><td><b>0</b></td><td>—</td></tr>
+      <tr><td>participação</td><td><b>2</b></td><td>"participou de atividade de promoção da saúde?" e tempo de tela em redes sociais — nenhuma das duas é participação no trabalho</td></tr>
+    </tbody>
+  </table>
+
+  <h3>As duas grafias do nome — qual usar</h3>
+  <table class="dense">
+    <thead><tr><th style="width:16%">Fonte</th><th style="width:46%">Como escreve</th><th>Nota</th></tr></thead>
+    <tbody>
+      <tr><td>VigIndústria, p. 16</td><td>"Sistema de Avaliação em Saúde e Segurança do Trabalhador da Indústria"</td><td><b>Use esta.</b> É o documento que a banca vai ler.</td></tr>
+      <tr><td>Caderno técnico, 2023</td><td>"Metodologia ASSTI (Avaliação de Saúde e Segurança em Trabalhadores da Indústria)"</td><td>É o caderno original. O ASSTI é sucessor do SAEVP (2010) e tem 3 índices: IGEV, IPRO, IPST.</td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout risk">
+    <div class="ct">E o relatório pede exatamente o que o instrumento não mede</div>
+    Na p. 98, o VigIndústria recomenda: <i>"orienta-se o <b>fortalecimento das competências de liderança para promover uma comunicação aberta e um ambiente psicologicamente seguro</b>"</i>". Mas o questionário não tem <b>nenhum</b> item que meça ambiente psicologicamente seguro, autonomia ou participação. <b>A medição cobre risco, bem-estar, morbidade, autocuidado e cultura de segurança — e para no limite do que a empresa oferece. Não mede o que o trabalhador exerce.</b>
+  </div>
+</section>
+
+<!-- ============ 3. GAP 1 ============ -->
+<section class="page" id="p5">
+  <div class="runhead"><span class="l">Cheers · O núcleo</span><span class="r">3 · Gap 1 — de dimensão</span></div>
+  <div class="eyebrow">Capítulo 3 · Gap 1 de 4</div>
+  <h2>Gap 1 · De dimensão</h2>
+  <div class="rule"></div>
+  <p class="lead">O Anexo I do desafio pede <b>quatro dimensões</b>. O instrumento oficial do SESI cobre três — e a quarta não tem nenhum item. Este é o gap que dá nome à proposta.</p>
+
+  <table class="dense">
+    <thead><tr><th style="width:20%">Dimensão (Anexo I)</th><th style="width:44%">Onde o VigIndústria mede</th><th style="width:36%">A lacuna</th></tr></thead>
+    <tbody>
+      <tr><td><b>Comportamento</b></td><td>Bloco comportamental completo: álcool episódico pesado 34,2% · sedentarismo no lazer 44,3% · tempo de tela 33,9% · tabaco 6,5%</td><td>Mede, mas não <b>prioriza por recorte</b>. Nada no sistema diz "aqui está o foco desta empresa".</td></tr>
+      <tr><td><b>Ambiente</b></td><td>Percepção de ambiente seguro 71,4% · Insatisfação com as condições de trabalho 8,1%</td><td>Dois indicadores, e <b>nenhum ligando ambiente → desfecho de saúde</b>.</td></tr>
+      <tr><td><b>Organização do trabalho</b></td><td>Liderança 72,6% · Prevenção 70,2% · Treinamento 69,8% · Comunicação 65,6% · Estresse 20,3%</td><td>Indicadores de <b>cultura</b>, <b>nenhum de organização</b>: jornada, autonomia, carga, apoio social.</td></tr>
+      <tr style="background:#FEF2F4 !important"><td><b>Participação das pessoas</b></td><td><b>NENHUM INDICADOR</b></td><td><b>O instrumento não mede participação, autonomia, decisão, sugestão, propósito, confiança ou segurança psicológica.</b> Zero itens (p. 110–119).</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Por que isso é um gap do <b>tema</b> e não do desafio</h3>
+  <p>O Anexo I não diz "quatro dimensões que o instrumento deveria medir". Ele diz que a resposta não está em incorporar tecnologia, mas em <b>redesenhar os modelos assistenciais</b> — mais integrados, participativos e conectados às necessidades reais das pessoas e das organizações. E lista as quatro dimensões que precisam ser articuladas. A 4ª — <b>participação das pessoas</b>, com destino em autonomia, participação, bem-estar e senso de propósito — é exatamente a que o sistema de medição do SESI deixou em branco.</p>
+
+  <div class="callout good">
+    <div class="ct">A regra de ouro da proposta</div>
+    <b>Não inventamos questionário.</b> A 7ª dimensão do ASSTI já existe como construto validado pelo SESI, com a bateria completa e pronto. A nossa contribuição não é criar uma escala — é <b>torná-la operacional</b>: dar voz, agregar com privacidade (k ≥ 10) e converter em alavanca de decisão. Quem validar a proposta na banca vai ver que a base é do SESI, não nossa.
+  </div>
+
+  <div class="callout">
+    <div class="ct">A leitura honesta da própria base</div>
+    O VigIndústria declara o próprio viés na p. 17: a amostra de conveniência — empresas que <b>voluntariamente</b> demandaram serviço ao SESI — "pode comprometer a representatividade". É o nosso principal contra-argumento e é nosso. A base é <b>transversal</b> (campo jul–dez/2025): <b>não há antes/depois</b>. E é exatamente por isso que o produto promete <b>medir</b> em vez de prometer resultado.
+  </div>
+</section>
+
+<!-- ============ 4. GAP 2 ============ -->
+<section class="page" id="p6">
+  <div class="runhead"><span class="l">Cheers · O núcleo</span><span class="r">4 · Gap 2 — de ciclo</span></div>
+  <div class="eyebrow">Capítulo 4 · Gap 2 de 4</div>
+  <h2>Gap 2 · De ciclo</h2>
+  <div class="rule"></div>
+  <p class="lead">A cadeia de valor da saúde ocupacional tem <b>7 elos</b>. Os sistemas existentes olham o meio. Onde a predição funciona — antes do evento — quase ninguém olha.</p>
+
+  <div class="chain">
+    <div class="node"><div class="h">1 · Presenteísmo</div><div class="b">Trabalhar com dor, cansaço ou adoecimento sem faltar. <b>Não existe em sistema nenhum.</b></div></div>
+    <div class="arrow">→</div>
+    <div class="node"><div class="h">2 · Exposição</div><div class="b">O que o posto produz: ruído, carga, calor, agentes químicos, jornada. <b>Existe em base pública, mas só agregada.</b></div></div>
+    <div class="arrow">→</div>
+    <div class="node"><div class="h">3 · Acidente</div><div class="b">CAT, INSS, eSocial. <b>Instrumentado.</b></div></div>
+    <div class="arrow">→</div>
+    <div class="node"><div class="h">4 · Afastamento</div><div class="b">4,1 mi em 2025 (+17,1%). <b>Instrumentado.</b></div></div>
+  </div>
+  <div class="chain">
+    <div class="node"><div class="h">5 · Incapacidade</div><div class="b">Permanente ou longa. <b>Instrumentado.</b></div></div>
+    <div class="arrow">→</div>
+    <div class="node"><div class="h">6 · Saída</div><div class="b">Desligamento, turnover, afastamento definitivo. <b>Instrumentado.</b></div></div>
+    <div class="arrow">→</div>
+    <div class="node"><div class="h">7 · Resultado</div><div class="b">Produtividade, margem, sustaining. <b>Só agregação nacional.</b></div></div>
+  </div>
+
+  <div class="callout warn">
+    <div class="ct">Onde a predição funciona é onde quase ninguém olha</div>
+    A predição só funciona nos elos <b>1 e 2</b> — <b>antes</b> do evento. O elo 1 (presenteísmo) não existe em sistema nenhum: não há dado, não há indicador, não há produto. O elo 2 (exposição) existe em base pública, mas só agregada por CNAE × porte × região — nunca no nível do posto.
+  </div>
+
+  <div class="cards">
+    <div class="card"><div class="t">O que a gente instrumenta do MVP</div><div class="d">Elo <b>2 (exposição prevista)</b> + elo <b>1 (a escuta do trabalhador sobre as condições que reduzem a capacidade de trabalhar)</b>. É por isso que o MVP não é "um app de check-in": é <b>uma janela que abre antes do afastamento</b>.</div></div>
+    <div class="card"><div class="t">Por que o presenteísmo não está no MVP</div><div class="d">O R$ 200–600 bi/ano do presenteísmo é fonte secundária <b>[a confirmar]</b> (IBEF-SP via AXENYA, 2024). E o R$ 468 bi (4% do PIB) é perda de produtividade por <b>doenças e acidentes de trabalho</b> — não do presenteísmo. Não vamos atribuir número a um elo que não temos dado.</div></div>
+    <div class="card"><div class="t">O que muda em 13/11</div><div class="d">Se o desafio vier sobre <b>interoperabilidade</b>, o export FHIR/RNDS vira o núcleo e a escuta vira caso de uso. Se vier sobre <b>exposição</b>, é o caso base. Se vier sobre <b>dashboard</b> (o cenário pior), reancoramos nas 4 dimensões.</div></div>
+    <div class="card"><div class="t">O que a proposta entrega em termos de ciclo</div><div class="d">Não um diagnóstico do passado — um <b>mecanismo de feedback</b> que fecha o ciclo: o trabalhador fala, o posto agrega, a empresa prioriza, e a intervenção é medida no ciclo seguinte. É a "continuidade de monitoramento sistemático" que o próprio VigIndústria pede na p. 100.</div></div>
+  </div>
+
+  <div class="quote">
+    "A continuidade do <b>monitoramento sistemático por meio do VigIndústria será fundamental para validar a efetividade das intervenções</b> em andamento e, por conseguinte, a eventual necessidade de reorientá-las."
+    <div class="att">— VigIndústria Brasil 2026, p. 100</div>
+  </div>
+</section>
+
+<!-- ============ 5. GAP 3 ============ -->
+<section class="page" id="p7">
+  <div class="runhead"><span class="l">Cheers · O núcleo</span><span class="r">5 · Gap 3 — de decisão</span></div>
+  <div class="eyebrow">Capítulo 5 · Gap 3 de 4</div>
+  <h2>Gap 3 · De decisão</h2>
+  <div class="rule"></div>
+  <p class="lead">O VigIndústria dá <b>33 indicadores</b> para <b>57.952 trabalhadores</b> em <b>825 empresas</b>. É um dado excelente. O que ele não dá é a resposta que o RH precisa: <b>"aqui está o foco desta empresa, e é isto que você faz na segunda-feira."</b></p>
+
+  <div class="kpis">
+    <div class="kpi"><div class="v">33</div><div class="l">indicadores com prevalência e IC 95%</div></div>
+    <div class="kpi"><div class="v">1</div><div class="l">onda — campo de jul–dez/2025, transversal</div></div>
+    <div class="kpi"><div class="v">0</div><div class="l">medições de antes/depois em todo o relatório</div></div>
+    <div class="kpi"><div class="v">95%</div><div class="l">de confiança, erro máximo de 2 p.p. — e sem desagregação por UF</div></div>
+  </div>
+
+  <h3>Três coisas que o relatório não faz</h3>
+  <div class="cards">
+    <div class="card"><div class="t">Não prioriza</div><div class="d">33 indicadores para toda a indústria. O RH recebe um relatório que descreve o Brasil do trabalho — e não o posto dele. <b>Priorizar exige comparar e decidir</b>, e o instrumento não foi feito para isso.</div></div>
+    <div class="card"><div class="t">Não mede se a intervenção funcionou</div><div class="d">Desenho transversal, de um tempo só. O próprio relatório pede continuidade de monitoramento (p. 100). <b>Não há antes/depois em lugar nenhum</b> — e sem antes/depois, nenhum programa de promoção de saúde se defende.</div></div>
+    <div class="card"><div class="t">Não devolve nada acionável ao posto</div><div class="d">A empresa recebe agregado. Não recebe "o que fazer". <b>E o painel da empresa é o mesmo formato para micro e para grande</b> — quando a micro precisa de uma ação de comunicação e a grande precisa de readequação ergonômica, o indicador é o mesmo.</div></div>
+  </div>
+
+  <div class="callout good">
+    <div class="ct">A virada que a proposta propõe</div>
+    <b>Do indicador para a alavanca.</b> O mesmo dado populacional, processado com <b>pesos à vista</b> e cruzado com a exposição prevista do posto, vira <b>3 alavancas priorizadas</b> — cada uma com o indicador nacional que a justifica. Não é um dashboard a mais: é a etapa que existe entre o diagnóstico e a ação.
+  </div>
+
+  <h3>As 3 alavancas e a evidência de cada uma</h3>
+  <table class="dense">
+    <thead><tr><th style="width:30%">Alavanca</th><th style="width:44%">Evidência que a sustenta</th><th>Por que é acionável</th></tr></thead>
+    <tbody>
+      <tr><td><b>1 · Reduzir a demanda no posto</b></td><td>Meta-análise em enfermagem: <b>demanda alta OR 1,57</b> (IC95% 1,04–2,36), significativo</td><td>Aponta onde mexer: jornada, demanda, ritmo</td></tr>
+      <tr><td><b>2 · Fortalecer o apoio de colegas e chefia</b></td><td>Meta-análise: <b>apoio no trabalho OR 0,58</b> (IC95% 0,41–0,83) — <b>reduziu</b> ausência</td><td>É intervenção de organização, não de bem-estar</td></tr>
+      <tr><td><b>3 · Comunicar prevenção de forma que chegue</b></td><td>65,6% consideram a comunicação <b>suficiente</b> (T36, p. 95) → <b>34,4%</b> não. Em micro e pequenas, só <b>56,2%</b> a acham suficiente</td><td>É a empresa-alvo do SESI-BA que está no gap</td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout warn">
+    <div class="ct">O contrapeso honesto — e ele é nosso</div>
+    A mesma meta-análise achou <b>job strain OR 1,20 (IC95% 0,94–1,52), não significativo</b>, e controle OR 0,79 (0,55–1,12), também não significativo. E o próprio HSE reconhece o contraste: Demands, Relationships, Change e Role se associaram a ansiedade e depressão, mas <b>control e apoio entre pares não</b>. <b>Por isso a proposta fala em demanda e apoio — e não em "autonomia genérica".</b>
+  </div>
+</section>
+
+<!-- ============ 6. GAP 4 ============ -->
+<section class="page" id="p8">
+  <div class="runhead"><span class="l">Cheers · O núcleo</span><span class="r">6 · Gap 4 — de incumbente</span></div>
+  <div class="eyebrow">Capítulo 6 · Gap 4 de 4</div>
+  <h2>Gap 4 · De incumbente</h2>
+  <div class="rule"></div>
+  <p class="lead">Não é que "não exista solução". Existe muita — e ela é ruim para o nosso caso. <b>Cada incumbent ocupa uma fatia e deixa o nosso gap aberto.</b></p>
+
+  <table class="dense tighter">
+    <thead><tr><th style="width:24%">Quem</th><th style="width:30%">O que faz</th><th style="width:46%">Por que não resolve o nosso gap</th></tr></thead>
+    <tbody>
+      <tr><td><b>SESI · ASSTI + Viva+</b><br><span style="font-size:7.5pt;color:#6B7A8C">o próprio SESI</span></td><td>Avaliação populacional do trabalhador, 7 dimensões, desde 2018</td><td>"Empresa só recebe agregado" — <b>não recebe nada acionável</b>. E a 7ª dimensão está morta dentro do próprio instrumento.</td></tr>
+      <tr><td><b>SOC · SGG · WOTY</b></td><td>Dashboard de SST + eSocial + PGR + COPSOQ</td><td>É <b>exatamente</b> o "dashboard de SST" que a nossa própria armadilha marca como valor incremental zero. Compliance, não participação.</td></tr>
+      <tr><td><b>bem.care · mywork · BlueService · Apdata</b></td><td>Contam a falta: atestado → folha</td><td>"Atestado = ausência, não saúde". <b>Contam a falta; ninguém cruza falta ↔ saúde ↔ população.</b> E a reclamação mais frequente do líder é não conseguir anexar atestado.</td></tr>
+      <tr><td><b>Onvida · Selven · DUO24h</b></td><td>Telemedicina B2B per capita</td><td>R$ 19,90–79,90/colaborador/mês. <b>Commodity.</b> Teleconsulta somada a app não é tese.</td></tr>
+      <tr><td><b>NRGuard · Benway · NR1Plus</b></td><td>COPSOQ/HSE + relatório IA + PGR</td><td>R$ 0–1.297/mês, com um player <b>gratuito e ilimitado</b>. Diagnóstico comoditizado.</td></tr>
+      <tr><td><b>500+ consultorias credenciadas SESI-BA</b></td><td>NR-1, PGR, laudos</td><td>R$ 15–80 mil, 4–12 semanas. <b>Entregam laudo</b> — a intervenção não é delas.</td></tr>
+      <tr><td><b>MEUSOC (do SOC)</b></td><td>App do trabalhador: 500 mil+ downloads</td><td><b>O canal já existe</b> — mas o trabalhador adota o app <i>sobre ele</i>, não <i>dentro</i> do plano de cuidado. É o canal certo com a lógica errada.</td></tr>
+      <tr><td><b>Wellhub · Benevity · Afya</b></td><td>Rede de bem-estar e benefícios</td><td><b>Fora do domínio.</b> "Ocupacional ≠ wellness". Não toca SST, ASO, PGR ou absenteísmo.</td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout">
+    <div class="ct">A frase que serve para a banca</div>
+    Não vamos dizer "não existe solução". Vamos dizer: <b>"o canal existe, o dado existe, o diagnóstico existe e o laudo existe — mas são quatro produtos separados, e nenhum deles cruza a saúde do trabalhador com o trabalho que causa o risco. O elo que falta é o mesmo elo que o SESI declarou e nunca mediu."</b>
+  </div>
+
+  <h3>As 4 portas de entrada — as barreiras reais</h3>
+  <table class="dense">
+    <thead><tr><th style="width:34%">Barreira</th><th style="width:16%">Intensidade</th><th>Por quê</th></tr></thead>
+    <tbody>
+      <tr><td>Dados populacionais do ASSTI</td><td><span class="pill pill-bad">Alta</span></td><td>Único dataset longitudinal de saúde do trabalhador na indústria — gerou o VigIndústria. E o indivíduo é dado sensível (LGPD).</td></tr>
+      <tr><td>Canal SESI</td><td><span class="pill pill-bad">Alta</span></td><td>500+ credenciadas, 15 carretas, 26 DRs. Distribuição física e confiança institucional; entrada por edital.</td></tr>
+      <tr><td>Prova de resultado em saúde</td><td><span class="pill pill-bad">Alta</span></td><td>Resultado é lento; comprador exige ROI e demo de 3 min.</td></tr>
+      <tr><td>Rede de clínicas (NR-7) + governança clínica</td><td><span class="pill pill-warn">Média</span></td><td>Sem execução, o software não entrega cuidado. <b>Parecer simulado elimina a equipe</b> (armadilha 4).</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- ============ 7. O MECANISMO ============ -->
+<section class="page" id="p9">
+  <div class="runhead"><span class="l">Cheers · O núcleo</span><span class="r">7 · O mecanismo</span></div>
+  <div class="eyebrow">Capítulo 7</div>
+  <h2>O mecanismo, em três passos</h2>
+  <div class="rule"></div>
+
+  <div class="chain">
+    <div class="node"><div class="h">TRABALHADOR</div><div class="b">6 itens offline · 90 s · opt-out por bloco · escala 1–5<br><br><b>Ele sai com as 2 alavancas que são dele.</b></div></div>
+    <div class="arrow">→</div>
+    <div class="node"><div class="h">POSTO / EMPRESA</div><div class="b">Índice de contexto do posto (k ≥ 10, agregado anônimo)<br>+ índice de exposição prevista (CNAE × porte × região), pesos à vista<br><br><b>"Como o modelo funciona" aberto na tela.</b></div></div>
+    <div class="arrow">→</div>
+    <div class="node"><div class="h">RESULTADO</div><div class="b"><b>3 alavancas priorizadas</b>, cada uma com o indicador nacional que a justifica<br><br>Dias expostos antes/depois · mudança organizacional observável</div></div>
+  </div>
+
+  <div class="callout">
+    <div class="ct">Em uma frase</div>
+    Um dispositivo de captura de sinal <b>em dois lados</b>: o trabalhador fala 6 itens num PWA instalável e offline; o agregado anônimo do posto cruza com um modelo de exposição previsto sobre bases públicas; e um motor de regras transparente traduz isso em 3 alavancas organizacionais com a evidência que as sustenta.
+  </div>
+
+  <h3>As 4 pontas do sistema — ponta a ponta</h3>
+  <table class="dense">
+    <thead><tr><th style="width:18%">Ponta</th><th style="width:40%">Hoje</th><th style="width:42%">Resolução</th></tr></thead>
+    <tbody>
+      <tr><td><b>Trabalhador</b></td><td>Fluxo: adoece → atestado → falta → o RH recebe uma folha. Ele <b>não é perguntado</b> sobre nada, e o plano de cuidado é montado <b>sobre</b> ele, sem ele.</td><td>Ele passa a <b>emitir sinal</b>: 6 itens, 90 s, offline, pode pular qualquer um — e recebe de volta as 2 alavancas que são dele. <b>A 4ª dimensão virando instrumento.</b></td></tr>
+      <tr><td><b>Empresa / RH</b></td><td>Recebe um relatório com 33 indicadores e nenhum "aqui está o foco".</td><td>Recebe <b>3 alavancas priorizadas</b>, cada uma com o indicador nacional que a justifica — e o porquê do peso, à vista.</td></tr>
+      <tr><td><b>SESI</b></td><td>A plataforma de <b>2.738.306 vidas ativas</b> (Viva+) não tem esta camada de escuta.</td><td>É <b>módulo da Plataforma Viva+</b>, e o objetivo estratégico do <b>PAO 2026</b> é literalmente "promover a gestão integrada da saúde dos trabalhadores por meio das soluções digitais e da inovação". Piloto: as <b>10.800 empresas</b> atendidas na Bahia + as <b>76 empresas</b> do MES.</td></tr>
+      <tr><td><b>Dado</b></td><td>Dado fragmentado: o plano não cobre ASO (RN 465 art. 14 §2º), eSocial é outro sistema, ASSTI é outro.</td><td>Base <b>100% pública</b>, <b>todos os pesos à vista</b>, com "como o modelo funciona" aberto. Também é o que nos protege da §10.6 (originalidade) e da §10.7 (PI de terceiros).</td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout good">
+    <div class="ct">A ponta a ponta cabe em uma frase de pitch</div>
+    "O trabalhador fala, o posto agrega, a empresa recebe <b>o que fazer</b> — e a gente mede se funcionou. O sistema é <b>offline, com pesos à vista, sobre base pública</b>, e roda dentro da Plataforma Viva+ do SESI."
+  </div>
+</section>
+
+<!-- ============ 8. A PONTA DE REGULAÇÃO ============ -->
+<section class="page" id="p10">
+  <div class="runhead"><span class="l">Cheers · O núcleo</span><span class="r">8 · A ponta de regulação</span></div>
+  <div class="eyebrow">Capítulo 8</div>
+  <h2>A ponta de regulação</h2>
+  <div class="rule"></div>
+  <p class="lead">Cada restrição abaixo é uma <b>restrição que virou argumento</b>. Nenhuma é opcional — e cada uma já tem resposta pronta no produto. É esta seção que separa o protótipo que a banca aprova do que ela elimina.</p>
+
+  <table class="dense">
+    <thead><tr><th style="width:20%">Norma</th><th style="width:40%">O que determina</th><th style="width:40%">Como a proposta trata</th></tr></thead>
+    <tbody>
+      <tr><td><b>Res. CFM nº 2.454/2026</b><br><span style="font-size:7.5pt;color:#6B7A8C">IA na medicina · DOU 27/02/2026 · vigência desde 26/08/2026</span></td><td>Art. 4º, I e §2º: IA só como <b>apoio</b>; <b>vedado delegar diagnóstico, prognóstico ou decisão terapêutica</b>. Art. 11: o uso deve ser explicado ao paciente. Anexo II, I: <b>baixo risco</b> para IA "sem influência decisória direta, atuando tipicamente em funções administrativas". Art. 18 §2º: ato médico é sempre do médico</td><td><b>É onde a solução inteira cabe.</b> O motor é <b>regras explicáveis</b>, não diagnóstico. E a tela "como o modelo funciona" satisfaz o art. 11. Dizer isso no pitch é o que separa a equipe das que serão eliminadas por parecer médico simulado</td></tr>
+      <tr><td><b>Res. CFM nº 2.382/2024</b><br><span style="font-size:7.5pt;color:#6B7A8C">Atesta CFM · 06/09/2024</span></td><td>Art. 1º: o Atesta CFM é <b>oficial e obrigatório, inclusive para atestados de saúde ocupacional</b>, com efeitos suspensos pelo TRF-1</td><td>O protótipo <b>não emite ASO nem atestado</b> e não usa dado real de trabalhador</td></tr>
+      <tr><td><b>LGPD</b><br><span style="font-size:7.5pt;color:#6B7A8C">Lei 13.709/2018 · art. 11 e 13</span></td><td>Art. 11: dado de saúde é <b>sensível</b>. §4º: <b>vedada vantagem econômica</b> no uso de dado sensível. §5º: <b>vedada seleção de risco</b> na contratação. Art. 13: base legal e ambiente controlado</td><td>Agregação com <b>k ≥ 10</b> por posto · opt-out por bloco · <b>zero dado individual</b> fora do aparelho · nada de vantagem econômica com dado de saúde · nada de seleção de risco</td></tr>
+      <tr><td><b>NR-7</b> (PCMSO)<br><span style="font-size:7.5pt;color:#6B7A8C">MTE</span></td><td>PCMSO; <b>ASO sigiloso, só apto/inapto</b>; item 7.5 e 7.5.6–7.5.11 (prazos): demissional <b>10 dias</b> · retorno: exame antes de reassumir <b>se afastamento ≥ 30 dias</b> · periódico 1–2 anos; item 7.6.2 — relatório analítico</td><td>O ASO é <b>ato médico e sigiloso</b>: o produto opera no <b>posto</b>, nunca no diagnóstico da pessoa. O prazo de demissional é o demo da ideia "Prazo" — mas ela não está no MVP</td></tr>
+      <tr><td><b>NR-1</b> (GRO/PGR)<br><span style="font-size:7.5pt;color:#6B7A8C">MTE · atualizada 2025</span></td><td>GRO/PGR; item 1.5.5.4 — checklist do PGR que dispara exames de vigilância</td><td>O motor consome o PGR como entrada de regra, mas <b>não produz laudo nem parecer</b></td></tr>
+      <tr><td><b>RN 465/2021</b> (ANS)<br><span style="font-size:7.5pt;color:#6B7A8C">art. 14 §2º</span></td><td>Exames ocupacionais ficam <b>fora da cobertura obrigatória</b>: admissionais, periódicos, retorno ao trabalho, mudança de função e demenciais</td><td>É o <b>fundo da fragmentação</b>: o plano não paga o ASO, o custo sai do empregador/SESI e <b>o dado não circula</b>. Trazer o trabalhador para dentro do fluxo é cobertura, não compliance — e é o suporte da meta 3.8</td></tr>
+      <tr><td><b>ANVISA RDC 751/2022</b><br><span style="font-size:7.5pt;color:#6B7A8C">Anexo I, regra 11</span></td><td>Software que alimenta decisão diagnóstica = <b>SaMD classe II</b>, com notificação obrigatória</td><td>Não construímos software de decisão diagnóstica — por isso não há notificação</td></tr>
+      <tr><td><b>Res. CFM 2.314/2022</b> · <b>CLT art. 442</b></td><td>Teleconsulta exige médico e consentimento · Exame pré-admissional só quando o PGR indica risco específico</td><td>Não produzimos teleconsulta · não há score pré-admissional — não temos score individual</td></tr>
+      <tr><td><b>Portaria GM/MS 1.434/2020</b><br><span style="font-size:7.5pt;color:#6B7A8C">RNDS</span> · <b>2.073/2011</b> (CPIISS)</td><td>Padrões oficiais de interoperabilidade (FHIR) · catálogo oficial: HL7, SNOMED-CT, TISS, DICOM, LOINC</td><td><b>Bundle FHIR R4 no perfil RNDS</b> é padrão oficial do país — o export não é um extra, é conformidade. É também a lista de padrões que o export respeita</td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout risk">
+    <div class="ct">Uma premissa que foi corrigida</div>
+    A norma de IA em medicina <b>não é</b> a Res. CFM 2.328/2022 (orçamentária do CFM) — é a <b>2.454/2026</b>. E "MIME/CGHS" não corresponde a nenhuma base pública identificável: <b>não citar</b>.
+  </div>
+</section>
+
+<!-- ============ 9. A 7ª OPERACIONALIZADA ============ -->
+<section class="page" id="p11">
+  <div class="runhead"><span class="l">Cheers · O núcleo</span><span class="r">9 · A 7ª operacionalizada</span></div>
+  <div class="eyebrow">Capítulo 9</div>
+  <h2>A 7ª dimensão operacionalizada</h2>
+  <div class="rule"></div>
+  <p class="lead">O que muda de "construto validado" para "instrumento em campo". <b>Os 6 itens são do HSE Management Standards</b> — o mesmo referencial que embasa as duas alavancas com OR significativo. Não inventamos pergunta: operacionalizamos o que a evidência já mede.</p>
+
+  <table class="dense">
+    <thead><tr><th style="width:20%">Item</th><th style="width:46%">A pergunta que o trabalhador lê</th><th style="width:16%">Escala</th><th>Por que está aqui</th></tr></thead>
+    <tbody>
+      <tr><td><b>Demanda</b></td><td>"No seu trabalho, o que exige mais esforço do que deveria?"</td><td>1 (nunca) a 5 (sempre)</td><td>OR 1,57 para afastamento — <b>é a alavanca 1</b></td></tr>
+      <tr><td><b>Controle</b></td><td>"Você consegue decidir como faz o seu trabalho?"</td><td>1–5</td><td>Contraste reconhecido pelo HSE: <b>não</b> se associou a ansiedade</td></tr>
+      <tr><td><b>Apoio</b></td><td>"Você recebe apoio de colegas e da chefia quando precisa?"</td><td>1–5</td><td>OR 0,58 — <b>é a alavanca 2</b></td></tr>
+      <tr><td><b>Reconhecimento</b></td><td>"Seu esforço é reconhecido?"</td><td>1–5</td><td>Reconstrução do <i>Role</i> do HSE</td></tr>
+      <tr><td><b>Propósito</b></td><td>"Você sabe por que o seu trabalho importa?"</td><td>1–5</td><td><b>O item que o instrumento oficial não tem</b> — e o destino do Anexo I</td></tr>
+      <tr><td><b>Segurança</b></td><td>"Você se sente seguro para falar de um problema no trabalho?"</td><td>1–5</td><td><b>Segurança psicológica</b> — o que a p. 98 recomenda e o instrumento não mede</td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout good">
+    <div class="ct">As regras do instrumento — o que garante que isso é elevado e não é vigiado</div>
+    <b>90 segundos</b> no total · <b>escala 1–5</b> em cada item · <b>opt-out por bloco</b> (pode pular qualquer um — inclusive todos) · <b>offline</b> (PWA instalável, funciona sem rede, sincroniza depois) · <b>agregado com k ≥ 10</b> por posto · <b>zero dado individual</b> fora do aparelho do trabalhador · <b>o trabalhador recebe de volta as 2 alavancas que são dele</b>.
+  </div>
+
+  <div class="callout">
+    <div class="ct">Por que isso não é "um app de bem-estar"</div>
+    Um app de bem-estar pede para o trabalhador cuidar de si. Este pede para o trabalhador <b>descrever o trabalho</b>, e devolve a ele e à empresa <b>as condições que produzem o dano</b>. O dado sai do individual e vira decisão organizacional — que é exatamente o "redesenhar o modelo assistencial" do Anexo I, e não "incorporar tecnologia".
+  </div>
+
+  <div class="callout warn">
+    <div class="ct">E por que 6 itens e não 20</div>
+    A bateria completa do ASSTI tem 46 indicadores. <b>90 segundos é o limite duro do comportamento</b> — e é por isso que a escuta do MVP é a <b>bateria de Demandas</b> do HSE (6 itens), que é exatamente o construto com OR significativo. O resto entra como <b>camada de contexto</b> no painel da empresa, não como questionário no celular.
+  </div>
+</section>
+
+<!-- ============ 10. O DIA A DIA ============ -->
+<section class="page" id="p12">
+  <div class="runhead"><span class="l">Cheers · O núcleo</span><span class="r">10 · O dia a dia</span></div>
+  <div class="eyebrow">Capítulo 10</div>
+  <h2>O dia a dia, ponta a ponta</h2>
+  <div class="rule"></div>
+  <p class="lead">Seis momentos de um dia de trabalho. É isto que a banca vai ver na demo — e é por isso que o time de conteúdo tem uma direção clara para o roteiro.</p>
+
+  <ol class="steps">
+    <li><b>07h40 · O convite.</b> O trabalhador recebe um QR no grupo do posto. Ninguém é obrigado — e ninguém precisa instalar nada: funciona no navegador do celular.</li>
+    <li><b>08h00 · 90 segundos.</b> Ele responde os 6 itens. Pode pular qualquer um. Pode parar e voltar depois. Nada sai do aparelho enquanto não sincroniza.</li>
+    <li><b>08h30 · A aggregating.</b> Quando o posto atinge <b>k ≥ 10</b> respostas, o índice de contexto é formado. Abaixo disso, <b>nada é mostrado</b> — é a regra que protege a LGPD e a confiança.</li>
+    <li><b>09h00 · A alavanca.</b> O índice cruza com a exposição prevista do posto (CNAE × porte × região) e com os indicadores nacionais. Saiem <b>3 alavancas priorizadas</b>, com o peso e a fonte visíveis.</li>
+    <li><b>10h00 · O plano do trabalhador.</b> Ele recebe as <b>2 alavancas que são dele</b> — não as da empresa. É o único momento do produto em que a pessoa recebe algo em troca de responder.</li>
+    <li><b>Segunda-feira seguinte · O antes/depois.</b> Dias expostos por posto, antes e depois. As 3 alavancas priorizadas. A mudança organizacional observável. <b>É o que a gente promete medir</b> — e o que o VigIndústria pede na p. 100.</li>
+  </ol>
+
+  <div class="callout">
+    <div class="ct">Os quatro dados que o protótipo mostra no painel do posto</div>
+    <b>Índice de contexto do posto</b> (k ≥ 10, agregado anônimo) · <b>índice de exposição prevista</b> (CNAE × porte × região, com pesos à vista) · <b>as 3 alavancas priorizadas</b>, cada uma com o indicador nacional que a justifica · <b>os dias expostos antes/depois</b>. É esse conjunto que responde "o que eu faço na segunda-feira".
+  </div>
+
+  <div class="callout good">
+    <div class="ct">O que a demo mostra, em ordem</div>
+    <b>Seletor</b> (empresa e posto) → <b>Exposição</b> (o índice previsto, com a composição à vista) → <b>"como o modelo funciona"</b> (a tela que satisfaz o art. 11 da Res. 2.454/2026) → <b>Escuta</b> (os 6 itens no celular) → <b>2 itens respondidos</b> → <b>"Ver meu plano"</b> (as 2 alavancas do trabalhador) → <b>Alavancas</b> (as 3 da empresa, com a fonte). <b>Esse é o roteiro do Modo Pitch da demo — e o ensaio acontece dentro dela.</b>
+  </div>
+</section>
+
+<!-- ============ 11. O IMPACTO ============ -->
+<section class="page" id="p13">
+  <div class="runhead"><span class="l">Cheers · O núcleo</span><span class="r">11 · O impacto honesto</span></div>
+  <div class="eyebrow">Capítulo 11</div>
+  <h2>O impacto honesto, em cinco níveis</h2>
+  <div class="rule"></div>
+  <p class="lead">A forma mais forte de mostrar maturidade para uma banca que lê o §8 é <b>dizer em voz alta o que a gente não pode afirmar</b>. Esta é a régua do time — e o slide de impacto já a carrega.</p>
+
+  <div class="ladder">
+    <div class="lv lv1"><div class="tag">1 · CERTEIRO<br>(fato da fonte)</div><div class="txt">A 7ª dimensão do ASSTI existe, foi declarada e nunca analisada (p. 16); o instrumento não tem nenhum item de participação, autonomia ou propósito (p. 110–119); 106 milhões de dias perdidos e 4,1 milhões de afastamentos no INSS em 2025 (+17,1%); 20,0% dos trabalhadores faltaram ≥1 dia por semana por saúde (n = 123.355). <b>Verificável por qualquer banca em 10 segundos.</b></div></div>
+    <div class="lv lv2"><div class="tag">2 · CERTEIRO<br>(projeto)</div><div class="txt">O protótipo é funcional, roda <b>offline</b> no celular, agrega com <b>k ≥ 10</b>, mostra os pesos à vista e exporta FHIR/RNDS. <b>Isto é nosso e a gente pode mostrar.</b></div></div>
+    <div class="lv lv3"><div class="tag">3 · HIPÓTESE<br>(a medir)</div><div class="txt">Que a escuta instrumentada antecipa o desfecho de saúde do trabalho; que 3 alavancas priorizadas mudam a organização do posto; que medir antes/depois viabiliza a reorientação de intervenções — que é o que a p. 100 do VigIndústria pede. <b>Hipótese nossa, sujeita a teste.</b></div></div>
+    <div class="lv lv4"><div class="tag">4 · ASSOCIAÇÃO<br>(não é causal)</div><div class="txt">Demanda OR 1,57 (1,04–2,36) e apoio OR 0,58 (0,41–0,83) vêm de <b>meta-análises observacionais</b>. Elas <b>associam</b> — não provam causalidade, e é por isso que a proposta <b>mede</b> em vez de prometer. <b>É essa distinção que separa a nossa fala da de um app de bem-estar.</b></div></div>
+    <div class="lv lv5"><div class="tag">5 · O QUE NÃO<br>SERÁ AFIRMADO</div><div class="txt"><b>Economia. ROI. Redução de absenteísmo em %.</b> Em ensaio randomizado (n = 32.974), o ROI de absenteísmo é <b>−49%</b> (BCR 0,51). Em não randomizados, 325%. A meta-análise de 2025 (23 estudos) dá <b>indeterminado</b> (P = 0,890). O IESS estima que <b>90%</b> das ações de promoção da saúde em empresas não são bem sucedidas. <b>Não vamos pedir confiança para uma promessa que a literatura não sustenta.</b></div></div>
+  </div>
+
+  <h3>O que a gente promete medir</h3>
+  <div class="cards">
+    <div class="card"><div class="t">Dias expostos por posto</div><div class="d">Antes e depois da intervenção. Um número que a empresa não tem hoje e que o VigIndústria não dá (é transversal).</div></div>
+    <div class="card"><div class="t">3 alavancas priorizadas</div><div class="d">Cada uma com o indicador nacional que a justifica e o peso do modelo à vista.</div></div>
+    <div class="card"><div class="t">Mudança organizacional observável</div><div class="d">O que mudou no posto — que é o indicador de "efetividade das intervenções" que o relatório pede na p. 100.</div></div>
+    <div class="card"><div class="t">E nada mais</div><div class="d">Sem número de economia no slide. Sem business model no centro. §2.3: a ação "não possui caráter comercial nem objetiva resultados financeiros".</div></div>
+  </div>
+
+  <div class="callout warn">
+    <div class="ct">A pergunta que a banca vai fazer: "quanto isso economiza?"</div>
+    <b>Resposta de 20 segundos:</b> "Não sabemos, e é por isso que o protótipo mede. Em ensaio randomizado com 33 mil pessoas, o retorno de programas de bem-estar foi de <b>menos 49%</b> — e a meta-análise mais recente é indeterminada. O que a gente promete é <b>o antes e o depois</b>: quantos dias expostos o posto tinha, quantos tem depois, e quais três alavancas priorizadas. Se isso funcionar, o dinheiro vem junto — mas a gente não vai vender o que não mediu."
+  </div>
+</section>
+
+<!-- ============ 12. O QUE FICA FORA ============ -->
+<section class="page" id="p14">
+  <div class="runhead"><span class="l">Cheers · O núcleo</span><span class="r">12 · O que fica fora</span></div>
+  <div class="eyebrow">Capítulo 12</div>
+  <h2>O que fica fora — e por quê</h2>
+  <div class="rule"></div>
+  <p class="lead">Quatro cortes explícitos. <b>Cada um vira nota</b>, porque a banca avalia maturidade e a maturidade é exatamente o que você <i>não</i> tenta fazer.</p>
+
+  <div class="cards">
+    <div class="card"><div class="t">1 · Não é diagnóstico, nem triagem, nem laudo</div><div class="d">§2.3 (sem caráter comercial) + Res. CFM 2.454/2026 (art. 4º I e §2º; art. 18 §2º). <b>O laudo é commodity</b> — 500+ consultorias vendem por R$ 15–80 mil em 4–12 semanas. E parecer simulado é a forma mais rápida de ser eliminado.</div></div>
+    <div class="card"><div class="t">2 · Não é app de bem-estar ou de atividade</div><div class="d">Atividade moderada <b>no trabalho</b>: +20 min/dia → <b>+15% de risco de afastamento longo</b> (p = 0,02). <b>No lazer</b> → −20%. Atividade no trabalho é exposição, não bem-estar. E a Centeni captou R$ 5 mi, chegou a 650 clientes e <b>devolveu R$ 2,5 mi em jul/2026</b>.</div></div>
+    <div class="card"><div class="t">3 · Não é dashboard de SST</div><div class="d">É o que SOC, SGG, WOTY e o próprio ASSTI já vendem. <b>Valor incremental zero</b> — e a banca sabe disso antes da gente falar.</div></div>
+    <div class="card"><div class="t">4 · Não é telemedicina</div><div class="d">R$ 19,90–79,90/colaborador/mês já é commodity, e o §2.3 proíbe o enquadramento comercial. Teleconsulta somada a app não é tese.</div></div>
+  </div>
+
+  <h3>O caminho que o time queria seguir, e por que a resposta foi o regulamento</h3>
+  <p>O time tinha uma preferência declarada: <b>"Agrotech + IoT + cadeia de frio + biotecnologia" — "seems much sexier"</b>. A resposta não foi gosto, foi regulamento. É honesto registrar <b>o que havia de verdadeiro</b> nesse caminho antes de descartá-lo:</p>
+  <table class="dense tighter">
+    <thead><tr><th style="width:38%">O que havia de verdadeiro</th><th style="width:62%">Por que mesmo assim não é o caminho</th></tr></thead>
+    <tbody>
+      <tr><td>§2.1 fala em "soluções inovadoras e <b>de base tecnológica</b>"</td><td>A tecnologia é bem-vinda. O que o Anexo I rejeita é a resposta ser <b>só</b> tecnologia — "a resposta não está apenas na incorporação de novas tecnologias". IoT industrial é o exemplo do que ele recusa.</td></tr>
+      <tr><td>IoT é visual e demonstrável em 32 h</td><td>Também é o que a banca lê como "manutenção preditiva" — e que <b>não toca nenhuma das 4 dimensões</b> do Anexo I. O mesmo esforço, investido em PWA offline + pesos à vista + demo ao vivo, pontua onde a banca olha.</td></tr>
+      <tr><td>Cadeia de frio e biotecnologia são saúde</td><td>Mas saúde <b>animal e vegetal</b> não é o ecossistema do §3.6 (profissionais e acadêmicos de saúde, TI, design, gestão) nem o objeto do §7.2 (modelos assistenciais de saúde). E §2.3 exclui o caráter comercial.</td></tr>
+      <tr><td>Agrotech é "sexy" e a ideia é do time</td><td>§10.6 exige originalidade — e agrotech é o espaço mais crowded que existe. §4.1.2 avalia o formulário <b>antes</b> do reveal: a proposta é julgada por quem lê o texto do formulário.</td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout good">
+    <div class="ct">O reframing — o que a gente fez com o "sexy"</div>
+    "Sexy" é <b>variável de pitch, não de domínio</b>. O que a banca paga com o "sexy" é 40% da nota em <b>Sofisticação técnica, Maturidade e Experiência do usuário</b>. O mesmo impulso — IoT, dado, precisão — transposto para o domínio certo vira: <b>PWA instalável e offline com 90 s no celular · modelo transparente com pesos à vista · agregação com k ≥ 10 · export FHIR/RNDS · demo funcional ao vivo</b>. Isso é mais bonito que um dashboard de IoT — e pontua.
+  </div>
+
+  <div class="callout">
+    <div class="ct">A resposta curta, se perguntarem "e se o desafio for outro?"</div>
+    "A nossa tese é a <b>lacuna da 4ª dimensão</b>, que é do <b>tema</b> — não é palpite sobre o desafio. Em 13/11 a gente descobre <b>qual</b> pergunta da empresa a gente ataca, e o escopo de 32 h se ajusta em 90 minutos. Se vier saúde mental, a exposição sai do MVP. Se vier interoperabilidade, o export FHIR vira o núcleo. <b>O que não muda é o método</b>: modelo transparente sobre dado público, motor de regras, e a promessa de medir."
+  </div>
+</section>
+
+<!-- ============ 13. RESUMO ============ -->
+<section class="page" id="p15">
+  <div class="runhead"><span class="l">Cheers · O núcleo</span><span class="r">13 · Resumo em 4 linhas</span></div>
+  <div class="eyebrow">Capítulo 13</div>
+  <h2>Resumo em 4 linhas</h2>
+  <div class="rule"></div>
+
+  <div class="callout good">
+    <div class="ct">Se alguém pedir "resuma em 4 linhas"</div>
+    O gap é <b>de dimensão</b> (a participação não tem instrumento), <b>de ciclo</b> (o elo 1 da cadeia não existe em sistema nenhum), <b>de decisão</b> (33 indicadores que não dizem o que fazer) e <b>de produto</b> (quem ocupa o espaço só conta falta ou vende laudo). A proposta resolve os quatro com o mesmo mecanismo — <b>o trabalhador fala, o agregado vira índice, a empresa recebe alavanca, e a gente mede</b>. E é a única versão que <b>não pode ser invalidada pelo reveal</b>, porque nasce de uma lacuna que a própria fonte do desafio declara.
+  </div>
+
+  <h3>Os quatro gaps, lado a lado</h3>
+  <table class="dense">
+    <thead><tr><th style="width:16%">Gap</th><th style="width:36%">A lacuna</th><th style="width:28%">A evidência</th><th>Como a proposta resolve</th></tr></thead>
+    <tbody>
+      <tr><td><b>1 · Dimensão</b></td><td>Das 4 dimensões do Anexo I, a 4ª (participação) não tem nenhum item de medição</td><td>p. 16 e p. 110–119 do VigIndústria</td><td>6 itens do HSE operacionalizados como instrumento de campo</td></tr>
+      <tr><td><b>2 · Ciclo</b></td><td>A cadeia tem 7 elos e a predição só funciona nos 2 primeiros — onde ninguém olha</td><td>Presenteísmo sem dado; exposição só agregada</td><td>Escuta instrumentada no elo 1 + exposição prevista no elo 2</td></tr>
+      <tr><td><b>3 · Decisão</b></td><td>33 indicadores que não priorizam e nunca são medidos de novo</td><td>Transversal jul–dez/2025 · p. 100</td><td>3 alavancas priorizadas + antes/depois por posto</td></tr>
+      <tr><td><b>4 · Incumbente</b></td><td>Quem ocupa o espaço só conta falta, vende laudo ou vende dashboard</td><td>11 players em 5 camadas, com preço</td><td>O elo que falta: saúde do trabalhador ↔ trabalho ↔ decisão</td></tr>
+    </tbody>
+  </table>
+
+  <h3>As duas frases do pitch que carregam a tese</h3>
+  <div class="quote">
+    <b>Gancho A — o sinal invisível:</b> "O SESI mede o risco que o trabalhador corre. Mas o trabalho que causa o risco não tem nenhum instrumento — e essa é a sétima dimensão do próprio ASSTI, declarada e nunca analisada."
+    <div class="att">Gancho B — a dimensão que não existe: "O desafio pede quatro dimensões. O instrumento do SESI cobre três. A quarta — participação — tem zero itens em dez páginas de questionário."</div>
+  </div>
+
+  <div class="callout">
+    <div class="ct">O que levar deste documento para a mesa</div>
+    <b>A p. 4</b> — a citação da p. 16 e o CR 0,863 — porque é o que sustenta a proposta em 10 segundos. <b>A p. 5</b> — a grade das 4 dimensões com os zero itens. <b>A p. 13</b> — a escada de 5 níveis, porque é o que separa a nossa fala da de um app de bem-estar. <b>A p. 14</b> — os 4 cortes, se a banca perguntar "por que não fez X".
+  </div>
+</section>
+
+</body>
+</html>

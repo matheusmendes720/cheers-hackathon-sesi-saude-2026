@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Cheers — Evidência, mercado e regulação</title>
+<style>
+@page { size: A4 portrait; margin: 14mm 12mm; }
+* { -webkit-print-color-adjust: exact; print-color-adjust: exact; box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  font-size: 10.5pt; line-height: 1.55; color: #16202C; background: #fff;
+  -webkit-font-smoothing: antialiased;
+}
+@media screen {
+  html { background: #d0d0d0; }
+  body { margin: 0; padding: 20px 0; }
+  body > section { width: 210mm; min-height: 297mm; margin: 0 auto 20px; background: #fff;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.18); overflow: hidden; }
+}
+:root{
+  --accent:#0D9488; --accent-dim:#0F766E;
+  --ink:#16202C; --ink2:#3B4A5A; --muted:#6B7A8C;
+  --surface:#F5F7FA; --surface2:#EEF2F7; --line:#D6DEE8; --linesoft:#E7ECF3;
+  --info:#2563EB; --warn:#B45309; --risk:#BE123C; --good:#047857; --violet:#6D28D9;
+}
+.page { position: relative; min-height: 269mm; padding-top: 11mm; padding-bottom: 3mm; break-after: page; }
+.page:last-child { break-after: auto; }
+.runhead { position: absolute; top: 0; left: 0; right: 0; height: 7mm;
+  border-bottom: 0.5pt solid var(--line); font-size: 8pt; color: var(--muted); line-height: 7mm; }
+.runhead .l { float: left; } .runhead .r { float: right; }
+.runfoot { position: absolute; bottom: 0; left: 0; right: 0; height: 8mm;
+  border-top: 0.5pt solid var(--line); font-size: 8pt; color: var(--muted); line-height: 8mm; text-align: center; }
+.eyebrow { font-size: 8pt; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; color: var(--accent); margin: 0 0 2mm; }
+h1 { font-size: 24pt; line-height: 1.15; margin: 0 0 3mm; letter-spacing: -0.4px; }
+h2 { font-size: 15pt; line-height: 1.2; margin: 0 0 2mm; letter-spacing: -0.2px; page-break-after: avoid; }
+h3 { font-size: 11.5pt; margin: 0 0 1.5mm; color: var(--accent-dim); page-break-after: avoid; }
+p { margin: 0 0 2.5mm; }
+.rule { height: 2.2mm; background: var(--accent); width: 26mm; margin: 0 0 4mm; border-radius: 1mm; }
+.lead { font-size: 11pt; color: var(--ink2); margin: 0 0 4mm; }
+ul, ol { margin: 0 0 3mm; padding-left: 5mm; }
+li { margin-bottom: 1.2mm; }
+strong { color: var(--ink); }
+code { font-family: "Cascadia Mono", Consolas, monospace; font-size: 9pt; background: var(--surface2); padding: 0.3mm 1mm; border-radius: 1mm; }
+table { width: 100%; border-collapse: collapse; margin: 0 0 3mm; font-size: 9pt; line-height: 1.42; }
+thead th { background: var(--accent); color: #fff; text-align: left; padding: 2mm 2.5mm; font-size: 8.5pt; font-weight: 700; }
+tbody td { border-bottom: 0.5pt solid var(--linesoft); padding: 1.8mm 2.5mm; vertical-align: top; }
+tbody tr:nth-child(even) td { background: var(--surface); }
+table.dense { font-size: 8pt; line-height: 1.32; }
+table.tighter { font-size: 7.4pt; line-height: 1.24; }
+table.tighter thead th { padding: 1.3mm 1.6mm; font-size: 7.4pt; }
+table.tighter tbody td { padding: 0.9mm 1.6mm; }
+table.dense thead th { padding: 1.6mm 2mm; font-size: 8pt; }
+table.dense tbody td { padding: 1.2mm 2mm; }
+.src { font-size: 7.5pt; color: var(--muted); margin: -2mm 0 3mm; }
+.kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 3mm; margin: 0 0 4mm; }
+.kpi { background: var(--surface); border: 0.5pt solid var(--line); border-left: 2.4mm solid var(--accent); border-radius: 1.5mm; padding: 3mm; }
+.kpi .v { font-size: 16pt; font-weight: 700; color: var(--accent-dim); line-height: 1.1; }
+.kpi .l { font-size: 8.5pt; color: var(--ink2); margin-top: 1mm; }
+.cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 3mm; margin: 0 0 3mm; }
+.card { border: 0.5pt solid var(--line); border-radius: 1.5mm; padding: 3mm; background: #fff; page-break-inside: avoid; }
+.card .t { font-weight: 700; font-size: 10.5pt; margin-bottom: 1mm; }
+.card .d { font-size: 9pt; color: var(--ink2); }
+.callout { background: var(--surface); border-left: 2.4mm solid var(--accent); border-radius: 1.2mm; padding: 3mm 3.5mm; margin: 0 0 3mm; font-size: 9.5pt; page-break-inside: avoid; }
+.callout.warn { border-left-color: var(--warn); background: #FFF8EF; }
+.callout.risk { border-left-color: var(--risk); background: #FEF2F4; }
+.callout.good { border-left-color: var(--good); background: #EFF9F3; }
+.callout .ct { font-weight: 700; font-size: 9pt; text-transform: uppercase; letter-spacing: 0.6px; color: var(--muted); margin-bottom: 1mm; }
+.quote { background: var(--surface2); border-radius: 1.2mm; padding: 3.5mm 4mm; margin: 0 0 3mm; font-size: 9.5pt; font-style: italic; color: var(--ink); page-break-inside: avoid; }
+.quote .att { font-style: normal; font-size: 8pt; color: var(--muted); margin-top: 1.5mm; }
+.pill { display: inline-block; font-size: 7.5pt; font-weight: 700; padding: 0.6mm 2mm; border-radius: 3mm; white-space: nowrap; }
+.pill-ok { background: #E8F5E9; color: #2E7D32; }
+.pill-warn { background: #FFF3E0; color: #E65100; }
+.pill-bad { background: #FFEBEE; color: #C62828; }
+.pill-good { background: #E3F2FD; color: #1565C0; }
+.pill-best { background: #F3E5F5; color: #6A1B9A; }
+.toc { margin: 0 0 4mm; }
+.toc-row { display: block; text-decoration: none; color: var(--ink); border-bottom: 0.5pt dotted var(--line);
+  padding: 1.6mm 0; font-size: 10pt; page-break-inside: avoid; }
+.toc-row .n { display: inline-block; width: 7mm; color: var(--accent); font-weight: 700; font-size: 9pt; }
+.toc-row .p { float: right; color: var(--muted); font-size: 9pt; }
+.toc-row .sub { display: block; font-size: 8.5pt; color: var(--muted); margin-left: 7mm; }
+.cover { background: linear-gradient(155deg, #0F766E 0%, #0D9488 45%, #115E59 100%); color: #fff; padding: 0; }
+.cover .inner { height: 100%; display: flex; flex-direction: column; justify-content: space-between; }
+.cover .band { margin: -14mm -12mm 0 -12mm; padding: 26mm 18mm 18mm 18mm; }
+.cover .kicker { font-size: 9pt; letter-spacing: 2px; text-transform: uppercase; opacity: 0.85; margin-bottom: 5mm; }
+.cover h1 { color: #fff; font-size: 30pt; }
+.cover .sub { font-size: 13pt; opacity: 0.92; margin-top: 3mm; max-width: 150mm; }
+.cover .foot { position: absolute; bottom: 0; left: -12mm; right: -12mm; margin: 0; padding: 8mm 18mm 10mm 18mm; background: rgba(0,0,0,0.16); font-size: 9pt; display: flex; justify-content: space-between; }
+.cover .meta { font-size: 9.5pt; }
+.cover .meta b { display: block; font-size: 7.5pt; text-transform: uppercase; letter-spacing: 1.2px; opacity: 0.7; font-weight: 600; margin-bottom: 0.5mm; }
+.cover .meta span { display: block; margin-bottom: 3mm; }
+.chart { margin: 0 0 3mm; }
+.chart svg { width: 100%; height: auto; display: block; }
+.chartnote { font-size: 7.5pt; color: var(--muted); margin: -1.5mm 0 3mm; }
+.fact { display: inline-block; font-size: 7pt; font-weight: 700; padding: 0.4mm 1.5mm; border-radius: 2mm; background: #E3F2FD; color: #1565C0; margin-left: 1.5mm; vertical-align: 1px; }
+</style>
+</head>
+<body>
+
+<!-- ============ CAPA ============ -->
+<section class="page cover">
+  <div class="inner">
+    <div class="band">
+      <div class="kicker">Documento 03 de 04 · Equipe Cheers</div>
+      <h1>Evidência, mercado e regulação</h1>
+      <div class="sub">Todos os números com a fonte ao lado. O mapa competitivo com preço. O escudo regulatório. E a lista do que <b>não</b> repetir.</div>
+    </div>
+    <div class="foot">
+      <div class="meta">
+        <b>Documento</b>
+        <span>03 de 04 — Evidência, mercado e regulação</span>
+        <span>Leitura: 15 minutos · material de consulta</span>
+      </div>
+      <div class="meta" style="text-align:right">
+        <b>Regra</b>
+        <span>Nenhum número sem fonte</span>
+        <span>Nenhum ROI prometido</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SUMÁRIO ============ -->
+<section class="page">
+  <div class="runhead"><span class="l">Cheers · Evidência, mercado e regulação</span><span class="r">Sumário</span></div>
+  <div class="eyebrow">Documento 03</div>
+  <h2>O que está neste documento</h2>
+  <div class="rule"></div>
+  <p class="lead">Este é o documento de <b>consulta</b>. Não é para ler do começo ao fim — é para abrir quando alguém contestar um número, perguntar de onde veio um preço, ou duvidar de que um caminho regulatório está fechado. <b>Cada número carrega a fonte na mesma linha.</b></p>
+
+  <nav class="toc">
+    <a class="toc-row" href="#p3"><span class="n">1</span>Os 4 números que sustentam o pitch<span class="p">3</span><span class="sub">E a regra de citação do VigIndústria</span>
+    <a class="toc-row" href="#p4"><span class="n">2</span>Os 33 indicadores · parte 1<span class="p">4</span><span class="sub">Comportamentais e bem-estar mental, com prevalência e IC 95%</span>
+    <a class="toc-row" href="#p5"><span class="n">3</span>Os 33 indicadores · parte 2<span class="p">5</span><span class="sub">Morbidade, percepção de saúde e cultura de segurança</span>
+    <a class="toc-row" href="#p6"><span class="n">4</span>A base científica<span class="p">7</span><span class="sub">O que a evidência sustenta — e o que ela não sustenta</span>
+    <a class="toc-row" href="#p7"><span class="n">5</span>O mapa competitivo, com preço<span class="p">8</span><span class="sub">5 camadas, 11 players e a faixa de preço do mercado</span>
+    <a class="toc-row" href="#p8"><span class="n">6</span>Dimensionamento e a âncora Salú<span class="p">9</span><span class="sub">Em valor em jogo, sem somar pools que se sobrepõem</span>
+    <a class="toc-row" href="#p9"><span class="n">7</span>O escudo regulatório<span class="p">11</span><span class="sub">Cada norma, o que determina e a implicação prática</span>
+    <a class="toc-row" href="#p10"><span class="n">8</span>ODS 3 e 9<span class="p">12</span><span class="sub">Texto oficial verificado e onde a proposta encosta</span>
+    <a class="toc-row" href="#p11"><span class="n">9</span>Os 9 datasets públicos<span class="p">14</span><span class="sub">O que dá para usar offline — e o que não é utilizável</span>
+    <a class="toc-row" href="#p12"><span class="n">10</span>O que não repetir<span class="p">16</span><span class="sub">As armadilhas mais perigosas, com a correção de cada uma</span>
+    <a class="toc-row" href="#p13"><span class="n">11</span>Índice de fontes<span class="p">18</span><span class="sub">Onde cada coisa está, para conferência rápida</span>
+  </nav>
+
+  <div class="callout warn">
+    <div class="ct">A regra de citação do VigInd variously</div>
+    A capa do PDF diz "VigIndústria Brasil <b>2025</b>" — esse é o <b>ano do campo</b> (jul–dez/2025). A edição foi <b>lançada em 2026</b> (Conecta Saúde, FIESP/SP, 01/09/2026). <b>Cite sempre "VigIndústria Brasil 2026 (campo jul–dez/2025)"</b> — nunca "VigIndústria 2025". E cite sempre a <b>curadoria</b> (<code>data/vigindustria-2026.md</code>), não o PDF bruto, para não errar o recorte: global × porte da empresa × faixa etária.
+  </div>
+</section>
+
+<!-- ============ 1. OS 4 NÚMEROS ============ -->
+<section class="page" id="p3">
+  <div class="runhead"><span class="l">Cheers · Evidência, mercado e regulação</span><span class="r">1 · Os 4 números</span></div>
+  <div class="eyebrow">Capítulo 1</div>
+  <h2>Os 4 números que sustentam o pitch</h2>
+  <div class="rule"></div>
+
+  <div class="kpis">
+    <div class="kpi"><div class="v">106 mi</div><div class="l">dias de trabalho perdidos<br><span style="font-size:7.5pt">CANPAT 2016–2025</span></div></div>
+    <div class="kpi"><div class="v">4,1 mi</div><div class="l">afastamentos por incapacidade em 2025 (+17,1%)<br><span style="font-size:7.5pt">INSS</span></div></div>
+    <div class="kpi"><div class="v">34,4%</div><div class="l">não acham a comunicação de prevenção suficiente<br><span style="font-size:7.5pt">VigIndústria, T36, p. 95</span></div></div>
+    <div class="kpi"><div class="v">2.738.306</div><div class="l">vidas ativas na Plataforma Viva+<br><span style="font-size:7.5pt">CN-SESI, PAO 2026</span></div></div>
+  </div>
+
+  <table class="dense">
+    <thead><tr><th style="width:24%">Número</th><th style="width:40%">O que é exatamente</th><th style="width:36%">Fonte</th></tr></thead>
+    <tbody>
+      <tr><td><b>106 mi dias</b></td><td>Dias de trabalho perdidos por acidentes de trabalho, acumulado 2016–2025</td><td>CANPAT — Auditores-Fiscais do Trabalho (CAT/INSS/eSocial). No mesmo período: <b>6,4 mi acidentes</b> e <b>27.486 óbitos</b>; <b>249 mi dias debitados</b></td></tr>
+      <tr><td><b>806.011 acidentes</b></td><td>Acidentes em 2025 — <b>recorde da série</b>, +65,8% desde 2020, com 3.644 óbitos</td><td>CANPAT 2025</td></tr>
+      <tr><td><b>4,1 mi afastamentos</b></td><td>Afastamentos por incapacidade no INSS em 2025, <b>+17,1%</b> (maior em 5 anos). Desses, <b>546.254 por saúde mental</b> (+15%), o 2º motivo depois de coluna — cerca de <b>R$ 3,5 bi</b></td><td>INSS / G1-Globo, 26/01/2026 <span class="fact">[a confirmar]</span></td></tr>
+      <tr><td><b>2,6 mi</b></td><td>Novas concessões acidentárias</td><td>INSS</td></tr>
+      <tr><td><b>20,0%</b></td><td>Trabalhadores que faltaram <b>≥1 dia por semana</b> por saúde; <b>6,5%</b> faltaram ≥3 dias. Mulheres: 22,5% e 7,7%</td><td>SESI/ASSTI, <i>Estilo de Vida, Saúde e Produtividade</i> (2018–2022), n = <b>123.355</b></td></tr>
+      <tr><td><b>65,6%</b></td><td>Consideram a comunicação sobre prevenção de acidentes <b>suficiente e adequada</b> (IC 63,8–67,3). Homens 67,7% · mulheres 62,4%</td><td>VigIndústria Brasil 2026, T36, p. 95</td></tr>
+      <tr><td><b>56,2%</b></td><td>O mesmo indicador em <b>micro e pequenas empresas</b> — ou seja, <b>43,8% não acham suficiente</b> neste porte</td><td>VigIndústria Brasil 2026, T36, p. 95 <span class="fact">o recorte não consta na tabela curada — usar com a atribuição do repo</span></td></tr>
+      <tr><td><b>57.952</b></td><td>Trabalhadores na base do VigIndústria, em <b>825 empresas</b> — campo jul–dez/2025</td><td>VigIndústria Brasil 2026, p. 16–23</td></tr>
+      <tr><td><b>2.738.306</b></td><td>Vidas ativas na Plataforma de Saúde e Segurança (Viva+) — indicador do objetivo do PAO 2026</td><td>CN-SESI, PAO 2026 (retificado)</td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout good">
+    <div class="ct">Por que estes 4 e não outros</div>
+    <b>106 mi dias</b> e <b>4,1 mi afastamentos</b> dão a <b>escala</b> do problema. <b>34,4%</b> (e o 56,2% no porte certo) dá a <b>porta de entrada operacional</b> — a comunicação de prevenção é uma alavanca concreta e verificável. <b>2.738.306 vidas</b> dá a <b>viabilidade institucional</b>. Nenhum deles exige crer na nossa tese: são fatos que a banca pode checar.
+  </div>
+
+  <div class="callout risk">
+    <div class="ct">O número que NÃO entra no slide</div>
+    <b>R$ 468 bi (4% do PIB)</b> é perda de produtividade por <b>doenças e acidentes de trabalho</b> (OIT/UN Brasil) — é o número do <b>setor</b>, não do presenteísmo. O presenteísmo é R$ 200–600 bi/ano <span class="fact">[a confirmar]</span> (IBEF-SP via AXENYA, 2024). E os três pools de mercado <b>não se somam</b>: R$ 468 bi, R$ 179 bi e R$ 276,9 bi têm sobreposição parcial. <b>É valor em jogo, não receita endereçável.</b>
+  </div>
+</section>
+
+<!-- ============ 2. INDICADORES 1 ============ -->
+<section class="page" id="p4">
+  <div class="runhead"><span class="l">Cheers · Evidência, mercado e regulação</span><span class="r">2 · Os 33 indicadores (1/2)</span></div>
+  <div class="eyebrow">Capítulo 2</div>
+  <h2>Os 33 indicadores · parte 1</h2>
+  <div class="rule"></div>
+  <p class="lead">Fonte única: <b>VigIndústria Brasil 2026</b> — SESI + CN-SESI + Ministério da Saúde, 119 p., campo jul–dez/2025. <b>7 + 6 + 10 + 4 + 6 = 33</b>. Prevalência com IC 95% e a página/tabela de origem em cada linha.</p>
+
+  <h3>Dimensão 2 · Fatores comportamentais de risco (p. 26–40) — 7 indicadores</h3>
+  <table class="dense">
+    <thead><tr><th style="width:5%">#</th><th style="width:36%">Indicador</th><th style="width:17%">Prevalência</th><th style="width:19%">IC 95%</th><th style="width:13%">Corte relevante</th><th style="width:10%">Pág · Tab</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>Consumo <b>episódico pesado</b> de álcool</td><td><b>34,2%</b></td><td>32,4–36,0</td><td>micro/pequenas <b>37,3%</b></td><td>29 · T5</td></tr>
+      <tr><td>2</td><td>Inatividade física no lazer</td><td><b>44,3%</b></td><td>42,4–46,1</td><td>mulheres <b>49,4%</b></td><td>34 · T8</td></tr>
+      <tr><td>3</td><td>Tempo prolongado de tela</td><td><b>33,9%</b></td><td>32,0–35,8</td><td>sem filhos 45,1%</td><td>38 · T10</td></tr>
+      <tr><td>4</td><td>Baixa frequência de frutas e hortaliças</td><td>75,0% homens<br>65,6% mulheres</td><td>—</td><td>—</td><td>30 · T6</td></tr>
+      <tr><td>5</td><td>Consumo excessivo de refrigerantes e sucos artificiais</td><td>22,2%</td><td>20,2–24,4</td><td>maior porte 22,2%</td><td>33 · T7</td></tr>
+      <tr><td>6</td><td>Tabagismo</td><td>6,5%</td><td>6,0–7,1</td><td>—</td><td>27 · T4</td></tr>
+      <tr><td>7</td><td>Tempo prolongado de TV</td><td>8,1%</td><td>—</td><td>—</td><td>36 · T9</td></tr>
+    </tbody>
+  </table>
+  <div class="src">Contraste declarado pelo próprio relatório (p. 98): o consumo episódico pesado de álcool é <b>~68% maior</b> que o do Vigitel 2024 para adultos brasileiros (20,4%).</div>
+
+  <h3>Dimensão 3 · Bem-estar mental (p. 41–53) — 6 indicadores</h3>
+  <table class="dense">
+    <thead><tr><th style="width:5%">#</th><th style="width:36%">Indicador</th><th style="width:17%">Prevalência</th><th style="width:19%">IC 95%</th><th style="width:13%">Corte relevante</th><th style="width:10%">Pág · Tab</th></tr></thead>
+    <tbody>
+      <tr><td>8</td><td>Elevado nível de estresse</td><td><b>20,3%</b></td><td>18,7–22,0</td><td>mulheres <b>26,2%</b></td><td>42 · T11</td></tr>
+      <tr><td>9</td><td>Dificuldade de relaxar e usufruir do lazer</td><td><b>18,7%</b></td><td>17,0–20,5</td><td>ensino fund. <b>25,7%</b></td><td>49 · T15</td></tr>
+      <tr><td>10</td><td>Percepção negativa da qualidade do sono</td><td><b>16,5%</b></td><td>15,0–18,1</td><td>mulheres 19,4%</td><td>47 · T14</td></tr>
+      <tr><td>11</td><td>Relacionamentos interpessoais de baixa qualidade</td><td><b>12,4%</b></td><td>11,0–13,8</td><td>menor porte <b>14,8%</b></td><td>45 · T13</td></tr>
+      <tr><td>12</td><td><b>Insatisfação com as condições de trabalho</b></td><td><b>8,1%</b></td><td>7,4–8,8</td><td>mulheres 7,9%</td><td>51 · T16</td></tr>
+      <tr><td>13</td><td>Pensamentos negativos e pessimistas persistentes</td><td>7,5%</td><td>6,4–8,7</td><td>mulheres <b>9,0%</b></td><td>44 · T12</td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout">
+    <div class="ct">A leitura que importa para a proposta</div>
+    Os indicadores 8 a 13 são <b>sinais individuais de bem-estar</b> — medem a pessoa. Nenhum deles diz algo sobre <b>a causa</b>: a demanda, o apoio, a organização. <b>É por isso que a escuta precisa perguntar pelo trabalho, e não pelo bem-estar.</b>
+  </div>
+</section>
+
+<!-- ============ 3. INDICADORES 2 ============ -->
+<section class="page" id="p5">
+  <div class="runhead"><span class="l">Cheers · Evidência, mercado e regulação</span><span class="r">3 · Os 33 indicadores (2/2)</span></div>
+  <div class="eyebrow">Capítulo 3</div>
+  <h2>Os 33 indicadores · parte 2</h2>
+  <div class="rule"></div>
+
+  <h3>Dimensão 4 · Morbidade referida (p. 54–74) — 10 indicadores</h3>
+  <table class="dense">
+    <thead><tr><th style="width:5%">#</th><th style="width:36%">Indicador</th><th style="width:17%">Prevalência</th><th style="width:19%">IC 95%</th><th style="width:13%">Corte relevante</th><th style="width:10%">Pág · Tab</th></tr></thead>
+    <tbody>
+      <tr><td>14</td><td><b>Obesidade</b></td><td><b>22,7%</b></td><td>—</td><td>micro/pequenas <b>24,2%</b></td><td>55 · T17</td></tr>
+      <tr><td>15</td><td>Problema crônico de coluna</td><td><b>19,3%</b></td><td>17,9–…</td><td>maior porte 19,9%</td><td>73 · T26</td></tr>
+      <tr><td>16</td><td>Colesterol alto referido</td><td>17,1%</td><td>15,7–18,6</td><td>—</td><td>61 · T20</td></tr>
+      <tr><td>17</td><td>Hipertensão arterial referida</td><td>16,2%</td><td>14,8–17,7</td><td>—</td><td>57 · T18</td></tr>
+      <tr><td>18</td><td><b>Depressão referida</b></td><td><b>11,8%</b></td><td>10,4–13,3</td><td>homens 5,9%</td><td>69 · T24</td></tr>
+      <tr><td>19</td><td>Asma ou bronquite asmática</td><td>8,5%</td><td>7,3–9,7</td><td>—</td><td>67 · T23</td></tr>
+      <tr><td>20</td><td>Diabetes referido</td><td>5,7%</td><td>4,7–6,9</td><td>homens 4,3%</td><td>59 · T19</td></tr>
+      <tr><td>21</td><td>Artrite ou reumatismo</td><td>4,3%</td><td>3,6–5,0</td><td>menor porte 5,2%</td><td>65 · T22</td></tr>
+      <tr><td>22</td><td>AVC referido</td><td>2,6%</td><td>0,8–8,5</td><td>menor porte 2,6%</td><td>63 · T21</td></tr>
+      <tr><td>23</td><td>Câncer referido</td><td>1,6%</td><td>—</td><td>menor porte 2,9%</td><td>71 · T25</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Dimensão 5 · Percepção de saúde e autocuidado (p. 75–83) — 4 indicadores</h3>
+  <table class="dense">
+    <thead><tr><th style="width:5%">#</th><th style="width:36%">Indicador</th><th style="width:17%">Prevalência</th><th style="width:19%">IC 95%</th><th style="width:13%">Corte relevante</th><th style="width:10%">Pág · Tab</th></tr></thead>
+    <tbody>
+      <tr><td>24</td><td>Baixa frequência de controle de condições crônicas</td><td><b>32%</b></td><td>30,0–34,0</td><td>micro/pequenas <b>38,2%</b></td><td>76 · T27</td></tr>
+      <tr><td>25</td><td>Percepção de saúde negativa</td><td><b>7,9%</b></td><td>6,6–9,5</td><td>mulheres <b>10,6%</b></td><td>80 · T29</td></tr>
+      <tr><td>26</td><td>Percepção de saúde bucal negativa</td><td>7,1%</td><td>5,9–8,5</td><td>—</td><td>82 · T30</td></tr>
+      <tr><td>27</td><td>Atitude negativa para o autocuidado</td><td>6,3%</td><td>5,3–7,4</td><td>—</td><td>78 · T28</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Dimensão 6 · Cultura de segurança (p. 84–97) — 6 indicadores <span style="font-size:8pt;color:#6B7A8C">(positivos)</span></h3>
+  <table class="dense">
+    <thead><tr><th style="width:5%">#</th><th style="width:36%">Indicador</th><th style="width:17%">Proporção</th><th style="width:19%">IC 95%</th><th style="width:13%">Corte relevante</th><th style="width:10%">Pág · Tab</th></tr></thead>
+    <tbody>
+      <tr><td>28</td><td>Segurança e prevenção são importantes para a empresa</td><td>79,7%</td><td>75,1–83,7</td><td>—</td><td>85 · T31</td></tr>
+      <tr><td>29</td><td><b>Percepção de ambiente de trabalho seguro</b></td><td><b>71,4%</b></td><td>69,6–73,1</td><td>menor porte 69,8%</td><td>87 · T32</td></tr>
+      <tr><td>30</td><td><b>Liderança obedece e encoraja a obediência às normas de segurança</b></td><td><b>72,6%</b></td><td>70,7–74,4</td><td>—</td><td>89 · T33</td></tr>
+      <tr><td>31</td><td>Empresa prioriza esforços suficientes para prevenção de acidentes</td><td>70,2%</td><td>66,6–73,6</td><td>—</td><td>91 · T34</td></tr>
+      <tr><td>32</td><td><b>Recebe treinamento para emergências e prevenção de acidentes</b></td><td><b>69,8%</b></td><td>68,1–71,5</td><td><b>micro/pequeno 59,5%</b> vs médio/grande 72,9%</td><td>93 · T35</td></tr>
+      <tr><td>33</td><td><b>Comunicação suficiente e adequada sobre prevenção de acidentes</b></td><td><b>65,6%</b></td><td>63,8–67,3</td><td>homens 67,7% · mulheres 62,4%</td><td>95 · T36</td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout good">
+    <div class="ct">O ângulo do porte — e ele é o piloto</div>
+    Em <b>micro e pequenas empresas</b>, o treinamento cai para <b>59,5%</b> (contra 72,9% em médio/grande) e a comunicação suficiente cai para <b>56,2%</b>. São as empresas-alvo do SESI Bahia: <b>10.800 empresas atendidas</b>. A terceira alavanca não é genérica — ela é dimensional, e o recorte está na fonte.
+  </div>
+
+  <div class="callout warn">
+    <div class="ct">Duas notas de honestidade sobre a base</div>
+    <b>1.</b> O relatório declara o próprio viés (p. 17): a amostra de conveniência — empresas que voluntariamente demandaram serviço ao SESI — "pode comprometer a representabilidade". <b>2.</b> A desagregação é por região e por fatores demográficos, <b>não por UF</b> (logisticamente inviável nesta onda). Se a banca perguntar "isso vale para a Bahia", a resposta honesta é: <b>não é agregação por estado — e é por isso que o piloto existe.</b>
+  </div>
+</section>
+
+<!-- ============ 4. BASE CIENTÍFICA ============ -->
+<section class="page" id="p6">
+  <div class="runhead"><span class="l">Cheers · Evidência, mercado e regulação</span><span class="r">4 · A base científica</span></div>
+  <div class="eyebrow">Capítulo 4</div>
+  <h2>A base científica</h2>
+  <div class="rule"></div>
+  <p class="lead">Esta é a régua de honestidade do projeto. Ela mostra <b>duas alavancas com sustentação</b>, <b>uma que não tem</b> (e por isso não vamos citar), e <b>o teto do que a literatura permite prometer</b>.</p>
+
+  <table class="dense tighter">
+    <thead><tr><th style="width:30%">Estudo</th><th style="width:10%">n</th><th style="width:38%">Resultado</th><th style="width:22%">Como a gente usa</th></tr></thead>
+    <tbody>
+      <tr><td>Meta-análise em enfermagem<br><span style="font-size:7.5pt;color:#6B7A8C">Occup Med, 2020 · 9 estudos</span></td><td>—</td><td><b>Demanda alta OR 1,57</b> (IC95% 1,04–2,36) <b>significativo</b> · <b>Apoio no trabalho OR 0,58</b> (0,41–0,83) <b>reduziu ausência</b> · Job strain OR 1,20 (0,94–1,52) <b>não significativo</b> · Controle OR 0,79 (0,55–1,12) não significativo</td><td><b>As 2 alavancas.</b> Cita demanda e apoio. <b>Não cita strain nem controle</b></td></tr>
+      <tr><td>Song Z, Baicker K. <i>JAMA</i> 2019;321(15):1491–1501<br><span style="font-size:7.5pt;color:#6B7A8C">RCT, BJ's</span></td><td><b>32.974</b></td><td>Absenteísmo <b>2,5% vs 2,6%</b> (P = 0,09) · gasto médico US$ 3.583 vs US$ 3.953 (P = 0,32) · <b>+8,3 pp de exercício</b> · <b>sem efeito</b> clínico nem de ausência em 18 meses</td><td><b>O teto.</b> Por isso não prometemos economia</td></tr>
+      <tr><td>ROI de absenteísmo</td><td>—</td><td>Em <b>RCT: −49%</b> (BCR 0,51) · em não randomizados (18 estudos): <b>325%</b> (BCR 4,25)</td><td><b>O número que nos impede de vender ROI</b></td></tr>
+      <tr><td>Meta-análise 2025 · 23 estudos</td><td>—</td><td>Absenteísmo <b>−0,18 dia</b> (P = 0,890) · ROI 1,92 (P = 0,096) → <b>indeterminado</b></td><td>Reforça a honestidade do pitch</td></tr>
+      <tr><td>HSE <i>Management Standards</i></td><td>—</td><td>Com o Indicator Tool: <b>Demands, Relationships, Change e Role</b> se associaram a ansiedade/depressão, mas <b>controle e apoio entre pares não</b>. Metas do HSE: <b>85%</b> (Demands/Control/Support) e <b>65%</b> (Roles/Relationships/Change)</td><td><b>A base dos 6 itens</b> e a régua de "autonomia genérica"</td></tr>
+      <tr><td>Gupta et al., <i>Int J Behav Nutr Phys Act</i> 2020</td><td><b>929</b></td><td>4 anos, acelerômetro: <b>+20 min/dia de atividade moderada NO TRABALHO → +15% de risco de afastamento longo</b> (p = 0,02); <b>NO LAZER → −20%</b> (p = 0,02)</td><td><b>A prova contra o app de atividade</b></td></tr>
+      <tr><td>Cochrane CD006955<br><span style="font-size:7.5pt;color:#6B7A8C">van Vilsteren et al., 2015</span></td><td><b>14 RCTs<br>1.897</b></td><td>Retorno ao trabalho mais rápido (HR 1,55; 1,20–2,01) e <b>−33,3 dias</b> de absenteísmo cumulativo; <b>sem</b> efeito em saúde mental ou câncer</td><td>Prova de que <b>intervenção no trabalho</b> funciona</td></tr>
+      <tr><td>Lambreghts et al., <i>Occup Environ Med</i> 2023;80:538–544</td><td>—</td><td>Revisão sistemática (burnout): intervenção <b>dirigida ao local de trabalho</b> — única com efeito no retorno: <b>89% vs 73%</b> aos 18 meses. <b>Viés moderado-alto</b></td><td>A evidência de que o alvo é o posto</td></tr>
+      <tr><td>IESS</td><td>—</td><td>Estima que <b>90% das ações de promoção da saúde em empresas não são bem sucedidas</b></td><td>O contra-argumento que a banca vai usar</td></tr>
+      <tr><td>NIOSH, <i>MMWR</i> 2023;72:1197–1205</td><td>—</td><td>Burnout "muito frequentemente": <b>11,6% → 19,0%</b> (2018→2022); <b>45,6%</b> em 2022</td><td>Contexto de saúde mental no trabalho</td></tr>
+      <tr><td>OMS / OIT, <i>Guidelines on mental health at work</i>, 28/09/2022</td><td>—</td><td><b>12 bi de dias</b> de trabalho perdidos/ano; <b>~US$ 1 tri</b>/ano</td><td>Escala global — para contexto, não para o slide</td></tr>
+      <tr><td>Illinois Workplace Wellness Study<br><span style="font-size:7.5pt;color:#6B7A8C">NBER W24229</span></td><td>—</td><td>Participantes já tinham <b>menor gasto antes</b>; nenhum efeito causal; os <b>IC95% excluem 83%</b> das estimativas da literatura prévia</td><td>Reforça: <b>medir, não prometer</b></td></tr>
+      <tr><td>Kivimäki et al., <i>BMJ</i> 2000;320(7240):971–5</td><td>—</td><td>Downsizing na Finlândia: absenteísmo <b>2,17×</b> (1,54–3,07); ajustar por mudanças no trabalho reduziu o efeito em <b>49%</b></td><td>Prova de que <b>mudar o trabalho</b> muda o absenteísmo</td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout good">
+    <div class="ct">A distinção que separa a nossa fala da de um app de bem-estar</div>
+    <b>As duas alavancas vêm de meta-análises observacionais: elas associam, não provam causalidade.</b> É exatamente por isso que a proposta <b>mede</b> em vez de prometer. Uma empresa que diz "vaia reduzir absenteísmo em 30%" está errada. Uma que diz "vamos medir quantos dias expostos o posto tem hoje, aplicar 3 alavancas priorizadas e medir de novo" está certa — e é o que a p. 100 do VigIndústria pede.
+  </div>
+</section>
+
+<!-- ============ 5. MAPA COMPETITIVO ============ -->
+<section class="page" id="p7">
+  <div class="runhead"><span class="l">Cheers · Evidência, mercado e regulação</span><span class="r">5 · O mapa competitivo</span></div>
+  <div class="eyebrow">Capítulo 5</div>
+  <h2>O mapa competitivo, com preço</h2>
+  <div class="rule"></div>
+  <p class="lead"><b>11 players, 5 camadas.</b> A discover não é "não existe solução" — é que <b>cada incumbent ocupa uma fatia e deixa o nosso gap aberto</b>.</p>
+
+  <table class="dense">
+    <thead><tr><th style="width:12%">Camada</th><th style="width:24%">Players</th><th style="width:20%">Preço</th><th style="width:44%">A lacuna que deixa</th></tr></thead>
+    <tbody>
+      <tr><td><b>1 · Absenteísmo</b></td><td>SESI ASSTI + Viva+ · bem.care · mywork · BlueService · Apdata</td><td>Institucional, sob consulta · SaaS sob consulta</td><td>"Atestado = ausência, não saúde". Contam a falta; <b>ninguém cruza falta ↔ saúde ↔ população</b>, e a 7ª dimensão continua morta</td></tr>
+      <tr><td><b>2 · RTW / SAW</b></td><td>SESI-BA (WDP/SAW/RTW) · Bridges Health · Cority · ESIS/Chubb · getUBetter</td><td>Vendor · sistema público</td><td>A capacidade <b>existe no SESI-BA</b> mas não está instrumentada — o auto-diagnóstico está "em breve" na Viva+</td></tr>
+      <tr><td><b>3 · Co-participação</b></td><td>SOC/Conplan (MEUSOC, 500 mil+) · SGG (1 mil+) · WOTY</td><td>Licença + serviços</td><td><b>Compliance, não participação.</b> O canal existe, mas o trabalhador adota o app <i>sobre ele</i>, não <i>dentro</i> do plano</td></tr>
+      <tr><td><b>4 · Camada digital SESI</b></td><td>ASSTI + Viva+ · Vixting (3.200+) · Sólides (1.200+)</td><td>Assinatura B2B→B2B</td><td>Não há camada de <b>trajetória longitudinal</b>. Vixting e Sólides não chegam ao trabalhador</td></tr>
+      <tr><td><b>5 · Ação psicossocial</b></td><td>NR-1 SaaS (NRGuard, NR1Plus, Benway) · 500+ consultorias · Onvida/Selven/DUO24h</td><td>R$ 0–1.297/mês · R$ 15–80 mil/projeto · R$ 19,90–79,90/colaborador/mês</td><td><b>O laudo é commodity; a intervenção não é.</b> O valor migra para fechar o ciclo risco → ação → retorno</td></tr>
+      <tr><td><span class="pill pill-warn">transversal</span></td><td>Wellhub · Benevity · Afya</td><td>Corporate / empregado</td><td><b>Fora do domínio.</b> "Ocupacional ≠ wellness". Não toca SST, ASO, PGR ou absenteísmo</td></tr>
+    </tbody>
+  </table>
+
+  <h3>A faixa de preço do mercado — e por que ela não é a nossa lacuna</h3>
+  <div class="chart">
+    <svg viewBox="0 0 640 250" role="img" aria-label="Faixa de preço por mês em escala logarítmica, de R$ 0 a R$ 80 mil">
+      <rect x="0" y="0" width="640" height="250" fill="#FFFFFF"/>
+      <text x="8" y="16" font-family="Segoe UI, Arial" font-size="11" font-weight="700" fill="#16202C">Preço por mês (escala logarítmica)</text>
+
+      <!-- grade vertical -->
+      <g stroke="#E7ECF3" stroke-width="1">
+        <line x1="284" y1="26" x2="284" y2="222"/><line x1="368" y1="26" x2="368" y2="222"/>
+        <line x1="452" y1="26" x2="452" y2="222"/><line x1="536" y1="26" x2="536" y2="222"/>
+        <line x1="620" y1="26" x2="620" y2="222"/>
+      </g>
+      <g font-family="Segoe UI, Arial" font-size="8" fill="#6B7A8C" text-anchor="middle">
+        <text x="284" y="234">R$ 10</text><text x="368" y="234">R$ 100</text>
+        <text x="452" y="234">R$ 1.000</text><text x="536" y="234">R$ 10 mil</text>
+        <text x="620" y="234">R$ 100 mil</text>
+      </g>
+      <line x1="200" y1="222" x2="620" y2="222" stroke="#D6DEE8" stroke-width="1"/>
+
+      <!-- faixas -->
+      <g font-family="Segoe UI, Arial" font-size="9" fill="#3B4A5A">
+        <text x="8" y="44">Benway · NR-1 SaaS</text>
+        <text x="8" y="72">Salú (derivado) · por vida</text>
+        <text x="8" y="100">Telemedicina B2B</text>
+        <text x="8" y="128">NR-1 SaaS (faixa)</text>
+        <text x="8" y="156">NRGuard</text>
+        <text x="8" y="184">Consultoria SESI-BA · por projeto</text>
+      </g>
+      <g stroke="#0D9488" stroke-width="7" stroke-linecap="round" opacity="0.85">
+        <circle cx="203" cy="40" r="4"/>
+        <circle cx="296" cy="68" r="4"/>
+        <line x1="309" y1="96" x2="360" y2="96"/>
+        <line x1="359" y1="124" x2="461" y2="124"/>
+        <circle cx="383" cy="152" r="4"/>
+        <line x1="551" y1="180" x2="612" y2="180"/>
+      </g>
+      <g font-family="Segoe UI, Arial" font-size="8" fill="#0F766E" font-weight="700">
+        <text x="212" y="43">R$ 0</text>
+        <text x="303" y="71">R$ 13,9</text>
+        <text x="366" y="99">R$ 79,90</text>
+        <text x="302" y="114" text-anchor="end">R$ 19,90</text>
+        <text x="467" y="127">R$ 1.297</text>
+        <text x="390" y="155">R$ 149,90</text>
+        <text x="546" y="176" text-anchor="end">R$ 15 mil</text>
+        <text x="616" y="171" text-anchor="end">R$ 80 mil</text>
+      </g>
+      <text x="8" y="212" font-family="Segoe UI, Arial" font-size="8" fill="#6B7A8C">Faixas em R$/colaborador/mês, exceto Salú (por vida coberta) e consultoria (preço de projeto, 4–12 semanas).</text>
+    </svg>
+  </div>
+  <div class="chartnote">Fontes: vendor (nrguard.com.br, credenciados SESI-BA 2025) · Fato Relevante CVM (Salú) · eixo 3 do próprio Regulamento.</div>
+
+  <div class="callout">
+    <div class="ct">O que o gráfico diz</div>
+    O diagnóstico commoditizado <b>já custa de R$ 0 a R$ 1.297 por mês</b> — com um player <b>gratuito e ilimitado</b>. A telemedicina é R$ 19,90–79,90. A consultoria de laudo é R$ 15–80 mil por projeto. <b>Nenhuma dessas faixas é a nossa lacuna</b>: a lacuna é a <b>4ª dimensão do Anexo I</b>, que não aparece em nenhum preço porque <b>nenhum produto a mede</b>. E é por isso que o §2.3 proíbe vender isso como negócio: o valor é institucional, não comercial.
+  </div>
+</section>
+
+<!-- ============ 6. DIMENSIONAMENTO ============ -->
+<section class="page" id="p8">
+  <div class="runhead"><span class="l">Cheers · Evidência, mercado e regulação</span><span class="r">6 · Dimensionamento e a âncora Salú</span></div>
+  <div class="eyebrow">Capítulo 6</div>
+  <h2>Dimensionamento e a âncora Salú</h2>
+  <div class="rule"></div>
+  <p class="lead">§2.3 proíbe caráter comercial. Mas a viabilidade é um critério de nota. A saída é falar em <b>valor em jogo</b> e em <b>canal institucional</b> — nunca em receita endereçável.</p>
+
+  <h3>Valor em jogo — sem somar pools que se sobrepõem</h3>
+  <table class="dense tighter">
+    <thead><tr><th style="width:26%">Valor</th><th style="width:36%">O que é</th><th style="width:38%">Fonte e ressalva</th></tr></thead>
+    <tbody>
+      <tr><td><b>R$ 468 bi/ano</b><br><span style="font-size:7.5pt">(4% do PIB)</span></td><td>Perda de produtividade por <b>doenças e acidentes de trabalho</b></td><td>OIT/UN Brasil (PIB 2024 = R$ 11,7 tri, IBGE). <b>Nunca atribuir ao presenteísmo</b></td></tr>
+      <tr><td><b>R$ 179 bi/ano</b></td><td>Perda associada à <b>saúde mental</b> (2,8% do PIB potencial; 21,2 mi pessoas ocupadas)</td><td>IFEMG, jan/2026 (o doc de fontes detalha R$ 179,15 bi/ano)</td></tr>
+      <tr><td><b>R$ 173 bi</b></td><td>Benefícios acidentários INSS, acumulado desde 2012</td><td>OIT/UN Brasil</td></tr>
+      <tr><td><b>R$ 276,9 bi/ano</b></td><td>Despesas assistenciais em <b>saúde empresarial</b></td><td>ANS Panorama + DIOPS (R$ 276.860.546.069 em 2025)</td></tr>
+      <tr><td><b>R$ 312,1 bi → R$ 256,8 bi</b></td><td>Receita → despesas assistenciais (2024): <b>82,3% da receita vira atendimento</b></td><td>ANS Panorama v8 nº10, dez/2025</td></tr>
+      <tr><td><b>78,0%</b></td><td>Sinistralidade média no 3T25; R$ 562/mês de receita × R$ 438/mês de despesa per capita</td><td>ANS/DIOPS + Panorama dez/2025</td></tr>
+      <tr><td><b>R$ 200–600 bi/ano</b></td><td><b>Presenteísmo</b></td><td>IBEF-SP via AXENYA, 2024 <span class="fact">[a confirmar]</span> — <b>não usar sem confirmar</b></td></tr>
+    </tbody>
+  </table>
+  <div class="callout risk">
+    <div class="ct">A regra do TAM</div>
+    <b>Não somar</b> R$ 468 bi + R$ 179 bi + R$ 276,9 bi. <b>Se sobrepõem parcialmente</b> — e somar valor em jogo como se fosse receita é exatamente o enquadramento que o §2.3 proíbe. O que vale é a <b>âncora de canal</b>, não a soma.
+  </div>
+
+  <h3>A âncora Salú — a prova de que o canal paga</h3>
+  <table class="dense">
+    <thead><tr><th style="width:26%">Métrica</th><th style="width:24%">Valor</th><th>Fonte</th></tr></thead>
+    <tbody>
+      <tr><td>Clientes</td><td><b>800+</b></td><td>Fato Relevante CVM</td></tr>
+      <tr><td>Vidas</td><td><b>~460 mil</b></td><td>idem</td></tr>
+      <tr><td>Receita 2025 · ARR</td><td>R$ 76,8 mi · <b>R$ 97,2 mi</b></td><td>idem</td></tr>
+      <tr><td><b>Preço de referência derivado</b></td><td><b>R$ 13,9 por vida/mês</b></td><td>derivado: R$ 76,8 mi ÷ 460 mil vidas</td></tr>
+      <tr><td>Venda</td><td>R$ 318,7 mi (jun/2026) — <b>~4× ARR</b>, maior M&A da Senior</td><td>Fato Relevante CVM</td></tr>
+      <tr><td>Valor comprovado entregue</td><td><b>+300 mil horas</b> devolvidas ao RH · <b>+1 mi de agendamentos</b> ocupacionais</td><td>Fato Relevante CVM, 06/2026</td></tr>
+    </tbody>
+  </table>
+
+  <h3>O canal institucional — o que sustenta a viabilidade</h3>
+  <table class="dense">
+    <thead><tr><th style="width:30%">Número</th><th style="width:22%">Valor</th><th>Por que importa</th></tr></thead>
+    <tbody>
+      <tr><td>Vidas ativas na Viva+</td><td><b>2.738.306</b></td><td>É o indicador do objetivo do PAO 2026: "número de trabalhadores na plataforma de saúde e segurança"</td></tr>
+      <tr><td>Empresas atendidas na Bahia (meta 2026)</td><td><b>10.800</b></td><td>O piloto</td></tr>
+      <tr><td>Empresas-membro do MES</td><td><b>76</b></td><td>Base de clientes e de validação. <b>Circula "90"</b> — a fonte primária (CN-SESI, 25/02/2026) diz 76</td></tr>
+      <tr><td>Empresas atendidas em SST (meta 2026)</td><td><b>79.119</b> (+23% vs 2025)</td><td>Realizado jan–ago/2026: 71.373 (prev. 64.578). <b>Bases diferentes — não misturar</b></td></tr>
+      <tr><td>Pessoas atendidas (meta 2026)</td><td><b>3.973.375</b> (+11%)</td><td>Realizado jan–ago/2026: 3.985.231</td></tr>
+      <tr><td>Pessoas em programas de SST (meta 2026)</td><td><b>6.756.318</b> (+23%)</td><td>Realizado jan–ago/2026: 9.140.728</td></tr>
+      <tr><td>Planos coletivos empresariais</td><td>~37 mi ben. (IESS) ou 38.977.827 (ANS/SIB)</td><td>71% ou 73,32% dos vínculos — <b>duas bases diferentes</b>. Empresas contratantes: 2,3 mi (2024), +48%; razão ben./contratante caiu de 20 → 16</td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout good">
+    <div class="ct">A frase de viabilidade do pitch</div>
+    "Não somos uma startup: somos um <b>módulo da Plataforma Viva+</b>, que já tem 2,7 milhões de vidas ativas, e o objetivo estratégico do <b>PAO 2026</b> é literalmente promover a gestão integrada da saúde dos trabalhadores por meio das soluções digitais e da inovação. O piloto são as <b>10.800 empresas atendidas na Bahia</b> e as <b>76 empresas do MES</b>."
+  </div>
+</section>
+
+<!-- ============ 7. ESCUDO REGULATÓRIO ============ -->
+<section class="page" id="p9">
+  <div class="runhead"><span class="l">Cheers · Evidência, mercado e regulação</span><span class="r">7 · O escudo regulatório</span></div>
+  <div class="eyebrow">Capítulo 7</div>
+  <h2>O escudo regulatório</h2>
+  <div class="rule"></div>
+  <p class="lead">Cada norma aqui é uma <b>restrição que virou argumento</b>. Nenhuma delas é opcional — e cada uma já tem resposta pronta no produto.</p>
+
+  <table class="dense tighter">
+    <thead><tr><th style="width:20%">Norma</th><th style="width:40%">O que determina</th><th style="width:40%">Como a proposta trata</th></tr></thead>
+    <tbody>
+      <tr><td><b>Res. CFM nº 2.454/2026</b><br><span style="font-size:7.5pt;color:#6B7A8C">IA na medicina · DOU 27/02/2026 · vigência desde 26/08/2026</span></td><td>Art. 4º, I e §2º: IA só como <b>apoio</b>; <b>vedado delegar diagnóstico, prognóstico ou decisão terapêutica</b>. Art. 11: o uso deve ser explicado ao paciente. Anexo II, I: <b>baixo risco</b> para IA "sem influência decisória direta, atuando tipicamente em funções administrativas". Art. 18 §2º: ato médico é sempre do médico</td><td><b>É onde a solução inteira cabe.</b> O motor é <b>regras explicáveis</b>, não diagnóstico. E a tela "como o modelo funciona" satisfaz o art. 11. Dizer isso no pitch é o que separa a equipe das que serão eliminadas por parecer médico simulado</td></tr>
+      <tr><td><b>Res. CFM nº 2.382/2024</b><br><span style="font-size:7.5pt;color:#6B7A8C">Atesta CFM · 06/09/2024</span></td><td>Art. 1º: o Atesta CFM é <b>oficial e obrigatório, inclusive para atestados de saúde ocupacional</b>, com efeitos suspensos pelo TRF-1</td><td>O protótipo <b>não emite ASO nem atestado</b> e não usa dado real de trabalhador</td></tr>
+      <tr><td><b>LGPD</b><br><span style="font-size:7.5pt;color:#6B7A8C">Lei 13.709/2018 · art. 11 e 13</span></td><td>Art. 11: dado de saúde é <b>sensível</b>. §4º: <b>vedada vantagem econômica</b> no uso de dado sensível. §5º: <b>vedada seleção de risco</b> na contratação. Art. 13: base legal e ambiente controlado</td><td>Agregação com <b>k ≥ 10</b> por posto · opt-out por bloco · <b>zero dado individual</b> fora do aparelho · nada de vantagem econômica com dado de saúde · nada de seleção de risco</td></tr>
+      <tr><td><b>NR-1</b> (GRO/PGR)<br><span style="font-size:7.5pt;color:#6B7A8C">MTE · atualizada 2025</span></td><td>GRO/PGR; item 1.5.5.4 — checklist do PGR que dispara exames de vigilância</td><td>O motor consome o PGR como entrada de regra, mas <b>não produz laudo nem parecer</b></td></tr>
+      <tr><td><b>NR-7</b> (PCMSO)<br><span style="font-size:7.5pt;color:#6B7A8C">MTE</span></td><td>PCMSO; <b>ASO sigiloso, só apto/inapto</b>; item 7.5 e 7.5.6–7.5.11 (prazos): demissional <b>10 dias</b> · retorno: exame antes de reassumir <b>se afastamento ≥ 30 dias</b> · periódico 1–2 anos; item 7.6.2 — relatório analítico</td><td>O ASO é <b>ato médico e sigiloso</b>: o produto opera no <b>posto</b>, nunca no diagnóstico da pessoa. O prazo de demissional é o demo da ideia "Prazo" — mas ela não está no MVP</td></tr>
+      <tr><td><b>RN 465/2021</b> (ANS)<br><span style="font-size:7.5pt;color:#6B7A8C">art. 14 §2º</span></td><td>Exames ocupacionais ficam <b>fora da cobertura obrigatória</b>: admissionais, periódicos, retorno ao trabalho, mudança de função e demenciais</td><td>É o <b>fundo da fragmentação</b>: o plano não paga o ASO, o custo sai do empregador/SESI e <b>o dado não circula</b>. Trazer o trabalhador para dentro do fluxo é cobertura, não compliance — e é o suporte da meta 3.8</td></tr>
+      <tr><td><b>ANVISA RDC 751/2022</b><br><span style="font-size:7.5pt;color:#6B7A8C">Anexo I, regra 11</span></td><td>Software que alimenta decisão diagnóstica = <b>SaMD classe II</b>, com notificação obrigatória</td><td>Não construímos software de decisão diagnóstica — por isso não há notificação</td></tr>
+      <tr><td><b>Res. CFM 2.314/2022</b><br><span style="font-size:7.5pt;color:#6B7A8C">05/05/2022</span></td><td>Teleconsulta exige médico e consentimento</td><td>Não produzimos teleconsulta</td></tr>
+      <tr><td><b>CLT art. 442</b></td><td>Exame pré-admissional só quando o PGR indica risco específico</td><td>Proíbe score pré-admissional — não temos score individual</td></tr>
+      <tr><td><b>Portaria GM/MS 1.434/2020</b><br><span style="font-size:7.5pt;color:#6B7A8C">RNDS</span></td><td>Padrões oficiais de interoperabilidade (FHIR)</td><td><b>Bundle FHIR R4 no perfil RNDS</b> é padrão oficial do país — o export não é um extra, é conformidade</td></tr>
+      <tr><td><b>Portaria GM/MS 2.073/2011</b><br><span style="font-size:7.5pt;color:#6B7A8C">CPIISS</span></td><td>Catálogo oficial de padrões: HL7, SNOMED-CT, TISS, DICOM, LOINC</td><td>É a lista de padrões que o export respeita</td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout risk">
+    <div class="ct">Uma premissa que foi corrigida</div>
+    A norma de IA em medicina <b>não é</b> a Res. CFM 2.328/2022 (orçamentária do CFM) — é a <b>2.454/2026</b>. E "MIME/CGHS" não corresponde a nenhuma base pública identificável: <b>não citar</b>.
+  </div>
+</section>
+
+<!-- ============ 8. ODS ============ -->
+<section class="page" id="p10">
+  <div class="runhead"><span class="l">Cheers · Evidência, mercado e regulação</span><span class="r">8 · ODS 3 e ODS 9</span></div>
+  <div class="eyebrow">Capítulo 8</div>
+  <h2>ODS 3 e ODS 9</h2>
+  <div class="rule"></div>
+  <p class="lead"><b>Regra fixa de todo o workspace:</b> toda referência a ODS é <b>ODS 3 (Saúde e Bem-Estar) + ODS 9 (Indústria, Inovação e Infraestrutura)</b>. Como escrever: <b>"Saúde e Bem-Estar (ODS 3 na Agenda 2030)"</b>. O SESI rotulou "ODS 2" na comunicação oficial — na Agenda 2030, Saúde e Bem-Estar é o <b>ODS 3</b>; ODS 2 é Fome Zero e Agricultura Sustentável. <b>O rótulo do SESI está errado; o conteúdo que ele quer dizer está certo.</b></p>
+
+  <div class="quote">
+    "<b>3.8</b> — Atingir a cobertura universal de saúde, incluindo a proteção do risco financeiro, o acesso a serviços de saúde essenciais de qualidade e o acesso a medicamentos e vacinas essenciais seguros, eficazes, de qualidade e a preços acessíveis para todos."
+    <div class="att">ONU / IPEA (adaptação brasileira) · un.org/sustainabledevelopment/health</div>
+  </div>
+  <div class="quote">
+    "<b>3.d</b> — Reforçar a capacidade de todos os países, particularmente os países em desenvolvimento, para o alerta precoce, redução de riscos e gerenciamento de riscos nacionais e globais de saúde."
+    <div class="att">ONU · sdgs.un.org/goals/goal3</div>
+  </div>
+  <div class="quote">
+    "<b>9.4</b> — Até 2030, modernizar a infraestrutura e reabilitar as indústrias para torná-las sustentáveis, com eficiência aumentada no uso de recursos e maior adoção de tecnologias e processos industriais limpos e ambientalmente corretos; com todos os países atuando de acordo com as suas respectivas capacidades."
+    <div class="att">ONU / gov.br · un.org/sustainabledevelopment/infrastructure-industrialization</div>
+  </div>
+  <div class="quote">
+    "<b>9.5</b> — Fortalecer a pesquisa científica, melhorar as capacidades tecnológicas de setores industriais em todos os países, particularmente os países em desenvolvimento, inclusive, até 2030, incentivando a inovação e aumentando substancialmente o número de trabalhadores de pesquisa e desenvolvimento por milhão de pessoas e os gastos público e privado em pesquisa e desenvolvimento."
+    <div class="att">ONU / gov.br · cartilha "Os cinco P's da Agenda 2030"</div>
+  </div>
+
+  <h3>Onde a proposta encosta em cada meta</h3>
+  <table class="dense">
+    <thead><tr><th style="width:10%">Meta</th><th style="width:44%">O encaixe</th><th style="width:46%">A evidência que sustenta</th></tr></thead>
+    <tbody>
+      <tr><td><b>3.8</b></td><td>É o <b>fundo da fragmentação</b>: a RN 465 art. 14 §2º tira o ASO da cobertura obrigatória, o custo sai do bolso do empregador/SESI e o dado não circula. <b>Trazer o trabalhador para dentro do fluxo é cobertura, não compliance</b></td><td>RN 465/2021 · R$ 276,9 bi/ano em despesas assistenciais (ANS Panorama + DIOPS) · 2.738.306 vidas Viva+</td></tr>
+      <tr><td><b>3.d</b></td><td>É literalmente o que a proposta faz: <b>antecipar</b> o desfecho em vez de medir o dano depois. E saúde mental no trabalho é a frente que mais cresce (546.254 afastamentos, +15%)</td><td>INSS 2025 · eixo 3 do MES · o desenho do MVP (elo 1 + elo 2 da cadeia)</td></tr>
+      <tr><td><b>9.4</b></td><td>A solução <b>não adiciona custo assistencial</b>: troca o assistido de indicador por decisão organizacional. E a meta fala em modernizar a indústria — a proposta moderniza <b>o trabalho</b></td><td>PAO 2026 · objetivo estratégico de gestão integrada da saúde dos trabalhadores</td></tr>
+      <tr><td><b>9.5</b></td><td>É a meta do <b>método</b>: cruzar base pública (VigIndústria, CAT/INSS) com instrumento validado e publicar o peso à vista</td><td>CR = 0,863 na 7ª dimensão (p. 16) · 9 datasets públicos · modelo transparente</td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout warn">
+    <div class="ct">Como as metas entram no formulário — e por que a banca não pontua ODS</div>
+    <b>O formulário não tem campo de ODS.</b> As 22 perguntas foram lidas na íntegra em 31/10/2026. As metas entram como <b>conhecimento demonstrado</b> nos campos de texto livre: em "por que você quer participar" (é onde §4.1.2 avalia "conhecimento na temática"), nas "competências técnicas" (as ferramentas que viabilizam as metas) e na "informação complementar" (a proposta em uma linha). <b>No pitch: 2 frases. No formulário: 1 linha.</b> E a interseção correta é <b>ODS 9 → ODS 3</b>, nunca ODS 9 → ODS 2.
+  </div>
+
+  <div class="callout good">
+    <div class="ct">O conector extra para a banca</div>
+    A saúde do trabalhador é <b>fator estratégico</b> para competitividade, produtividade e sustentabilidade da indústria. É o <b>eixo 3 do MES — Modelos Assistenciais Sustentáveis</b> — que é literalmente o tema do hackathon. Os 3 eixos do MES 2026–2027 são: (1) Dados e Inteligência em Saúde · (2) Promoção da Saúde e Prevenção · (3) <b>Modelos Assistenciais Sustentáveis</b>.
+  </div>
+</section>
+
+<!-- ============ 9. DATASETS ============ -->
+<section class="page" id="p11">
+  <div class="runhead"><span class="l">Cheers · Evidência, mercado e regulação</span><span class="r">9 · Os 9 datasets públicos</span></div>
+  <div class="eyebrow">Capítulo 9</div>
+  <h2>Os 9 datasets públicos</h2>
+  <div class="rule"></div>
+  <p class="lead">Base <b>100% pública e offline</b>. Isso é o que permite ao protótipo rodar na máquina de um de nós sem depender da rede do local (§11.2) — e é o que protege a originalidade (§10.6) e a PI de terceiros (§10.7).</p>
+
+  <table class="dense tighter">
+    <thead><tr><th style="width:20%">Dataset</th><th style="width:34%">Granularidade</th><th style="width:10%">Offline</th><th style="width:36%">Uso no MVP</th></tr></thead>
+    <tbody>
+      <tr><td><b>CAT — INSS</b></td><td>1 acidente: CID-10, CBO, CNAE, natureza da lesão, afastamento</td><td>sim (CSV mensal)</td><td><b>Núcleo</b>: sinistralidade, absenteísmo, mapa de risco</td></tr>
+      <tr><td><b>VigIndústria Brasil 2026</b></td><td>Agregada: 825 empresas, 57.952 trabalhadores, 33 indicadores</td><td>sim</td><td>Baseline do pitch e das 4 dimensões</td></tr>
+      <tr><td><b>ANS Panorama nov/2025</b></td><td>Agregada nacional</td><td>sim</td><td>Despesas assistenciais e sinistralidade setorial</td></tr>
+      <tr><td><b>ANS SIB/ICB por UF</b></td><td>Por beneficiário, <b>sem dado clínico</b> (BA ≈ 44 MB)</td><td>sim</td><td>Absenteísmo e turnover por perfil</td></tr>
+      <tr><td><b>ANS TISS</b><br><span style="font-size:7.5pt;color:#6B7A8C">ambulatorial/hospitalar + dicionário</span></td><td>Mensal por UF, XML</td><td>sim (1 UF/1 mês)</td><td>Custo assistencial; <b>prova de leitura de padrão real</b></td></tr>
+      <tr><td><b>ANS painel de glosas</b></td><td>Agregada</td><td>sim</td><td>Custo da negação</td></tr>
+      <tr><td><b>DATASUS TabNet</b><br><span style="font-size:7.5pt;color:#6B7A8C">SIA, SIH, SIM, SINAN, CNES</span></td><td>Agregada por município/UF/CID/procedimento</td><td>sim (exporta CSV)</td><td>Contexto e comparabilidade</td></tr>
+      <tr><td><b>e-SUS AB / Sisab</b><br><span style="font-size:7.5pt;color:#6B7A8C">Previne</span></td><td>Agregada municipal</td><td>sim</td><td>Atenção primária como contraponto ao modelo corporativo</td></tr>
+      <tr><td><b>IBGE SIDRA</b><br><span style="font-size:7.5pt;color:#6B7A8C">PNS, PNAD Contínua</span></td><td>Agregada</td><td>sim</td><td>Denominadores populacionais</td></tr>
+      <tr><td><b>CID-10</b><br><span style="font-size:7.5pt;color:#6B7A8C">CID10CSV.ZIP, 297 KB</span></td><td>Código → descrição</td><td>sim</td><td>Padronizar saída e agrupar causas</td></tr>
+      <tr><td><b>eSocial S-1.3</b><br><span style="font-size:7.5pt;color:#6B7A8C">leiautes + XSD (S-2210, S-2220)</span></td><td>Schema XML</td><td>sim</td><td>Base do validador de conformidade</td></tr>
+    </tbody>
+  </table>
+
+  <h3>O que <b>não</b> é utilizável — e por quê</h3>
+  <div class="cards">
+    <div class="card"><div class="t">ASSTI / CN-SESI e dados das empresas do MES</div><div class="d"><b>Sem acesso público.</b> É a lacuna e o dado ao mesmo tempo — e é por isso que o piloto com o SESI é o caminho de validação.</div></div>
+    <div class="card"><div class="t">Microdados do Censo 2022</div><div class="d">Acesso controlado, com documentoação e termo de uso.</div></div>
+    <div class="card"><div class="t">TISS nacional completo</div><div class="d">Volume de GB. <b>1 UF / 1 mês</b> prova a leitura de padrão real sem o custo.</div></div>
+    <div class="card"><div class="t">eSocial enviado · base individualizada de trabalhadores</div><div class="div">Exige certificado digital; e a base individualizada é vedada pela LGPD.</div></div>
+  </div>
+
+  <h3>A stack avaliada — e o custo real em horas de setup</h3>
+  <table class="dense">
+    <thead><tr><th style="width:30%">Opção</th><th style="width:16%">Setup por dev</th><th style="width:54%">Veredito</th></tr></thead>
+    <tbody>
+      <tr><td><b>Vite + React + TS</b> com dados locais (JSON + SQLite)</td><td><b>4 h</b></td><td><b>Base recomendada.</b> Deixa folga para PWA e para o motor</td></tr>
+      <tr><td>PWA instalável (service worker)</td><td>+2 h</td><td><b>Melhor custo/benefício</b> — é o que faz a demo rodar offline</td></tr>
+      <tr><td>Next.js export estático</td><td>6–8 h</td><td>Descartado: custa caro e não agrega</td></tr>
+      <tr><td>Python + Streamlit/Gradio</td><td>3 h</td><td>Fallback para a parte de IA, se sobrar tempo</td></tr>
+      <tr><td>LLM local (llama.cpp / Ollama, GGUF 1–3 B)</td><td>+3 h e 1–2 GB</td><td><b>Só se sobrar tempo.</b> O motor é de regras, não de LLM</td></tr>
+      <tr><td>Tauri / Electron</td><td>6–10 h</td><td>Não compensa</td></tr>
+      <tr><td>Flutter / React Native</td><td>12–20 h</td><td><b>Cortar.</b> PWA resolve</td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout">
+    <div class="ct">A regra de infraestrutura que vem junto</div>
+    <b>H3 · Sofisticação técnica</b> é um dos três critérios de protótipo (13,3% do total). Mas sofisticação aqui é <b>modelo transparente, PWA offline, k ≥ 10, export FHIR/RNDS e invariante verificada</b> — não framework. <b>A stack é decidida em 13/11, com o desafio real à vista</b> (D5). Até lá, <b>nada</b> é decidido: §7.3 + §11.8.
+  </div>
+</section>
+
+<!-- ============ 10. O QUE NÃO REPETIR ============ -->
+<section class="page" id="p12">
+  <div class="runhead"><span class="l">Cheers · Evidência, mercado e regulação</span><span class="r">10 · O que não repetir</span></div>
+  <div class="eyebrow">Capítulo 10</div>
+  <h2>O que não repetir</h2>
+  <div class="rule"></div>
+  <p class="lead">As armadilhas mais perigosas, com a correção de cada uma. <b>Este é o documento que protege a nota.</b> Uma delas, sozinha, pode custar o prêmio.</p>
+
+  <h3>As armadilhas numéricas e de citação</h3>
+  <table class="dense tighter">
+    <thead><tr><th style="width:38%">O que não dizer</th><th style="width:38%">O que dizer</th><th>Por quê</th></tr></thead>
+    <tbody>
+      <tr><td>"ODS 2 – Saúde e Bem-Estar"</td><td><b>ODS 3</b> (ODS 2 é Fome Zero e Agricultura Sustentável)</td><td>Erro de numeração do SESI. Escrever "Saúde e Bem-Estar (ODS 3 na Agenda 2030)" concilia o rótulo dele com a numeração oficial</td></tr>
+      <tr><td>Meta 3.8 = "cobrir universalmente os serviços de saúde, <b>incluindo atenção reabilitativa</b>"</td><td>O texto oficial da ONU (acima, p. 10)</td><td>"Atenção reabilitativa" vem da <b>OMS (WHA76.6, 2023)</b> — é outra fonte. <b>Nunca misturar as duas na mesma citação</b></td></tr>
+      <tr><td>"R$ 468 bi é o custo do presenteísmo"</td><td>"R$ 468 bi é a perda de produtividade por <b>doenças e acidentes de trabalho</b>"</td><td>OIT/UN Brasil. O presenteísmo é R$ 200–600 bi/ano [a confirmar]</td></tr>
+      <tr><td>"65,6% diz que a comunicação é insuficiente"</td><td>"<b>65,6% diz que é suficiente</b> — logo 34,4% não. Em micro e pequenas, só 56,2%"</td><td>Estava invertido. T36, p. 95</td></tr>
+      <tr><td>"VigIndústria 2025"</td><td>"VigIndústria Brasil 2026 (campo jul–dez/2025)"</td><td>A capa diz 2025 (ano do campo); a edição foi lançada em 2026</td></tr>
+      <tr><td>"R$ 206 bilhões atribuídos à depressão"</td><td>"<b>75,3 mil trabalhadores afastados</b> por depressão em 2016"</td><td>Implausível por ordem de grandeza e não corroborado. <b>Não usar</b></td></tr>
+      <tr><td>"O MES tem 90 empresas"</td><td><b>76</b></td><td>Fonte primária: CN-SESI, 25/02/2026</td></tr>
+      <tr><td>"R$ 25 de cada R$ 100 perdidos por dia de falta" · custo médio por dia/empregado</td><td>—</td><td>É de imprensa, ou <b>não encontrado em fonte primária</b>. Não usar</td></tr>
+      <tr><td>Somar R$ 468 bi + R$ 179 bi + R$ 276,9 bi</td><td>Falar em <b>valor em jogo</b>, separadamente</td><td>Se sobrepõem parcialmente; somar é o enquadramento que o §2.3 proíbe</td></tr>
+    </tbody>
+  </table>
+
+  <h3>As armadilhas de tese e de produto</h3>
+  <table class="dense tighter">
+    <thead><tr><th style="width:38%">O que não fazer</th><th style="width:38%">A evidência que mata</th><th>Por quê</th></tr></thead>
+    <tbody>
+      <tr><td>App de atividade física / step challenge</td><td>+20 min/dia <b>no trabalho</b> → <b>+15%</b> de afastamento longo (p = 0,02); <b>no lazer</b> → −20%. Centeni: R$ 5 mi captados, devolveu R$ 2,5 mi</td><td>Mede a coisa errada</td></tr>
+      <tr><td>"Programa de bem-estar reduz absenteísmo"</td><td>RCT n = 32.974: 2,5% vs 2,6% (P = 0,09); gasto US$ 3.583 vs 3.953 (P = 0,32)</td><td>Sem efeito em 18 meses</td></tr>
+      <tr><td>"O ROI de 1:2 a 1:4 se paga"</td><td>Em RCT, ROI de absenteísmo <b>−49%</b>. Meta 2025: <b>indeterminado</b>. IESS: <b>90%</b> não têm sucesso</td><td>É mentira estatística</td></tr>
+      <tr><td>"Manutenção preditiva" / "Indústria 4.0"</td><td>O Anexo I rejeita "incorporação de novas tecnologias" como resposta</td><td>A banca lê como IoT industrial, e não toca nenhuma das 4 dimensões</td></tr>
+      <tr><td>Dashboard de indicador de SST</td><td>É o que SOC, SGG, WOTY e o próprio ASSTI já vendem</td><td>Valor incremental zero</td></tr>
+      <tr><td>Telemedicina corporativa per capita</td><td>R$ 19,90–79,90/colaborador/mês</td><td>Commodity</td></tr>
+      <tr><td>NR-1 SaaS + COPSOQ + relatório IA</td><td>R$ 79–1.297/mês, com um player <b>gratuito</b></td><td>Saturado</td></tr>
+      <tr><td>IA que simula parecer médico</td><td>CFM 2.454/2026 art. 4º e §2º; LGPD art. 11 §5º; CLT art. 442; NR-7</td><td>Elimina a equipe — e com 60% da nota no pitch</td></tr>
+      <tr><td>"Autonomia genérica"</td><td>Strain OR 1,20 (0,94–1,52) <b>NS</b>; demanda OR 1,57 <b>sim</b>; apoio OR 0,58 <b>reduziu ausência</b></td><td>Dizer <b>demanda e apoio</b>, e só</td></tr>
+      <tr><td>"A organização resolve"</td><td>O HSE se contradiz: Demands, Relationships, Change e Role se associaram a ansiedade/depressão, mas <b>control e apoio entre pares não</b></td><td>Usar a régua do HSE (85% / 65%) e não prometer uniformidade</td></tr>
+      <tr><td>Chegar com a tese travada · construir antes do evento</td><td>§7.3 + <b>§11.8</b></td><td>Desclassificação do participante <b>e do grupo</b></td></tr>
+      <tr><td>Prometer economia · slide de business model no centro</td><td>§2.3</td><td>Convida a banca a ler "startup" — o pior enquadramento num evento sem caráter comercial</td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout risk">
+    <div class="ct">A armadilha que custa mais caro</div>
+    <b>Construir o produto antes do reveal.</b> §11.8 pune "vantagem indevida mediante meios fraudulentos" — e a desclassificação atinge o <b>grupo inteiro</b>. Em 32 h de build com 2 devs, chegar em 14/11 com o protótipo pronto é impossível de propósito. <b>Chegar com o kit é o que a banca rewards.</b>
+  </div>
+</section>
+
+<!-- ============ 11. ÍNDICE DE FONTES ============ -->
+<section class="page" id="p13">
+  <div class="runhead"><span class="l">Cheers · Evidência, mercado e regulação</span><span class="r">11 · Índice de fontes</span></div>
+  <div class="eyebrow">Capítulo 11</div>
+  <h2>Índice de fontes</h2>
+  <div class="rule"></div>
+  <p class="lead">Onde cada coisa está, para conferência rápida. <b>Se um número é questionado na banca, o caminho de volta ao original é sempre o mesmo: a curadoria do VigIndústria, com página e tabela.</b></p>
+
+  <table class="dense">
+    <thead><tr><th style="width:30%">Fonte</th><th style="width:26%">Onde está no repo</th><th>Observação</th></tr></thead>
+    <tbody>
+      <tr><td><b>Regulamento Hackathon SESI Saúde 2026</b> (11 p. + Anexo I)</td><td>PDF na raiz do repo</td><td>Lido integralmente. <b>É a fonte de verdade</b> — prevalece sobre a página oficial e sobre o grupo</td></tr>
+      <tr><td><b>VigIndústria Brasil 2026</b> (119 p.)</td><td><code>data/vigindustria-2026.md</code> (curadoria) + <code>docs/sources/</code> (PDF) + <code>data/vigindustria-2026-raw.txt</code> (texto integral)</td><td><b>Cite a curadoria</b>, não o texto bruto — é onde o recorte está correto</td></tr>
+      <tr><td><b>ASSTI — caderno técnico</b> (SESI/DN, 2023, 107 p.)</td><td><code>docs/sources/</code></td><td><b>Ninguém leu ainda.</b> É o próximo passo crítico da agenda de pesquisa</td></tr>
+      <tr><td><b>ANS Panorama</b> nov/2025 + dados abertos</td><td><code>docs/sources/</code> + catálogo de URLs</td><td>Despesas assistenciais, sinistralidade, SIB/ICB, TISS, glosas</td></tr>
+      <tr><td><b>CANPAT</b> (MTE/IGT) · <b>INSS</b></td><td>Citados com o número da série</td><td>Sinistralidade, afastamentos, dias. O dado do INSS (4,1 mi) está marcado <b>[a confirmar]</b> no primário</td></tr>
+      <tr><td><b>Meta-análises e ensaios</b></td><td><code>docs/00</code> §5, <code>docs/research/</code>, <code>docs/pesquisa/01</code></td><td>JAMA 2019 · Occup Med 2020 · Cochrane CD006955 · Occup Environ Med 2023 · Int J Behav Nutr Phys Act 2020 · BMJ 2000 · MMWR 2023 · OMS/OIT 2022</td></tr>
+      <tr><td><b>Documentos do grupo</b> (WhatsApp)</td><td><code>chat.md</code> · <code>chat.txt</code></td><td>Export bruto. <b>Contém erros factuais</b> — serve de evidência de origem, não de leitura</td></tr>
+      <tr><td><b>Decisões e estado do time</b></td><td><code>AGENTS.md</code></td><td>371 linhas: correções, decisões D1–D17, restrições R1–R14, estrutura</td></tr>
+      <tr><td><b>Proposta canônica</b></td><td><code>docs/04-proposta.md</code></td><td>Tese, escopo, ordem de corte, 5 bifurcações</td></tr>
+      <tr><td><b>Mapa competitivo</b></td><td><code>docs/pesquisa/01-mapa-competitivo.md</code></td><td>11 players, 5 camadas, 4 portas de entrada</td></tr>
+      <tr><td><b>Justificativa</b></td><td><code>docs/09-por-que-esta-proposta.md</code></td><td>Os 4 gaps, a 7ª operacionalizada, o impacto em 5 níveis</td></tr>
+      <tr><td><b>Metas ODS</b></td><td><code>docs/06-ods-metas.md</code></td><td>Textos oficiais verificados e o mapeamento</td></tr>
+      <tr><td><b>Formulário oficial</b></td><td><code>docs/05-inscricao-formulario.md</code></td><td>As 22 perguntas lidas via API + o texto de cada campo</td></tr>
+      <tr><td><b>Regulação e stack</b></td><td><code>docs/viabilidade-stack-dados-regulatorio.md</code></td><td>Normas, datasets, custo em horas de setup</td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout good">
+    <div class="ct">O padrão de evidência do workspace</div>
+    Toda afirmação carrega uma marca: <b>[fato]</b> — verificável, com link e data · <b>[hipótese]</b> — leitura nossa, sujeita a teste · <b>[a confirmar]</b> — depende de confirmação da organização · <b>§N</b> — vem do regulamento. <b>Agente que não sabe pesquisa e cita: não chuta número clínico nem estatística de mercado.</b> É a mesma regra que vale para este PDF.
+  </div>
+</section>
+
+</body>
+</html>
