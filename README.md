@@ -1,6 +1,8 @@
 # Cheers — Hackathon+ SESI Saúde 2026
 
-> **O SESI mede o risco que o trabalhador corre. Não mede o trabalho que causa o risco.**
+> **O SINAL mede o trabalho que causa o risco — e devolve, por posto, as 3 alavancas priorizadas que a empresa aplica, antes da falta.**
+>
+> *Voz mensurável para o trabalhador. Ação priorizada para a empresa. A 7ª dimensão do ASSTI, finalmente medida, para o SESI.*
 
 Repositório da equipe **Cheers** (5 pessoas) para o **Hackathon+ SESI Saúde** — SESI Bahia + Grupo Rede+, Salvador, **14 e 15 de novembro de 2026**.
 

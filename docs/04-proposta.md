@@ -13,8 +13,9 @@ Marca: `[fato]` verificável com fonte · `[hipótese]` leitura nossa · `[a con
 |---|---|
 | **Nome** | **SINAL** — *o sinal que antecede a falta* |
 | **Alternativas** | **Elo 1** (o elo invisível da cadeia, autoexplicativo depois do slide 2) · **Escuta** (o mais direto, o mais genérico) |
-| **Frase de 10 s** | *"A gente mede o trabalho que causa o risco — não só o risco."* |
-| **Frase de 30 s** | *"Hoje o SESI mede o risco que o trabalhador corre. Não mede o trabalho que causa o risco. O SINAL dá ao trabalhador uma voz mensurável e devolve à empresa, em alavancas priorizadas, o que mudar no trabalho — antes da falta."* |
+| **Proposta de valor** (a frase do topo do README e do repo) | *"O SINAL mede o trabalho que causa o risco — e devolve, por posto, as 3 alavancas priorizadas que a empresa aplica, antes da falta."* — **Voz mensurável para o trabalhador. Ação priorizada para a empresa. A 7ª dimensão do ASSTI, finalmente medida, para o SESI.** |
+| **Frase de 10 s** (o gancho do pitch) | *"A gente mede o trabalho que causa o risco — não só o risco."* |
+| **Frase de 30 s** (o pitch) | *"Hoje o SESI mede o risco que o trabalhador corre. Não mede o trabalho que causa o risco. O SINAL dá ao trabalhador uma voz mensurável e devolve à empresa, em alavancas priorizadas, o que mudar no trabalho — antes da falta."* |
 | **Checagem pendente** | Disponibilidade do nome no INPI + busca por marca registrada no setor de saúde ocupacional — 20 min, antes de 08/11 (o nome vai no formulário) |
 
 ---
