@@ -359,6 +359,13 @@ As seções de setup, lint e teste entram no AGENTS.md em **13/11**, quando a st
 
 **Apagar arquivo neste PC (Windows):** use `rm -- "<caminho-absoluto>"` como **único comando** do bash — sem `cd` antes, sem `echo`/`;` depois. `Remove-Item` é bloqueado pela política de segurança. Para diretório: `rm -r -- "<caminho-absoluto>"`. O runtime roteia para o launcher recuperável (lixeira).
 
+**Como verificar se um link do repo está quebrado (leia antes de "consertar"):**
+
+1. **Não confie em uma única checagem de existência de arquivo.** Nesta máquina `Test-Path` e `os.path.exists` já retornaram `False` para arquivos que existiam, e o `raw.githubusercontent.com` já devolveu **404 transitório** logo após um push (o CDN propaga com atraso). Um "link quebrado" confirmado por uma checagem só pode ser falso alarme.
+2. **As duas fontes de verdade** são a **árvore do git** (`git ls-tree -r --name-only HEAD`) e o **HTTP no remoto** (`https://github.com/<owner>/<repo>/blob/main/<caminho>` — a página `blob`, que é o que o link do README abre de fato).
+3. **Compare as duas árvores** (`git ls-tree` vs a API `/git/trees/main?recursive=1`) e see se há diferença de nome ou tamanho. Divergência só na árvore local = arquivo local; divergência só na remota = não publicado.
+4. **Nunca use `git commit -am` num repo com outra sessão ativa** — o `-a` stageia a remoção de qualquer arquivo que tenha sumido do disco, e o sumiço passa despercebido se o `git status` seguinte parecer limpo.
+
 ---
 
 ## Segurança e dados
