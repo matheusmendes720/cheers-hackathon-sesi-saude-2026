@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SINAL — Demo · Hackathon+ SESI Saúde 2026</title>
+<meta name="description" content="Demo funcional do SINAL: o trabalho que causa o risco, medido com a voz de quem trabalha — e devolvido em 3 alavancas priorizadas por posto. 100% offline.">
+<style>
+/* Tokens identicos aos do demo.html — dark + light, zero recurso externo. */
+:root{
+  --bg:#080B10; --surface:#10161F; --surface-2:#18202C; --surface-3:#212B3A;
+  --line:#2A3646; --line-soft:#1E2836;
+  --text:#E9EFF7; --text-2:#9FB0C6; --text-3:#6B7E96;
+  --accent:#2DD4BF; --accent-dim:#14B8A6; --accent-ink:#042F2C;
+  --good:#3DD68C; --violet:#A78BFA;
+  --radius:12px; --radius-lg:18px;
+  --sp-2:8px; --sp-3:12px; --sp-4:16px; --sp-5:24px; --sp-6:32px; --sp-7:48px; --sp-8:64px;
+  --fs-xs:12px; --fs-sm:13px; --fs-base:15px; --fs-lg:21px; --fs-2xl:34px; --fs-3xl:44px;
+  --font:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --mono:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,monospace;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 28px rgba(0,0,0,.32);
+}
+@media (prefers-color-scheme: light){
+  :root{
+    --bg:#F5F7FA; --surface:#FFFFFF; --surface-2:#F8FAFC; --surface-3:#EEF2F7;
+    --line:#D6DEE8; --line-soft:#E7ECF3;
+    --text:#101720; --text-2:#4A5A70; --text-3:#75869B;
+    --accent:#0D9488; --accent-dim:#0F766E; --accent-ink:#FFFFFF;
+    --good:#047857; --violet:#6D28D9;
+    --shadow:0 1px 2px rgba(16,24,40,.06),0 8px 24px rgba(16,24,40,.07);
+  }
+}
+*,*::before,*::after{box-sizing:border-box}
+body{
+  margin:0; background:var(--bg); color:var(--text);
+  font-family:var(--font); font-size:var(--fs-base); line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:880px; margin:0 auto; padding:var(--sp-7) var(--sp-5) var(--sp-8)}
+.eyebrow{
+  font-family:var(--mono); font-size:var(--fs-xs); letter-spacing:.14em; text-transform:uppercase;
+  color:var(--accent); margin:0 0 var(--sp-4);
+}
+h1{
+  font-size:var(--fs-3xl); line-height:1.12; letter-spacing:-.02em;
+  margin:0 0 var(--sp-5); font-weight:650;
+}
+h1 .mark{color:var(--accent)}
+.lede{
+  font-size:var(--fs-lg); color:var(--text-2); margin:0 0 var(--sp-6); max-width:62ch;
+}
+.lede strong{color:var(--text); font-weight:600}
+.cards{display:grid; gap:var(--sp-4); margin:0 0 var(--sp-6)}
+.card{
+  background:var(--surface); border:1px solid var(--line); border-radius:var(--radius);
+  padding:var(--sp-5);
+}
+.card h2{
+  font-size:var(--fs-sm); font-family:var(--mono); letter-spacing:.1em; text-transform:uppercase;
+  color:var(--text-3); margin:0 0 var(--sp-3); font-weight:500;
+}
+.steps{list-style:none; margin:0; padding:0; counter-reset:s}
+.steps li{
+  counter-increment:s; position:relative; padding-left:34px; margin-bottom:var(--sp-3); color:var(--text-2);
+}
+.steps li:last-child{margin-bottom:0}
+.steps li::before{
+  content:counter(s); position:absolute; left:0; top:1px;
+  width:22px; height:22px; border-radius:50%;
+  background:var(--surface-3); border:1px solid var(--line);
+  color:var(--accent); font-family:var(--mono); font-size:var(--fs-xs);
+  display:flex; align-items:center; justify-content:center;
+}
+.steps b{color:var(--text); font-weight:600}
+.actions{display:flex; flex-wrap:wrap; gap:var(--sp-3); margin-bottom:var(--sp-6)}
+.btn{
+  display:inline-flex; align-items:center; gap:var(--sp-2);
+  padding:13px 22px; border-radius:var(--radius-sm,10px);
+  font-weight:600; font-size:var(--fs-base); text-decoration:none; border:1px solid transparent;
+  background:var(--accent); color:var(--accent-ink);
+  transition:transform .12s ease, filter .12s ease;
+}
+.btn:hover{filter:brightness(1.08); transform:translateY(-1px)}
+.btn.ghost{background:transparent; color:var(--text); border-color:var(--line)}
+.btn.ghost:hover{border-color:var(--accent); color:var(--accent)}
+.note{
+  font-size:var(--fs-sm); color:var(--text-3); margin:0;
+  padding-top:var(--sp-5); border-top:1px solid var(--line-soft);
+}
+.note code{font-family:var(--mono); font-size:var(--fs-xs); color:var(--text-2)}
+.pill{
+  display:inline-block; font-family:var(--mono); font-size:var(--fs-xs);
+  padding:3px 10px; border-radius:999px; border:1px solid var(--line);
+  color:var(--text-2); background:var(--surface-2); margin-right:var(--sp-2);
+}
+.pill.ok{color:var(--good); border-color:color-mix(in srgb, var(--good) 40%, transparent)}
+@media (max-width:560px){
+  h1{font-size:var(--fs-2xl)} .lede{font-size:var(--fs-base)}
+  .wrap{padding:var(--sp-6) var(--sp-4) var(--sp-7)}
+}
+@media (prefers-reduced-motion: reduce){ .btn{transition:none} }
+</style>
+</head>
+<body>
+<main class="wrap">
+
+  <p class="eyebrow">Hackathon+ SESI Saúde 2026 · SESI Bahia + Grupo Rede+</p>
+
+  <h1><span class="mark">SINAL</span> — o sinal que antecede a falta</h1>
+
+  <p class="lede">
+    O SESI mede o risco que o trabalhador corre. <strong>Não mede o trabalho que causa o risco.</strong>
+    O SINAL mede — e devolve, por posto, as <strong>3 alavancas priorizadas</strong> que a empresa aplica, antes da falta.
+  </p>
+
+  <div class="cards">
+    <div class="card">
+      <h2>Como funciona em três passos</h2>
+      <ol class="steps">
+        <li><b>Trabalhador</b> responde 6 itens no celular, em 90 s, <b>offline</b> — e pode pular qualquer um.</li>
+        <li><b>Posto (k ≥ 10)</b> vira um índice de contexto de trabalho 0–100. Nada individual sai do aparelho.</li>
+        <li><b>Empresa</b> recebe 3 alavancas priorizadas, cada uma com o indicador nacional que a justifica.</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="actions">
+    <a class="btn" href="demo.html">Abrir a demo</a>
+    <a class="btn ghost" href="slide-impacto.html">Ver o slide de impacto</a>
+  </div>
+
+  <p class="note">
+    <span class="pill ok">offline</span><span class="pill ok">sem CDN</span><span class="pill ok">sem recurso externo</span>
+    <br><br>
+    Demo funcional da equipe <b>Cheers</b> — 14 e 15 de novembro de 2026, Salvador.
+    Todo número da demo tem fonte; a base completa está no
+    <a href="https://github.com/matheusmendes720/cheers-hackathon-sesi-saude-2026" style="color:var(--accent)">repositório</a>.
+  </p>
+
+</main>
+</body>
+</html>
