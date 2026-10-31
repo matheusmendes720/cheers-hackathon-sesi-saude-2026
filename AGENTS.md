@@ -189,7 +189,7 @@ Erros que circulam no grupo do WhatsApp. **Nenhum agente deve propagá-los.**
 
 **⚠️ E a consequência disso:** o que se leva ao dia 14 **não é uma solução pronta — é capacidade de absorver o desafio em 90 minutos.** Chegar com uma tese travada (O1+O3, por exemplo) incumpre exatamente o nivelamento que o §7.3 impõe, e as nossas 5 oportunidades podem não ser o desafio real. O ativo que construímos é o **kit de mapeamento**: grade das 4 dimensões do Anexo I · 33 indicadores com prevalência e CI · instrumento validado do VigIndústria · 9 datasets públicos · escudo regulatório (CFM 2.454/2026 Anexo II, I) · 5 armadilhas com evidência · mapa competitivo de 5 camadas. Ver `docs/02-cruzamento-whatsapp.md` §1.
 
-**Métrica de sucesso em 12/11:** 1 problema definido com evidência ✅ (`docs/04-proposta.md` §2) · 3 hipóteses ranqueadas ✅ (A/B/C em `docs/01`) · 1 roteiro de 3 min **escrito** ✅ (`pitch/roteiro-3min.md`) — **falta ensaiar 10× em voz alta** (D14) · 1 slide único de impacto ✅ (`pitch/slide-impacto.html`) · 1 protocolo de 90 min para o reveal ✅ (`docs/08-plano-90min.md`) · 8 perguntas para os mentores ✅ (abaixo) · stack decidida no dia seguinte com o desafio real à vista.
+**Métrica de sucesso em 12/11:** 1 problema definido com evidência ✅ (`docs/04-proposta.md` §2) · 3 hipóteses ranqueadas ✅ (A/B/C em `docs/01`) · 1 roteiro de 3 min **escrito** ✅ (`pitch/roteiro-3min.md`) — **falta ensaiar 10× em voz alta** (D14) · 1 slide único de impacto ✅ (`pitch/slide-impacto.html`) · 1 protocolo de 90 min para o reveal ✅ (`docs/08-plano-90min.md`) · 8 perguntas para os mentores ✅ (abaixo) · 1 entrada humana para o time ✅ (`README.md`) · 1 plano de build ✅ (`docs/10-mapa-de-build-32h.md`) · stack decidida no dia seguinte com o desafio real à vista.
 
 **A proposta canônica do produto é `docs/04-proposta.md`** (31/10). Ela não substitui o §7.3: o desafio detalhado é revelado na abertura e pode reposicionar a tese — o §10 da proposta mapeia as **5 bifurcações** do kit para cada cenário, e o §5 traz o **plano de corte** que decide o que sai se o tempo apertar.
 
@@ -281,6 +281,7 @@ Ao propor solução, sempre anexar: (1) a meta ODS específica, (2) o eixo do Co
 Estado em 31/10/2026:
 
 ```
+README.md                                              entrada humana do time — "só leia 3 coisas" + o que fazer até sexta
 AGENTS.md                                              este arquivo
 Regulamento Hackathon SESI Saude 2026.pdf              regulamento oficial (§N)
 chat.md                                                export do WhatsApp em Markdown
@@ -301,6 +302,7 @@ docs/08-plano-90min.md                               o protocolo de 13/11: grade
 docs/09-por-que-esta-proposta.md                     a justificativa completa: os 4 gaps, a 7ª dimensão operacionalizada, o impacto honesto e o veredito sobre o agro
 pitch/slide-impacto.html                             slide único de impacto (A4 paisagem, imprimível, offline)
 pitch/apresentacao-interna.md                        apresentação de 10 min para o time, sem contexto prévio
+docs/10-mapa-de-build-32h.md                          plano de build hora a hora (2 turnos, CORTE 1/2, 3 trilhos, 8 riscos)
 docs/pesquisa/01-mapa-competitivo.md                  mapa competitivo (11 players, 5 camadas)
 docs/pesquisa/01-mapa-competitivo-fontes.md            bibliografia anotada do mapa
 docs/pesquisa/02-dimensionamento-mercado.md            dimensionamento e funil de custo
